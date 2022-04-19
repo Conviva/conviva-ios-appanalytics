@@ -85,3 +85,16 @@ tracker.track(event);
 
 **Note: If your tracked event cannot be described by the structured event type, please contact your Conviva representative to define the appropriate custom extension.**
 
+# Custom event tracking to track your application specific events and state changes
+* Use trackCustomEvent api to pass custom events with data.
+  * name – Name of the custom event
+  * data - Event data. Any type of data in string format.
+
+```
+
+let name = “Metadata”
+let data = “{“title”:”Friends”,”Genre”:”PG-13”}”
+self.tracker?.trackCustomEvent(name!, data: data!);
+
+```
+ 
