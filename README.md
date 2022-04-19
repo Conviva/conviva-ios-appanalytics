@@ -9,13 +9,13 @@ Use Application Analytics to autocollect events and track application specific e
 
 * Link the following system frameworks to Link Binary with Libraries section in xcode:
 
-** UIKit
+* UIKit
 
-** Foundation
+* Foundation
 
-** CoreTelephony (iOS only)
+* CoreTelephony (iOS only)
 
-** FMDB (version 2.7 or above)
+* FMDB (version 2.7 or above)
 
 In Other Linker Flags section in Xcode, add "-ObjC".
 
