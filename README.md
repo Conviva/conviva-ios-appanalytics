@@ -2,19 +2,20 @@
 Use Application Analytics to autocollect events and track application specific events and state changes.
 
 # Initialization
-Install the Conviva library
 
-Download and unzip the package from Downloads. During the build phase, add ConvivaAppAnalytics.xcframework to Link Binary with Libraries section in xcode. This package contains the frameworks for both, iOS and tvOS.
+* Install the Conviva library
 
-Link the following system frameworks to Link Binary with Libraries section in xcode:
+* Download and unzip the package from Downloads. During the build phase, add ConvivaAppAnalytics.xcframework to Link Binary with Libraries section in xcode. This package contains the frameworks for both, iOS and tvOS.
 
-UIKit
+* Link the following system frameworks to Link Binary with Libraries section in xcode:
 
-Foundation
+** UIKit
 
-CoreTelephony (iOS only)
+** Foundation
 
-FMDB (version 2.7 or above)
+** CoreTelephony (iOS only)
+
+** FMDB (version 2.7 or above)
 
 In Other Linker Flags section in Xcode, add "-ObjC".
 
