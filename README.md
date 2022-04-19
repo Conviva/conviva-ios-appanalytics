@@ -21,7 +21,7 @@ Use Application Analytics to autocollect events and track application specific e
 
   * To refer to the Conviva classes from your source code, add the following import statements:
 
-  * //Swift
+//Swift
 ```
 
 import ConvivaAppAnalytics
