@@ -24,7 +24,7 @@ Use Application Analytics to autocollect events and track application specific e
   * //Swift
 ```
 
-* import ConvivaAppAnalytics
+import ConvivaAppAnalytics
 
 ```
 
