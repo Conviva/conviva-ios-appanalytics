@@ -22,26 +22,34 @@ In Other Linker Flags section in Xcode, add "-ObjC".
 To refer to the Conviva classes from your source code, add the following import statements:
 
 //Swift
+```
+
 * import ConvivaAppAnalytics
 
+```
+
 //Objc
-* @import ConvivaAppAnalytics;
+```
+
+@import ConvivaAppAnalytics;
+
+```
 
 # Initialize the top level object
 
 //Swift
 ```
 
-* let networkConfig = CATNetworkConfiguration(endpoint: "https://appgw.conviva.com", method: .post);
-* CATAppAnalytics.createTracker(namespace: "AppAnalytics", customerKey: "345128905673421", network: networkConfig)
+let networkConfig = CATNetworkConfiguration(endpoint: "https://appgw.conviva.com", method: .post);
+CATAppAnalytics.createTracker(namespace: "AppAnalytics", customerKey: "345128905673421", network: networkConfig)
 
 ```
 
 //ObjC
 ```
 
-* CATNetworkConfiguration *networkConfig = [[CATNetworkConfiguration alloc] initWithEndpoint:@"https://appgw.conviva.com" method:SPHttpMethodPost];
-* [CATAppAnalytics createTrackerWithNamespace:@"AppAnalytics" customerKey:@"678367802" network:networkConfig];
+CATNetworkConfiguration *networkConfig = [[CATNetworkConfiguration alloc] initWithEndpoint:@"https://appgw.conviva.com" method:SPHttpMethodPost];
+[CATAppAnalytics createTrackerWithNamespace:@"AppAnalytics" customerKey:@"678367802" network:networkConfig];
 
 ```
 
