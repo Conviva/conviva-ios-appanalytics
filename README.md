@@ -9,19 +9,19 @@ Use Application Analytics to autocollect events and track application specific e
 
 * Link the following system frameworks to Link Binary with Libraries section in xcode:
 
-* UIKit
+  * UIKit
 
-* Foundation
+  * Foundation
 
-* CoreTelephony (iOS only)
+  * CoreTelephony (iOS only)
 
-* FMDB (version 2.7 or above)
+  * FMDB (version 2.7 or above)
 
-In Other Linker Flags section in Xcode, add "-ObjC".
+  * In Other Linker Flags section in Xcode, add "-ObjC".
 
-To refer to the Conviva classes from your source code, add the following import statements:
+  * To refer to the Conviva classes from your source code, add the following import statements:
 
-//Swift
+  * //Swift
 ```
 
 * import ConvivaAppAnalytics
