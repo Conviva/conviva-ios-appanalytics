@@ -52,7 +52,7 @@ CATTracker *tracker = [CATAppAnalytics createTrackerWithCustomerKey:@"<YOUR_CUST
 # Set the user id (viewer id)
 ```
 
-* tracker.subject.userId = @"user_id";
+tracker.subject.userId = @"user_id";
 
 ```
 
