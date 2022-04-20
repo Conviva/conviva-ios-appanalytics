@@ -58,7 +58,7 @@ tracker.subject.userId = @"user_id";
 
 # Custom event tracking to track your application specific events and state changes
 Use trackCustomEvent() to track all kinds of events. This API provides 2 fields to describe the tracked events. 
-  * eventNamem  - Name of the custom event.
+  * eventName  - Name of the custom event.
   * eventData  – Any type of data in string format.
 
 The following example shows the implementation of the 'onClick' 
