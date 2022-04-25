@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.01 (04/25/2022)
+* Fixed library version reporting issue
+
 ## 0.2.0 (04/19/2022)
 * Auto capture of UIButton clicks
 * Screen view tracking for both iOS and tvOS
