@@ -294,6 +294,16 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
  */
 + (NSArray<NSString *> *)instancedTrackerNamespaces;
 
+/**
+ * @return AppAnalytics instance.
+ */
++ (instancetype)sharedInstance;
+
+/**
+ * @return Client Id.
+ */
+- (NSString*) getClientId;
+
 @end
 
 NS_ASSUME_NONNULL_END

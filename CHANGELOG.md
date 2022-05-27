@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.2 (05/27/2022)
+* Fixed clid duplication issue
+* Support for low power mode
+* Monitor cpu usage of the app
+
+## 0.2.1 (04/25/2022)
+* Fixed library version reporting issue
+
 ## 0.2.1 (04/25/2022)
 * Fixed library version reporting issue
 

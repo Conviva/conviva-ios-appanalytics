@@ -153,6 +153,8 @@ extern NSString * const kCATMobileLowPowerMode;
 extern NSString * const kCATMobileAvailableStorage;
 extern NSString * const kCATMobileTotalStorage;
 
+extern NSString * const kCATMobileCPUUsage;
+
 // --- Application Context
 extern NSString * const kCATApplicationVersion;
 extern NSString * const kCATApplicationBuild;
