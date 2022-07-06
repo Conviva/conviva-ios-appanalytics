@@ -51,7 +51,7 @@ import ConvivaAppAnalytics
     
     func startTracking() {
         
-        let networkConfig = CATNetworkConfiguration(endpoint: "https://snowplow-dev.conviva.com", method: .post);
+        let networkConfig = CATNetworkConfiguration(endpoint: "https://appgw.conviva.com", method: .post);
         let trackerConfig = trackerConfigs();
         let sessionConfig = sessionConfigs();
         let tracker = CATAppAnalytics.createTracker(namespace: "ConvivaAnalytics", customerKey: "345128905673421",network: networkConfig, configurations: [trackerConfig,sessionConfig])
