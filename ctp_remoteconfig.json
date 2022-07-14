@@ -1,6 +1,6 @@
 {
     "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.mobile/remote_config/jsonschema/1-0-0",
-    "configurationVersion": 36,
+    "configurationVersion": 37,
     "configurationBundle": [{
         "namespace": "testTracker1",
         "networkConfiguration": {
