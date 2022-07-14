@@ -23,8 +23,7 @@
             "diagnosticAutotracking": true,
             "base64encoding":false,
             "buttonClickAutotracking":true,
-            "userClickAutotracking":true,
-            "userClickAutotracking":false
+            "userClickAutotracking":true
         },
         "subjectConfiguration": {
             "userId": "example",
