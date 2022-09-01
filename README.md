@@ -68,13 +68,13 @@ self.tracker.trackCustomEvent("your-event-name", data: data);
 When user navigates between screens, user journey is tracked by reading the class names of UIViewController classes. Name of the screens can be customized using below code as per the bussiness needs.
 
 * ObjC:
-**//Declare property like below
-**@property(copy, nonatomic)NSString *catViewId;
-**//Add below line in viewDidLoad method
-**self.catViewId = @“Customizable name”;
+* //Declare property like below
+* @property(copy, nonatomic)NSString *catViewId;
+* //Add below line in viewDidLoad method
+* self.catViewId = @“Customizable name”;
 * Swift:
-**//Add below property in view controller
-**@objc var catViewId:String = “App Analytics View”
+* //Add below property in view controller
+* @objc var catViewId:String = “App Analytics View”
 
 # Note: If user of this sdk also uses ConvivaSDK for Experience Insights/Ad Insights, ConvivaSDK version must be 4.0.28 or above to be compatable with ConvivaAppAnalytics version 0.2.3 or above
  
