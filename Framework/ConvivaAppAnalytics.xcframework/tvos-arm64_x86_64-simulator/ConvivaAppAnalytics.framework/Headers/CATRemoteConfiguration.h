@@ -44,6 +44,11 @@ NS_SWIFT_NAME(CATRemoteConfiguration)
 @property (nonatomic, readonly) CATHttpMethod method;
 
 /**
+ * Fallback endpoints for retry incase main end points fails.
+ */
+@property (nonatomic, nullable, strong) NSArray *fallbackEndpoints;
+
+/**
  * @param endpoint URL of the remote configuration.
  *                 The URL can include the schema/protocol (e.g.: `http://remote-config-url.xyz`).
  *                 In case the URL doesn't include the schema/protocol, the HTTPS protocol is

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.3 (09/01/2022)
+* Remote Configuraation support to enable/disable features from backend portal
+** Ex: Enable/Disable button click tracking, screen view tracking, installAutotracking etc 
+* Renamed buttonClickAutotracking to userClickAutoTracking and deprecated buttonClickAutotracking property which is used to enable/disable button click tracking
+* Support to add flag to client id keychain item to access in background as well
+** Note: If user of this sdk also uses ConvivaSDK for Experience Insights/Ad Insights, ConvivaSDK version must be 4.0.28 or above to be compatable with ConvivaAppAnalytics version 0.2.3 or above
+
 ## 0.2.2 (05/27/2022)
 * Fixed clid duplication issue
 * Support for low power mode

@@ -25,6 +25,9 @@
 #import "CATTrackerConfiguration.h"
 #import "CATSubjectConfiguration.h"
 #import "CATSessionConfiguration.h"
+//#import "CATCustomEventTrackingConfiguration.h"
+
+@class CATCustomEventTrackingConfiguration;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -39,6 +42,7 @@ NS_SWIFT_NAME(CATConfigurationBundle)
 @property (nonatomic, nullable) CATTrackerConfiguration *trackerConfiguration;
 @property (nonatomic, nullable) CATSubjectConfiguration *subjectConfiguration;
 @property (nonatomic, nullable) CATSessionConfiguration *sessionConfiguration;
+@property (nonatomic, nullable) CATCustomEventTrackingConfiguration *customEventTrackingConfiguration;
 
 @property (nonatomic, nonnull, readonly) NSArray<CATConfiguration *> *configurations;
 

@@ -25,6 +25,8 @@
 #import "CATDevicePlatform.h"
 #import "CATLoggerDelegate.h"
 
+@class CATCustomEventTrackingConfiguration;
+
 NS_ASSUME_NONNULL_BEGIN
 
 NS_SWIFT_NAME(CATTrackerConfigurationProtocol)
@@ -111,7 +113,12 @@ NS_SWIFT_NAME(CATTrackerConfigurationProtocol)
 /**
  * Whether enable button click auto tracking.
  */
-@property () BOOL buttonClickAutotracking;
+@property () BOOL buttonClickAutotracking DEPRECATED_MSG_ATTRIBUTE("Use userClickAutotracking instead");
+
+/**
+ * Whether enable user click auto tracking.
+ */
+@property () BOOL userClickAutotracking;
 
 /**
  * Whether to enable/disable perodic heart beat.
@@ -122,6 +129,12 @@ NS_SWIFT_NAME(CATTrackerConfigurationProtocol)
  *  Perodic heart beat interval.
  */
 @property () NSInteger periodicHeartbeatInterval;
+
+
+/**
+ * Whether enable custom event tracking
+ */
+@property () CATCustomEventTrackingConfiguration* customEventTrackingConfiguration;
 
 @end
 
@@ -152,8 +165,10 @@ NS_SWIFT_NAME(CATTrackerConfiguration)
  *         exceptionAutotracking = true;
  *         diagnosticAutotracking = false;
  *         buttonClickAutotracking = true;
+ *         userClickAutotracking = true;
  *         enablePeriodicHeartbeat = true;
  *         periodicHeartbeatInterval = 40; //secs
+ *         customEventTracking = true;
  */
 - (instancetype)init;
 
@@ -235,6 +250,11 @@ SP_BUILDER_DECLARE(CATPrewarmDetectionMode, prewarmDetectionMode)
  * Whether enable automatic tracking of button click events.
  */
 SP_BUILDER_DECLARE(BOOL, buttonClickAutotracking)
+
+/**
+ * Whether enable automatic tracking of user click events.
+ */
+SP_BUILDER_DECLARE(BOOL, userClickAutotracking)
 
 /**
  * Whether to enable/disable perodic heart beat.

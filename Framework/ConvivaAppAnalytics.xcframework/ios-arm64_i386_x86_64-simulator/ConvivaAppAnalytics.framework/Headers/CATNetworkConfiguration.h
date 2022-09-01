@@ -60,6 +60,12 @@ NS_SWIFT_NAME(CATNetworkConfiguration)
 @property (nonatomic, nullable) NSString *customPostPath;
 
 /**
+ * A custom path which will be added to the endpoint URL to specify the
+ * complete URL of the collector when paired with the POST method.
+ */
+@property (nonatomic, nullable, copy) NSString *remoteCfgUrl;
+
+/**
  *  Custom headers for http requests.
  */
 @property (nonatomic, nullable) NSDictionary<NSString *, NSString *> *requestHeaders;

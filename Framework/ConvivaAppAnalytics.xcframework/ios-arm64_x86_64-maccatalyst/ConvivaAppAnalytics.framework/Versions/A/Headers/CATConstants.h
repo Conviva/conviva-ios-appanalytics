@@ -52,6 +52,7 @@
 // --- Version
 
 extern NSString * const kCATVersion;
+extern NSString * const kCATVersionPrefix;
 
 // --- Dictionary keys
 
@@ -91,6 +92,7 @@ extern NSString * const kCATErrorSchema;
 extern NSString * const kCATApplicationInstallSchema;
 extern NSString * const kCATGdprContextSchema;
 extern NSString * const kCATDiagnosticErrorSchema;
+extern NSString * const kCATConvivaEventInfoSchema;
 
 // --- Event Keys
 
@@ -167,6 +169,9 @@ extern NSString * const kCATSessionPreviousId;
 extern NSString * const kCATSessionIndex;
 extern NSString * const kCATSessionStorage;
 extern NSString * const kCATSessionFirstEventId;
+extern NSString * const kSPSessionFirstEventTimestamp;
+extern NSString * const kSPSessionEventIndex;
+extern NSString * const kSPSessionPreviousEventTimestamp;
 
 // --- Geo-Location Context
 

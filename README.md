@@ -81,4 +81,5 @@ let data = "{\"identifier1\": \"test\",\"identifier2\": 1,\"identifier3\":true}"
 self.tracker.trackCustomEvent("your-event-name", data: data);
 
 ```
+# Note: If user of this sdk also uses ConvivaSDK for Experience Insights/Ad Insights, ConvivaSDK version must be 4.0.28 or above to be compatable with ConvivaAppAnalytics version 0.2.3 or above
  

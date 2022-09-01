@@ -29,6 +29,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class CATServiceProvider;
+@class CATConfigurationProvider;
+
 /**
  * Entry point to instance a new Snowplow tracker.
  */
@@ -60,12 +63,15 @@ NS_SWIFT_NAME(CATAppAnalytics)
  * which will delete all the EventStores instanced with namespaces not listed in the passed list.
  *
  * @param remoteConfiguration The remote configuration used to indicate where to download the configuration from.
+ * @param customerKey - Customer Key.
  * @param defaultBundles The default configuration passed by default in case there isn't a cached version and it's able to download a new one.
  * @param onSuccess The callback called when a configuration (cached or downloaded) is set It passes the list of the namespaces associated
  *                  to the created trackers.
  */
 + (void)setupWithRemoteConfiguration:(CATRemoteConfiguration *)remoteConfiguration
-         defaultConfigurationBundles:(nullable NSArray<CATConfigurationBundle *> *)defaultBundles onSuccess:(void(^)(NSArray<NSString *> * _Nullable namespaces))onSuccess NS_SWIFT_NAME(setup(remoteConfiguration:defaultConfiguration:onSuccess:));
+                         customerKey:(NSString*)customerKey
+         defaultConfigurationBundles:(nullable NSArray<CATConfigurationBundle *> *)defaultBundles
+                           onSuccess:(void(^)(NSArray<NSString *> * _Nullable namespaces))onSuccess NS_SWIFT_NAME(setup(remoteConfiguration:customerKey:defaultConfiguration:onSuccess:));
 
 /**
  * Reconfigure, create or delete the trackers based on the configuration downloaded remotely.
@@ -83,10 +89,13 @@ NS_SWIFT_NAME(CATAppAnalytics)
  * To remove all the zombie events you can an internal method `removeUnsentEventsExceptForNamespaces` on `SPSQLEventStore`
  * which will delete all the EventStores instanced with namespaces not listed in the passed list.
  *
+ * @param customerKey - Customer Key.
  * @param onSuccess The callback called when a configuration (cached or downloaded) is set It passes the list of the namespaces associated
  *                  to the created trackers.
  */
-+ (void)refreshIfRemoteUpdate:(void(^)(NSArray<NSString *> * _Nullable namespaces))onSuccess NS_SWIFT_NAME(refresh(onSuccess:));
++ (void)refreshIfRemoteUpdate:(NSString*)customerKey
+                    onSuccess:(void(^)(NSArray<NSString *> * _Nullable namespaces))onSuccess
+                    NS_SWIFT_NAME(refresh(onSuccess:customerKey:));
 
 /// Standard Configuration
 
@@ -303,6 +312,12 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
  * @return Client Id.
  */
 - (NSString*) getClientId;
+
+/* Remote config refresh interval */
+@property (nonatomic) NSInteger remoteCfgRefreshInterval;
+
+@property (nonatomic, nonnull, readonly) NSMutableDictionary<NSString *, CATServiceProvider *> *serviceProviderInstances;
+@property (nonatomic, nullable, readonly) CATConfigurationProvider *configurationProvider;
 
 @end
 
