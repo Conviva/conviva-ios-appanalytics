@@ -137,6 +137,28 @@ NS_SWIFT_NAME(CATAppAnalytics)
  * be sent to the collector and they remain in a zombie state inside the EventStore.
  * To remove all the zombie events you can an internal method `removeUnsentEventsExceptForNamespaces` on `SPSQLEventStore`
  * which will delete all the EventStores instanced with namespaces not listed in the passed list.
+ * @param customerKey Customer key provided by conviva.
+ * @param appName Uniquely identifiable app name.
+ * @return The tracker instance created.
+ */
++ (id<CATTrackerController>)createTrackerWithCustomerKey:(NSString*)customerKey appName:(NSString*)appName namespace:(NSString *)namespace NS_SWIFT_NAME(createTracker(customerKey:appName:namespace:));
+
+/**
+ * Create a new tracker instance which will be used inside the app to track events.
+ * The app can run multiple tracker instances which will be identified by string `namespaces`.
+ * The tracker will be configured with default setting and only the collector endpoint URL need
+ * to be passed for the configuration.
+ * For the default configuration of the tracker see `TrackerConfiguration(String)`.
+ *
+ * To configure tracker with more details see `createTracker(Context, String, NetworkConfiguration, Configuration...)`
+ * To use the tracker as singleton see `getDefaultTracker()`
+ *
+ * IMPORTANT: The EventStore will persist all the events that have been tracked but not yet sent.
+ * Those events are attached to the namespace.
+ * If the tracker is removed or the app relaunched with a different namespace, those events can't
+ * be sent to the collector and they remain in a zombie state inside the EventStore.
+ * To remove all the zombie events you can an internal method `removeUnsentEventsExceptForNamespaces` on `SPSQLEventStore`
+ * which will delete all the EventStores instanced with namespaces not listed in the passed list.
  *
  * @param customerKey Customer key provided by conviva.
  * @param configurations All the configuration objects with the details about the fine tuning of
@@ -312,6 +334,11 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
  * @return Client Id.
  */
 - (NSString*) getClientId;
+
+/**
+ * @return Get last event info.
+ */
+- (NSDictionary *) getLastEventInfo:(long long)eventTimestamp;
 
 /* Remote config refresh interval */
 @property (nonatomic) NSInteger remoteCfgRefreshInterval;

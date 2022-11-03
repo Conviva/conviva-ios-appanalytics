@@ -95,7 +95,35 @@ NS_SWIFT_NAME(CATTrackerController)
  * @param name The event name.
  * @param data The event data.
  */
-- (void)trackCustomEvent:(NSString *)name data:(NSString*)data;
+- (void)trackCustomEvent:(NSString *)name data:(nullable NSString*)data;
+
+/**
+ * Track custom tags.
+ * Pass custom tags
+ * @param tags Tags.
+ */
+- (void)setCustomTags:(NSDictionary *)tags;
+
+/**
+ * Track custom tags.
+ * Pass custom tags
+ * @param category category.
+ * @param tags Tags.
+ */
+- (void)setCustomTags:(NSString *)category tags:(NSDictionary *)tags;
+
+/**
+ * Remove custom tags.
+ * Pass custom tags
+ */
+- (void)clearCustomTags;
+
+/**
+ * Set custom tags.
+ * Pass custom tags
+ * @param tagKeys tagKeys.
+ */
+- (void)clearCustomTags:(NSArray *)tagKeys;
 
 /**
  * Pause the tracker.

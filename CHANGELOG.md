@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.4 (11/03/2022)
+* Custom Tags support
+** Support is added to pass custom data as key-val pairs which are available in each event triggered by sdk and passed to backend.
+* Event Index and previous event timestamps are added for each event.
+* Event Index and first event timestamp of current session are added for each event.
+** Note: If user of this sdk also uses ConvivaSDK for Experience Insights/Ad Insights, ConvivaSDK version must be 4.0.28 or above to be compatable with ConvivaAppAnalytics version 0.2.4 or above
+
 ## 0.2.3 (09/01/2022)
 * Remote Configuraation support to enable/disable features from backend portal
 ** Ex: Enable/Disable button click tracking, screen view tracking, installAutotracking etc 

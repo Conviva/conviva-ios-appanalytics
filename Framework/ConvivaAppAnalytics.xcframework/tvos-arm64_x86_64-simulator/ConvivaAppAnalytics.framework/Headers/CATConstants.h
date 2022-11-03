@@ -93,6 +93,7 @@ extern NSString * const kCATApplicationInstallSchema;
 extern NSString * const kCATGdprContextSchema;
 extern NSString * const kCATDiagnosticErrorSchema;
 extern NSString * const kCATConvivaEventInfoSchema;
+extern NSString * const kCATConvivaCustomTagsSchema;
 
 // --- Event Keys
 
