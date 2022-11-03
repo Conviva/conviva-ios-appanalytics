@@ -76,5 +76,44 @@ When user navigates between screens, user journey is tracked by reading the clas
 * //Add below property in view controller
 * @objc var catViewId:String = “App Analytics View”
 
+# Custom Tags Support
+Support is added to pass custom data as key-val pairs which are available in each event triggered by sdk and passed to backend. Below are the new api additions to support Custom Tags.
+
+* Setter API
+/**
+ * Set custom tags.
+ * Pass custom tags
+ * @param tags Dictionary of Key-Val pairs.
+ */
+- (void)setCustomTags:(NSDictionary *)tags;
+
+** Usage
+NSDictionary* tags = @{
+    @"Key1": @"Value1",
+    @"Key2": @"Value2",
+};
+[self.tracker setCustomTags:tags];
+
+* Clear API
+/**
+ * Clears all custom tags.
+ */
+- (void)clearCustomTags;
+
+** Usage
+[self.tracker clearCustomTags];
+
+/**
+ * Clears custom tags which are matching keys as passed in.
+ * Keys of tags to be cleared
+ * @param tagKeys tagKeys.
+ */
+- (void)clearCustomTags:(NSArray *)tagKeys;
+
+** Usage
+NSArray* keys = @[ @"Key1", @"Key2", @"Key3" ];
+[self.tracker clearCustomTags:keys];
+
+
 # Note: If user of this sdk also uses ConvivaSDK for Experience Insights/Ad Insights, ConvivaSDK version must be 4.0.28 or above to be compatable with ConvivaAppAnalytics version 0.2.3 or above
  
