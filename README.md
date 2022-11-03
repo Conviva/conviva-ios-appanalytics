@@ -21,32 +21,33 @@ Use Application Analytics to autocollect events and track application specific e
   * In Other Linker Flags section in Xcode, add "-ObjC".
   * To refer to the Conviva classes from your source code, add the following import statements:
 
+```swift
 //Swift
-```
 import ConvivaAppAnalytics
-
 ```
 
+```objective-c
 //Objc
-```
 @import ConvivaAppAnalytics;
 
 ```
 
 # Initialize the top level object
 
+```swift
 //Swift
-```
+
 var tracker = CATAppAnalytics.createTracker(customerKey: "<YOUR_CUSTOMER_KEY_ADVISED_BY_Conviva>", appName: "<YOUR_APP_NAME_ADVISED_BY_Conviva>")
 ```
 
+```objective-c
 //ObjC
-```
+
 CATTracker *tracker = [CATAppAnalytics createTrackerWithCustomerKey:@"<YOUR_CUSTOMER_KEY_ADVISED_BY_Conviva>" appName:@"<YOUR_APP_NAME_ADVISED_BY_Conviva>"];
 ```
 
 # Set the user id (viewer id)
-```
+```swift
 tracker.subject.userId = @"user_id";
 ```
 
@@ -58,7 +59,7 @@ Use trackCustomEvent() to track all kinds of events. This API provides 2 fields 
 The following example shows the implementation of the 'onClick' 
 event listener to any element:
 
-```
+```swift
 let data = "{\"identifier1\": \"test\",\"identifier2\": 1,\"identifier3\":true}"
 self.tracker.trackCustomEvent("your-event-name", data: data);
 
