@@ -80,6 +80,8 @@ When user navigates between screens, user journey is tracked by reading the clas
 Support is added to pass custom data as key-val pairs which are available in each event triggered by sdk and passed to backend. Below are the new api additions to support Custom Tags.
 
 * Setter API
+
+```objective-c
 /**
  * Set custom tags.
  * Pass custom tags
@@ -113,6 +115,8 @@ NSDictionary* tags = @{
 ** Usage
 NSArray* keys = @[ @"Key1", @"Key2", @"Key3" ];
 [self.tracker clearCustomTags:keys];
+
+```
 
 
 # Note: If user of this sdk also uses ConvivaSDK for Experience Insights/Ad Insights, ConvivaSDK version must be 4.0.28 or above to be compatable with ConvivaAppAnalytics version 0.2.3 or above
