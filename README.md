@@ -67,21 +67,25 @@ self.tracker.trackCustomEvent("your-event-name", data: data);
 # Screen view tracking
 When user navigates between screens, user journey is tracked by reading the class names of UIViewController classes. Name of the screens can be customized using below code as per the bussiness needs.
 
+```objective-c
 * ObjC:
 * //Declare property like below
 * @property(copy, nonatomic)NSString *catViewId;
 * //Add below line in viewDidLoad method
 * self.catViewId = @“Customizable name”;
+```
+```swift
 * Swift:
 * //Add below property in view controller
 * @objc var catViewId:String = “App Analytics View”
+```
 
 # Custom Tags Support
 Support is added to pass custom data as key-val pairs which are available in each event triggered by sdk and passed to backend. Below are the new api additions to support Custom Tags.
 
+```objective-c
 * Setter API
 
-```objective-c
 /**
  * Set custom tags.
  * Pass custom tags
