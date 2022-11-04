@@ -85,7 +85,7 @@ When user navigates between screens, user journey is tracked by reading the clas
 Support is added to pass custom data as key-val pairs which are available in each event triggered by sdk and passed to backend. Below are the new api additions to support Custom Tags.
 
 ```objective-c
-* Setter API
+// Setter API
 
 /**
  * Set custom tags.
@@ -94,20 +94,20 @@ Support is added to pass custom data as key-val pairs which are available in eac
  */
 - (void)setCustomTags:(NSDictionary *)tags;
 
-** Usage
+// Usage
 NSDictionary* tags = @{
     @"Key1": @"Value1",
     @"Key2": @"Value2",
 };
 [self.tracker setCustomTags:tags];
 
-* Clear API
+// Clear API
 /**
  * Clears all custom tags.
  */
 - (void)clearCustomTags;
 
-** Usage
+// Usage
 [self.tracker clearCustomTags];
 
 /**
@@ -117,7 +117,7 @@ NSDictionary* tags = @{
  */
 - (void)clearCustomTags:(NSArray *)tagKeys;
 
-** Usage
+// Usage
 NSArray* keys = @[ @"Key1", @"Key2", @"Key3" ];
 [self.tracker clearCustomTags:keys];
 
