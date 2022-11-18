@@ -6,7 +6,7 @@ Use Application Analytics to autocollect events and track application specific e
    * https://github.com/conviva/conviva-ios-appanalytics
 * Cocoapods
    * Add below line in pods file
-     * pod 'ConvivaAppAnalytics', '0.2.4'
+     * pod 'ConvivaAppAnalytics', '0.2.5'
 
 * Manual Download
   * Download and unzip the package from Downloads. During the build phase, add ConvivaAppAnalytics.xcframework to Link Binary with Libraries section 
@@ -125,4 +125,5 @@ NSArray* keys = @[ @"Key1", @"Key2", @"Key3" ];
 
 
 # Note: If user of this sdk also uses ConvivaSDK for Experience Insights/Ad Insights, ConvivaSDK version must be 4.0.28 or above to be compatable with ConvivaAppAnalytics version 0.2.3 or above
+# To enable automatic collection of playback events, ConvivaSDK 4.0.32 or above must be used.
  

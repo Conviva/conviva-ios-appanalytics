@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.5 (11/18/2022)
+* Support to capture the playback events automatically from ConvivaSDK and reporting to AppAnalytics. If customer does not use ConvivaSDK for Experience Insights/Ad Insights, there is no impact on the event collection and everything else should work seamlessly.
+** Note: To enable automatic collection of playback events, ConvivaSDK 4.0.32 or above must be used.
+** Note: If user of this sdk also uses ConvivaSDK for Experience Insights/Ad Insights, ConvivaSDK version must be 4.0.28 or above to be compatable with ConvivaAppAnalytics version 0.2.4 or above
+
 ## 0.2.4 (11/03/2022)
 * Custom Tags support
 ** Support is added to pass custom data as key-val pairs which are available in each event triggered by sdk and passed to backend.
