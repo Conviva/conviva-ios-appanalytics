@@ -330,6 +330,10 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
  */
 + (instancetype)sharedInstance;
 
+
++ (void) mergeClientConfigs:(NSArray<CATConfiguration *>*) clientConfigs
+           withRemoteConfig:(NSArray<CATConfiguration *>*) remoteConfigs;
+
 /**
  * @return Client Id.
  */
@@ -339,6 +343,8 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
  * @return Get last event info.
  */
 - (NSDictionary *) getLastEventInfo:(long long)eventTimestamp;
+
+
 
 /* Remote config refresh interval */
 @property (nonatomic) NSInteger remoteCfgRefreshInterval;

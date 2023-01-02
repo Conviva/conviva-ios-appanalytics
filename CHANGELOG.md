@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.6 (01/02/2023)
+* Fixed an issue where app id set by customer is overwritten by bundle id.
+* Using latest schema(1-0-4) for video to app events.
+** Note: Compatable with ConvivaSDK 4.0.34/ConvivaAVFoundation 4.0.40 or above.
+
 ## 0.2.5 (11/18/2022)
 * Support to capture the playback events automatically from ConvivaSDK and reporting to AppAnalytics. If customer does not use ConvivaSDK for Experience Insights/Ad Insights, there is no impact on the event collection and everything else should work seamlessly.
 ** Note: To enable automatic collection of playback events, ConvivaSDK 4.0.32 or above must be used.
