@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.7 (02/13/2023)
+* Improved screen view tracking by filtering out unnecessary system view controllers. 
+* Added x-client-id header field for all events for inernal event routing.
+** Note: Compatable with ConvivaSDK 4.0.34/ConvivaAVFoundation 4.0.40 or above.
+
 ## 0.2.6 (01/02/2023)
 * Fixed an issue where app id set by customer is overwritten by bundle id.
 * Using latest schema(1-0-4) for video to app events.
