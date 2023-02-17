@@ -65,5 +65,40 @@ import ConvivaAppAnalytics
         CATAppAnalytics.defaultTracker()?.trackCustomEvent("button_click", data: data)
     
     }
+ 
+    func setCustomTags (category:String?, data:String?) {
+        
+        if let _ = data, data!.count > 0{
+            
+            guard let dict = convertToDictionary(text:data!) else { return  };
+            
+            self.tracker?.setCustomTags( dict)
+            
+        }
+        else {
+            self.tracker?.clearCustomTags()
+        }
+    }
+    
+    func clearTags(tags:[String]) {
+        self.tracker?.clearCustomTags(tags)
+    }
+    
+    func clearTags() {
+        // Clears all tags
+        self.tracker?.clearCustomTags()
+    }
+ 
+    func sendRawEvent (name:String?, data:String?) {
+        
+        if  let _ = name{
+            self.tracker?.trackCustomEvent(name!, data: data);
+        }
+        
+    }
+ 
+   func onLogOut {
+     CATAppAnalytics.defaultTracker()?.subject?.userId = nil;
+   }
 }
 
