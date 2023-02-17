@@ -61,10 +61,8 @@ import ConvivaAppAnalytics
     
     func trackButtonClick(button:UIButton) {
         
-        let eventToCapture:CATStructured = CATStructured(category: "user_action", action: "click")
-        eventToCapture.label = button.currentTitle;
-        eventToCapture.property = String(describing: type(of: button))
-        CATAppAnalytics.defaultTracker()?.track(eventToCapture)
+        let data = "{\"lable\": \(button.currentTitle!),\"property\": \(String(describing: type(of: button)))}"
+        self.tracker?.trackCustomEvent("button_click", data: data)
     
     }
 }
