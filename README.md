@@ -43,7 +43,7 @@ var tracker = CATAppAnalytics.createTracker(customerKey: "<YOUR_CUSTOMER_KEY_ADV
 ```objective-c
 //ObjC
 
-CATTracker *tracker = [CATAppAnalytics createTrackerWithCustomerKey:@"<YOUR_CUSTOMER_KEY_ADVISED_BY_Conviva>" appName:@"<YOUR_APP_NAME_ADVISED_BY_Conviva>"];
+CATTrackerController *tracker = [CATAppAnalytics createTrackerWithCustomerKey:@"<YOUR_CUSTOMER_KEY_ADVISED_BY_Conviva>" appName:@"<YOUR_APP_NAME_ADVISED_BY_Conviva>"];
 ```
 
 # Set the user id (viewer id)
