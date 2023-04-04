@@ -37,14 +37,18 @@ import ConvivaAppAnalytics
 ```swift
 //Swift
 
-var tracker = CATAppAnalytics.createTracker(customerKey: "<YOUR_CUSTOMER_KEY_ADVISED_BY_Conviva>", appName: "<YOUR_APP_NAME_ADVISED_BY_Conviva>")
+var tracker = CATAppAnalytics.createTracker(customerKey: customerKey, appName: appName)
 ```
 
 ```objective-c
 //ObjC
 
-CATTrackerController *tracker = [CATAppAnalytics createTrackerWithCustomerKey:@"<YOUR_CUSTOMER_KEY_ADVISED_BY_Conviva>" appName:@"<YOUR_APP_NAME_ADVISED_BY_Conviva>"];
+CATTrackerController *tracker = [CATAppAnalytics createTrackerWithCustomerKey:customerKey appName:appName]
 ```
+
+<strong>customerKey</strong> - a string to identify specific customer account. Different keys shall be used for development / debug versus production environment. Find your keys on the account info page in Pulse.
+
+<strong>appName</strong> - a string value used to distinguish your applications. Simple values that are unique across all of your integrated platforms work best here.
 
 # Set the user id (viewer id)
 ```swift
