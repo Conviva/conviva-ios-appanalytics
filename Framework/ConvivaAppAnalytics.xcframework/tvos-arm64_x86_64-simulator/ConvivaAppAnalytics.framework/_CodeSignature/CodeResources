@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/CATConfigurationBundle.h</key>
 		<data>
-		3Czra716F+gCXAu9WOAgg7PxTqI=
+		QkQINtlq2D2b0HIiqW5NpAORWGg=
 		</data>
 		<key>Headers/CATConsentDocument.h</key>
 		<data>
@@ -140,6 +140,10 @@
 		<data>
 		dQbjrYC8IP7iDJJz+dPxHyGV1Rw=
 		</data>
+		<key>Headers/CATNetworkReqTrackingConfiguration.h</key>
+		<data>
+		5lseGQek+3hSFtQ+NxpWIpg+bys=
+		</data>
 		<key>Headers/CATPageView.h</key>
 		<data>
 		VQNX7kxmwB5+joF8LLyQT4gBF90=
@@ -226,7 +230,7 @@
 		</data>
 		<key>Headers/CATTrackerController.h</key>
 		<data>
-		dmxHoNyiKtszXU5pRa3wu8tIDwg=
+		9AuUKEPHYwwr8gOMou2EeGcYV/M=
 		</data>
 		<key>Headers/CATTrackerStateSnapshot.h</key>
 		<data>
@@ -238,11 +242,11 @@
 		</data>
 		<key>Headers/ConvivaAppAnalytics-tvOS-umbrella.h</key>
 		<data>
-		h7NG2cSItii9OG8xyfPBxemyQD4=
+		dEdZb5XUJUmI4vzdhY2M5grW+vE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hXgAsdyIzd5WTiW1M2g5nrCtW9I=
+		Yd2PR9Pzpjqi+Xg9aecWoJY4SB4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -288,11 +292,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3Czra716F+gCXAu9WOAgg7PxTqI=
+			QkQINtlq2D2b0HIiqW5NpAORWGg=
 			</data>
 			<key>hash2</key>
 			<data>
-			2a2cVR1JJcTZCwPT/ubXOwHugj+ibtA+L6e8lZx1WvE=
+			AZQngjrb+GRLajlrj1bPF8j8GvxQl6VXM9NY0SofvbU=
 			</data>
 		</dict>
 		<key>Headers/CATConsentDocument.h</key>
@@ -625,6 +629,17 @@
 			cSVLT5Cvi1Pdy9IhUM40VmjDYliXhdoZxBIsSWxzK/4=
 			</data>
 		</dict>
+		<key>Headers/CATNetworkReqTrackingConfiguration.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5lseGQek+3hSFtQ+NxpWIpg+bys=
+			</data>
+			<key>hash2</key>
+			<data>
+			5RfD81jmZ3fWku3wJ0VpbM1Yka9sgvNeLRD+cWvQoYQ=
+			</data>
+		</dict>
 		<key>Headers/CATPageView.h</key>
 		<dict>
 			<key>hash</key>
@@ -860,11 +875,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dmxHoNyiKtszXU5pRa3wu8tIDwg=
+			9AuUKEPHYwwr8gOMou2EeGcYV/M=
 			</data>
 			<key>hash2</key>
 			<data>
-			UN9sX4RDTYfNYV7188U99C684IP2RVis0sGY3cUuo3Q=
+			u5UwCsQO3w50zIKA5jy7SlTgoYAH6eu0Y+Uui8gTijg=
 			</data>
 		</dict>
 		<key>Headers/CATTrackerStateSnapshot.h</key>
@@ -893,11 +908,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			h7NG2cSItii9OG8xyfPBxemyQD4=
+			dEdZb5XUJUmI4vzdhY2M5grW+vE=
 			</data>
 			<key>hash2</key>
 			<data>
-			5fPdnYVFDB1mP2p5O1cpwi4KNVuc2LkRJFQoWLYd3Jw=
+			PO8mlPCP0+NSF/OMf22iz1ylFN2KYl4xdRfqMo5xDs8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

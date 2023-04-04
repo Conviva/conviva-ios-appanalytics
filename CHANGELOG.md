@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.8 (04/14/2023)
+* Added support to auto collect network request(http/https) performance metrics.Supports both NSURLSession and NSURLConnection frameworks.
+** Note: Compatable with ConvivaSDK 4.0.34/ConvivaAVFoundation 4.0.40 or above.
+
 ## 0.2.7 (02/13/2023)
 * Improved screen view tracking by filtering out unnecessary system view controllers. 
 * Added x-client-id header field for all events for inernal event routing.

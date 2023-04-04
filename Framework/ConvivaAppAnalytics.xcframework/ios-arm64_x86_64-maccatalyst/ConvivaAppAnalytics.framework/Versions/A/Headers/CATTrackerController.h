@@ -113,10 +113,16 @@ NS_SWIFT_NAME(CATTrackerController)
 - (void)setCustomTags:(NSString *)category tags:(NSDictionary *)tags;
 
 /**
- * Remove custom tags.
- * Pass custom tags
+ * Removes all custom tags.
+ *
  */
-- (void)clearCustomTags;
+- (void) clearCustomTags;
+
+/**
+ * Removes all custom tags.
+ *
+ */
+- (void)clearAllCustomTags;
 
 /**
  * Set custom tags.
