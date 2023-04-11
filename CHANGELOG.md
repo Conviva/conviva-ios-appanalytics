@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.9 (04/11/2023)
+* Added required support for flutter.Please refer https://pub.dev/packages/conviva_tracker for more details on how to integrate Conviva AppAnalytics to Flutter iOS apps.
+** Note: Compatable with ConvivaSDK 4.0.34/ConvivaAVFoundation 4.0.40 or above.
+
 ## 0.2.8 (04/14/2023)
 * Added support to auto collect network request(http/https) performance metrics.Supports both NSURLSession and NSURLConnection frameworks.
 ** Note: Compatable with ConvivaSDK 4.0.34/ConvivaAVFoundation 4.0.40 or above.
