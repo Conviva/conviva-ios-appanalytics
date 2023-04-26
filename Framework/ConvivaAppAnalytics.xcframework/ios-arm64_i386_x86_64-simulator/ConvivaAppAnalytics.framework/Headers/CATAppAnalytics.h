@@ -368,6 +368,22 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
 - (NSString*) getClientId;
 
 /**
+ * @return Client Id Event Index.
+ */
+- (NSInteger) getClientIdEventIndex;
+
+/**
+ *  Sets Client Id Event Index.
+ *  @param index - Sets Client Id Event Index.
+ */
+- (void) setClientIdIndex:(NSInteger)index;
+
+/**
+ *  Sync Client Id Event Index.
+ */
+- (void) syncClientIdEventIndex;
+
+/**
  * @return Get last event info.
  */
 - (NSDictionary *) getLastEventInfo:(long long)eventTimestamp;

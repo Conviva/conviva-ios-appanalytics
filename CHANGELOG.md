@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.10 (04/26/2023)
+* Added event index to client id schema which useful for efficient session management. 
+** Note: Compatable with ConvivaSDK 4.0.34/ConvivaAVFoundation 4.0.40 or above.
+
 ## 0.2.9 (04/11/2023)
 * Added required support for flutter.Please refer https://pub.dev/packages/conviva_tracker for more details on how to integrate Conviva AppAnalytics to Flutter iOS apps.
 ** Note: Compatable with ConvivaSDK 4.0.34/ConvivaAVFoundation 4.0.40 or above.
