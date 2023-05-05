@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.12 (05/04/2023)
+* Added required support for React Native apps.Please refer https://www.npmjs.com/package/@convivainc/conviva-react-native-appanalytics for more details on how to integrate Conviva AppAnalytics to React Native iOS apps.
+** Note: Compatable with ConvivaSDK 4.0.34/ConvivaAVFoundation 4.0.40 or above.
+
 ## 0.2.10 (04/26/2023)
 * Added event index to client id schema which is useful for efficient session management. 
 ** Note: Compatable with ConvivaSDK 4.0.34/ConvivaAVFoundation 4.0.40 or above.
