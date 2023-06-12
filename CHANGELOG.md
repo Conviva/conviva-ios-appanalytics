@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.13 (06/12/2023)
+* Enhances applying of the remote configuration at an interval of cacheRefreshInterval which is set to 30 mins by default.
+* Fixes the issue of duplicate instance id when the application is crashed and relaunched.
+* Enhances the auto collection of screen_view event, by excluding the child views tracking.
+* Auto Capture of Segment Control Tracking.
+* Reporting Keychain errors as diagnostic errors.
+** Note: Compatable with ConvivaSDK 4.0.34/ConvivaAVFoundation 4.0.40 or above.
+
 ## 0.2.12 (05/04/2023)
 * Added required support for React Native apps.Please refer https://www.npmjs.com/package/@convivainc/conviva-react-native-appanalytics for more details on how to integrate Conviva AppAnalytics to React Native iOS apps.
 ** Note: Compatable with ConvivaSDK 4.0.34/ConvivaAVFoundation 4.0.40 or above.

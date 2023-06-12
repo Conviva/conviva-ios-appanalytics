@@ -420,10 +420,18 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
 
 
 /* Remote config refresh interval */
-@property (nonatomic) NSInteger remoteCfgRefreshInterval;
+//@property (nonatomic) NSInteger remoteCfgRefreshInterval;
 
 @property (nonatomic, nonnull, readonly) NSMutableDictionary<NSString *, CATServiceProvider *> *serviceProviderInstances;
 @property (nonatomic, nullable, readonly) CATConfigurationProvider *configurationProvider;
+@property (nonatomic, nullable, strong) NSTimer *remoteConfigTimer;
+
+- (void)setCacheRefreshInterval:(NSInteger)cacheRefreshInterval;
+- (NSInteger)lastCacheRefreshInterval;
+- (void)fetchConfigurationOnlyRemote:(BOOL)onlyRemote;
+- (void)createRemoteConfigTimerWithInterval:(NSTimeInterval)timeInterval;
+- (BOOL)doesRemoteConfigNeedRefresh;
+- (NSTimeInterval)timeToCheckForLatestConfigFromServer;
 
 @end
 
