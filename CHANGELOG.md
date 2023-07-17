@@ -1,7 +1,9 @@
 # Changelog
 
 ## 0.2.14 (07/17/2023)
-* Minor changes in remote configuration.
+* Added Crash Exception Handling.
+* Added trackCustomEvent API which accepts Object as an argument.
+* Minor changes to Network Request Collection.
 
 ## 0.2.13 (06/12/2023)
 * Enhances applying of the remote configuration at an interval of cacheRefreshInterval which is set to 30 mins by default.
