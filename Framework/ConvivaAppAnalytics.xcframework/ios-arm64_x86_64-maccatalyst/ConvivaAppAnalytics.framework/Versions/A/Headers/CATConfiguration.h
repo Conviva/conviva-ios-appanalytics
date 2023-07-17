@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(CATConfiguration)
 @interface CATConfiguration : NSObject <NSCopying, NSSecureCoding>
 
-- (instancetype)initWithDictionary:(NSDictionary<NSString *, NSObject *> *)dictionary;
+- (nullable instancetype)initWithDictionary:(NSDictionary<NSString *, NSObject *> *)dictionary;
 
 @end
 

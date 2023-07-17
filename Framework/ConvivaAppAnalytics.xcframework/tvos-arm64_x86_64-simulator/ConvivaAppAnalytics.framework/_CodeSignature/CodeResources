@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CATAppAnalytics.h</key>
 		<data>
-		+U8ELNEDnWVWFZ/wCt8Won4nvWk=
+		nVhUym/GhbOgDEhV026BbFfpA04=
 		</data>
 		<key>Headers/CATBackground.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/CATConfiguration.h</key>
 		<data>
-		1Y3DO6AkFAKONkJpCaHIZfXUthQ=
+		bmA9+fxJAz/Bgxkk4oAjbyak/DI=
 		</data>
 		<key>Headers/CATConfigurationBundle.h</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>Headers/CATNetworkConfiguration.h</key>
 		<data>
-		ZSYSnv+QU14dzvHoUi/OQE6PmsQ=
+		ZVt3jjPOQskQrUwVOfdx/2xb3LA=
 		</data>
 		<key>Headers/CATNetworkConnection.h</key>
 		<data>
@@ -198,7 +198,7 @@
 		</data>
 		<key>Headers/CATSessionConfiguration.h</key>
 		<data>
-		XVN/XaV1f+jD/09aZtSUUKHM1f4=
+		8H4UyZ5RTNjB1KTpuMCO6oDYa14=
 		</data>
 		<key>Headers/CATSessionController.h</key>
 		<data>
@@ -230,7 +230,7 @@
 		</data>
 		<key>Headers/CATTrackerController.h</key>
 		<data>
-		9AuUKEPHYwwr8gOMou2EeGcYV/M=
+		5AaQMsWYDEp5qzK/5ztQzJeJ1Yc=
 		</data>
 		<key>Headers/CATTrackerStateSnapshot.h</key>
 		<data>
@@ -246,7 +246,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Ss/LlGB1om3HNMTbbQ/rBOSQjLY=
+		W0YVF/arOlkL5HvvGidfT3eyMqw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -259,11 +259,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+U8ELNEDnWVWFZ/wCt8Won4nvWk=
+			nVhUym/GhbOgDEhV026BbFfpA04=
 			</data>
 			<key>hash2</key>
 			<data>
-			FcN4J9/xpqun9fIMUXkw9BI/C2gJgdoWGpyLPjuCxSc=
+			aU16tL9yOTMRXcG0KtSCiJUXVkcXF7EnkjMg+0Tf1po=
 			</data>
 		</dict>
 		<key>Headers/CATBackground.h</key>
@@ -281,11 +281,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1Y3DO6AkFAKONkJpCaHIZfXUthQ=
+			bmA9+fxJAz/Bgxkk4oAjbyak/DI=
 			</data>
 			<key>hash2</key>
 			<data>
-			cvWWpa5yrGrv70lthOh2zeGNnS9+zcY3/8VK3cgl4Os=
+			lSqIJsnxP8rKEERGpVAVSf5dt0UZLCi6je3Nc+YY0rw=
 			</data>
 		</dict>
 		<key>Headers/CATConfigurationBundle.h</key>
@@ -600,11 +600,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZSYSnv+QU14dzvHoUi/OQE6PmsQ=
+			ZVt3jjPOQskQrUwVOfdx/2xb3LA=
 			</data>
 			<key>hash2</key>
 			<data>
-			M94zviJPyqOY0piq9kz2E5TLeqc6BN2qtNX6TJdvVF8=
+			6Y9MaoSONS9+JYg54GUekdaKivBJ4XBQ9ElbaI6YXxc=
 			</data>
 		</dict>
 		<key>Headers/CATNetworkConnection.h</key>
@@ -787,11 +787,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XVN/XaV1f+jD/09aZtSUUKHM1f4=
+			8H4UyZ5RTNjB1KTpuMCO6oDYa14=
 			</data>
 			<key>hash2</key>
 			<data>
-			DV4DuqrE+R9AWw45ZMkKH2Bxh+5QHDJmNHHt5I3GxT8=
+			uI48e3hYhZ3DMk6mZmDhAvnLw/YMwYqJv5ar4uyIjyQ=
 			</data>
 		</dict>
 		<key>Headers/CATSessionController.h</key>
@@ -875,11 +875,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9AuUKEPHYwwr8gOMou2EeGcYV/M=
+			5AaQMsWYDEp5qzK/5ztQzJeJ1Yc=
 			</data>
 			<key>hash2</key>
 			<data>
-			u5UwCsQO3w50zIKA5jy7SlTgoYAH6eu0Y+Uui8gTijg=
+			7/TuSFEbFD4nMbzoB852vM7QWvmLqolYU/e2hefPxy8=
 			</data>
 		</dict>
 		<key>Headers/CATTrackerStateSnapshot.h</key>

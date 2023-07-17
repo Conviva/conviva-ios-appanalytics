@@ -76,14 +76,14 @@ NS_SWIFT_NAME(CATSessionConfiguration)
  * @param foregroundTimeout The timeout set for the inactivity of app when in foreground.
  * @param backgroundTimeout The timeout set for the inactivity of app when in background.
  */
-- (instancetype)initWithForegroundTimeoutInSeconds:(NSInteger)foregroundTimeout backgroundTimeoutInSeconds:(NSInteger)backgroundTimeout;
+- (nullable instancetype)initWithForegroundTimeoutInSeconds:(NSInteger)foregroundTimeout backgroundTimeoutInSeconds:(NSInteger)backgroundTimeout;
 
 /**
  * This will setup the session behaviour of the tracker.
  * @param foregroundTimeout The timeout set for the inactivity of app when in foreground.
  * @param backgroundTimeout The timeout set for the inactivity of app when in background.
  */
-- (instancetype)initWithForegroundTimeout:(NSMeasurement<NSUnitDuration *> *)foregroundTimeout
+- (nullable instancetype)initWithForegroundTimeout:(NSMeasurement<NSUnitDuration *> *)foregroundTimeout
                         backgroundTimeout:(NSMeasurement<NSUnitDuration *> *)backgroundTimeout
 API_AVAILABLE(ios(10), macosx(10.12), tvos(10.0), watchos(3.0));
 

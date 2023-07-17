@@ -82,7 +82,7 @@ NS_SWIFT_NAME(CATNetworkConfiguration)
  *                 In case the URL doesn't include the schema/protocol, the HTTPS protocol is
  *                 automatically selected.
  */
-- (instancetype)initWithEndpoint:(NSString *)endpoint;
+- (nullable instancetype)initWithEndpoint:(NSString *)endpoint;
 
 /**
  * @param endpoint URL of the collector that is going to receive the events tracked by the tracker.
@@ -91,13 +91,13 @@ NS_SWIFT_NAME(CATNetworkConfiguration)
  *                 automatically selected.
  * @param method The method used to send the requests (GET or POST).
  */
-- (instancetype)initWithEndpoint:(NSString *)endpoint method:(CATHttpMethod)method;
+- (nullable instancetype)initWithEndpoint:(NSString *)endpoint method:(CATHttpMethod)method;
 
 /**
  * @param networkConnection The NetworkConnection component which will control the
  *                          communication between the tracker and the collector.
  */
-- (instancetype)initWithNetworkConnection:(id<CATNetworkConnection>)networkConnection;
+- (nullable instancetype)initWithNetworkConnection:(id<CATNetworkConnection>)networkConnection;
 
 SP_BUILDER_DECLARE_NULLABLE(NSString *, customPostPath)
 SP_BUILDER_DECLARE_NULLABLE(NSDictionary *, requestHeaders)

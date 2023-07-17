@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.14 (07/17/2023)
+* Minor changes in remote configuration.
+
 ## 0.2.13 (06/12/2023)
 * Enhances applying of the remote configuration at an interval of cacheRefreshInterval which is set to 30 mins by default.
 * Fixes the issue of duplicate instance id when the application is crashed and relaunched.

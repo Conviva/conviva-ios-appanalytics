@@ -119,7 +119,7 @@ NS_SWIFT_NAME(CATAppAnalytics)
  * @param appName Uniquely identifiable app name.
  * @return The tracker instance created.
  */
-+ (id<CATTrackerController>)createTrackerWithCustomerKey:(NSString*)customerKey appName:(NSString*)appName NS_SWIFT_NAME(createTracker(customerKey:appName:));
++ (nullable id<CATTrackerController>)createTrackerWithCustomerKey:(NSString*)customerKey appName:(NSString*)appName NS_SWIFT_NAME(createTracker(customerKey:appName:));
 
 
 /**
@@ -145,7 +145,7 @@ NS_SWIFT_NAME(CATAppAnalytics)
  *                       the tracker.
  * @return The tracker instance created.
  */
-+ (id<CATTrackerController>)createTrackerWithCustomerKey:(NSString*)customerKey
++ (nullable id<CATTrackerController>)createTrackerWithCustomerKey:(NSString*)customerKey
                                                  appName:(NSString*)appName
                                           configurations:(NSArray<CATConfiguration *> *)configurations NS_SWIFT_NAME(createTracker(customerKey:appName:configurations:));
 
@@ -169,7 +169,7 @@ NS_SWIFT_NAME(CATAppAnalytics)
  * @param appName Uniquely identifiable app name.
  * @return The tracker instance created.
  */
-+ (id<CATTrackerController>)createTrackerWithCustomerKey:(NSString*)customerKey appName:(NSString*)appName namespace:(NSString *)namespace NS_SWIFT_NAME(createTracker(customerKey:appName:namespace:));
++ (nullable id<CATTrackerController>)createTrackerWithCustomerKey:(NSString*)customerKey appName:(NSString*)appName namespace:(NSString *)namespace NS_SWIFT_NAME(createTracker(customerKey:appName:namespace:));
 
 /**
  * Create a new tracker instance which will be used inside the app to track events.
@@ -196,7 +196,7 @@ NS_SWIFT_NAME(CATAppAnalytics)
  *                       the tracker.
  * @return The tracker instance created.
  */
-+ (id<CATTrackerController>)createTrackerWithCustomerKey:(NSString*)customerKey
++ (nullable id<CATTrackerController>)createTrackerWithCustomerKey:(NSString*)customerKey
                                                  appName:(NSString*)appName
                                                  network:(CATNetworkConfiguration *)networkConfiguration
                                           configurations:(NSArray<CATConfiguration *> *)configurations;
@@ -222,7 +222,7 @@ NS_SWIFT_NAME(CATAppAnalytics)
  *                       the tracker.
  * @return The tracker instance created.
  */
-+ (id<CATTrackerController>)createTrackerWithCustomerKey:(NSString*)customerKey
++ (nullable id<CATTrackerController>)createTrackerWithCustomerKey:(NSString*)customerKey
                                           configurations:(NSArray<CATConfiguration *> *)configurations NS_SWIFT_NAME(createTracker(customerKey:configurations:));
 
 /**
@@ -249,7 +249,7 @@ NS_SWIFT_NAME(CATAppAnalytics)
  *                       the tracker.
  * @return The tracker instance created.
  */
-+ (id<CATTrackerController>)createTrackerWithCustomerKey:(NSString*)customerKey
++ (nullable id<CATTrackerController>)createTrackerWithCustomerKey:(NSString*)customerKey
                                                  network:(CATNetworkConfiguration *)networkConfiguration
                                           configurations:(NSArray<CATConfiguration *> *)configurations NS_SWIFT_NAME(createTracker(customerKey:network:configurations:));
 
@@ -277,7 +277,7 @@ NS_SWIFT_NAME(CATAppAnalytics)
  * @param method The method for the requests to the collector (GET or POST).
  * @return The tracker instance created.
  */
-+ (id<CATTrackerController>)createTrackerWithNamespace:(NSString *)namespace customerKey:(NSString*)customerKey endpoint:(NSString *)endpoint method:(CATHttpMethod)method NS_SWIFT_NAME(createTracker(namespace:customerKey:endpoint:method:));
++ (nullable id<CATTrackerController>)createTrackerWithNamespace:(NSString *)namespace customerKey:(NSString*)customerKey endpoint:(NSString *)endpoint method:(CATHttpMethod)method NS_SWIFT_NAME(createTracker(namespace:customerKey:endpoint:method:));
 
 /**
  * Create a new tracker instance which will be used inside the app to track events.
@@ -303,7 +303,7 @@ NS_SWIFT_NAME(CATAppAnalytics)
  *                collector.
  * @return The tracker instance created.
  */
-+ (id<CATTrackerController>)createTrackerWithNamespace:(NSString *)namespace customerKey:(NSString*)customerKey network:(CATNetworkConfiguration *)networkConfiguration NS_SWIFT_NAME(createTracker(namespace:customerKey:network:));
++ (nullable id<CATTrackerController>)createTrackerWithNamespace:(NSString *)namespace customerKey:(NSString*)customerKey network:(CATNetworkConfiguration *)networkConfiguration NS_SWIFT_NAME(createTracker(namespace:customerKey:network:));
 
 /**
  * Create a new tracker instance which will be used inside the app to track events.
@@ -331,7 +331,7 @@ NS_SWIFT_NAME(CATAppAnalytics)
  *                       the tracker.
  * @return The tracker instance created.
  */
-+ (id<CATTrackerController>)createTrackerWithNamespace:(NSString *)namespace customerKey:(NSString*)customerKey
++ (nullable id<CATTrackerController>)createTrackerWithNamespace:(NSString *)namespace customerKey:(NSString*)customerKey
 network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<CATConfiguration *> *)configurations NS_SWIFT_NAME(createTracker(namespace:customerKey:network:configurations:));
 
 /**
@@ -380,12 +380,12 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
 /**
  * @return Set of namespace of the active trackers in the app.
  */
-+ (NSArray<NSString *> *)instancedTrackerNamespaces;
++ (nullable NSArray<NSString *> *)instancedTrackerNamespaces;
 
 /**
  * @return AppAnalytics instance.
  */
-+ (instancetype)sharedInstance;
++ (nullable instancetype)sharedInstance;
 
 
 + (void) mergeClientConfigs:(NSArray<CATConfiguration *>*) clientConfigs
@@ -394,7 +394,7 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
 /**
  * @return Client Id.
  */
-- (NSString*) getClientId;
+- (nullable NSString*) getClientId;
 
 /**
  * @return Client Id Event Index.
@@ -415,7 +415,7 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
 /**
  * @return Get last event info.
  */
-- (NSDictionary *) getLastEventInfo:(long long)eventTimestamp;
+- (nullable NSDictionary *) getLastEventInfo:(long long)eventTimestamp;
 
 
 
