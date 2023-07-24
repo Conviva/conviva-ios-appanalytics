@@ -22,12 +22,12 @@ Use Application Analytics to autocollect events and track application specific e
   * To refer to the Conviva classes from your source code, add the following import statements:
 
 ```swift
-//Swift
+* Swift:
 import ConvivaAppAnalytics
 ```
 
 ```objective-c
-//Objc
+* ObjC:
 @import ConvivaAppAnalytics;
 
 ```
@@ -35,12 +35,12 @@ import ConvivaAppAnalytics
 # Initialize the top level object
 
 ```swift
-//Swift
+* Swift:
 var tracker = CATAppAnalytics.createTracker(customerKey: customerKey, appName: appName)
 ```
 
 ```objective-c
-//ObjC
+* ObjC:
 id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey:customerKey appName:appName]
 ```
 
@@ -50,12 +50,12 @@ id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey
 
 # Set the user id (viewer id)
 ```swift
-//Swift
+* Swift:
 tracker.subject.userId = "user_id";
 ```
 
 ```objective-c
-//ObjC
+* ObjC:
 tracker.subject.userId = @"user_id";
 ```
 # Custom event tracking to track your application specific events and state changes
@@ -97,6 +97,7 @@ When user navigates between screens, user journey is tracked by reading the clas
 Support is added to pass custom data as key-val pairs which are available in each event triggered by sdk and passed to backend. Below are the new api additions to support Custom Tags.
 
 ```objective-c
+* ObjC:
 // Setter API
 
 /**
@@ -135,7 +136,7 @@ NSArray* keys = @[ @"Key1", @"Key2", @"Key3" ];
 
 ```
 ```swift
-//Swift
+* Swift:
 //Usage: Set custom tags
 let tags = ["Key1": "Value1", "Key2": "Value2"]
 tracker.setCustomTags(tags)
