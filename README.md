@@ -43,7 +43,7 @@ var tracker = CATAppAnalytics.createTracker(customerKey: customerKey, appName: a
 ```objective-c
 //ObjC
 
-CATTrackerController *tracker = [CATAppAnalytics createTrackerWithCustomerKey:customerKey appName:appName]
+id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey:customerKey appName:appName]
 ```
 
 <strong>customerKey</strong> - a string to identify specific customer account. Different keys shall be used for development / debug versus production environment. Find your keys on the account info page in Pulse.
@@ -52,9 +52,14 @@ CATTrackerController *tracker = [CATAppAnalytics createTrackerWithCustomerKey:cu
 
 # Set the user id (viewer id)
 ```swift
-tracker.subject.userId = @"user_id";
+//Swift
+tracker.subject.userId = "user_id";
 ```
 
+```objective-c
+//ObjC
+tracker.subject.userId = @"user_id";
+```
 # Custom event tracking to track your application specific events and state changes
 Use trackCustomEvent() to track all kinds of events. This API provides 2 fields to describe the tracked events. 
   * eventName  - Name of the custom event.
@@ -64,9 +69,15 @@ The following example shows the implementation of the 'onClick'
 event listener to any element:
 
 ```swift
+//Swift
 let data = "{\"identifier1\": \"test\",\"identifier2\": 1,\"identifier3\":true}"
 self.tracker.trackCustomEvent("your-event-name", data: data);
+```
 
+```objective-c
+//ObjC
+NSString *data = @"{\"identifier1\": \"test\",\"identifier2\": 1,\"identifier3\":true}";
+[self.tracker trackCustomEvent:@"your-event-name" data:data];
 ```
 
 # Screen view tracking
@@ -77,12 +88,12 @@ When user navigates between screens, user journey is tracked by reading the clas
 * //Declare property like below
 * @property(copy, nonatomic)NSString *catViewId;
 * //Add below line in viewDidLoad method
-* self.catViewId = @“Customizable name”;
+* self.catViewId = @"Customizable name";
 ```
 ```swift
 * Swift:
 * //Add below property in view controller
-* @objc var catViewId:String = “App Analytics View”
+* @objc var catViewId:String = "App Analytics View"
 ```
 
 # Custom Tags Support
