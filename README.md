@@ -67,13 +67,13 @@ The following example shows the implementation of the 'onClick'
 event listener to any element:
 
 ```swift
-//Swift
+* Swift:
 let data = "{\"identifier1\": \"test\",\"identifier2\": 1,\"identifier3\":true}"
 tracker.trackCustomEvent("your-event-name", data: data);
 ```
 
 ```objective-c
-//ObjC
+* ObjC:
 NSString *data = @"{\"identifier1\": \"test\",\"identifier2\": 1,\"identifier3\":true}";
 [tracker trackCustomEvent:@"your-event-name" data:data];
 ```
