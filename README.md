@@ -36,13 +36,11 @@ import ConvivaAppAnalytics
 
 ```swift
 //Swift
-
 var tracker = CATAppAnalytics.createTracker(customerKey: customerKey, appName: appName)
 ```
 
 ```objective-c
 //ObjC
-
 id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey:customerKey appName:appName]
 ```
 
@@ -83,6 +81,11 @@ NSString *data = @"{\"identifier1\": \"test\",\"identifier2\": 1,\"identifier3\"
 # Screen view tracking
 When user navigates between screens, user journey is tracked by reading the class names of UIViewController classes. Name of the screens can be customized using below code as per the bussiness needs.
 
+```swift
+* Swift:
+* //Add below property in view controller
+* @objc var catViewId:String = "App Analytics View"
+```
 ```objective-c
 * ObjC:
 * //Declare property like below
@@ -90,12 +93,6 @@ When user navigates between screens, user journey is tracked by reading the clas
 * //Add below line in viewDidLoad method
 * self.catViewId = @"Customizable name";
 ```
-```swift
-* Swift:
-* //Add below property in view controller
-* @objc var catViewId:String = "App Analytics View"
-```
-
 # Custom Tags Support
 Support is added to pass custom data as key-val pairs which are available in each event triggered by sdk and passed to backend. Below are the new api additions to support Custom Tags.
 
@@ -109,7 +106,7 @@ Support is added to pass custom data as key-val pairs which are available in eac
  */
 - (void)setCustomTags:(NSDictionary *)tags;
 
-// Usage
+//Usage
 NSDictionary* tags = @{
     @"Key1": @"Value1",
     @"Key2": @"Value2",
@@ -122,7 +119,7 @@ NSDictionary* tags = @{
  */
 - (void)clearCustomTags;
 
-// Usage
+//Usage
 [self.tracker clearCustomTags];
 
 /**
@@ -132,10 +129,21 @@ NSDictionary* tags = @{
  */
 - (void)clearCustomTags:(NSArray *)tagKeys;
 
-// Usage
+//Usage
 NSArray* keys = @[ @"Key1", @"Key2", @"Key3" ];
 [self.tracker clearCustomTags:keys];
 
+```
+```swift
+//Swift
+//Usage: Set custom tags
+let tags = ["Key1": "Value1", "Key2": "Value2"]
+tracker.setCustomTags(tags)
+//Usage: Clear all custom tags
+tracker.clearCustomTags()
+//Usage: Clear custom tags
+let keys = ["Key1", "Key2", "Key3"]
+tracker.clearCustomTags(keys)
 ```
 
 
