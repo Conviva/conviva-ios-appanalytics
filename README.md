@@ -69,13 +69,13 @@ event listener to any element:
 ```swift
 //Swift
 let data = "{\"identifier1\": \"test\",\"identifier2\": 1,\"identifier3\":true}"
-self.tracker.trackCustomEvent("your-event-name", data: data);
+tracker.trackCustomEvent("your-event-name", data: data);
 ```
 
 ```objective-c
 //ObjC
 NSString *data = @"{\"identifier1\": \"test\",\"identifier2\": 1,\"identifier3\":true}";
-[self.tracker trackCustomEvent:@"your-event-name" data:data];
+[tracker trackCustomEvent:@"your-event-name" data:data];
 ```
 
 # Screen view tracking
@@ -111,7 +111,7 @@ NSDictionary* tags = @{
     @"Key1": @"Value1",
     @"Key2": @"Value2",
 };
-[self.tracker setCustomTags:tags];
+[tracker setCustomTags:tags];
 
 // Clear API
 /**
@@ -120,7 +120,7 @@ NSDictionary* tags = @{
 - (void)clearCustomTags;
 
 //Usage
-[self.tracker clearCustomTags];
+[tracker clearCustomTags];
 
 /**
  * Clears custom tags which are matching keys as passed in.
@@ -131,7 +131,7 @@ NSDictionary* tags = @{
 
 //Usage
 NSArray* keys = @[ @"Key1", @"Key2", @"Key3" ];
-[self.tracker clearCustomTags:keys];
+[tracker clearCustomTags:keys];
 
 ```
 ```swift
@@ -139,8 +139,10 @@ NSArray* keys = @[ @"Key1", @"Key2", @"Key3" ];
 //Usage: Set custom tags
 let tags = ["Key1": "Value1", "Key2": "Value2"]
 tracker.setCustomTags(tags)
+
 //Usage: Clear all custom tags
 tracker.clearCustomTags()
+
 //Usage: Clear custom tags
 let keys = ["Key1", "Key2", "Key3"]
 tracker.clearCustomTags(keys)
