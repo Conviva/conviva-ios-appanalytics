@@ -51,7 +51,7 @@ id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey
 # Set the user id (viewer id)
 ```swift
 * Swift:
-tracker.subject.userId = "user_id";
+tracker?.subject?.userId = "user_id";
 ```
 
 ```objective-c
@@ -69,7 +69,7 @@ event listener to any element:
 ```swift
 * Swift:
 let data = "{\"identifier1\": \"test\",\"identifier2\": 1,\"identifier3\":true}"
-tracker.trackCustomEvent("your-event-name", data: data);
+tracker?.trackCustomEvent("your-event-name", data: data);
 ```
 
 ```objective-c
@@ -139,14 +139,14 @@ NSArray* keys = @[ @"Key1", @"Key2", @"Key3" ];
 * Swift:
 //Usage: Set custom tags
 let tags = ["Key1": "Value1", "Key2": "Value2"]
-tracker.setCustomTags(tags)
+tracker?.setCustomTags(tags)
 
 //Usage: Clear all custom tags
-tracker.clearCustomTags()
+tracker?.clearCustomTags()
 
 //Usage: Clear custom tags
 let keys = ["Key1", "Key2", "Key3"]
-tracker.clearCustomTags(keys)
+tracker?.clearCustomTags(keys)
 ```
 
 
