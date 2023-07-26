@@ -41,7 +41,7 @@ var tracker = CATAppAnalytics.createTracker(customerKey: customerKey, appName: a
 
 ```objective-c
 * ObjC:
-id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey:customerKey appName:appName]
+id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey:customerKey appName:appName];
 ```
 
 <strong>customerKey</strong> - a string to identify specific customer account. Different keys shall be used for development / debug versus production environment. Find your keys on the account info page in Pulse.
@@ -51,7 +51,7 @@ id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey
 # Set the user id (viewer id)
 ```swift
 * Swift:
-tracker?.subject?.userId = "user_id";
+tracker?.subject?.userId = "user_id"
 ```
 
 ```objective-c
@@ -69,7 +69,7 @@ event listener to any element:
 ```swift
 * Swift:
 let data = "{\"identifier1\": \"test\",\"identifier2\": 1,\"identifier3\":true}"
-tracker?.trackCustomEvent("your-event-name", data: data);
+tracker?.trackCustomEvent("your-event-name", data: data)
 ```
 
 ```objective-c
