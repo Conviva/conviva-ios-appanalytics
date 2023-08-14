@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.15 (08/14/2023)
+* Fixed an issue where remote configuration of blocking/unblocking URLs for network request tracking is not applied.
+* Fixed event index duplication issue.
+
 ## 0.2.14 (07/17/2023)
 * Added Crash Exception Handling.
 * Added trackCustomEvent API which accepts Object as an argument.
