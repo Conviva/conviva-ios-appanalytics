@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.16 (09/28/2023)
+* Added few video extensions and analytics solutions to the default blocklist of network request tracking collection.
+
 ## 0.2.15 (08/14/2023)
 * Fixed an issue where remote configuration of blocking/unblocking URLs for network request tracking is not applied.
 * Fixed event index duplication issue.
