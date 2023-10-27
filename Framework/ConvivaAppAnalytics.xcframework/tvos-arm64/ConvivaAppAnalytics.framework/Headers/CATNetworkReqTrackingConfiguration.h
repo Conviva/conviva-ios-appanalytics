@@ -12,7 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CATNetworkReqTrackingConfiguration : CATConfiguration
 
+@property(assign, readonly) BOOL enabled;
+
 @property(strong, readonly) NSArray *blocklist;
+
+//@property(strong, readonly) NSArray *safelist;
+//
+//@property(strong, readonly) NSArray *droplist;
+
+@property(strong, readonly) NSArray *collectattr;
 
 - (instancetype) initWithBlocklist:(NSArray *)blocklist;
 
@@ -25,6 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL) isBlockedEndpoint:(NSString*)endpoint;
 
 - (void) setBlocklistItems:(NSArray * _Nonnull)blocklist;
+
+- (BOOL)isNetworkRequestTrackingDisabled;
 
 @end
 

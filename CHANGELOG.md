@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.18 (10/27/2023)
+* Enhances network request & response collection feature to capture limited (json only, size limit 10kb) and controlled set of information from headers and body.
+
 ## 0.2.16 (09/28/2023)
 * Added few video extensions and analytics solutions to the default blocklist of network request tracking collection.
 
