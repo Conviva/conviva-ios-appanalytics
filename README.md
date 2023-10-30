@@ -151,7 +151,9 @@ tracker?.clearCustomTags(keys)
 
 <details>
   <summary><b>Auto-collected Events</b></summary>
-  
+
+##### Conviva provides a rich set of application performance metrics with the help of autocollected app events, such as _screen_view_ , _button_click_, and _network_request_.
+
   * network_request - after receiving the network request response
   * screen_view - when the screen is interacted on either first launch or relaunch
   * application_error - when an error occurrs in the application
@@ -164,6 +166,6 @@ tracker?.clearCustomTags(keys)
 To learn about the default metrics for analyzing the native and web applications performance, such as App Crashes, Avg Screen Load Time, and Page Loads, refer to the [App Experience Metrics](https://pulse.conviva.com/learning-center/content/app_experience/app_experience_metrics.html?tocpath=App%20Experience%7C_____8) page in the Learning Center.
 </details>
 
-### Note: If user of this sdk also uses ConvivaSDK for Experience Insights/Ad Insights, ConvivaSDK version must be 4.0.28 or above to be compatable with ConvivaAppAnalytics version 0.2.3 or above
-### To enable automatic collection of playback events, ConvivaSDK 4.0.32 or above must be used.
+#### Note: If user of this sdk also uses ConvivaSDK for Experience Insights/Ad Insights, ConvivaSDK version must be 4.0.28 or above to be compatable with ConvivaAppAnalytics version 0.2.3 or above
+#### To enable automatic collection of playback events, ConvivaSDK 4.0.32 or above must be used.
  
