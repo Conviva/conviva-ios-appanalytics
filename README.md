@@ -152,14 +152,16 @@ tracker?.clearCustomTags(keys)
 <details>
   <summary><b>Auto-collected Events</b></summary>
   
-  * network_request
-  * screen_view
-  * application_error
-  * button_click
-  * application_background
-  * application_foreground
-  * application_install
-  * deep_link_received
+  * network_request - after receiving the network request response
+  * screen_view - when the screen is interacted on either first launch or relaunch
+  * application_error - when an error occurrs in the application
+  * button_click - on the button click callback
+  * application_background - when the application is taken to the background
+  * application_foreground - when the application is taken to the foreground
+  * application_install - when the application is launched for the first time after it's installed. (It's not the exact installed time.)
+  * deep_link_received - on opening an application using the UTM URL
+
+To learn about the default metrics for analyzing the native and web applications performance, such as App Crashes, Avg Screen Load Time, and Page Loads, refer to the [App Experience Metrics](https://pulse.conviva.com/learning-center/content/app_experience/app_experience_metrics.html?tocpath=App%20Experience%7C_____8) page in the Learning Center.
 </details>
 
 ### Note: If user of this sdk also uses ConvivaSDK for Experience Insights/Ad Insights, ConvivaSDK version must be 4.0.28 or above to be compatable with ConvivaAppAnalytics version 0.2.3 or above
