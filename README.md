@@ -149,7 +149,19 @@ let keys = ["Key1", "Key2", "Key3"]
 tracker?.clearCustomTags(keys)
 ```
 
+<details>
+  <summary><b>Auto-collected Events</b></summary>
+  
+  * network_request
+  * screen_view
+  * application_error
+  * button_click
+  * application_background
+  * application_foreground
+  * application_install
+  * deep_link_received
+</details>
 
-# Note: If user of this sdk also uses ConvivaSDK for Experience Insights/Ad Insights, ConvivaSDK version must be 4.0.28 or above to be compatable with ConvivaAppAnalytics version 0.2.3 or above
-# To enable automatic collection of playback events, ConvivaSDK 4.0.32 or above must be used.
+### Note: If user of this sdk also uses ConvivaSDK for Experience Insights/Ad Insights, ConvivaSDK version must be 4.0.28 or above to be compatable with ConvivaAppAnalytics version 0.2.3 or above
+### To enable automatic collection of playback events, ConvivaSDK 4.0.32 or above must be used.
  
