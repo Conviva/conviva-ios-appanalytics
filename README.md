@@ -6,7 +6,7 @@ Use Application Analytics to autocollect events and track application specific e
    * https://github.com/conviva/conviva-ios-appanalytics
 * Cocoapods
    * Add below line in pods file
-     * pod 'ConvivaAppAnalytics', '0.2.18'
+     * pod 'ConvivaAppAnalytics', '0.2.19'
 
 * Manual Download
   * Download and unzip the package from Downloads. During the build phase, add ConvivaAppAnalytics.xcframework to Link Binary with Libraries section 

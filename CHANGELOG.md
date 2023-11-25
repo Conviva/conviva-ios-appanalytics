@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.19 (11/24/2023)
+* Fixes the random crashes.
+
 ## 0.2.18 (10/27/2023)
 * Enhances network request & response collection feature to capture limited (json only, size limit 10kb) and controlled set of information from headers and body.
 

@@ -31,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class CATServiceProvider;
 @class CATConfigurationProvider;
+@class CATNSURLSessionInstrument;
+@class CATNSURLConnectionInstrument;
 
 /**
  * Entry point to instance a new Snowplow tracker.
@@ -425,13 +427,8 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
 @property (nonatomic, nonnull, readonly) NSMutableDictionary<NSString *, CATServiceProvider *> *serviceProviderInstances;
 @property (nonatomic, nullable, readonly) CATConfigurationProvider *configurationProvider;
 @property (nonatomic, nullable, strong) NSTimer *remoteConfigTimer;
-
-- (void)setCacheRefreshInterval:(NSInteger)cacheRefreshInterval;
-- (NSInteger)lastCacheRefreshInterval;
-- (void)fetchConfigurationOnlyRemote:(BOOL)onlyRemote;
-- (void)createRemoteConfigTimerWithInterval:(NSTimeInterval)timeInterval;
-- (BOOL)doesRemoteConfigNeedRefresh;
-- (NSTimeInterval)timeToCheckForLatestConfigFromServer;
+@property (nonatomic,strong) CATNSURLSessionInstrument *urlSessionInstrument;
+@property (nonatomic,strong) CATNSURLConnectionInstrument *urlConnectionInstrument;
 
 @end
 

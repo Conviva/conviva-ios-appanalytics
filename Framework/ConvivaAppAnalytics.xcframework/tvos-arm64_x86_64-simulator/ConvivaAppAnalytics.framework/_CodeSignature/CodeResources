@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CATAppAnalytics.h</key>
 		<data>
-		nVhUym/GhbOgDEhV026BbFfpA04=
+		tXjaFv1isUwdBh7w4oyUlSNdF78=
 		</data>
 		<key>Headers/CATBackground.h</key>
 		<data>
@@ -246,7 +246,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		IVzGJ9ycUyrR/f39hn5QaJoaLuo=
+		S8Y7LasZtcCM+bn5oDdFq8xLYT0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -259,11 +259,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nVhUym/GhbOgDEhV026BbFfpA04=
+			tXjaFv1isUwdBh7w4oyUlSNdF78=
 			</data>
 			<key>hash2</key>
 			<data>
-			aU16tL9yOTMRXcG0KtSCiJUXVkcXF7EnkjMg+0Tf1po=
+			NwSi2T4QRqYsfgIjvlJymfgRYbyPtCLgG8Cn+vEjSms=
 			</data>
 		</dict>
 		<key>Headers/CATBackground.h</key>
