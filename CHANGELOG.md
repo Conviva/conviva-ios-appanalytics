@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.20 (01/04/2024)
+* Minor changes in button click event.
+
 ## 0.2.19 (11/24/2023)
 * Fixes the random crashes.
 

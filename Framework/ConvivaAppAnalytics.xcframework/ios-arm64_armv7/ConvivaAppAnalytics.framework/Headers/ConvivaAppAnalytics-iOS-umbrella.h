@@ -68,6 +68,7 @@
 #import "CATTrackerStateSnapshot.h"
 #import "CATState.h"
 #import "CATUnStructured.h"
+#import "CATButtonClickEvent.h"
 #import "CATNetworkReqTrackingConfiguration.h"
 
 FOUNDATION_EXPORT double ConvivaAppAnalyticsVersionNumber;

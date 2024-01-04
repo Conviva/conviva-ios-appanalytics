@@ -12,6 +12,10 @@
 		<data>
 		/XJyM7roreG2hBDm7gvxOxhWIco=
 		</data>
+		<key>Headers/CATButtonClickEvent.h</key>
+		<data>
+		BoFtANFKHdc315K/IGXhvflm8UE=
+		</data>
 		<key>Headers/CATConfiguration.h</key>
 		<data>
 		bmA9+fxJAz/Bgxkk4oAjbyak/DI=
@@ -242,11 +246,11 @@
 		</data>
 		<key>Headers/ConvivaAppAnalytics-tvOS-umbrella.h</key>
 		<data>
-		dEdZb5XUJUmI4vzdhY2M5grW+vE=
+		HhUHo5BktTd4KXRcF4nbLERb7b0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		S8Y7LasZtcCM+bn5oDdFq8xLYT0=
+		gnicHbVtU//Gjk8VuRmf2XMK61M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -275,6 +279,17 @@
 			<key>hash2</key>
 			<data>
 			sKprrBxH72/I8V6cHhRxUPfVZnxsOHLbGzZCii3phgg=
+			</data>
+		</dict>
+		<key>Headers/CATButtonClickEvent.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BoFtANFKHdc315K/IGXhvflm8UE=
+			</data>
+			<key>hash2</key>
+			<data>
+			QJAGzVhgZopsu8gv9m0i0ltaTgY6B1hoOFTF1QBy46Q=
 			</data>
 		</dict>
 		<key>Headers/CATConfiguration.h</key>
@@ -908,11 +923,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dEdZb5XUJUmI4vzdhY2M5grW+vE=
+			HhUHo5BktTd4KXRcF4nbLERb7b0=
 			</data>
 			<key>hash2</key>
 			<data>
-			PO8mlPCP0+NSF/OMf22iz1ylFN2KYl4xdRfqMo5xDs8=
+			bcl2ahkqlK625A7LbLr9TGWXt+o2ooQvZUEo5y60LNM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
