@@ -1,6 +1,11 @@
 # conviva-ios-appanalytics
 Use Application Analytics to autocollect events and track application specific events and state changes.
 
+# Supported Platforms
+* iOS(12.0 and above)
+* tvOS(12.0 and above)
+* watchOS(TBD)
+
 # Initialization
 * SPM
    * https://github.com/conviva/conviva-ios-appanalytics
