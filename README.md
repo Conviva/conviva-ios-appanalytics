@@ -3,7 +3,7 @@ Use Application Analytics to autocollect events and track application specific e
 
 # Supported Platforms
 * iOS(12.0 and above)
-* iPadOS(12.0 and above)
+* iPadOS(13.0 and above)
 * tvOS(12.0 and above)
 * watchOS(TBD)
 
