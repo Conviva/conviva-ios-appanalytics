@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.21 (02/13/2024)
+* Privacy manifest support added.
+
 ## 0.2.20 (01/04/2024)
 * Minor changes in button click event.
 
