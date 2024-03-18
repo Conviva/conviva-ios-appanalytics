@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.22 (03/18/2024)
+* Enhances network request & response collection feature to capture Array type data.
+
 ## 0.2.21 (02/13/2024)
 * Privacy manifest support added.
 

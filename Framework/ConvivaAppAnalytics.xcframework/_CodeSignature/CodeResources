@@ -6,7 +6,7 @@
 	<dict>
 		<key>ios-arm64_armv7/ConvivaAppAnalytics.framework/ConvivaAppAnalytics</key>
 		<data>
-		iDudz3si/fFbXP8ubJVT1JxggoY=
+		4LkKqgeg2ml4n34dwGwNjKZDwFY=
 		</data>
 		<key>ios-arm64_armv7/ConvivaAppAnalytics.framework/Headers/CATAppAnalytics.h</key>
 		<data>
@@ -254,7 +254,7 @@
 		</data>
 		<key>ios-arm64_armv7/ConvivaAppAnalytics.framework/Info.plist</key>
 		<data>
-		yKbTVbAfDcCk6Y9N0tzl3AU8ahI=
+		/97vHHbICG0HQida5kjbnJLkUCU=
 		</data>
 		<key>ios-arm64_armv7/ConvivaAppAnalytics.framework/Modules/module.modulemap</key>
 		<data>
@@ -266,7 +266,7 @@
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/ConvivaAppAnalytics.framework/ConvivaAppAnalytics</key>
 		<data>
-		Pzl0AXt37uizprIfQwMOgIZVJvg=
+		IYkU01KfPZ6O4CnOaP+lcy6KYrQ=
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/ConvivaAppAnalytics.framework/Headers/CATAppAnalytics.h</key>
 		<data>
@@ -514,7 +514,7 @@
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/ConvivaAppAnalytics.framework/Info.plist</key>
 		<data>
-		7dDqFNWXmxjhoGzhzX7DdvtIgbE=
+		PmgjCWDvtajO63vCw/EtoT1U91Y=
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/ConvivaAppAnalytics.framework/Modules/module.modulemap</key>
 		<data>
@@ -526,7 +526,7 @@
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		owKXWbaSdRsmoPDY7UdYKO2/2j8=
+		Ix4EKYhvdmfqj2jsdwmRiYaf5d8=
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -534,11 +534,11 @@
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		HU5FkAZt2z+W3Q1yVtda1KHWuI0=
+		z6CLXaJsetlnEsQY/BdxwP8shmA=
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeResources</key>
 		<data>
-		SILaD3kw4mROmPR6cKiVJXAjfKQ=
+		OvSgMnEFiWih1i8RxgybsBnU21w=
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeSignature</key>
 		<data>
@@ -546,7 +546,7 @@
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/ConvivaAppAnalytics.framework/Versions/A/ConvivaAppAnalytics</key>
 		<data>
-		L+/ll6lTPHoKL8NoWEONq3S31Zo=
+		ax0WQn3L53WXa5wB+UblGHLqz+8=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/ConvivaAppAnalytics.framework/Versions/A/Headers/CATAppAnalytics.h</key>
 		<data>
@@ -798,7 +798,7 @@
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/ConvivaAppAnalytics.framework/Versions/A/Resources/Info.plist</key>
 		<data>
-		wORy2FLahgwsLKsMGcb9EOCPTWM=
+		bRpkSKLYonOQwsT2Rs99l5uZw/M=
 		</data>
 		<key>ios-arm64_x86_64-maccatalyst/ConvivaAppAnalytics.framework/Versions/A/Resources/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -806,7 +806,7 @@
 		</data>
 		<key>tvos-arm64/ConvivaAppAnalytics.framework/ConvivaAppAnalytics</key>
 		<data>
-		SolFu1UjjsUeCSEREJl2hTMGbL4=
+		agdMeKIjKSaUVm4XIFqFiCLoBMc=
 		</data>
 		<key>tvos-arm64/ConvivaAppAnalytics.framework/Headers/CATAppAnalytics.h</key>
 		<data>
@@ -1054,7 +1054,7 @@
 		</data>
 		<key>tvos-arm64/ConvivaAppAnalytics.framework/Info.plist</key>
 		<data>
-		QZeLbjhNZgVmT8Sw+9XGYjYmu+8=
+		85G8pGoGN0TzR6M6VgM2qPpzWDU=
 		</data>
 		<key>tvos-arm64/ConvivaAppAnalytics.framework/Modules/module.modulemap</key>
 		<data>
@@ -1066,7 +1066,7 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/ConvivaAppAnalytics.framework/ConvivaAppAnalytics</key>
 		<data>
-		vW5z63vcrFX7Llran+PeFKC7rI0=
+		yBzCtyHWeVzjGaNEA4YSJtKJZkc=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/ConvivaAppAnalytics.framework/Headers/CATAppAnalytics.h</key>
 		<data>
@@ -1314,7 +1314,7 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/ConvivaAppAnalytics.framework/Info.plist</key>
 		<data>
-		FgXaj/JmKCmLy7WnPhkmtUiPbJk=
+		ETgKTx+oYiaHTrOhXN6Q/e4xIS4=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/ConvivaAppAnalytics.framework/Modules/module.modulemap</key>
 		<data>
@@ -1326,7 +1326,7 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		r+sPWAyEdpK46tFM5LKISltKCSk=
+		UfiBOQF4IvoJ463zPbnvDMeiPk0=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -1334,11 +1334,11 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		o4fv9Nwy5ggxHVHFFptVejm+jko=
+		Hrm30gc9dOCWfySDdhXyY9Mj8uQ=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeResources</key>
 		<data>
-		XwlGyDMLAtSCSqUGCuW8XMfgfvE=
+		rqweqWpJJquE+NpE5muD0AV6qIg=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeSignature</key>
 		<data>
@@ -1351,11 +1351,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iDudz3si/fFbXP8ubJVT1JxggoY=
+			4LkKqgeg2ml4n34dwGwNjKZDwFY=
 			</data>
 			<key>hash2</key>
 			<data>
-			DSg0dhxmOGjLEIJCt73RvJ7zYJMrfdySTqiQsJjb7Rg=
+			ezbejUg3Xz1KiQegb0HdZT8N2vGBNlpFkVm9IyumCXc=
 			</data>
 		</dict>
 		<key>ios-arm64_armv7/ConvivaAppAnalytics.framework/Headers/CATAppAnalytics.h</key>
@@ -2033,11 +2033,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yKbTVbAfDcCk6Y9N0tzl3AU8ahI=
+			/97vHHbICG0HQida5kjbnJLkUCU=
 			</data>
 			<key>hash2</key>
 			<data>
-			2hf3Q93Ry9dUdsBi+tO/ItRqsDPgKOQunNWY4wImOI0=
+			AY7wsvhlDpBNZUE9mtjpkW5oTWdIUfaAU/eNjjoIvgg=
 			</data>
 		</dict>
 		<key>ios-arm64_armv7/ConvivaAppAnalytics.framework/Modules/module.modulemap</key>
@@ -2066,11 +2066,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Pzl0AXt37uizprIfQwMOgIZVJvg=
+			IYkU01KfPZ6O4CnOaP+lcy6KYrQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			Rul8PMBF67To72SrcCiMkr7OzfSAVBXOyp14PtH/Me8=
+			pPVF4kW28CdmnohlMxCsKKHdUisL75YsBhiCyV0uQUE=
 			</data>
 		</dict>
 		<key>ios-arm64_i386_x86_64-simulator/ConvivaAppAnalytics.framework/Headers/CATAppAnalytics.h</key>
@@ -2748,11 +2748,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7dDqFNWXmxjhoGzhzX7DdvtIgbE=
+			PmgjCWDvtajO63vCw/EtoT1U91Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			/WbSRa1zjNPsa2b1KUrd6kq5Y/nJHIj2HeLVrRIqbQ0=
+			gy29Ri22PFlqMvo7VxN6a81WbkwAOgyhNZOZiiOTtVs=
 			</data>
 		</dict>
 		<key>ios-arm64_i386_x86_64-simulator/ConvivaAppAnalytics.framework/Modules/module.modulemap</key>
@@ -2781,11 +2781,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			owKXWbaSdRsmoPDY7UdYKO2/2j8=
+			Ix4EKYhvdmfqj2jsdwmRiYaf5d8=
 			</data>
 			<key>hash2</key>
 			<data>
-			1/SpdyAvayguRAFXK25b7HwUnXcJe5XenOIe/jJMtgw=
+			3CakrC2H4icz6vXn4VEzpdo3PBs5FZorHi3j4vwjucs=
 			</data>
 		</dict>
 		<key>ios-arm64_i386_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeRequirements</key>
@@ -2803,22 +2803,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HU5FkAZt2z+W3Q1yVtda1KHWuI0=
+			z6CLXaJsetlnEsQY/BdxwP8shmA=
 			</data>
 			<key>hash2</key>
 			<data>
-			3sAows4tIH4N4PKtD4RVqzhbYq6sBPAbXWQUgSp01Mk=
+			XFOlh9DPT/T9PAN1r6KxTH+eMnYz70mAZ85TJj7Xaxw=
 			</data>
 		</dict>
 		<key>ios-arm64_i386_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SILaD3kw4mROmPR6cKiVJXAjfKQ=
+			OvSgMnEFiWih1i8RxgybsBnU21w=
 			</data>
 			<key>hash2</key>
 			<data>
-			SwD4jKLluanTQV7hJPRMtu1+HKnd9BqErHtBhnmla98=
+			ZYLy4p026mM2tS50c3mUr2tYYEeQ7T5efSrz5LeMfFo=
 			</data>
 		</dict>
 		<key>ios-arm64_i386_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeSignature</key>
@@ -2856,11 +2856,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			L+/ll6lTPHoKL8NoWEONq3S31Zo=
+			ax0WQn3L53WXa5wB+UblGHLqz+8=
 			</data>
 			<key>hash2</key>
 			<data>
-			ULODjQN6/hwL8t1/JHrc5RzmjD1oRRFVUGM9+ATqj+4=
+			7FDiG7mWqvDsT4rhG3C1R6qwcblOnmyXxpnyuEb4+5A=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/ConvivaAppAnalytics.framework/Versions/A/Headers/CATAppAnalytics.h</key>
@@ -3549,11 +3549,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wORy2FLahgwsLKsMGcb9EOCPTWM=
+			bRpkSKLYonOQwsT2Rs99l5uZw/M=
 			</data>
 			<key>hash2</key>
 			<data>
-			2m+WmcQYu66T6AHpEsG0lJwAsHNFg17vUVftnkVpSj8=
+			YDYuubIUuxIy1K+Un7IzIjF3XISDp8M0pCQOPydUciU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-maccatalyst/ConvivaAppAnalytics.framework/Versions/A/Resources/PrivacyInfo.xcprivacy</key>
@@ -3576,11 +3576,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SolFu1UjjsUeCSEREJl2hTMGbL4=
+			agdMeKIjKSaUVm4XIFqFiCLoBMc=
 			</data>
 			<key>hash2</key>
 			<data>
-			7C8czvM97ka/4Ub/rp/J9T3A22+el3onshjePFhSK/c=
+			Ns6UXcXE8Gw7vkshLMODg6znNZ7klB6yMlTR2RnC7u4=
 			</data>
 		</dict>
 		<key>tvos-arm64/ConvivaAppAnalytics.framework/Headers/CATAppAnalytics.h</key>
@@ -4258,11 +4258,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QZeLbjhNZgVmT8Sw+9XGYjYmu+8=
+			85G8pGoGN0TzR6M6VgM2qPpzWDU=
 			</data>
 			<key>hash2</key>
 			<data>
-			9orULWEBA0NCUdAWl9fcbRNDkioVxyR5J516qsvopKE=
+			NtA+bnZEKZq2Ym/YrJAQNROQcdLtVbgx8Sdkq4GZwNY=
 			</data>
 		</dict>
 		<key>tvos-arm64/ConvivaAppAnalytics.framework/Modules/module.modulemap</key>
@@ -4291,11 +4291,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vW5z63vcrFX7Llran+PeFKC7rI0=
+			yBzCtyHWeVzjGaNEA4YSJtKJZkc=
 			</data>
 			<key>hash2</key>
 			<data>
-			6AaNNUhcj0mEqtsFr6rxvOLBSzRYdu3ATYe/dspW3E4=
+			cDPUT/8xtBuGgiOaN7s76UNv8vnQPulwUYvBpZUZsXk=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/ConvivaAppAnalytics.framework/Headers/CATAppAnalytics.h</key>
@@ -4973,11 +4973,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FgXaj/JmKCmLy7WnPhkmtUiPbJk=
+			ETgKTx+oYiaHTrOhXN6Q/e4xIS4=
 			</data>
 			<key>hash2</key>
 			<data>
-			dKsPM9IAygV93GYTqGraRBdqP59uvIis3RPGnuTMwqY=
+			nck2icyUqIKadZDYbzlKsYOWqquxMohHlTTx1oIK9hw=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/ConvivaAppAnalytics.framework/Modules/module.modulemap</key>
@@ -5006,11 +5006,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			r+sPWAyEdpK46tFM5LKISltKCSk=
+			UfiBOQF4IvoJ463zPbnvDMeiPk0=
 			</data>
 			<key>hash2</key>
 			<data>
-			AzlSi9EGpwZSzuJt+dzhzCbzWWeaIzeCQJk+9+9W1eM=
+			ZS8tLTATzcohyEaxPlnoGCkcfC/5j14kxcIZcJotf2k=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeRequirements</key>
@@ -5028,22 +5028,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			o4fv9Nwy5ggxHVHFFptVejm+jko=
+			Hrm30gc9dOCWfySDdhXyY9Mj8uQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			qZoRq03+AHraCCVub1EJReEWGyos9UVFaT2SyV1l0PE=
+			eRNbFeO6x/3cmnbs7iFM7fzYgUdmPY94J91ZLXqhclU=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XwlGyDMLAtSCSqUGCuW8XMfgfvE=
+			rqweqWpJJquE+NpE5muD0AV6qIg=
 			</data>
 			<key>hash2</key>
 			<data>
-			cUL/JT+bpqbK4sL4hK90Fy16DdJl9kMpCGzcAkMTCwY=
+			2a78YWeUc2oUa4CLGlCps6aIBibTWs53qM5TV6FJyu0=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/ConvivaAppAnalytics.framework/_CodeSignature/CodeSignature</key>
