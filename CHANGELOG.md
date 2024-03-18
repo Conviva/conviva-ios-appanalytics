@@ -4,7 +4,6 @@
 * Enhances network request & response collection feature to capture Array type data.
 * Enhances network request feature by adding collection of query parameters as part as target url.
 * Minor Fix added to the collection of content-type in network request feature.
-* Removed remote_config.json and added the following (.aac , .vtt, .googlevideo, webp, appsflyer, facebook to the default blocklist.
 
 ## 0.2.21 (02/13/2024)
 * Privacy manifest support added.
