@@ -15,7 +15,7 @@ Use Application Analytics to autocollect events and track application specific e
      * pod 'ConvivaAppAnalytics', '0.2.22'
 
  **NOTE: During pod installation, if you are facing any issues with FMDB, Please update your file as below and do pod installation.**
- * Add below line in pods file
+   * Add below line in pods file
      * pod 'ConvivaAppAnalytics', '0.2.22'
      * pod 'FMDB', '2.7.5'
 
