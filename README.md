@@ -14,6 +14,11 @@ Use Application Analytics to autocollect events and track application specific e
    * Add below line in pods file
      * pod 'ConvivaAppAnalytics', '0.2.22'
 
+ **NOTE: During pod installation, if you are facing any issues with FMDB, Please update your file as below and do pod installation.**
+ * Add below line in pods file
+     * pod 'ConvivaAppAnalytics', '0.2.22'
+     * pod 'FMDB', '2.7.5'
+
 * Manual Download
   * Download and unzip the package from Downloads. During the build phase, add ConvivaAppAnalytics.xcframework to Link Binary with Libraries section 
   in  xcode. This package contains the frameworks for both, iOS and tvOS.
