@@ -174,7 +174,6 @@ button_click | on the button click callback|
 application_background | when the application is taken to the background|
 application_foreground | when the application is taken to the foreground|
 application_install |when the application is launched for the first time after it's installed. (It's not the exact installed time.)|
-deep_link_received | on opening an application using the UTM URL|
 
 To learn about the default metrics for analyzing the native and web applications performance, such as App Crashes, Avg Screen Load Time, and Page Loads, refer to the [App Experience Metrics](https://pulse.conviva.com/learning-center/content/app_experience/app_experience_metrics.html?tocpath=App%20Experience%7C_____8) page in the Learning Center.
 </details>
