@@ -70,6 +70,8 @@ NS_SWIFT_NAME(CATNetworkConnection)
  */
 - (NSURL *)url;
 
+- (void)setEncoding:(NSString*)encoding;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -76,6 +76,19 @@ NS_SWIFT_NAME(CATDefaultNetworkConnectionBuilder)
  */
 - (void) setRequestHeaders:(NSDictionary<NSString *, NSString *> *)requestHeadersKeyValue;
 
+/*!
+ @brief Emitter builder method to set gzip Encoding.
+ @param encoding Encoding.
+ */
+- (void) setEncoding:(NSString*)encoding;
+
+
+/*!
+ @brief Emitter builder method to set merge endpoint.
+ @param mergeEndpoint merge endpoint.
+ */
+- (void) setMergeEndPoint:(BOOL)mergeEndpoint;
+
 @end
 
 NS_SWIFT_NAME(CATDefaultNetworkConnection)

@@ -136,6 +136,7 @@ NS_SWIFT_NAME(CATTrackerConfigurationProtocol)
  */
 @property () CATCustomEventTrackingConfiguration* customEventTrackingConfiguration;
 
+
 @end
 
 /**
@@ -150,10 +151,10 @@ NS_SWIFT_NAME(CATTrackerConfiguration)
  * It sets a default TrackerConfiguration.
  * Default values:
  *         devicePlatform = DevicePlatform.Mobile;
- *         base64encoding = true;
+ *         base64encoding = false;
  *         logLevel = LogLevel.OFF;
  *         loggerDelegate = null;
- *         sessionContext = true;
+ *         sessionContext = false;
  *         deepLinkContext = true;
  *         applicationContext = true;
  *         platformContext = true;
@@ -163,7 +164,7 @@ NS_SWIFT_NAME(CATTrackerConfiguration)
  *         lifecycleAutotracking = true;
  *         installAutotracking = true;
  *         exceptionAutotracking = true;
- *         diagnosticAutotracking = false;
+ *         diagnosticAutotracking = true;
  *         buttonClickAutotracking = true;
  *         userClickAutotracking = true;
  *         enablePeriodicHeartbeat = true;

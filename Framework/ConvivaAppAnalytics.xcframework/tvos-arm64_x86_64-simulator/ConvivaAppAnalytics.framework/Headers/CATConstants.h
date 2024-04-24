@@ -65,6 +65,7 @@ extern NSString * const kCATAcceptContentHeader;
 extern NSInteger  const kCATDefaultBufferTimeout;
 extern NSString * const kCATEndpointPost;
 extern NSString * const kCATEndpointGet;
+extern NSString * const kCATContentEncoding;
 
 // --- Schema Paths
 
@@ -318,6 +319,12 @@ extern NSString * const kCATDiagnosticErrorMessage;
 extern NSString * const kCATDiagnosticErrorStack;
 extern NSString * const kCATDiagnosticErrorClassName;
 extern NSString * const kCATDiagnosticErrorExceptionName;
+
+
+// --- Encoding Techniques
+
+extern NSString * const kCATEncodingTechniqueGzip;
+extern NSString * const kCATEncodingTechniqueNone;
 
 /**
  * Different modes of prewarm-detection

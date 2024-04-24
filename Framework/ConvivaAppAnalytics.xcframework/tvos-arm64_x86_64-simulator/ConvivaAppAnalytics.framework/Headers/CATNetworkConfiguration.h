@@ -66,6 +66,16 @@ NS_SWIFT_NAME(CATNetworkConfiguration)
 @property (nonatomic, nullable, copy) NSString *remoteCfgUrl;
 
 /**
+ * It indicates whether the JSON data in the payload should be gzipped or not.
+ */
+@property (nonatomic, copy) NSString* encoding;
+
+/**
+ * It indicates whether the customerKey has to be merged with endpoint.
+ */
+@property () BOOL mergeEndpoint;
+
+/**
  *  Custom headers for http requests.
  */
 @property (nonatomic, nullable) NSDictionary<NSString *, NSString *> *requestHeaders;
@@ -101,6 +111,17 @@ NS_SWIFT_NAME(CATNetworkConfiguration)
 
 SP_BUILDER_DECLARE_NULLABLE(NSString *, customPostPath)
 SP_BUILDER_DECLARE_NULLABLE(NSDictionary *, requestHeaders)
+
+/**
+ * It indicates whether the JSON data in the payload should be gzipped or not.
+ */
+SP_BUILDER_DECLARE(NSString *, encoding)
+
+/**
+ * It indicates whether the customerKey has to be merged with endpoint.
+ */
+SP_BUILDER_DECLARE(BOOL, mergeEndpoint)
+
 
 @end
 
