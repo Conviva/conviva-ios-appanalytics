@@ -5,6 +5,7 @@
 * Supports custom gateway URL by using the unique `CUSTOMER_KEY` associated to each customer.
 * Renames the remote configuration URL domain to `*.conviva.com`.
 * Updates the default block list of the *Network Request Tracking* feature.
+* Reduces the payload size of Network Request Event by limiting the default attributes to targetUrl, method, responseStatusCode and duration. However, the retention of request/response body/header attributes remain unchanged.
 
 ## 0.2.22 (03/18/2024)
 * Enhances network request & response collection feature to capture Array type data.
