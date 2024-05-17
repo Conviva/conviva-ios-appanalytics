@@ -27,6 +27,8 @@
 #import "CATRemoteConfiguration.h"
 #import "CATConfigurationBundle.h"
 
+#define CAT_CONFIG_REFRESH_INTERVAL (1 * 60 * 30) // Thirty Minutes
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class CATServiceProvider;

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.24 (05/17/2024)
+* Removed external dependency of FMDB.
+* Fixed random crashes.
+
 ## 0.2.23 (04/24/2024)
 * Optimizes the payload size by applying *gzip encryption* and *schema optimisation*.
 * Supports custom gateway URL by using the unique `CUSTOMER_KEY` associated to each customer.

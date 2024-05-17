@@ -25,7 +25,7 @@
 #import "CATEmitterEvent.h"
 
 @class CATPayload;
-@class FMDatabaseQueue;
+@class CATDatabaseQueue;
 
 NS_SWIFT_NAME(CATSQLiteEventStore)
 @interface CATSQLiteEventStore :NSObject <CATEventStore>

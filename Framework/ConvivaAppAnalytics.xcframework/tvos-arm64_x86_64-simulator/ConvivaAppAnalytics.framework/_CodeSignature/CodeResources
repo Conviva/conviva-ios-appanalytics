@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CATAppAnalytics.h</key>
 		<data>
-		tXjaFv1isUwdBh7w4oyUlSNdF78=
+		jaK4/qxdKw9AKslMlEGkTtxxY7I=
 		</data>
 		<key>Headers/CATBackground.h</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>Headers/CATSQLiteEventStore.h</key>
 		<data>
-		y5fYiFcPC1vlURerS2MvEQgT67c=
+		TvGB0zYfOWCJx5/FU1ZjqlRwVHs=
 		</data>
 		<key>Headers/CATSchemaRule.h</key>
 		<data>
@@ -250,7 +250,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		px1Bvo3xfHC1/l/ywzByDcV99tk=
+		6npKyLw2Zxz/X1NQO/NSgQZ0nDE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -263,11 +263,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tXjaFv1isUwdBh7w4oyUlSNdF78=
+			jaK4/qxdKw9AKslMlEGkTtxxY7I=
 			</data>
 			<key>hash2</key>
 			<data>
-			NwSi2T4QRqYsfgIjvlJymfgRYbyPtCLgG8Cn+vEjSms=
+			abiviS595Z67z6D0UiDJBK6jfZhSui/fDoy10+F5Fj0=
 			</data>
 		</dict>
 		<key>Headers/CATBackground.h</key>
@@ -736,11 +736,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			y5fYiFcPC1vlURerS2MvEQgT67c=
+			TvGB0zYfOWCJx5/FU1ZjqlRwVHs=
 			</data>
 			<key>hash2</key>
 			<data>
-			oyddXrOGPKysKbAWjfeZTxWn5BctpxHmRc+6jFoxkRQ=
+			56ARZ22ULlXroswfoERh1ZMiuk/nQn079PE9zAcMEJQ=
 			</data>
 		</dict>
 		<key>Headers/CATSchemaRule.h</key>
