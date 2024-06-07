@@ -1,7 +1,7 @@
 # Changelog
 
 ## 0.2.245 (06/07/2024)
-* Optimized the offline storage and retry mechanism of events in case of failures.
+* Optimised the retry mechanism of events in case of failures.
 
 ## 0.2.24 (05/17/2024)
 * Removed external dependency of FMDB.
