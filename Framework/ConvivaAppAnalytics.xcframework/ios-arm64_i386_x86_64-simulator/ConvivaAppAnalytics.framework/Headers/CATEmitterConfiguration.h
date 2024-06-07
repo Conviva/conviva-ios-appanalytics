@@ -99,8 +99,8 @@ NS_SWIFT_NAME(CATEmitterConfiguration)
  * It sets a default EmitterConfiguration.
  * Default values:
  *         bufferOption = BufferOption.Single;
- *         emitRange = 150;
- *         threadPoolSize = 15;
+ *         emitRange = 5;
+ *         threadPoolSize = 2;
  *         byteLimitGet = 40000;
  *         byteLimitPost = 40000;
  */
