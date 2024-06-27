@@ -1,6 +1,9 @@
 # Changelog
 
-## 0.2.245 (06/07/2024)
+## 0.2.26 (06/27/2024)
+* Added support to auto collect network request(http/https) performance metrics for URLSession Asynchronous methods.
+
+## 0.2.25 (06/07/2024)
 * Optimised the retry mechanism of events in case of failures.
 
 ## 0.2.24 (05/17/2024)
