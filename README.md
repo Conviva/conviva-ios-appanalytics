@@ -45,12 +45,18 @@ import ConvivaAppAnalytics
 
 ```swift
 * Swift:
-var tracker = CATAppAnalytics.createTracker(customerKey: customerKey, appName: appName)
+let tracker = CATAppAnalytics.createTracker(customerKey: customerKey, appName: appName)
+
+// The tracker object can be fetched using the following API in the other classes than the place where createTracker is invoked using following API:
+let tracker = CATAppAnalytics.defaultTracker();
 ```
 
 ```objective-c
 * ObjC:
 id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey:customerKey appName:appName];
+
+// The tracker object can be fetched using the following API in the other classes than the place where createTracker is invoked using following API:
+id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
 ```
 
 <strong>customerKey</strong> - a string to identify specific customer account. Different keys shall be used for development / debug versus production environment. Find your keys on the account info page in Pulse.
