@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.28 (08/05/2024)
+* Stability improvements
+
 ## 0.2.26 (06/27/2024)
 * Added support to auto collect network request(http/https) performance metrics for URLSession Asynchronous methods.
 
