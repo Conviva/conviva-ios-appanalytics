@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.29 (22/08/2024)
+* *Screen views* in SwiftUI apps can now be tracked using the View extension function .convivaAnalyticsScreenView(name: "Screen Name").
+* *Button clicks* in SwiftUI apps can now be tracked using the Button extension function .convivaAnalyticsButtonClick(title: "Button Title").
+* *Picker (Segment Control)* in SwiftUI apps are now tracked.
+
 ## 0.2.28 (08/05/2024)
 * Stability improvements
 

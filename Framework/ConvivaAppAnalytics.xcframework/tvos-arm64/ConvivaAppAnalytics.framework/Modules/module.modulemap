@@ -4,3 +4,8 @@ framework module ConvivaAppAnalytics {
   export *
   module * { export * }
 }
+
+module ConvivaAppAnalytics.Swift {
+  header "ConvivaAppAnalytics-Swift.h"
+  requires objc
+}
