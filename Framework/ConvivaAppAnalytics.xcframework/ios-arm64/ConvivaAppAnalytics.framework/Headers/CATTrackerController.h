@@ -152,6 +152,12 @@ NS_SWIFT_NAME(CATTrackerController)
  */
 - (void)resume;
 
+/**
+ * Sends periodic HB's while in background if app is active if it is set to true. Else, periodic HB's will be paused on entering background.
+ * Default is YES.
+ */
+- (void)keepAliveInBackground:(BOOL)keepAlive;
+
 @end
 
 NS_ASSUME_NONNULL_END

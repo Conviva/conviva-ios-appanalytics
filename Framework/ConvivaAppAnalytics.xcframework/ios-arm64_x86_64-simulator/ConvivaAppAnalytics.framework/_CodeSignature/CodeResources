@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CATAppAnalytics.h</key>
 		<data>
-		jaK4/qxdKw9AKslMlEGkTtxxY7I=
+		9V8/2IbSmSeV8kNGgW0TGRUjqXs=
 		</data>
 		<key>Headers/CATBackground.h</key>
 		<data>
@@ -234,7 +234,7 @@
 		</data>
 		<key>Headers/CATTrackerController.h</key>
 		<data>
-		5AaQMsWYDEp5qzK/5ztQzJeJ1Yc=
+		nA42s0cA5AzcN6aPrlyRovA19nw=
 		</data>
 		<key>Headers/CATTrackerStateSnapshot.h</key>
 		<data>
@@ -254,7 +254,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		oq3D/LyLLK7QTBd7fjBTwXmYZLM=
+		WYPRjC7zTNOfWBGUHcNt8v5NbSA=
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -274,7 +274,7 @@
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rWaSaaXwtEQSzYCBGCjvnyqcVlU=
+		fuElA15sszuzvT7COgdDy6kI6a8=
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -294,7 +294,7 @@
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		hFSpibOHtj6CTvi4DlOpPbYynn4=
+		vYBox0WcjzkfjEwrOjjgCvOqz2Y=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -307,11 +307,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jaK4/qxdKw9AKslMlEGkTtxxY7I=
+			9V8/2IbSmSeV8kNGgW0TGRUjqXs=
 			</data>
 			<key>hash2</key>
 			<data>
-			abiviS595Z67z6D0UiDJBK6jfZhSui/fDoy10+F5Fj0=
+			/htn8XrBBizxqYXjbpdVx+ruIcULzRJxtjT8K77RAbI=
 			</data>
 		</dict>
 		<key>Headers/CATBackground.h</key>
@@ -934,11 +934,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5AaQMsWYDEp5qzK/5ztQzJeJ1Yc=
+			nA42s0cA5AzcN6aPrlyRovA19nw=
 			</data>
 			<key>hash2</key>
 			<data>
-			7/TuSFEbFD4nMbzoB852vM7QWvmLqolYU/e2hefPxy8=
+			JORbKKkh6gbV9zb6gFkdmNoja6aC/W3JmOKzBiya3Zg=
 			</data>
 		</dict>
 		<key>Headers/CATTrackerStateSnapshot.h</key>
@@ -1033,11 +1033,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rWaSaaXwtEQSzYCBGCjvnyqcVlU=
+			fuElA15sszuzvT7COgdDy6kI6a8=
 			</data>
 			<key>hash2</key>
 			<data>
-			VioIXgtP2MmKF4ocJOaKkwHT09ALmZbTi/KCSwGgx/k=
+			Y0XsNQe6yX/jHnty7uoS1v1K1d0vAnfSHQBpjfp3Cuw=
 			</data>
 		</dict>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -1088,11 +1088,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hFSpibOHtj6CTvi4DlOpPbYynn4=
+			vYBox0WcjzkfjEwrOjjgCvOqz2Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			sfSisixUzGZBXlWguqvp/DFpbE0M/1v7ybIo/OigjI0=
+			fyJVgtCGGzKR0LU8MnPOWX5Lzf9HldWqB7ATZVtYx5U=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

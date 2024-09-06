@@ -401,6 +401,11 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
 - (nullable NSString*) getClientId;
 
 /**
+ *  Sets Client Id Event Index.
+ */
+- (BOOL) setClientId: (NSString *)newClientId;
+
+/**
  * @return Client Id Event Index.
  */
 - (NSInteger) getClientIdEventIndex;

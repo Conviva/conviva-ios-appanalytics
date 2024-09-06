@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.30 (06/09/2024)
+* Supports sending periodic heart beats when application is active in background due to playback.
+* Introduces API for setting the conviva identifier.
+
 ## 0.2.29 (22/08/2024)
 * *Screen views* in SwiftUI apps can now be tracked using the View extension function .convivaAnalyticsScreenView(name: "Screen Name") which sends a custom event with name conviva_custom_screenview(cv_csv) which needs to be mapped per customer account.
 * *Button clicks* in SwiftUI apps can now be tracked using the Button extension function .convivaAnalyticsButtonClick(title: "Button Title").
