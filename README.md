@@ -74,12 +74,11 @@ tracker?.subject?.userId = "user_id"
 tracker.subject.userId = @"user_id";
 ```
 # Custom event tracking to track your application specific events and state changes
-Use trackCustomEvent() to track all kinds of events. This API provides 2 fields to describe the tracked events. 
+Use trackCustomEvent(name:data:) to track all kinds of events. This API provides 2 fields to describe the tracked events. 
   * eventName  - Name of the custom event.
-  * eventData  – Any type of data in string format.
+  * data  – Any type of data in string format.
 
-The following example shows the implementation of the 'onClick' 
-event listener to any element:
+The following example shows the implementation of the trackCustomEvent.
 
 ```swift
 * Swift:
@@ -91,6 +90,24 @@ tracker?.trackCustomEvent("your-event-name", data: data)
 * ObjC:
 NSString *data = @"{\"identifier1\": \"test\",\"identifier2\": 1,\"identifier3\":true}";
 [tracker trackCustomEvent:@"your-event-name" data:data];
+```
+
+Use trackCustomEvent(name:eventData) to track all kinds of events. This API provides 2 fields to describe the tracked events. 
+  * eventName  - Name of the custom event.
+  * eventData  – Dictionary/Array of dictionaries
+
+The following example shows the implementation of the trackCustomEvent.
+
+```swift
+* Swift:
+var eventData = ["identifier1":"test","identifier2":1,"identifier3":true] as [String : Any]
+tracker?.trackCustomEvent("your-event-name", eventData: eventData)
+```
+
+```objective-c
+* ObjC:
+NSDictionary *data = @{@"identifier1":@"test",@"identifier2":@(1),@"identifier3":@(true)};
+[self trackCustomEvent:@"your-event-name" eventData:data];
 ```
 
 # Screen view tracking
