@@ -7,7 +7,7 @@ Use Application Analytics to autocollect events and track application specific e
 * tvOS(9.0 and above)
 * watchOS(TBD)
 
-# Initialization
+# Configuring Workspace
 * SPM
    * https://github.com/conviva/conviva-ios-appanalytics
 * Cocoapods
@@ -41,9 +41,19 @@ import ConvivaAppAnalytics
 
 ```
 
-# Initialize the top level object
+# Initialize Conviva Tracker
+
+It is recommended to initialize the Conviva Tracker at the earliest possible stage in the application's launch lifecycle. Ideally, this should be done in the app's entry point method, before any other application functionalities are executed.
 
 ```swift
+func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+) -> Bool
+```
+
+```swift
+// Initialization
 * Swift:
 let tracker = CATAppAnalytics.createTracker(customerKey: customerKey, appName: appName)
 
@@ -52,6 +62,7 @@ let tracker = CATAppAnalytics.defaultTracker();
 ```
 
 ```objective-c
+// Initialization
 * ObjC:
 id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey:customerKey appName:appName];
 
