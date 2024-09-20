@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.2.31 (20/09/2024)
+* <b>Remote config enhancements:</b>
+  * Implements exponential backoff for remote config fetch attempts in case of failures, with a maximum of 3 attempts, each separated by a 5-second interval
+  * Enhances version checking for remote config
+  * Enhances the remote config fetch timestamp based on server responses
+* <b>Retry Logic enhancements:</b>
+  * Enhances the retry logic to delete the db entries in response to avoid piling up events on failure cases
+* <b>Logging enhancements:</b>
+  * Logs all error messages to console
+* <b>Other enhancements:</b>
+  * Reports custom events properly even if data passed is not valid json.
+
 ## 0.2.30 (06/09/2024)
 * Supports sending periodic heart beats when application is active in background due to playback.
 * Introduces API for setting the conviva identifier.

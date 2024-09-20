@@ -30,11 +30,18 @@ NS_SWIFT_NAME(CATRequestResult)
 /// Returns the stored index array, needed to remove the events after sending.
 @property (nonatomic, readonly) NSArray<NSNumber *> *storeIds;
 
+/// http status code
+@property (nonatomic, readonly) NSInteger statusCode;
+
+@property (nonatomic, readonly) BOOL overSize;
+
 /**
  * Creates a request result object
- * @param success whether the operation was a success or not
+ * @param statusCode http status code
  * @param storeIds the event indexes in the database
  */
-- (instancetype)initWithSuccess:(BOOL)success storeIds:(NSArray<NSNumber *> *)storeIds;
+- (instancetype)initWithStatusCode:(NSInteger)statusCode storeIds:(NSArray<NSNumber *> *)storeIds overSize:(BOOL)overSize;
+
+- (BOOL) shouldRetry;
 
 @end

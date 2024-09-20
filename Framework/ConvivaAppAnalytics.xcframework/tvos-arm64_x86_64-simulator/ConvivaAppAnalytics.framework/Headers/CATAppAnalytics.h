@@ -27,8 +27,6 @@
 #import "CATRemoteConfiguration.h"
 #import "CATConfigurationBundle.h"
 
-#define CAT_CONFIG_REFRESH_INTERVAL (1 * 60 * 30) // Thirty Minutes
-
 NS_ASSUME_NONNULL_BEGIN
 
 @class CATServiceProvider;
@@ -46,60 +44,6 @@ NS_SWIFT_NAME(CATAppAnalytics)
 - (instancetype)new NS_UNAVAILABLE;
 
 /// Remote Configuration
-
-/**
- * Setup a single or a set of tracker instances which will be used inside the app to track events.
- * The app can run multiple tracker instances which will be identified by string `namespaces`.
- * The trackers configuration is automatically download from the endpoint indicated in the `RemoteConfiguration`
- * passed as argument. For more details see `RemoteConfiguration`.
- *
- * The method is asynchronous and you can receive the list of the created trackers in the callbacks once the trackers are created.
- * The callback can be called multiple times in case a cached configuration is ready and later a fetched configuration is available.
- * You can also pass as argument a default configuration in case there isn't a cached configuration and it's not able to download
- * a new one. The downloaded configuration updates the cached one only if the configuration version is greater than the cached one.
- * Otherwise the cached one is kept and the callback is not called.
- *
- * IMPORTANT: The EventStore will persist all the events that have been tracked but not yet sent.
- * Those events are attached to the namespace.
- * If the tracker is removed or the app relaunched with a different namespace, those events can't
- * be sent to the collector and they remain in a zombie state inside the EventStore.
- * To remove all the zombie events you can an internal method `removeUnsentEventsExceptForNamespaces` on `SPSQLEventStore`
- * which will delete all the EventStores instanced with namespaces not listed in the passed list.
- *
- * @param remoteConfiguration The remote configuration used to indicate where to download the configuration from.
- * @param customerKey - Customer Key.
- * @param defaultBundles The default configuration passed by default in case there isn't a cached version and it's able to download a new one.
- * @param onSuccess The callback called when a configuration (cached or downloaded) is set It passes the list of the namespaces associated
- *                  to the created trackers.
- */
-+ (void)setupWithRemoteConfiguration:(CATRemoteConfiguration *)remoteConfiguration
-                         customerKey:(NSString*)customerKey
-         defaultConfigurationBundles:(nullable NSArray<CATConfigurationBundle *> *)defaultBundles
-                           onSuccess:(void(^)(NSArray<NSString *> * _Nullable namespaces))onSuccess NS_SWIFT_NAME(setup(remoteConfiguration:customerKey:defaultConfiguration:onSuccess:));
-
-/**
- * Reconfigure, create or delete the trackers based on the configuration downloaded remotely.
- * The trackers configuration is automatically download from the endpoint indicated in the `RemoteConfiguration`
- * previously used to setup the trackers.
- *
- * The method is asynchronous and you can receive the list of the created trackers in the callbacks once the trackers are created.
- * The downloaded configuration updates the cached one only if the configuration version is greater than the cached one.
- * Otherwise the cached one is kept and the callback is not called.
- *
- * IMPORTANT: The EventStore will persist all the events that have been tracked but not yet sent.
- * Those events are attached to the namespace.
- * If the tracker is removed or the app relaunched with a different namespace, those events can't
- * be sent to the collector and they remain in a zombie state inside the EventStore.
- * To remove all the zombie events you can an internal method `removeUnsentEventsExceptForNamespaces` on `SPSQLEventStore`
- * which will delete all the EventStores instanced with namespaces not listed in the passed list.
- *
- * @param customerKey - Customer Key.
- * @param onSuccess The callback called when a configuration (cached or downloaded) is set It passes the list of the namespaces associated
- *                  to the created trackers.
- */
-+ (void)refreshIfRemoteUpdate:(NSString*)customerKey
-                    onSuccess:(void(^)(NSArray<NSString *> * _Nullable namespaces))onSuccess
-                    NS_SWIFT_NAME(refresh(onSuccess:customerKey:));
 
 /// Standard Configuration
 
@@ -391,10 +335,6 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
  */
 + (nullable instancetype)sharedInstance;
 
-
-+ (void) mergeClientConfigs:(NSArray<CATConfiguration *>*) clientConfigs
-           withRemoteConfig:(NSArray<CATConfiguration *>*) remoteConfigs;
-
 /**
  * @return Client Id.
  */
@@ -432,8 +372,6 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
 //@property (nonatomic) NSInteger remoteCfgRefreshInterval;
 
 @property (nonatomic, nonnull, readonly) NSMutableDictionary<NSString *, CATServiceProvider *> *serviceProviderInstances;
-@property (nonatomic, nullable, readonly) CATConfigurationProvider *configurationProvider;
-@property (nonatomic, nullable, strong) NSTimer *remoteConfigTimer;
 @property (nonatomic,strong) CATNSURLSessionInstrument *urlSessionInstrument;
 @property (nonatomic,strong) CATNSURLConnectionInstrument *urlConnectionInstrument;
 

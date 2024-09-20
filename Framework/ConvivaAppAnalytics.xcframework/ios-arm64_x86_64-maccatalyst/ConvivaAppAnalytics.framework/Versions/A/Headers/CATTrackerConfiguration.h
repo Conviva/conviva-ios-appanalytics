@@ -136,7 +136,6 @@ NS_SWIFT_NAME(CATTrackerConfigurationProtocol)
  */
 @property () CATCustomEventTrackingConfiguration* customEventTrackingConfiguration;
 
-
 @end
 
 /**
@@ -170,6 +169,7 @@ NS_SWIFT_NAME(CATTrackerConfiguration)
  *         enablePeriodicHeartbeat = true;
  *         periodicHeartbeatInterval = 40; //secs
  *         customEventTracking = true;
+ *
  */
 - (instancetype)init;
 

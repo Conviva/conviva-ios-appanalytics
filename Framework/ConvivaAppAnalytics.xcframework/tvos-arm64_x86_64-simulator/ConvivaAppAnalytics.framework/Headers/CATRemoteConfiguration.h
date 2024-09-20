@@ -46,7 +46,7 @@ NS_SWIFT_NAME(CATRemoteConfiguration)
 /**
  * Fallback endpoints for retry incase main end points fails.
  */
-@property (nonatomic, nullable, strong) NSArray *fallbackEndpoints;
+//@property (nonatomic, nullable, strong) NSArray *fallbackEndpoints;
 
 /**
  * @param endpoint URL of the remote configuration.
