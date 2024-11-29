@@ -95,6 +95,7 @@ extern NSString * const kCATGdprContextSchema;
 extern NSString * const kCATDiagnosticErrorSchema;
 extern NSString * const kCATConvivaEventInfoSchema;
 extern NSString * const kCATConvivaCustomTagsSchema;
+extern NSString * const kCATConvivaDiagnosticInfoSchema;
 
 // --- Event Keys
 
@@ -325,6 +326,23 @@ extern NSString * const kCATDiagnosticErrorExceptionName;
 
 extern NSString * const kCATEncodingTechniqueGzip;
 extern NSString * const kCATEncodingTechniqueNone;
+
+// --- Diagnostic Info
+
+extern NSString * const kCATDiagnosticInfoClassName;
+extern NSString * const kCATDiagnosticInfoMessage;
+extern NSString * const kCATDiagnosticInfoStackTrace;
+extern NSString * const kCATDiagnosticInfoExceptionName;
+extern NSString * const kCATDiagnosticInfoExtraData;
+
+extern NSString * const kCATRemoteConfigVersion;
+extern NSString * const kCATRemoteConfigAppliedTime;
+extern NSString * const kCATRemoteConfigCacheRefreshInterval;
+extern NSString * const kCATRemoteConfigSource;
+extern NSString * const kCATSamplingRandomNumber;
+extern NSString * const kCATSamplingPercentage;
+extern NSString * const kCATSamplingStatus;
+extern NSString * const kCATSamplingDecision;
 
 /**
  * Different modes of prewarm-detection

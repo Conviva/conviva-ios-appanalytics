@@ -29,6 +29,7 @@
 
 @class CATCustomEventTrackingConfiguration;
 @class CATNetworkReqTrackingConfiguration;
+@class CATDiagnosticInfoConfiguration;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -45,6 +46,7 @@ NS_SWIFT_NAME(CATConfigurationBundle)
 @property (nonatomic, nullable) CATSessionConfiguration *sessionConfiguration;
 @property (nonatomic, nullable) CATCustomEventTrackingConfiguration *customEventTrackingConfiguration;
 @property (nonatomic, nullable) CATNetworkReqTrackingConfiguration *networkReqTrackingConfiguration;
+@property (nonatomic, nullable) CATDiagnosticInfoConfiguration *diagnosticInfoConfiguration;
 
 @property (nonatomic, nonnull, readonly) NSArray<CATConfiguration *> *configurations;
 

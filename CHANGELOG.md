@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.32 (29/11/2024)
+* Supports Controlled Ingestion Feature which is disabled by default. Upgrading to this version will not change the collection behavior unless it is enabled. To enable this feature, please contact Conviva support team.
+* Supports sending Diagnostic Info Events which is disabled by default.
+
 ## 0.2.31 (20/09/2024)
 * <b>Remote config enhancements:</b>
   * Implements exponential backoff for remote config fetch attempts in case of failures, with a maximum of 3 attempts, each separated by a 5-second interval
