@@ -81,4 +81,10 @@ NS_SWIFT_NAME(CATSQLiteEventStore)
  */
 - (long long int)getLastInsertedRowId;
 
+/**
+ *  Returns  the events with size limit.
+ *  @return An array with each dictionary element containing key-value pairs of 'date', 'data', 'ID'.
+ */
+- (NSArray<CATEmitterEvent *> *)getEventsBySizeLimit:(NSUInteger)size;
+
 @end

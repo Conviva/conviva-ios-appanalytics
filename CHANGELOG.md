@@ -1,8 +1,11 @@
 # Changelog
 
-## 0.2.32 (29/11/2024)
-* Supports Controlled Ingestion Feature which is disabled by default. Upgrading to this version will not change the collection behavior unless it is enabled. To enable this feature, please contact Conviva support team.
-* Supports sending Diagnostic Info Events which is disabled by default.
+## 1.0.0 (02/01/2025)
+* Introduces Event Batching Feature with configurable payload size and interval which is enabled by default to efficiently use the network
+* Using dedicated low priority threads(with minimal count) to minimise the impact on application performance
+* Clearing remote config cache on customer key or sensor version change
+* Improvements to stability of the sdk by efficiently handling synchronisation across threads
+* Enhances sending logic by using asynchronous http send mechanism and with decent timeouts
 
 ## 0.2.31 (20/09/2024)
 * <b>Remote config enhancements:</b>

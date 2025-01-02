@@ -31,6 +31,7 @@ NS_SWIFT_NAME(CATEmitterEvent)
 
 @property (nonatomic, readonly) CATPayload *payload;
 @property (nonatomic, readonly) long long storeId;
+@property (nonatomic, readonly) long long size;
 
 - (instancetype)initWithPayload:(CATPayload *)payload storeId:(long long)storeId;
 

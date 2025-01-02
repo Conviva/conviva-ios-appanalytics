@@ -71,17 +71,17 @@ NS_SWIFT_NAME(CATTrackerController)
  * @apiNote Don't retain the reference. It may change on tracker reconfiguration.
  */
 @property (readonly, nonatomic) id<CATEmitterController> emitter;
-/**
- * GdprController.
- * @apiNote Don't retain the reference. It may change on tracker reconfiguration.
- */
-@property (readonly, nonatomic) id<CATGDPRController> gdpr;
-/**
- * GlobalContextsController.
- * @apiNote Don't retain the reference. It may change on tracker reconfiguration.
- */
-@property (readonly, nonatomic) id<CATGlobalContextsController> globalContexts;
 
+/**
+  * GdprController.
+  * @apiNote Don't retain the reference. It may change on tracker reconfiguration.
+  */
+ @property (readonly, nonatomic) id<CATGDPRController> gdpr;
+ /**
+  * GlobalContextsController.
+  * @apiNote Don't retain the reference. It may change on tracker reconfiguration.
+  */
+ @property (readonly, nonatomic) id<CATGlobalContextsController> globalContexts;
 /**
  * Track the event.
  * The tracker will take care to process and send the event assigning `event_id` and `device_timestamp`.

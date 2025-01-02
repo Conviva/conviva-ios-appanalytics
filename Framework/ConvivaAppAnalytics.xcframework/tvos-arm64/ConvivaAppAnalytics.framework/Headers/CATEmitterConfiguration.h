@@ -79,6 +79,24 @@ NS_SWIFT_NAME(CATEmitterConfigurationProtocol)
  */
 @property (nullable) id<CATRequestCallback> requestCallback;
 
+/**
+ * It indicates whether Batching feature is enabled or not.
+ */
+
+@property () BOOL batchingEnabled;
+
+/**
+ * It indicates the batching interval in seconds.
+ */
+
+@property () NSInteger batchingIntervalInSec;
+
+/**
+ * It indicates which are the urgent events.
+ */
+
+@property(strong) NSArray<NSString *> *urgentEvents;
+
 @end
 
 /**
@@ -137,6 +155,24 @@ SP_BUILDER_DECLARE_NULLABLE(id<CATRequestCallback>, requestCallback)
  * If it's not set the tracker will use a SQLite database as default EventStore.
  */
 SP_BUILDER_DECLARE_NULLABLE(id<CATEventStore>, eventStore)
+
+/**
+ * It indicates whether Batching feature is enabled or not.
+ */
+
+SP_BUILDER_DECLARE(BOOL, batchingEnabled)
+
+/**
+ * It indicates the batching interval in seconds.
+ */
+
+SP_BUILDER_DECLARE(NSInteger, batchingIntervalInSec)
+
+/**
+ * It indicates which are the urgent events.
+ */
+
+SP_BUILDER_DECLARE(NSArray<NSString *> *, urgentEvents)
 
 @end
 

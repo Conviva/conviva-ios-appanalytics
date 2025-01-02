@@ -69,6 +69,24 @@ NS_SWIFT_NAME(CATEventStore)
  */
 - (NSArray<CATEmitterEvent *> *)emittableEventsWithQueryLimit:(NSUInteger)queryLimit;
 
+/**
+ * Returns a list of EmitterEvent objects which contains events and related ids.
+ * @param size is the size limit of events returned.
+ * @return EmitterEvent objects containing storeIds and event payloads.
+ */
+
+- (NSArray<CATEmitterEvent *> *)getEventsBySizeLimit:(NSUInteger)size;
+
+
+- (NSUInteger)getAllEventsSize;
+
+/**
+ * Returns last inserted event row id.
+ * @return last inserted event row id.
+ */
+
+- (long long int) getLastInsertedRowId;
+
 @end
 
 NS_ASSUME_NONNULL_END

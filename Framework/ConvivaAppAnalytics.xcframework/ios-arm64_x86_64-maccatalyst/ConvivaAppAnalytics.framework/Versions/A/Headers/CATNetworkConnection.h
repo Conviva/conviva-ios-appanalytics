@@ -58,7 +58,8 @@ NS_SWIFT_NAME(CATNetworkConnection)
  * @param requests to send,
  * @return results of the sending operation.
  */
-- (NSArray<CATRequestResult *> *)sendRequests:(NSArray<CATRequest *> *)requests;
+- (void)sendRequests:(NSArray<CATRequest *> *)requests  
+   completionHandler:(void(^)(NSArray<CATRequestResult *> *))completionHandler;
 
 /**
  * @return http method used to send requests to the collector.

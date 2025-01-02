@@ -29,13 +29,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class CATServiceProvider;
-@class CATConfigurationProvider;
-@class CATNSURLSessionInstrument;
-@class CATNSURLConnectionInstrument;
-
 /**
- * Entry point to instance a new Snowplow tracker.
+ * Entry point to instance a new CAT tracker.
  */
 NS_SWIFT_NAME(CATAppAnalytics)
 @interface CATAppAnalytics : NSObject
@@ -43,9 +38,8 @@ NS_SWIFT_NAME(CATAppAnalytics)
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)new NS_UNAVAILABLE;
 
-/// Remote Configuration
 
-/// Standard Configuration
+/// Remote Configuration
 
 /**
  * Create a new tracker instance which will be used inside the app to track events.
@@ -69,6 +63,23 @@ NS_SWIFT_NAME(CATAppAnalytics)
  */
 + (nullable id<CATTrackerController>)createTrackerWithCustomerKey:(NSString*)customerKey appName:(NSString*)appName NS_SWIFT_NAME(createTracker(customerKey:appName:));
 
+/**
+ * The default tracker instance is the first created in the app, but that can be overridden programmatically
+ * calling `setTrackerAsDefault(TrackerController)`.
+ */
++ (nullable id<CATTrackerController>)defaultTracker;
+
+/**
+ * @return AppAnalytics instance.
+ */
++ (nullable instancetype)sharedInstance;
+
+@end
+
+/**
+ * Entry point to instance a new Snowplow tracker.
+ */
+@interface CATAppAnalytics(Advanced)
 
 /**
  * Create a new tracker instance which will be used inside the app to track events.
@@ -251,7 +262,9 @@ NS_SWIFT_NAME(CATAppAnalytics)
  *                collector.
  * @return The tracker instance created.
  */
-+ (nullable id<CATTrackerController>)createTrackerWithNamespace:(NSString *)namespace customerKey:(NSString*)customerKey network:(CATNetworkConfiguration *)networkConfiguration NS_SWIFT_NAME(createTracker(namespace:customerKey:network:));
++ (nullable id<CATTrackerController>)createTrackerWithNamespace:(NSString *)namespace
+                                                    customerKey:(NSString*)customerKey
+                                                        network:(CATNetworkConfiguration *)networkConfiguration NS_SWIFT_NAME(createTracker(namespace:customerKey:network:));
 
 /**
  * Create a new tracker instance which will be used inside the app to track events.
@@ -279,32 +292,18 @@ NS_SWIFT_NAME(CATAppAnalytics)
  *                       the tracker.
  * @return The tracker instance created.
  */
-+ (nullable id<CATTrackerController>)createTrackerWithNamespace:(NSString *)namespace customerKey:(NSString*)customerKey
-network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<CATConfiguration *> *)configurations NS_SWIFT_NAME(createTracker(namespace:customerKey:network:configurations:));
++ (nullable id<CATTrackerController>)createTrackerWithNamespace:(NSString *)namespace
+                                                    customerKey:(NSString*)customerKey
+                                                        network:(CATNetworkConfiguration *)networkConfiguration
+                                                 configurations:(NSArray<CATConfiguration *> *)configurations NS_SWIFT_NAME(createTracker(namespace:customerKey:network:configurations:));
 
 /**
- * The default tracker instance is the first created in the app, but that can be overridden programmatically
- * calling `setTrackerAsDefault(TrackerController)`.
- */
-+ (nullable id<CATTrackerController>)defaultTracker;
-
-/**
- * Using the namespace identifier is possible to get the trackerController if already instanced.
- *
- * @param namespace The namespace that identifies the tracker.
- * @return The tracker if it exist with that namespace.
- */
-+ (nullable id<CATTrackerController>)trackerByNamespace:(NSString *)namespace NS_SWIFT_NAME(tracker(namespace:));
-
-/**
- * Set the passed tracker as default tracker if it's registered as an active tracker in the app.
- * If the passed instance is of a tracker which is already removed (see `removeTracker`) then it can't become the new default tracker
- * and the operation fails.
- *
- * @param trackerController The new default tracker.
- * @return Whether the tracker passed is registered among the active trackers of the app.
- */
-+ (BOOL)setTrackerAsDefault:(id<CATTrackerController>)trackerController NS_SWIFT_NAME(setAsDefault(tracker:));
+  * Using the namespace identifier is possible to get the trackerController if already instanced.
+  *
+  * @param namespace The namespace that identifies the tracker.
+  * @return The tracker if it exist with that namespace.
+  */
+ + (nullable id<CATTrackerController>)trackerByNamespace:(NSString *)namespace NS_SWIFT_NAME(tracker(namespace:));
 
 /**
  * A tracker can be removed from the active trackers of the app.
@@ -326,16 +325,6 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
 + (void)removeAllTrackers NS_SWIFT_NAME(removeAllTrackers());
 
 /**
- * @return Set of namespace of the active trackers in the app.
- */
-+ (nullable NSArray<NSString *> *)instancedTrackerNamespaces;
-
-/**
- * @return AppAnalytics instance.
- */
-+ (nullable instancetype)sharedInstance;
-
-/**
  * @return Client Id.
  */
 - (nullable NSString*) getClientId;
@@ -354,26 +343,7 @@ network:(CATNetworkConfiguration *)networkConfiguration configurations:(NSArray<
  *  Sets Client Id Event Index.
  *  @param index - Sets Client Id Event Index.
  */
-- (void) setClientIdIndex:(NSInteger)index;
-
-/**
- *  Sync Client Id Event Index.
- */
-- (void) syncClientIdEventIndex;
-
-/**
- * @return Get last event info.
- */
-- (nullable NSDictionary *) getLastEventInfo:(long long)eventTimestamp;
-
-
-
-/* Remote config refresh interval */
-//@property (nonatomic) NSInteger remoteCfgRefreshInterval;
-
-@property (nonatomic, nonnull, readonly) NSMutableDictionary<NSString *, CATServiceProvider *> *serviceProviderInstances;
-@property (nonatomic,strong) CATNSURLSessionInstrument *urlSessionInstrument;
-@property (nonatomic,strong) CATNSURLConnectionInstrument *urlConnectionInstrument;
+- (void) setClientIdEventIndex:(NSInteger)index;
 
 @end
 

@@ -29,14 +29,14 @@ NS_SWIFT_NAME(CATPayload)
 
 /**
  *  Initializes a newly allocated CATPayload
- *  @return A SnowplowPayload.
+ *  @return A CATPayload.
  */
 - (id) init;
 
 /**
  *  Initializes a newly allocated CATPayload with an existing object of type NSDictionary.
  *  @param dict An object of NSDictionary.
- *  @return A SnowplowPayload.
+ *  @return A CATPayload.
  */
 - (id)initWithNSDictionary:(NSDictionary<NSString *, NSObject *> *)dict;
 

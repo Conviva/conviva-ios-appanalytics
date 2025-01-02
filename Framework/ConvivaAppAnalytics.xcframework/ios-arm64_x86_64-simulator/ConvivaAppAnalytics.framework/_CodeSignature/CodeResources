@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/CATAppAnalytics+Advanced.h</key>
+		<data>
+		2Cbf3I/8GerIsdwdHdSFB6Rt794=
+		</data>
 		<key>Headers/CATAppAnalytics.h</key>
 		<data>
-		nTvlYQZEzbzGyvwP/4yfuAZaF2s=
+		hSUGdhOJjoZLfdpTf09RPk53Y78=
 		</data>
 		<key>Headers/CATBackground.h</key>
 		<data>
@@ -22,7 +26,7 @@
 		</data>
 		<key>Headers/CATConfigurationBundle.h</key>
 		<data>
-		ATTdKvUm5+8PpJRg50y+M3L364E=
+		7vB5miYGIyrQBfO3ASs74OCObJ4=
 		</data>
 		<key>Headers/CATConsentDocument.h</key>
 		<data>
@@ -66,7 +70,7 @@
 		</data>
 		<key>Headers/CATEmitterConfiguration.h</key>
 		<data>
-		6PamiOyurge4uh86OA79AgqbRxE=
+		JesNGNTLOLgadNarN+09W066RCw=
 		</data>
 		<key>Headers/CATEmitterController.h</key>
 		<data>
@@ -74,7 +78,7 @@
 		</data>
 		<key>Headers/CATEmitterEvent.h</key>
 		<data>
-		4RqM6vtF+4Ny7zEYK83zHcQSdB4=
+		XM9Rn5x77S2JIsQasKmCZvp0h9E=
 		</data>
 		<key>Headers/CATError.h</key>
 		<data>
@@ -86,7 +90,7 @@
 		</data>
 		<key>Headers/CATEventStore.h</key>
 		<data>
-		X3b5DfPyGIlimoaR+TkstM+5IZs=
+		kViWuu78VQwWm45ibz8l8nzsfXc=
 		</data>
 		<key>Headers/CATForeground.h</key>
 		<data>
@@ -138,7 +142,7 @@
 		</data>
 		<key>Headers/CATNetworkConnection.h</key>
 		<data>
-		tA4RZDLHckozktBx7xcSHulO688=
+		wEKwgdCa6TRnCpUUdv35vvhet08=
 		</data>
 		<key>Headers/CATNetworkController.h</key>
 		<data>
@@ -154,7 +158,7 @@
 		</data>
 		<key>Headers/CATPayload.h</key>
 		<data>
-		h5UhcxqPdIl3lhIjfKOYIweyHo4=
+		aT514ag3BlxtcduB0pNtRegTyV4=
 		</data>
 		<key>Headers/CATPushNotification.h</key>
 		<data>
@@ -178,7 +182,7 @@
 		</data>
 		<key>Headers/CATSQLiteEventStore.h</key>
 		<data>
-		TvGB0zYfOWCJx5/FU1ZjqlRwVHs=
+		FljS7Elt429ib+iyZ8RPlJqRFtw=
 		</data>
 		<key>Headers/CATSchemaRule.h</key>
 		<data>
@@ -234,7 +238,7 @@
 		</data>
 		<key>Headers/CATTrackerController.h</key>
 		<data>
-		nA42s0cA5AzcN6aPrlyRovA19nw=
+		bLkAUbx2v3pV5xqzR7yK3AZ7NfE=
 		</data>
 		<key>Headers/CATTrackerStateSnapshot.h</key>
 		<data>
@@ -250,11 +254,11 @@
 		</data>
 		<key>Headers/ConvivaAppAnalytics-iOS-umbrella.h</key>
 		<data>
-		HhUHo5BktTd4KXRcF4nbLERb7b0=
+		aPtyNmewPXK4lmIS01pHNGMat/Q=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		v91tVXFafLE3RehFyXp8oeA2Oxw=
+		YdKdDY4FH7q3+gfYnLPerzAoC/8=
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -274,7 +278,7 @@
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		dWGtuuNojWEyJuH3n6UswCIjkT0=
+		5bOqc2uPg9sFjPzxnAFA98dX4wY=
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -294,7 +298,7 @@
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		mQHiv9Fn3OYt8qHxpsb99HNLwlM=
+		NiSZ4Mp29jt9WmtHlrnc0ddd8PI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -303,15 +307,26 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/CATAppAnalytics+Advanced.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2Cbf3I/8GerIsdwdHdSFB6Rt794=
+			</data>
+			<key>hash2</key>
+			<data>
+			UK89NovSmNQ07HBQjzYsvZ5zr+u/RCyeEkE8aGVtm5k=
+			</data>
+		</dict>
 		<key>Headers/CATAppAnalytics.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nTvlYQZEzbzGyvwP/4yfuAZaF2s=
+			hSUGdhOJjoZLfdpTf09RPk53Y78=
 			</data>
 			<key>hash2</key>
 			<data>
-			uPu5jcPAT1W3VuQJOPj8/ZVTG92yuvabo0rFrRe+fKM=
+			ErcyKR5cJn2fupv467clb459SY7nxzYRA98IdUFAaL8=
 			</data>
 		</dict>
 		<key>Headers/CATBackground.h</key>
@@ -351,11 +366,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ATTdKvUm5+8PpJRg50y+M3L364E=
+			7vB5miYGIyrQBfO3ASs74OCObJ4=
 			</data>
 			<key>hash2</key>
 			<data>
-			r9p2HAL9m15CEq7WyKLwKctOZnQRnV1JWLJyyiCMWok=
+			2urEMH8vWaylFfIkLVQDI9X62gByYzcFGF2AwY+HHdY=
 			</data>
 		</dict>
 		<key>Headers/CATConsentDocument.h</key>
@@ -472,11 +487,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6PamiOyurge4uh86OA79AgqbRxE=
+			JesNGNTLOLgadNarN+09W066RCw=
 			</data>
 			<key>hash2</key>
 			<data>
-			ReMYUxuAYecAjKCwtkEszlA2kVy4oVsoog+C0y/eijA=
+			GeOcRsJ++kLErXavVAlA6Fdau5SC7WBpGzcsK2RB038=
 			</data>
 		</dict>
 		<key>Headers/CATEmitterController.h</key>
@@ -494,11 +509,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4RqM6vtF+4Ny7zEYK83zHcQSdB4=
+			XM9Rn5x77S2JIsQasKmCZvp0h9E=
 			</data>
 			<key>hash2</key>
 			<data>
-			xCtK7zVxAQ/pgGK/NSwNtugtopa5jVkIMRDNuKhHRxc=
+			U/icGFpei4dnJdzUebmLisBHo7rYHiJCO1pv7C/BL3o=
 			</data>
 		</dict>
 		<key>Headers/CATError.h</key>
@@ -527,11 +542,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			X3b5DfPyGIlimoaR+TkstM+5IZs=
+			kViWuu78VQwWm45ibz8l8nzsfXc=
 			</data>
 			<key>hash2</key>
 			<data>
-			VtTeC1PY9VYaXPISUKosb8XZei/vUhb6JR+QhgrS974=
+			dd+nwP86fz1bP8E7lMXOIxIXLui5qQ66bGwDsQClTvk=
 			</data>
 		</dict>
 		<key>Headers/CATForeground.h</key>
@@ -670,11 +685,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tA4RZDLHckozktBx7xcSHulO688=
+			wEKwgdCa6TRnCpUUdv35vvhet08=
 			</data>
 			<key>hash2</key>
 			<data>
-			D+eefIwi+S1ZuEqjuz0ycAUEfJPgZKTUs2Lytr8qAtM=
+			Ebs+yAZ0O+dKQwLDJgxgefiSnkPRv0ZPLbwG2q3BULM=
 			</data>
 		</dict>
 		<key>Headers/CATNetworkController.h</key>
@@ -714,11 +729,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			h5UhcxqPdIl3lhIjfKOYIweyHo4=
+			aT514ag3BlxtcduB0pNtRegTyV4=
 			</data>
 			<key>hash2</key>
 			<data>
-			dmVXXfyXGBqZYul2CAMZRsfJ/hukBI1d8kcQJQ82Bxw=
+			Z0sYqhjpCSHE9gwT+YCtt1XViQlwZS7a8XjbRCJrp7M=
 			</data>
 		</dict>
 		<key>Headers/CATPushNotification.h</key>
@@ -780,11 +795,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TvGB0zYfOWCJx5/FU1ZjqlRwVHs=
+			FljS7Elt429ib+iyZ8RPlJqRFtw=
 			</data>
 			<key>hash2</key>
 			<data>
-			56ARZ22ULlXroswfoERh1ZMiuk/nQn079PE9zAcMEJQ=
+			TCl9ENIftaJwkH8t7nBsmTItyzQ/Aen8NM5N5pTaa5U=
 			</data>
 		</dict>
 		<key>Headers/CATSchemaRule.h</key>
@@ -934,11 +949,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nA42s0cA5AzcN6aPrlyRovA19nw=
+			bLkAUbx2v3pV5xqzR7yK3AZ7NfE=
 			</data>
 			<key>hash2</key>
 			<data>
-			JORbKKkh6gbV9zb6gFkdmNoja6aC/W3JmOKzBiya3Zg=
+			WiXsbhQ+TiUJwDXoGyVJr9KC95EPO9/ejBiATAmu//c=
 			</data>
 		</dict>
 		<key>Headers/CATTrackerStateSnapshot.h</key>
@@ -978,11 +993,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HhUHo5BktTd4KXRcF4nbLERb7b0=
+			aPtyNmewPXK4lmIS01pHNGMat/Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			bcl2ahkqlK625A7LbLr9TGWXt+o2ooQvZUEo5y60LNM=
+			v3Y/UUqr7WY/XCGV3apRAMuS/43XaQ2WK8nFaiMNUr4=
 			</data>
 		</dict>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -1033,11 +1048,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dWGtuuNojWEyJuH3n6UswCIjkT0=
+			5bOqc2uPg9sFjPzxnAFA98dX4wY=
 			</data>
 			<key>hash2</key>
 			<data>
-			FC8XK29ZERHUfcdHG9PrtJfv59H1JfVx/iF3ns1YXdA=
+			5X84FwKU1yWcUo/r/oF0WytehDwc2k/TC6rjrGfVJMw=
 			</data>
 		</dict>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -1088,11 +1103,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mQHiv9Fn3OYt8qHxpsb99HNLwlM=
+			NiSZ4Mp29jt9WmtHlrnc0ddd8PI=
 			</data>
 			<key>hash2</key>
 			<data>
-			uHcgMV2mKuc2mvl4sVnka4e1JdNv+kLA3KqKnBwlZac=
+			NXnjB20TkHm558e8fpZec8wZML6B8rSuQhBNnxegN0Y=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

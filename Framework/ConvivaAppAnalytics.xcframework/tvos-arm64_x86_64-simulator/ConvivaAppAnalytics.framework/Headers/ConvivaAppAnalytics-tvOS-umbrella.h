@@ -11,6 +11,7 @@
 #endif
 
 #import "CATAppAnalytics.h"
+#import "CATAppAnalytics+Advanced.h"
 #import "CATConstants.h"
 #import "CATLoggerDelegate.h"
 #import "CATPayload.h"
