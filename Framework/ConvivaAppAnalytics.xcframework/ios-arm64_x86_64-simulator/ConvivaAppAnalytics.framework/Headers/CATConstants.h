@@ -321,7 +321,6 @@ extern NSString * const kCATDiagnosticErrorStack;
 extern NSString * const kCATDiagnosticErrorClassName;
 extern NSString * const kCATDiagnosticErrorExceptionName;
 
-
 // --- Encoding Techniques
 
 extern NSString * const kCATEncodingTechniqueGzip;
@@ -343,6 +342,61 @@ extern NSString * const kCATSamplingRandomNumber;
 extern NSString * const kCATSamplingPercentage;
 extern NSString * const kCATSamplingStatus;
 extern NSString * const kCATSamplingDecision;
+
+// --- Conditional Collection
+
+extern NSString * const kCATConditionalCollectionCollect;
+extern NSString * const kCATConditionalCollectionBlock;
+
+extern NSString * const kCATConditionalCollectionRequired;
+extern NSString * const kCATConditionalCollectionOptional;
+
+extern NSString * const kCATConditionalCollectionType;
+extern NSString * const kCATConditionalCollectionTypeOr;
+extern NSString * const kCATConditionalCollectionTypeAnd;
+extern NSString * const kCATConditionalCollectionConditions;
+
+extern NSString * const kCATConditionalCollectionKey;
+extern NSString * const kCATConditionalCollectionValue;
+
+extern NSString * const kCATConditionalCollectionOperation;
+extern NSString * const kCATConditionalCollectionOperationOr;
+extern NSString * const kCATConditionalCollectionOperationAnd;
+extern NSString * const kCATConditionalCollectionOperationEquals;
+extern NSString * const kCATConditionalCollectionOperationNotEquals;
+extern NSString * const kCATConditionalCollectionOperationGreaterThan;
+extern NSString * const kCATConditionalCollectionOperationGreaterThanOrEquals;
+extern NSString * const kCATConditionalCollectionOperationLessThan;
+extern NSString * const kCATConditionalCollectionOperationLessThanOrEquals;
+extern NSString * const kCATConditionalCollectionOperationStartsWith;
+extern NSString * const kCATConditionalCollectionOperationEndsWith;
+extern NSString * const kCATConditionalCollectionOperationContains;
+
+// --- Conditional Collection - Network Request Tracking
+
+extern NSString * const kCATConditionalCollectionNetworkRequestHost;
+extern NSString * const kCATConditionalCollectionNetworkRequestPath;
+extern NSString * const kCATConditionalCollectionNetworkRequestScheme;
+extern NSString * const kCATConditionalCollectionNetworkRequestDuration;
+extern NSString * const kCATConditionalCollectionNetworkRequestStatusCode;
+
+// --- Cache
+
+extern NSString * const kCATConditionalCollectionRequiredPatternMatchingStatus;
+
+
+typedef NS_ENUM(NSInteger, CATConditionalCollectionStatus) {
+    CATConditionalCollectionStatusNo = 0,        // CollectionStatus is NO
+    CATConditionalCollectionStatusYes = 1 ,      // CollectionStatus is YES
+    CATConditionalCollectionStatusUnknown = -1   // CollectionStatus is Unknown state
+};
+
+typedef NS_ENUM(NSInteger, CATRequiredPatternMatchingStatus) {
+    CATRequiredPatternMatchingStatusNone = 0,    // Required pattern matching status is unknown
+    CATRequiredPatternMatchingStatusCollect = 1,  // Required pattern matching satisfied in "collect"
+    CATRequiredPatternMatchingStatusBlock = 2,    // Required pattern matching satisfied in "block"
+    CATRequiredPatternMatchingStatusBlocklist = 3,    // Required pattern matching satisfied in either "blocklist" or Sensor default blocklist
+};
 
 /**
  * Different modes of prewarm-detection

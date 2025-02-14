@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 (02/14/2025)
+* Introduces Intelligent Collection of Network Request Feature designed to optimize data collection while ensuring flexibility and  actionable insights with reduced volume:
+  * Controls network request volume through Activation rules (Collect or Block), which override previous URL-based blocklists.
+  * Supports URL-based filtering using hostname, path, scheme, and filtering based on duration and response status code.
+**NOTE**: By default, this feature is not enabled during Activation. To enable it, please contact the Conviva Support team. Existing customers will not be impacted if the feature remains disabled, as all changes are fully backward compatible.
+* Internal improvements and optimisations
+
 ## 1.0.0 (02/01/2025)
 * Introduces Event Batching Feature with configurable payload size and interval which is enabled by default to efficiently use the network
 * Using dedicated low priority threads(with minimal count) to minimise the impact on application performance
