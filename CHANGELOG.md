@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2 (02/27/2025)
+* Provides flexibility with control of the click event collection, based on any element title, element type, element name, etc.
+**NOTE**: To enable controlled collection of click events (iOS), contact Conviva Support.
+
 ## 1.0.1 (02/14/2025)
 * Introduces Intelligent Collection of Network Request Feature designed to optimize data collection while ensuring flexibility and  actionable insights with reduced volume:
   * Controls network request volume through Activation rules (Collect or Block), which override previous URL-based blocklists.

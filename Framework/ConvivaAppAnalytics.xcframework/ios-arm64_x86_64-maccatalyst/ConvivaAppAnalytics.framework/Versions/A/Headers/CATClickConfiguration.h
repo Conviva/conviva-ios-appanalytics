@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CATConfiguration.h"
+#import "CATConditionalCollectionConfiguration.h"
 
 NS_SWIFT_NAME(CATClickConfigurationProtocol)
 @protocol CATClickConfigurationProtocol
@@ -18,9 +19,9 @@ NS_SWIFT_NAME(CATClickConfigurationProtocol)
 
 @end
 
-
+NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(CATClickConfiguration)
-@interface CATClickConfiguration : CATConfiguration<CATClickConfigurationProtocol>
+@interface CATClickConfiguration : CATConditionalCollectionConfiguration<CATClickConfigurationProtocol>
 
 /**
  * It sets a default TrackerConfiguration.
@@ -30,9 +31,15 @@ NS_SWIFT_NAME(CATClickConfiguration)
 
 - (instancetype)init;
 
+- (instancetype) initWithDictionary:(NSDictionary<NSString *, NSObject *> *)dict;
+
+- (id)copyWithZone:(nullable NSZone *)zone;
+
 /**
  * Whether to enable or disable click tracking.
  */
 SP_BUILDER_DECLARE(BOOL, en)
 
 @end
+
+NS_ASSUME_NONNULL_END

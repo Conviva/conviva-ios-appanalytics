@@ -253,6 +253,7 @@ extern NSString * const kCATSvPreviousScreenId;
 extern NSString * const kCATSvTransitionType;
 extern NSString * const kCATSvViewController;
 extern NSString * const kCATSvTopViewController;
+extern NSString * const kCATConvivaCsv;
 
 // --- User Timing Event
 
@@ -320,6 +321,9 @@ extern NSString * const kCATDiagnosticErrorMessage;
 extern NSString * const kCATDiagnosticErrorStack;
 extern NSString * const kCATDiagnosticErrorClassName;
 extern NSString * const kCATDiagnosticErrorExceptionName;
+
+// --- Conviva Click Event
+extern NSString * const kCATConvivaClick;
 
 // --- Encoding Techniques
 
