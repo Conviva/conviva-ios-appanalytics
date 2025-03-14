@@ -355,5 +355,14 @@ NS_SWIFT_NAME(CATAppAnalytics)
  */
 - (void) setClientIdEventIndex:(NSInteger)index;
 
+/**
+ *  Gets config info for given target URL
+ *
+ *  @param targetUrl - target url.
+ *  @returns Config info map
+ */
+- (NSDictionary *)getConfigInfoFor:(NSString *)targetUrl;
+
+
 @end
 NS_ASSUME_NONNULL_END

@@ -30,6 +30,7 @@
 #import "CATNetworkController.h"
 #import "CATGDPRController.h"
 #import "CATGlobalContextsController.h"
+#import "CATNetworkReqTrackingConfiguration.h"
 
 #import "CATEventBase.h"
 
@@ -157,6 +158,8 @@ NS_SWIFT_NAME(CATTrackerController)
  * Default is YES.
  */
 - (void)keepAliveInBackground:(BOOL)keepAlive;
+
+- (CATNetworkReqTrackingConfiguration *)nwReqTrackingConfiguration;
 
 @end
 

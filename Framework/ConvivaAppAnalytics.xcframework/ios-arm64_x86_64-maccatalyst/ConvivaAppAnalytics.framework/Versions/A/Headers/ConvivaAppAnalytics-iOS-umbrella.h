@@ -71,6 +71,7 @@
 #import "CATState.h"
 #import "CATUnStructured.h"
 #import "CATButtonClickEvent.h"
+#import "CATNetworkTrace.h"
 #import "CATConditionalCollectionConfiguration.h"
 #import "CATNetworkReqTrackingConfiguration.h"
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3 (03/14/2025)
+* Sends events enabled by default in code till config is available. Once config is available, honours strictly config.
+* Fixed crash issue if both conviva and Firebase are used by app.
+
 ## 1.0.2 (02/27/2025)
 * Provides flexibility with control of the click event collection, based on any element title, element type, element name, etc.
 **NOTE**: To enable controlled collection of click events (iOS), contact Conviva Support.

@@ -19,6 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(strong, readonly) NSArray *collectattr;
 
+@property (assign, readwrite) BOOL isRQBCollectionEnabled;
+
+@property (assign, readwrite) BOOL isRSBCollectionEnabled;
+
 - (instancetype) initWithBlocklist:(NSArray *)blocklist;
 
 - (instancetype) initWithDictionary:(NSDictionary<NSString *, NSObject *> *)dict;
@@ -31,7 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void) setBlocklistItems:(NSArray * _Nonnull)blocklist;
 
-- (BOOL)isNetworkRequestTrackingDisabled;
+- (BOOL) isNetworkRequestTrackingDisabled;
+
+- (void) updateCollectAttributes;
 
 @end
 
