@@ -2,9 +2,9 @@
 Use Application Analytics to autocollect events and track application specific events and state changes.
 
 # Supported Platforms
-* iOS(9.0 and above)
+* iOS(12.0 and above)
 * iPadOS(13.0 and above)
-* tvOS(9.0 and above)
+* tvOS(12.0 and above)
 * watchOS(TBD)
 
 # Configuring Workspace
