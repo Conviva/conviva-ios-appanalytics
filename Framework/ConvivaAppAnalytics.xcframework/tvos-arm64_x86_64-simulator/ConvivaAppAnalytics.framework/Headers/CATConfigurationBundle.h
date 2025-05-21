@@ -27,11 +27,13 @@
 #import "CATSessionConfiguration.h"
 #import "CATEmitterConfiguration.h"
 #import "CATClickConfiguration.h"
+
 //#import "CATCustomEventTrackingConfiguration.h"
 
 @class CATCustomEventTrackingConfiguration;
 @class CATNetworkReqTrackingConfiguration;
 @class CATDiagnosticInfoConfiguration;
+@class CATTraceParentConfiguration;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -51,6 +53,7 @@ NS_SWIFT_NAME(CATConfigurationBundle)
 @property (nonatomic, nullable) CATEmitterConfiguration *emitterConfiguration;
 @property (nonatomic, nullable) CATDiagnosticInfoConfiguration *diagnosticInfoConfiguration;
 @property (nonatomic, nullable) CATClickConfiguration *clickcc;
+@property (nonatomic, nullable) CATTraceParentConfiguration *traceParentConfiguration;
 
 @property (nonatomic, nonnull, readonly) NSArray<CATConfiguration *> *configurations;
 

@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.3 (05/21/2025)
+* Supports the traceparent header generation and collection.
+
 ## 1.0.3 (03/14/2025)
 * Sends events enabled by default in code till config is available. Once config is available, honours strictly config.
 * Fixed crash issue if both conviva and Firebase are used by app.

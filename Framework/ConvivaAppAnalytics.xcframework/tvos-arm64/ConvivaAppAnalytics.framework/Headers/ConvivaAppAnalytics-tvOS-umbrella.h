@@ -25,6 +25,7 @@
 #import "CATSessionConfiguration.h"
 #import "CATEmitterConfiguration.h"
 #import "CATClickConfiguration.h"
+#import "CATTraceParentConfiguration.h"
 #import "CATGDPRConfiguration.h"
 #import "CATGlobalContextsConfiguration.h"
 #import "CATConfigurationBundle.h"
