@@ -62,7 +62,7 @@ Use Conviva iOS ECO SDK to auto-collect events and track application-specific ev
     - In **Other Linker Flags** add `-ObjC`.
       
 - Import the Conviva SDK into your source code:
-
+<!-- :::code-tabs[Swift,ObjC] -->
 ```swift
 // Swift:
 import ConvivaAppAnalytics
@@ -73,6 +73,7 @@ import ConvivaAppAnalytics
 @import ConvivaAppAnalytics;
 
 ```
+<!-- ::: -->
 
 #### Swift Package Manager
 - In Xcode, navigate to **File**  &#8594; **Add Package Dependency...**
@@ -96,6 +97,7 @@ pod 'ConvivaAppAnalytics', '<version>'
 > It is recommended to initialize the tracker at the earliest possible stage of the application's launch lifecycle. Ideally, this should be done in the app's entry point method, before any other application functionality is executed.
 
 Some examples of Conviva iOS ECO SDK initialization:
+<!-- :::code-tabs[Swift,ObjC] -->
 ```swift
 // Swift:
 import ConvivaAppAnalytics
@@ -131,12 +133,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return YES;
 }
 ```
+<!-- ::: -->
 **customerKey** - A string to identify a specific customer account. Use different keys for dev and prod. Find them in [Pulse](https://pulse.conviva.com/app/profile/applications) under My Profile(_Conviva login required_).
 
 **appName** -  A string value that uniquely identifies your app across platforms.
 
 The tracker object can be retrieved using the following API in other classes after initialization.
-
+<!-- :::code-tabs[Swift,ObjC] -->
 ```swift
 // Swift:
 let tracker = CATAppAnalytics.defaultTracker();
@@ -146,10 +149,11 @@ let tracker = CATAppAnalytics.defaultTracker();
 // ObjC:
 id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
 ```
+<!-- ::: -->
 
 ### 3. Set the User ID
 User ID is a unique string identifier to distinguish individual viewers. If using [Conviva Video Sensor](https://github.com/Conviva/ConvivaSDK), match it with the **Viewer ID**.
-
+<!-- :::code-tabs[Swift,ObjC] -->
 ```swift
 // Swift:
 tracker?.subject?.userId = "user_id"
@@ -159,7 +163,7 @@ tracker?.subject?.userId = "user_id"
 // ObjC:
 tracker.subject.userId = @"user_id";
 ```
-
+<!-- ::: -->
 After steps 1–3, verify [auto-collected events](#auto-collected-events) in the [validation dashboard](https://pulse.conviva.com/app/appmanager/ecoIntegration/validation). (_Conviva login required_)
 
 ## More Features
@@ -169,7 +173,7 @@ After steps 1–3, verify [auto-collected events](#auto-collected-events) in the
 <summary><b>Track Custom Event</b></summary>
 
 Two APIs to track custom events:
-
+<!-- :::code-tabs[ObjC] -->
 ```objective-c
 /**
  * Track custom event.
@@ -185,9 +189,9 @@ Two APIs to track custom events:
  */
 - (void)trackCustomEvent:(NSString *)name eventData:(nonnull id)eventData;
 ```
-
+<!-- ::: -->
 Examples: 
-
+<!-- :::code-tabs[Swift,ObjC] -->
 ```swift
 // Swift:
 var eventData = ["identifier1":"test","identifier2":1,"identifier3":true] as [String : Any]
@@ -199,7 +203,7 @@ tracker?.trackCustomEvent("your-event-name", eventData: eventData)
 NSDictionary *data = @{@"identifier1":@"test",@"identifier2":@(1),@"identifier3":@(true)};
 [self trackCustomEvent:@"your-event-name" eventData:data];
 ```
-
+<!-- ::: -->
 </details>
 
 <details>
@@ -209,6 +213,7 @@ NSDictionary *data = @{@"identifier1":@"test",@"identifier2":@(1),@"identifier3"
 Custom Tags are global tags applied to all events and persist throughout the application lifespan, or until they are cleared.
 
 Set the custom tags: 
+<!-- :::code-tabs[Swift,ObjC] -->
 ```swift
 // Swift:
 // Adds the custom tags
@@ -225,8 +230,9 @@ NSDictionary* tags = @{
 };
 [tracker setCustomTags:tags];
 ```
-
+<!-- ::: -->
 Clear a few of the previously set custom tags:
+<!-- :::code-tabs[Swift,ObjC] -->
 ```swift
 // Swift:
 // Clears custom tags Key1, Key2 & Key3
@@ -240,8 +246,9 @@ tracker?.clearCustomTags(keys)
 NSArray* keys = @[ @"Key1", @"Key2", @"Key3" ];
 [tracker clearCustomTags:keys];
 ```
-
+<!-- ::: -->
 Clear all the previously set custom tags:
+<!-- :::code-tabs[Swift,ObjC] -->
 ```swift
 // Swift:
 // Clears all the custom tags
@@ -253,7 +260,7 @@ tracker?.clearAllCustomTags()
 // Clears all the custom tags
 [tracker clearAllCustomTags];
 ```
-
+<!-- ::: -->
 </details>
 
 <details>
@@ -262,7 +269,7 @@ tracker?.clearAllCustomTags()
 
 By default, user navigation is tracked using the class names of `UIViewController` instances. 
 Override the screen name using the following API:
-
+<!-- :::code-tabs[Swift,ObjC] -->
 ```swift
 // Swift:
 class ExampleViewController: UIViewController {
@@ -281,8 +288,7 @@ class ExampleViewController: UIViewController {
     @property(copy, nonatomic)NSString *catViewId;
 
 @end
-```
-```objective-c
+
 // CustomViewController.m
 #import "ExampleViewController.h"
 
@@ -297,7 +303,7 @@ class ExampleViewController: UIViewController {
 
 @end
 ```
-
+<!-- ::: -->
 </details>
 
 <details>
@@ -309,13 +315,16 @@ class ExampleViewController: UIViewController {
    In SwiftUI applications, `button_click` and `screen_view` events are not auto-collected. To enable tracking for these events, Conviva provides extension functions: 
 
    To track user taps or clicks:  
+   <!-- :::code-tabs[Swift] -->
    ```swift
    Button("Submit") {
        // action
    }.convivaAnalyticsButtonClick(title: "Submit") 
    ```
+   <!-- ::: -->
 
    To track when a new screen or view is displayed:
+   <!-- :::code-tabs[Swift] -->
    ```swift
    struct DetailView: View {
       var body: some View {
@@ -326,7 +335,7 @@ class ExampleViewController: UIViewController {
      }
   }
    ```
-   
+   <!-- ::: -->
    
 </details>
 
