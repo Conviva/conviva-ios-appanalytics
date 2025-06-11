@@ -111,7 +111,7 @@ pod 'ConvivaAppAnalytics', '<version>'
 
 ### 2. Initialization
 
-> [!NOTE]
+> **Note:**
 > It is recommended to initialize the tracker at the earliest possible stage of the application's launch lifecycle. Ideally, this should be done in the app's entry point method, before any other application functionality is executed.
 
 Some examples of Conviva iOS ECO SDK initialization:
