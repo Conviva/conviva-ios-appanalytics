@@ -63,12 +63,12 @@ Use Conviva iOS ECO SDK to auto-collect events and track application-specific ev
       
 - Import the Conviva SDK into your source code:
 <!-- :::code-tabs[Swift,ObjC] -->
-```swift
+```Swift
 // Swift:
 import ConvivaAppAnalytics
 ```
 
-```Objective-C
+```ObjC
 // ObjC:
 @import ConvivaAppAnalytics;
 
@@ -98,7 +98,7 @@ pod 'ConvivaAppAnalytics', '<version>'
 
 Some examples of Conviva iOS ECO SDK initialization:
 <!-- :::code-tabs[Swift,ObjC] -->
-```swift
+```Swift
 // Swift:
 import ConvivaAppAnalytics
 
@@ -118,7 +118,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-```objective-c
+```ObjC
 // ObjC:
 @import ConvivaAppAnalytics;
 
@@ -140,12 +140,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 The tracker object can be retrieved using the following API in other classes after initialization.
 <!-- :::code-tabs[Swift,ObjC] -->
-```swift
+```Swift
 // Swift:
 let tracker = CATAppAnalytics.defaultTracker();
 ```
 
-```objective-c
+```ObjC
 // ObjC:
 id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
 ```
@@ -154,12 +154,12 @@ id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
 ### 3. Set the User ID
 User ID is a unique string identifier to distinguish individual viewers. If using [Conviva Video Sensor](https://github.com/Conviva/ConvivaSDK), match it with the **Viewer ID**.
 <!-- :::code-tabs[Swift,ObjC] -->
-```swift
+```Swift
 // Swift:
 tracker?.subject?.userId = "user_id"
 ```
 
-```objective-c
+```ObjC
 // ObjC:
 tracker.subject.userId = @"user_id";
 ```
@@ -173,8 +173,8 @@ After steps 1–3, verify [auto-collected events](#auto-collected-events) in the
 <summary><b>Track Custom Event</b></summary>
 
 Two APIs to track custom events:
-<!-- :::code-tabs[ObjC] -->
-```objective-c
+
+```
 /**
  * Track custom event.
  * @param name Name of the custom event.
@@ -189,16 +189,16 @@ Two APIs to track custom events:
  */
 - (void)trackCustomEvent:(NSString *)name eventData:(nonnull id)eventData;
 ```
-<!-- ::: -->
+
 Examples: 
 <!-- :::code-tabs[Swift,ObjC] -->
-```swift
+```Swift
 // Swift:
 var eventData = ["identifier1":"test","identifier2":1,"identifier3":true] as [String : Any]
 tracker?.trackCustomEvent("your-event-name", eventData: eventData)
 ```
 
-```objective-c
+```ObjC
 // ObjC:
 NSDictionary *data = @{@"identifier1":@"test",@"identifier2":@(1),@"identifier3":@(true)};
 [self trackCustomEvent:@"your-event-name" eventData:data];
@@ -214,14 +214,14 @@ Custom Tags are global tags applied to all events and persist throughout the app
 
 Set the custom tags: 
 <!-- :::code-tabs[Swift,ObjC] -->
-```swift
+```Swift
 // Swift:
 // Adds the custom tags
 let tags = ["Key1": "Value1", "Key2": "Value2"]
 tracker?.setCustomTags(tags)
 ```
 
-```objective-c
+```ObjC
 // ObjC:
 // Adds the custom tags
 NSDictionary* tags = @{
@@ -233,14 +233,14 @@ NSDictionary* tags = @{
 <!-- ::: -->
 Clear a few of the previously set custom tags:
 <!-- :::code-tabs[Swift,ObjC] -->
-```swift
+```Swift
 // Swift:
 // Clears custom tags Key1, Key2 & Key3
 let keys = ["Key1", "Key2", "Key3"]
 tracker?.clearCustomTags(keys)
 ```
 
-```objective-c
+```ObjC
 // ObjC:
 // Clears custom tags Key1, Key2 & Key3
 NSArray* keys = @[ @"Key1", @"Key2", @"Key3" ];
@@ -249,13 +249,13 @@ NSArray* keys = @[ @"Key1", @"Key2", @"Key3" ];
 <!-- ::: -->
 Clear all the previously set custom tags:
 <!-- :::code-tabs[Swift,ObjC] -->
-```swift
+```Swift
 // Swift:
 // Clears all the custom tags
 tracker?.clearAllCustomTags()
 ```
 
-```objective-c
+```ObjC
 // ObjC:
 // Clears all the custom tags
 [tracker clearAllCustomTags];
@@ -270,7 +270,7 @@ tracker?.clearAllCustomTags()
 By default, user navigation is tracked using the class names of `UIViewController` instances. 
 Override the screen name using the following API:
 <!-- :::code-tabs[Swift,ObjC] -->
-```swift
+```Swift
 // Swift:
 class ExampleViewController: UIViewController {
 
@@ -280,7 +280,7 @@ class ExampleViewController: UIViewController {
 }
 
 ```
-```objective-c
+```ObjC
 // ObjC:
 // CustomViewController.h
 @interface ExampleViewController : UIViewController
@@ -315,17 +315,17 @@ class ExampleViewController: UIViewController {
    In SwiftUI applications, `button_click` and `screen_view` events are not auto-collected. To enable tracking for these events, Conviva provides extension functions: 
 
    To track user taps or clicks:  
-   <!-- :::code-tabs[Swift] -->
-   ```swift
+  
+   ```
    Button("Submit") {
        // action
    }.convivaAnalyticsButtonClick(title: "Submit") 
    ```
-   <!-- ::: -->
+
 
    To track when a new screen or view is displayed:
-   <!-- :::code-tabs[Swift] -->
-   ```swift
+   
+   ```
    struct DetailView: View {
       var body: some View {
          VStack {
@@ -335,7 +335,7 @@ class ExampleViewController: UIViewController {
      }
   }
    ```
-   <!-- ::: -->
+  
    
 </details>
 
