@@ -128,7 +128,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
         // Initialize Conviva Tracker
-        let tracker = CATAppAnalytics.createTracker(customerKey: customerKey, appName: appName)
+        let tracker = CATAppAnalytics.createTracker(customerKey: "YOUR_CUSTOMER_KEY", appName: "YOUR_APP_NAME")
 
         return true
     }
@@ -146,7 +146,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     // Initialize Conviva Tracker
-    id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey:customerKey appName:appName];
+    id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey:"YOUR_CUSTOMER_KEY" appName:"YOUR_APP_NAME"];
 
     return YES;
 }
