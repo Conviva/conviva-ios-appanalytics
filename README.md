@@ -56,9 +56,9 @@ Use Conviva iOS ECO SDK to auto-collect events and track application-specific ev
 
 - Only for [Swift Package Manager](#swift-package-manager) and [Manual Install](#manual-install), add required frameworks and linker flags:
 
-<!--SPM-->
+<!--self-serve[SPM,Manual]-->
 
-<!--Manual--> 
+
 
     -  In Xcode, navigate to **Build Phases** &#8594; **Link Binary With Libraries** and add the following system frameworks:
         -  `UIKit`
@@ -79,30 +79,35 @@ import ConvivaAppAnalytics
 
 ```
 <!-- ::: -->
-<!--eofManual--> 
+<!--eof-self-serve--> 
 
 #### Swift Package Manager
 - In Xcode, navigate to **File**  &#8594; **Add Package Dependency...**
 - Add the following repository URL to add the Package:
     - `https://github.com/conviva/conviva-ios-appanalytics`
 
-<!--eofSPM--> 
+<!--eof-self-serve--> 
 
-<!--CocoaPods-->    
+<!--self-serve[CocoaPods]-->
+
+   
 #### CocoaPods
 Add the following line to your `Podfile`, replacing `<version>` with the latest version: [![release](https://img.shields.io/github/release/Conviva/conviva-ios-appanalytics?label=Conviva%20iOS%20ECO%20SDK)](https://github.com/Conviva/conviva-ios-appanalytics/releases)
 ```plaintext
 pod 'ConvivaAppAnalytics', '<version>'
 ```
-<!--eofCocoaPods-->  
+<!--eof-self-serve--> 
 
-<!--Manual--> 
+<!--self-serve[Manual]-->
+
+
 
 #### Manual Install
 - Download the package from [![release](https://img.shields.io/github/release/Conviva/conviva-ios-appanalytics?label=Conviva%20iOS%20ECO%20SDK)](https://github.com/Conviva/conviva-ios-appanalytics/releases).
 - In Xcode, go to **Build Phases** and add `ConvivaAppAnalytics.xcframework` to the **Link Binary with Libraries** section. This package contains frameworks for iOS, iPadOS and tvOS.
 
-<!--eofManual-->
+<!--eof-self-serve--> 
+
 
 ### 2. Initialization
 
