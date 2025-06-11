@@ -164,6 +164,8 @@ tracker?.subject?.userId = "user_id"
 tracker.subject.userId = @"user_id";
 ```
 <!-- ::: -->
+
+
 After steps 1–3, verify [auto-collected events](#auto-collected-events) in the [validation dashboard](https://pulse.conviva.com/app/appmanager/ecoIntegration/validation). (_Conviva login required_)
 
 ## More Features
