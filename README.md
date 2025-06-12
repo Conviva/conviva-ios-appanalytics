@@ -86,7 +86,7 @@ Use Conviva iOS ECO SDK to auto-collect events and track application-specific ev
 
 Only for [Swift Package Manager](#swift-package-manager) and [Manual Install](#manual-install), add required frameworks and linker flags:
 
-<!--self-serve[SPM,Manual]-->
+   <!--self-serve[SPM,Manual]-->
 
 
 
@@ -109,7 +109,7 @@ import ConvivaAppAnalytics
 
 ```
 <!-- ::: -->
-<!--eof-self-serve--> 
+   <!--eof-self-serve--> 
 
 
 ### 2. Initialization
