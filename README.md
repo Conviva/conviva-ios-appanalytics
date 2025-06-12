@@ -155,9 +155,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 <!-- ::: -->
-**customerKey** - A string to identify a specific customer account. Use different keys for dev and prod. Find them in [Pulse](https://pulse.conviva.com/app/profile/applications) under My Profile(_Conviva login required_).
+**YOUR_CUSTOMER_KEY** - A string to identify a specific customer account. Use different keys for dev and prod. Find them in [Pulse](https://pulse.conviva.com/app/profile/applications) under My Profile(_Conviva login required_).
 
-**appName** -  A string value that uniquely identifies your app across platforms.
+**YOUR_APP_NAME** -  A string value that uniquely identifies your app across platforms.
 
 The tracker object can be retrieved using the following API in other classes after initialization.
 <!-- :::code-tabs[Swift,ObjC] -->
