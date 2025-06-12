@@ -192,7 +192,7 @@ After steps 1–3, verify [auto-collected events](#auto-collected-events) in the
 ## More Features
 
 <details>
-
+<!--self-serve-custom-event-->
 <summary><b>Track Custom Event</b></summary>
 
 Two APIs to track custom events:
@@ -227,10 +227,12 @@ NSDictionary *data = @{@"identifier1":@"test",@"identifier2":@(1),@"identifier3"
 [self trackCustomEvent:@"your-event-name" eventData:data];
 ```
 <!-- ::: -->
+
+<!--eof-self-serve-custom-event--> 
 </details>
 
 <details>
-
+<!--self-serve-custom-event-->
 <summary><b>Set Custom Tags</b></summary>
 
 Custom Tags are global tags applied to all events and persist throughout the application lifespan, or until they are cleared.
@@ -284,6 +286,8 @@ tracker?.clearAllCustomTags()
 [tracker clearAllCustomTags];
 ```
 <!-- ::: -->
+
+<!--eof-self-serve-custom-event--> 
 </details>
 
 <details>
