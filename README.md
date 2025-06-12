@@ -90,11 +90,11 @@ Only for [Swift Package Manager](#swift-package-manager) and [Manual Install](#m
 
 
 
-    -  In Xcode, navigate to **Build Phases** &#8594; **Link Binary With Libraries** and add the following system frameworks:
-        -  `UIKit`
-        -  `Foundation`
-        -  `CoreTelephony` (iOS only)
-    - In **Other Linker Flags** add `-ObjC`.
+   -  In Xcode, navigate to **Build Phases** &#8594; **Link Binary With Libraries** and add the following system frameworks:
+       -  `UIKit`
+       -  `Foundation`
+       -  `CoreTelephony` (iOS only)
+   - In **Other Linker Flags** add `-ObjC`.
       
 - Import the Conviva SDK into your source code:
 <!-- :::code-tabs[Swift,ObjC] -->
