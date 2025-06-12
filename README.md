@@ -81,7 +81,7 @@ import ConvivaAppAnalytics
 <!-- ::: -->
 <!--eof-self-serve--> 
 
-<!-- :::code-tabs[Swift] -->
+<!--self-serve[SPM]-->
 
 #### Swift Package Manager
 - In Xcode, navigate to **File**  &#8594; **Add Package Dependency...**
