@@ -81,7 +81,7 @@ pod 'ConvivaAppAnalytics', '<version>'
  
     
 
-- Only for [Swift Package Manager](#swift-package-manager) and [Manual Install](#manual-install), add required frameworks and linker flags:
+Only for [Swift Package Manager](#swift-package-manager) and [Manual Install](#manual-install), add required frameworks and linker flags:
 
 <!--self-serve[SPM,Manual]-->
 
