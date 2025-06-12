@@ -53,10 +53,10 @@ Use Conviva iOS ECO SDK to auto-collect events and track application-specific ev
  
 <!--self-serve[SPM]-->
 
-- #### Swift Package Manager
-- In Xcode, navigate to **File**  &#8594; **Add Package Dependency...**
-- Add the following repository URL to add the Package:
-    - `https://github.com/conviva/conviva-ios-appanalytics`
+    - #### Swift Package Manager
+        - In Xcode, navigate to **File**  &#8594; **Add Package Dependency...**
+        - Add the following repository URL to add the Package:
+            - `https://github.com/conviva/conviva-ios-appanalytics`
 
 <!--eof-self-serve--> 
 
