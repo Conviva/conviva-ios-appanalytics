@@ -48,55 +48,78 @@ Use Conviva iOS ECO SDK to auto-collect events and track application-specific ev
   
 
 ### 1. Installation
-- Install the Conviva iOS ECO SDK using one of the following methods:
-  
-    - [Swift Package Manager](#swift-package-manager)
-    - [CocoaPods](#cocoapods)
-    - [Manual Install](#manual-install)
 
-- Only for [Swift Package Manager](#swift-package-manager) and [Manual Install](#manual-install), add required frameworks and linker flags:
-    -  In Xcode, navigate to **Build Phases** &#8594; **Link Binary With Libraries** and add the following system frameworks:
-        -  `UIKit`
-        -  `Foundation`
-        -  `CoreTelephony` (iOS only)
-    - In **Other Linker Flags** add `-ObjC`.
+- Install the Conviva iOS ECO SDK using one of the following methods:
+ 
+    <!--self-serve[SPM]-->
+
+    - **Swift Package Manager**
+        - In **Xcode**, navigate to:  
+             `File` → `Add Package Dependency...`
+        - Add the following repository URL:  
+             `https://github.com/conviva/conviva-ios-appanalytics`
+
+
+    <!--eof-self-serve--> 
+
+    <!--self-serve[CocoaPods]-->
+
+    - **CocoaPods**
+
+       - Add the following line to your `Podfile`, replacing `<version>` with the latest version: [![release](https://img.shields.io/github/release/Conviva/conviva-ios-appanalytics?label=Conviva%20iOS%20ECO%20SDK)](https://github.com/Conviva/conviva-ios-appanalytics/releases)
+
+    ```plaintext
+        pod 'ConvivaAppAnalytics', '<version>'
+    ```
+     <!--eof-self-serve--> 
+
+
+     <!--self-serve[Manual]-->
+
+   - **Manual Install**
+       - Download the package from [![release](https://img.shields.io/github/release/Conviva/conviva-ios-appanalytics?label=Conviva%20iOS%20ECO%20SDK)](https://github.com/Conviva/conviva-ios-appanalytics/releases).
+       - In Xcode, go to **Build Phases** and add `ConvivaAppAnalytics.xcframework` to the **Link Binary with Libraries** section. This package contains frameworks for iOS, iPadOS and tvOS.
+
+   <!--eof-self-serve--> 
+ 
+    
+
+Only for [Swift Package Manager](#swift-package-manager) and [Manual Install](#manual-install), add required frameworks and linker flags:
+
+   <!--self-serve[SPM,Manual]-->
+
+
+
+   -  In Xcode, navigate to **Build Phases** &#8594; **Link Binary With Libraries** and add the following system frameworks:
+       -  `UIKit`
+       -  `Foundation`
+       -  `CoreTelephony` (iOS only)
+   - In **Other Linker Flags** add `-ObjC`.
       
 - Import the Conviva SDK into your source code:
-
-```swift
+<!-- :::code-tabs[Swift,ObjC] -->
+```Swift
 // Swift:
 import ConvivaAppAnalytics
 ```
 
-```Objective-C
+```ObjC
 // ObjC:
 @import ConvivaAppAnalytics;
 
 ```
+<!-- ::: -->
+   <!--eof-self-serve--> 
 
-#### Swift Package Manager
-- In Xcode, navigate to **File**  &#8594; **Add Package Dependency...**
-- Add the following repository URL to add the Package:
-    - `https://github.com/conviva/conviva-ios-appanalytics`
-     
-    
-#### CocoaPods
-Add the following line to your `Podfile`, replacing `<version>` with the latest version: [![release](https://img.shields.io/github/release/Conviva/conviva-ios-appanalytics?label=Conviva%20iOS%20ECO%20SDK)](https://github.com/Conviva/conviva-ios-appanalytics/releases)
-```plaintext
-pod 'ConvivaAppAnalytics', '<version>'
-```
-
-#### Manual Install
-- Download the package from [![release](https://img.shields.io/github/release/Conviva/conviva-ios-appanalytics?label=Conviva%20iOS%20ECO%20SDK)](https://github.com/Conviva/conviva-ios-appanalytics/releases).
-- In Xcode, go to **Build Phases** and add `ConvivaAppAnalytics.xcframework` to the **Link Binary with Libraries** section. This package contains frameworks for iOS, iPadOS and tvOS.
 
 ### 2. Initialization
 
-> [!NOTE]
+> **Note:**
 > It is recommended to initialize the tracker at the earliest possible stage of the application's launch lifecycle. Ideally, this should be done in the app's entry point method, before any other application functionality is executed.
 
 Some examples of Conviva iOS ECO SDK initialization:
-```swift
+<!-- :::code-tabs[Swift,ObjC] -->
+```Swift
 // Swift:
 import ConvivaAppAnalytics
 
@@ -108,7 +131,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
         // Initialize Conviva Tracker
-        let tracker = CATAppAnalytics.createTracker(customerKey: customerKey, appName: appName)
+        let tracker = CATAppAnalytics.createTracker(customerKey: "YOUR_CUSTOMER_KEY", appName: "YOUR_APP_NAME")
 
         return true
     }
@@ -116,7 +139,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-```objective-c
+```ObjC
 // ObjC:
 @import ConvivaAppAnalytics;
 
@@ -126,51 +149,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     // Initialize Conviva Tracker
-    id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey:customerKey appName:appName];
+    id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey:"YOUR_CUSTOMER_KEY" appName:"YOUR_APP_NAME"];
 
     return YES;
 }
 ```
-**customerKey** - A string to identify a specific customer account. Use different keys for dev and prod. Find them in [Pulse](https://pulse.conviva.com/app/profile/applications) under My Profile(_Conviva login required_).
+<!-- ::: -->
+**YOUR_CUSTOMER_KEY** - A string to identify a specific customer account. Use different keys for dev and prod. Find them in [Pulse](https://pulse.conviva.com/app/profile/applications) under My Profile(_Conviva login required_).
 
-**appName** -  A string value that uniquely identifies your app across platforms.
+**YOUR_APP_NAME** -  A string value that uniquely identifies your app across platforms.
 
 The tracker object can be retrieved using the following API in other classes after initialization.
-
-```swift
+<!-- :::code-tabs[Swift,ObjC] -->
+```Swift
 // Swift:
 let tracker = CATAppAnalytics.defaultTracker();
 ```
 
-```objective-c
+```ObjC
 // ObjC:
 id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
 ```
+<!-- ::: -->
 
 ### 3. Set the User ID
 User ID is a unique string identifier to distinguish individual viewers. If using [Conviva Video Sensor](https://github.com/Conviva/ConvivaSDK), match it with the **Viewer ID**.
-
-```swift
+<!-- :::code-tabs[Swift,ObjC] -->
+```Swift
 // Swift:
 tracker?.subject?.userId = "user_id"
 ```
 
-```objective-c
+```ObjC
 // ObjC:
 tracker.subject.userId = @"user_id";
 ```
+<!-- ::: -->
+
 
 After steps 1–3, verify [auto-collected events](#auto-collected-events) in the [validation dashboard](https://pulse.conviva.com/app/appmanager/ecoIntegration/validation). (_Conviva login required_)
 
 ## More Features
 
 <details>
-
+<!--self-serve-custom-event-->
 <summary><b>Track Custom Event</b></summary>
 
 Two APIs to track custom events:
 
-```objective-c
+```
 /**
  * Track custom event.
  * @param name Name of the custom event.
@@ -187,36 +214,39 @@ Two APIs to track custom events:
 ```
 
 Examples: 
-
-```swift
+<!-- :::code-tabs[Swift,ObjC] -->
+```Swift
 // Swift:
 var eventData = ["identifier1":"test","identifier2":1,"identifier3":true] as [String : Any]
 tracker?.trackCustomEvent("your-event-name", eventData: eventData)
 ```
 
-```objective-c
+```ObjC
 // ObjC:
 NSDictionary *data = @{@"identifier1":@"test",@"identifier2":@(1),@"identifier3":@(true)};
 [self trackCustomEvent:@"your-event-name" eventData:data];
 ```
+<!-- ::: -->
 
+<!--eof-self-serve-custom-event--> 
 </details>
 
 <details>
-
+<!--self-serve-custom-event-->
 <summary><b>Set Custom Tags</b></summary>
 
 Custom Tags are global tags applied to all events and persist throughout the application lifespan, or until they are cleared.
 
 Set the custom tags: 
-```swift
+<!-- :::code-tabs[Swift,ObjC] -->
+```Swift
 // Swift:
 // Adds the custom tags
 let tags = ["Key1": "Value1", "Key2": "Value2"]
 tracker?.setCustomTags(tags)
 ```
 
-```objective-c
+```ObjC
 // ObjC:
 // Adds the custom tags
 NSDictionary* tags = @{
@@ -225,35 +255,39 @@ NSDictionary* tags = @{
 };
 [tracker setCustomTags:tags];
 ```
-
+<!-- ::: -->
 Clear a few of the previously set custom tags:
-```swift
+<!-- :::code-tabs[Swift,ObjC] -->
+```Swift
 // Swift:
 // Clears custom tags Key1, Key2 & Key3
 let keys = ["Key1", "Key2", "Key3"]
 tracker?.clearCustomTags(keys)
 ```
 
-```objective-c
+```ObjC
 // ObjC:
 // Clears custom tags Key1, Key2 & Key3
 NSArray* keys = @[ @"Key1", @"Key2", @"Key3" ];
 [tracker clearCustomTags:keys];
 ```
-
+<!-- ::: -->
 Clear all the previously set custom tags:
-```swift
+<!-- :::code-tabs[Swift,ObjC] -->
+```Swift
 // Swift:
 // Clears all the custom tags
 tracker?.clearAllCustomTags()
 ```
 
-```objective-c
+```ObjC
 // ObjC:
 // Clears all the custom tags
 [tracker clearAllCustomTags];
 ```
+<!-- ::: -->
 
+<!--eof-self-serve-custom-event--> 
 </details>
 
 <details>
@@ -262,8 +296,8 @@ tracker?.clearAllCustomTags()
 
 By default, user navigation is tracked using the class names of `UIViewController` instances. 
 Override the screen name using the following API:
-
-```swift
+<!-- :::code-tabs[Swift,ObjC] -->
+```Swift
 // Swift:
 class ExampleViewController: UIViewController {
 
@@ -273,7 +307,7 @@ class ExampleViewController: UIViewController {
 }
 
 ```
-```objective-c
+```ObjC
 // ObjC:
 // CustomViewController.h
 @interface ExampleViewController : UIViewController
@@ -281,8 +315,7 @@ class ExampleViewController: UIViewController {
     @property(copy, nonatomic)NSString *catViewId;
 
 @end
-```
-```objective-c
+
 // CustomViewController.m
 #import "ExampleViewController.h"
 
@@ -297,7 +330,7 @@ class ExampleViewController: UIViewController {
 
 @end
 ```
-
+<!-- ::: -->
 </details>
 
 <details>
@@ -309,14 +342,17 @@ class ExampleViewController: UIViewController {
    In SwiftUI applications, `button_click` and `screen_view` events are not auto-collected. To enable tracking for these events, Conviva provides extension functions: 
 
    To track user taps or clicks:  
-   ```swift
+  
+   ```
    Button("Submit") {
        // action
    }.convivaAnalyticsButtonClick(title: "Submit") 
    ```
 
+
    To track when a new screen or view is displayed:
-   ```swift
+   
+   ```
    struct DetailView: View {
       var body: some View {
          VStack {
@@ -326,7 +362,7 @@ class ExampleViewController: UIViewController {
      }
   }
    ```
-   
+  
    
 </details>
 
