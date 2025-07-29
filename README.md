@@ -186,9 +186,6 @@ tracker.subject.userId = @"user_id";
 ```
 <!-- ::: -->
 
-
-After steps 1–3, verify [auto-collected events](#auto-collected-events) in the [validation dashboard](https://pulse.conviva.com/app/appmanager/ecoIntegration/validation). (_Conviva login required_)
-
 ## More Features
 
 <details>
@@ -418,6 +415,9 @@ To learn about the default metrics for analyzing the native and web applications
    Auto-collection of `screen_view` and `button_click` is not supported for SwiftUI. To report `screen_view` and `button_click` in SwiftUI, please refer to `"SwiftUI Support"` under the [More Features](#more-features).
    
 </details>
+
+### Validation
+To verify the integration for [auto-collected events](#auto-collected-events), check the page - [validation dashboard](https://pulse.conviva.com/app/appmanager/ecoIntegration/validation). (_Conviva login required_)
 
 ## FAQ
 
