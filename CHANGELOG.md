@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.0 (07/31/2025)
+* Supports Conviva Visual Activation.
+
 ## 1.1.3 (05/21/2025)
 * Supports the traceparent header generation and collection.
 
