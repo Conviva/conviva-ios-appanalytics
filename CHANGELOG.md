@@ -1,6 +1,9 @@
 # Changelog
 
 ## 1.2.0 (07/31/2025)
+* Improved the Visual Activation system to dynamically update the positions of clickable elements during and after user scroll interactions in complex view hierarchies.
+
+## 1.2.0 (07/31/2025)
 * Supports Conviva Visual Activation.
 
 ## 1.1.3 (05/21/2025)

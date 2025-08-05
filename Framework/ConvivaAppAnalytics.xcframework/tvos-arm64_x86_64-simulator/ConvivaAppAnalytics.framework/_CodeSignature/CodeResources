@@ -274,7 +274,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XmTDSUnSGSOeXiVIBc2pX52JEcE=
+		bRLatB0XmkFX6DeIt763S5I0Zsw=
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/arm64-apple-tvos-simulator.abi.json</key>
 		<data>
@@ -294,7 +294,7 @@
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/arm64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		ZvNzrrIyfUm6L63XCgVykIoSzfc=
+		qYfpmIT/49uawjt58nbldRpW3u8=
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-tvos-simulator.abi.json</key>
 		<data>
@@ -314,7 +314,7 @@
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		Qd+MNpK5VLB+tclV0zOx5ny++wU=
+		9YTY75IOy79uaJeHDIcqaiSMQgs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1108,11 +1108,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZvNzrrIyfUm6L63XCgVykIoSzfc=
+			qYfpmIT/49uawjt58nbldRpW3u8=
 			</data>
 			<key>hash2</key>
 			<data>
-			lhUB8hm+q7xAPC8O8Umr/RPmkTxPimUYoVr1Ghg0NqI=
+			B2/mhfaNkd13u6R83F0P0OuVjT272/yjs7ZIZgVCMpw=
 			</data>
 		</dict>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-tvos-simulator.abi.json</key>
@@ -1163,11 +1163,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Qd+MNpK5VLB+tclV0zOx5ny++wU=
+			9YTY75IOy79uaJeHDIcqaiSMQgs=
 			</data>
 			<key>hash2</key>
 			<data>
-			yLnB+ut1MqtXU6QM3uar7y9Iwkqs9Njk4gf1lUhnNSc=
+			Yb4b5P34G+JOKcbXbpvha+Dmr+q45yOdsnrjov98fEw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
