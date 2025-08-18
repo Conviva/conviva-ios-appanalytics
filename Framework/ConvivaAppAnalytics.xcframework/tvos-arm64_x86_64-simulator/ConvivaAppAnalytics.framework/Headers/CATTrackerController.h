@@ -161,12 +161,6 @@ NS_SWIFT_NAME(CATTrackerController)
 
 - (CATNetworkReqTrackingConfiguration *)nwReqTrackingConfiguration;
 
-/**
- @brief Tracker method to get customer key, Set it first to fetch value.
- @return customerKey.
- */
-
-- (NSString *)customerKey;
 @end
 
 NS_ASSUME_NONNULL_END
