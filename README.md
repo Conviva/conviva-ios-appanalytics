@@ -1,6 +1,6 @@
-# Conviva iOS ECO SDK
+# Conviva iOS DPI SDK
 
-Use Conviva iOS ECO SDK to auto-collect events and track application-specific events and state changes.
+Use Conviva iOS DPI SDK to auto-collect events and track application-specific events and state changes.
 
 **Table of Contents**
 - [Quick Start](#quick-start)
@@ -49,7 +49,7 @@ Use Conviva iOS ECO SDK to auto-collect events and track application-specific ev
 
 ### 1. Installation
 
-- Install the Conviva iOS ECO SDK using one of the following methods:
+- Install the Conviva iOS DPI SDK using one of the following methods:
  
     <!--self-serve[SPM]-->
 
@@ -117,7 +117,7 @@ import ConvivaAppAnalytics
 > **Note:**
 > It is recommended to initialize the tracker at the earliest possible stage of the application's launch lifecycle. Ideally, this should be done in the app's entry point method, before any other application functionality is executed.
 
-Some examples of Conviva iOS ECO SDK initialization:
+Some examples of Conviva iOS DPI SDK initialization:
 <!-- :::code-tabs[Swift,ObjC] -->
 ```Swift
 // Swift:
@@ -421,4 +421,4 @@ To verify the integration for [auto-collected events](#auto-collected-events), c
 
 ## FAQ
 
-[ECO Integration FAQ](https://pulse.conviva.com/learning-center/content/sensor_developer_center/tools/eco_integration/eco_integration_faq.htm)
+[DPI Integration FAQ](https://pulse.conviva.com/learning-center/content/sensor_developer_center/tools/eco_integration/eco_integration_faq.htm)
