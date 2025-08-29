@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.2.0 (07/31/2025)
+## 1.2.1 (08/05/2025)
 * Improved the Visual Activation system to dynamically update the positions of clickable elements during and after user scroll interactions in complex view hierarchies.
 
 ## 1.2.0 (07/31/2025)
