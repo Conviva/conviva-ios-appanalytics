@@ -46,13 +46,6 @@
 #define SP_DIRTYFLAG(prop) @property BOOL prop##Updated;
 #define SP_DIRTY_GETTER(type, prop) - (type)prop { return (!self.sourceConfig || self.prop##Updated) ? super.prop : self.sourceConfig.prop; }
 
-#define LogWithTimestamp(fmt, ...) do { \
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init]; \
-    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"]; \
-    NSString *ts = [formatter stringFromDate:[NSDate date]]; \
-    NSLog((@"[%@] " fmt), ts, ##__VA_ARGS__); \
-} while(0)
-
 
 @interface CATConstants : NSObject
 

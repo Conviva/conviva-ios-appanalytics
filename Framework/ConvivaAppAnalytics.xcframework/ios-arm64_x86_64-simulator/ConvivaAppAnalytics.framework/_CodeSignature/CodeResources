@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/CATConstants.h</key>
 		<data>
-		HxEB3U2cfQKhRZu59eDGi4a0xIU=
+		KYKrKrMlOitaHfujNcHvMOijGuw=
 		</data>
 		<key>Headers/CATDeepLinkEntity.h</key>
 		<data>
@@ -274,7 +274,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		q22t9WC2VRBW62PeGOTYhKzC9cY=
+		tq/R9APjEAIGxAzuW5gOiOJzd08=
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -294,7 +294,7 @@
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		q63uiFJZX7rAapcg96I/Jna4iVk=
+		wxcFCVsCz6xEYBq++uc9GgQkvh0=
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -314,7 +314,7 @@
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		8qojogFU4wr5zSQsysszZ1rM4PQ=
+		QwsvNHpNdQ9Sq4odUbbrXyelYcg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -448,11 +448,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HxEB3U2cfQKhRZu59eDGi4a0xIU=
+			KYKrKrMlOitaHfujNcHvMOijGuw=
 			</data>
 			<key>hash2</key>
 			<data>
-			xCsCVKDPQ3g7ntpMnPZKV+/SrGB/UYL04Z8KaftEG8M=
+			F7A3T49D132MxQPuBg3oa66QAwFqRq9GPDpJDu4b4OI=
 			</data>
 		</dict>
 		<key>Headers/CATDeepLinkEntity.h</key>
@@ -1108,11 +1108,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			q63uiFJZX7rAapcg96I/Jna4iVk=
+			wxcFCVsCz6xEYBq++uc9GgQkvh0=
 			</data>
 			<key>hash2</key>
 			<data>
-			t/o3C4axDYNoXK3WCDF5vSEszEjpLDkeNVBGVSMTQvA=
+			r8VtnSOO+RHS+aKMwDupfUEGQCB8+LHeH60qgOlc+BM=
 			</data>
 		</dict>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -1163,11 +1163,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8qojogFU4wr5zSQsysszZ1rM4PQ=
+			QwsvNHpNdQ9Sq4odUbbrXyelYcg=
 			</data>
 			<key>hash2</key>
 			<data>
-			4wEbXbxvRG15X9tn+i2r6YdcDFBt1OJS3OWoyYip+3o=
+			DPdZVn88N7ckCye1HjMH8T39JieDfFuwc3k6XixZ66s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/CATConstants.h</key>
 		<data>
-		HxEB3U2cfQKhRZu59eDGi4a0xIU=
+		KYKrKrMlOitaHfujNcHvMOijGuw=
 		</data>
 		<key>Headers/CATDeepLinkEntity.h</key>
 		<data>
@@ -274,7 +274,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Lt3l9CwgI4Ls26TNs0q4XYMXNkE=
+		YDn1y5R0OoV7mr83RKbapzNElFw=
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/arm64-apple-tvos-simulator.abi.json</key>
 		<data>
@@ -294,7 +294,7 @@
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/arm64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		5lyc6d6yQzvfKTQWw3RH3wAcORA=
+		4RDdbI6I9C/KaARH2KZPamPEXxA=
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-tvos-simulator.abi.json</key>
 		<data>
@@ -314,7 +314,7 @@
 		</data>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-tvos-simulator.swiftmodule</key>
 		<data>
-		OLJS/o0xWOk5ykVw9rhUSttwMlw=
+		hZw2PIGzi60bm17pi1MsETBhU7Y=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -448,11 +448,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HxEB3U2cfQKhRZu59eDGi4a0xIU=
+			KYKrKrMlOitaHfujNcHvMOijGuw=
 			</data>
 			<key>hash2</key>
 			<data>
-			xCsCVKDPQ3g7ntpMnPZKV+/SrGB/UYL04Z8KaftEG8M=
+			F7A3T49D132MxQPuBg3oa66QAwFqRq9GPDpJDu4b4OI=
 			</data>
 		</dict>
 		<key>Headers/CATDeepLinkEntity.h</key>
@@ -1108,11 +1108,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5lyc6d6yQzvfKTQWw3RH3wAcORA=
+			4RDdbI6I9C/KaARH2KZPamPEXxA=
 			</data>
 			<key>hash2</key>
 			<data>
-			3wVOKtSTx7lf84IHltsDVzETWTqwRBcAOCioDBXevFg=
+			ehChWTY8QJfn1FJZvh+nCPpo5ahm0MaG1KxSL90Szdo=
 			</data>
 		</dict>
 		<key>Modules/ConvivaAppAnalytics.swiftmodule/x86_64-apple-tvos-simulator.abi.json</key>
@@ -1163,11 +1163,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OLJS/o0xWOk5ykVw9rhUSttwMlw=
+			hZw2PIGzi60bm17pi1MsETBhU7Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			byr0n//PPU0PX3TnSm+4yjQF0y8Lnx2ANCgTf3eDkKQ=
+			W1wvW7YsCmHG/POEJ6Sx3mBNZRwHOuj7cLo8amJ2CEY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

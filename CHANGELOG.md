@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.4 (09/23/2025)
+* Resolved an issue where certain network requests on Apple mobile platforms were not being captured by the DPI module.
+
 ## 1.2.1 (08/05/2025)
 * Improved the Visual Activation system to dynamically update the positions of clickable elements during and after user scroll interactions in complex view hierarchies.
 
