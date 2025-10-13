@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(assign, readonly) BOOL enabled;
 
+@property(assign, readonly) int32_t rbl; //max supported request/response body length in KB
+
 @property(strong, readonly) NSArray *blocklist;
 
 @property(strong, readonly) NSArray *collectattr;

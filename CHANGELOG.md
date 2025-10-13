@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.5.0 (10/13/2025)
+## 🚀 Enhancements
+- **Added Remote Config Support for Request/Response Body Sub-Field Collection Limits**  
+  Introduced remote configuration to control the maximum size of request and response bodies eligible for sub-field collection.  
+  - **Default limit:** 10 KB  
+  - **Maximum recommended limit:** 256 KB (to prevent performance overhead)
+
+## ⚙️ Improvements
+- Internal performance and stability optimizations
+
+
 ## 1.1.4 (09/23/2025)
 * Resolved an issue where certain network requests on Apple mobile platforms were not being captured by the DPI module.
 
