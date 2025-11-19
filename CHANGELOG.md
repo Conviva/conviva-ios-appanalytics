@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.6.0 (11/19/2025)
+* Crash and ANR reporting has been improved with MetricKit for users on iOS 14+. This delivers deeper insights and faster fixes for a more stable app experience.
+
 ## 1.5.0 (10/13/2025)
 ## 🚀 Enhancements
 - **Added Remote Config Support for Request/Response Body Sub-Field Collection Limits**  

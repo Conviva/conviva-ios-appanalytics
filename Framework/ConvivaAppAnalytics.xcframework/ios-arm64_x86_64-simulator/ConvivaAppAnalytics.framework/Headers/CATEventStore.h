@@ -27,6 +27,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSUInteger, EventType) {
+    Default,
+    Crash
+};
+
 NS_SWIFT_NAME(CATEventStore)
 @protocol CATEventStore <NSObject>
 
@@ -35,6 +40,13 @@ NS_SWIFT_NAME(CATEventStore)
  * @param payload the payload to be added
  */
 - (void)addEvent:(CATPayload *)payload;
+
+/**
+ * Adds an event to the store.
+ * @param payload the payload to be added
+ * @param eventType the eventType to be added
+ */
+- (void)addEvent:(CATPayload *)payload eventType:(EventType)eventType;
 
 /**
  * Removes an event from the store.
@@ -49,6 +61,13 @@ NS_SWIFT_NAME(CATEventStore)
  * @return a boolean of success to remove.
  */
 - (BOOL)removeEventsWithIds:(NSArray<NSNumber *> *)storeIds;
+
+/**
+ * Removes an event from the store.
+ * @param type the type of the event in the store.
+ * @return a boolean of success to remove.
+ */
+- (BOOL)removeEventsOfType:(EventType)type;
 
 /**
  * Empties the store of all the events.

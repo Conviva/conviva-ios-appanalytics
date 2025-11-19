@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "ConvivaAppAnalytics",
+    "printedName": "ConvivaAppAnalytics",
     "children": [
       {
         "kind": "Import",
@@ -173,7 +173,67 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvivaAppAnalytics",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MetricKit",
+        "printedName": "MetricKit",
+        "declKind": "Import",
+        "moduleName": "ConvivaAppAnalytics"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvivaAppAnalytics",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvivaAppAnalytics",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MetricKit",
+        "printedName": "MetricKit",
+        "declKind": "Import",
+        "moduleName": "ConvivaAppAnalytics"
       },
       {
         "kind": "Import",
@@ -226,6 +286,22 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -246,7 +322,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATEngineDelegate",
-                "printedName": "ConvivaAppAnalytics.CATEngineDelegate",
+                "printedName": "any ConvivaAppAnalytics.CATEngineDelegate",
                 "usr": "s:19ConvivaAppAnalytics17CATEngineDelegateP"
               }
             ],
@@ -452,6 +528,32 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvivaAppAnalytics",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -557,7 +659,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATHTTPHandlerDelegate",
-                "printedName": "ConvivaAppAnalytics.CATHTTPHandlerDelegate",
+                "printedName": "any ConvivaAppAnalytics.CATHTTPHandlerDelegate",
                 "usr": "s:19ConvivaAppAnalytics22CATHTTPHandlerDelegateP"
               }
             ],
@@ -579,6 +681,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "CATHTTPHandler",
@@ -616,7 +732,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATHTTPServerDelegate",
-                "printedName": "ConvivaAppAnalytics.CATHTTPServerDelegate",
+                "printedName": "any ConvivaAppAnalytics.CATHTTPServerDelegate",
                 "usr": "s:19ConvivaAppAnalytics21CATHTTPServerDelegateP"
               }
             ],
@@ -706,6 +822,20 @@
         ],
         "hasMissingDesignatedInitializers": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "CATHTTPServerHandler",
@@ -881,6 +1011,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -1012,12 +1156,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -1069,6 +1213,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "CATCertificatePinning",
@@ -1318,6 +1476,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -1478,12 +1650,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "ConvivaAppAnalytics.CATCertificatePinning?",
+                "printedName": "(any ConvivaAppAnalytics.CATCertificatePinning)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATCertificatePinning",
-                    "printedName": "ConvivaAppAnalytics.CATCertificatePinning",
+                    "printedName": "any ConvivaAppAnalytics.CATCertificatePinning",
                     "usr": "s:19ConvivaAppAnalytics21CATCertificatePinningP"
                   }
                 ],
@@ -1533,7 +1705,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATTransportEventClient",
-                "printedName": "ConvivaAppAnalytics.CATTransportEventClient",
+                "printedName": "any ConvivaAppAnalytics.CATTransportEventClient",
                 "usr": "s:19ConvivaAppAnalytics23CATTransportEventClientP"
               }
             ],
@@ -1565,7 +1737,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Error?) -> ()",
+                "printedName": "((any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -1575,12 +1747,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.Error?",
+                    "printedName": "(any Swift.Error)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -1679,6 +1851,20 @@
             "printedName": "CATTransport",
             "usr": "s:19ConvivaAppAnalytics12CATTransportP",
             "mangledName": "$s19ConvivaAppAnalytics12CATTransportP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -1824,6 +2010,22 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -2060,12 +2262,12 @@
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(ConvivaAppAnalytics.CATFrameCollector.Event.Type) -> (Swift.Error) -> ConvivaAppAnalytics.CATFrameCollector.Event",
+                    "printedName": "(ConvivaAppAnalytics.CATFrameCollector.Event.Type) -> (any Swift.Error) -> ConvivaAppAnalytics.CATFrameCollector.Event",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(Swift.Error) -> ConvivaAppAnalytics.CATFrameCollector.Event",
+                        "printedName": "(any Swift.Error) -> ConvivaAppAnalytics.CATFrameCollector.Event",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -2076,7 +2278,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ]
@@ -2172,6 +2374,22 @@
             "moduleName": "ConvivaAppAnalytics",
             "declAttributes": [
               "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
             ]
           },
           {
@@ -2208,7 +2426,23 @@
         "declAttributes": [
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -2612,6 +2846,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -3002,6 +3250,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -3048,6 +3310,22 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -3113,12 +3391,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(ConvivaAppAnalytics.CATFrameEvent.Type) -> (Swift.Error) -> ConvivaAppAnalytics.CATFrameEvent",
+                "printedName": "(ConvivaAppAnalytics.CATFrameEvent.Type) -> (any Swift.Error) -> ConvivaAppAnalytics.CATFrameEvent",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error) -> ConvivaAppAnalytics.CATFrameEvent",
+                    "printedName": "(any Swift.Error) -> ConvivaAppAnalytics.CATFrameEvent",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -3129,7 +3407,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ]
@@ -3162,6 +3440,22 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -3205,6 +3499,22 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -3252,7 +3562,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATFramerEventClient",
-                "printedName": "ConvivaAppAnalytics.CATFramerEventClient",
+                "printedName": "any ConvivaAppAnalytics.CATFramerEventClient",
                 "usr": "s:19ConvivaAppAnalytics20CATFramerEventClientP"
               }
             ],
@@ -3362,6 +3672,22 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -3569,7 +3895,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATFramerEventClient",
-                "printedName": "ConvivaAppAnalytics.CATFramerEventClient",
+                "printedName": "any ConvivaAppAnalytics.CATFramerEventClient",
                 "usr": "s:19ConvivaAppAnalytics20CATFramerEventClientP"
               }
             ],
@@ -3632,6 +3958,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CATFramer",
             "printedName": "CATFramer",
             "usr": "s:19ConvivaAppAnalytics9CATFramerP",
@@ -3650,6 +3990,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -3807,6 +4163,50 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "MetricKit",
+        "printedName": "MetricKit",
+        "declKind": "Import",
+        "moduleName": "ConvivaAppAnalytics"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvivaAppAnalytics",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvivaAppAnalytics",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MetricKit",
+        "printedName": "MetricKit",
+        "declKind": "Import",
+        "moduleName": "ConvivaAppAnalytics"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvivaAppAnalytics",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "CATHTTPUpgradeError",
         "printedName": "CATHTTPUpgradeError",
@@ -3936,6 +4336,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
@@ -4026,6 +4440,22 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -4105,12 +4535,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(ConvivaAppAnalytics.CATHTTPEvent.Type) -> (Swift.Error) -> ConvivaAppAnalytics.CATHTTPEvent",
+                "printedName": "(ConvivaAppAnalytics.CATHTTPEvent.Type) -> (any Swift.Error) -> ConvivaAppAnalytics.CATHTTPEvent",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error) -> ConvivaAppAnalytics.CATHTTPEvent",
+                    "printedName": "(any Swift.Error) -> ConvivaAppAnalytics.CATHTTPEvent",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -4121,7 +4551,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ]
@@ -4154,6 +4584,22 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -4197,6 +4643,22 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -4217,7 +4679,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATHTTPHandlerDelegate",
-                "printedName": "ConvivaAppAnalytics.CATHTTPHandlerDelegate",
+                "printedName": "any ConvivaAppAnalytics.CATHTTPHandlerDelegate",
                 "usr": "s:19ConvivaAppAnalytics22CATHTTPHandlerDelegateP"
               }
             ],
@@ -4294,6 +4756,22 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -4337,6 +4815,22 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -4357,7 +4851,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATHTTPServerDelegate",
-                "printedName": "ConvivaAppAnalytics.CATHTTPServerDelegate",
+                "printedName": "any ConvivaAppAnalytics.CATHTTPServerDelegate",
                 "usr": "s:19ConvivaAppAnalytics21CATHTTPServerDelegateP"
               }
             ],
@@ -4447,6 +4941,22 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -4459,7 +4969,40 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConvivaAppAnalytics",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MetricKit",
+        "printedName": "MetricKit",
+        "declKind": "Import",
+        "moduleName": "ConvivaAppAnalytics"
       },
       {
         "kind": "Import",
@@ -4489,7 +5032,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATEngineDelegate",
-                "printedName": "ConvivaAppAnalytics.CATEngineDelegate",
+                "printedName": "any ConvivaAppAnalytics.CATEngineDelegate",
                 "usr": "s:19ConvivaAppAnalytics17CATEngineDelegateP"
               }
             ],
@@ -4809,12 +5352,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -4890,6 +5433,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -4936,6 +5493,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -5126,6 +5690,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -5269,6 +5847,22 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -5348,6 +5942,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -5363,12 +5973,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -5421,6 +6031,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -5789,12 +6415,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(ConvivaAppAnalytics.CATConnectionEvent.Type) -> (Swift.Error) -> ConvivaAppAnalytics.CATConnectionEvent",
+                "printedName": "(ConvivaAppAnalytics.CATConnectionEvent.Type) -> (any Swift.Error) -> ConvivaAppAnalytics.CATConnectionEvent",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error) -> ConvivaAppAnalytics.CATConnectionEvent",
+                    "printedName": "(any Swift.Error) -> ConvivaAppAnalytics.CATConnectionEvent",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -5805,7 +6431,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ]
@@ -5838,6 +6464,22 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -5885,6 +6527,22 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -5928,6 +6586,22 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -5943,12 +6617,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(ConvivaAppAnalytics.CATServerEvent.Type) -> (ConvivaAppAnalytics.CATConnection, [Swift.String : Swift.String]) -> ConvivaAppAnalytics.CATServerEvent",
+                "printedName": "(ConvivaAppAnalytics.CATServerEvent.Type) -> (any ConvivaAppAnalytics.CATConnection, [Swift.String : Swift.String]) -> ConvivaAppAnalytics.CATServerEvent",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(ConvivaAppAnalytics.CATConnection, [Swift.String : Swift.String]) -> ConvivaAppAnalytics.CATServerEvent",
+                    "printedName": "(any ConvivaAppAnalytics.CATConnection, [Swift.String : Swift.String]) -> ConvivaAppAnalytics.CATServerEvent",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -5959,12 +6633,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(ConvivaAppAnalytics.CATConnection, [Swift.String : Swift.String])",
+                        "printedName": "(any ConvivaAppAnalytics.CATConnection, [Swift.String : Swift.String])",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "CATConnection",
-                            "printedName": "ConvivaAppAnalytics.CATConnection",
+                            "printedName": "any ConvivaAppAnalytics.CATConnection",
                             "usr": "s:19ConvivaAppAnalytics13CATConnectionP"
                           },
                           {
@@ -6020,12 +6694,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(ConvivaAppAnalytics.CATServerEvent.Type) -> (ConvivaAppAnalytics.CATConnection, Swift.String, Swift.UInt16) -> ConvivaAppAnalytics.CATServerEvent",
+                "printedName": "(ConvivaAppAnalytics.CATServerEvent.Type) -> (any ConvivaAppAnalytics.CATConnection, Swift.String, Swift.UInt16) -> ConvivaAppAnalytics.CATServerEvent",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(ConvivaAppAnalytics.CATConnection, Swift.String, Swift.UInt16) -> ConvivaAppAnalytics.CATServerEvent",
+                    "printedName": "(any ConvivaAppAnalytics.CATConnection, Swift.String, Swift.UInt16) -> ConvivaAppAnalytics.CATServerEvent",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -6036,12 +6710,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(ConvivaAppAnalytics.CATConnection, Swift.String, Swift.UInt16)",
+                        "printedName": "(any ConvivaAppAnalytics.CATConnection, Swift.String, Swift.UInt16)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "CATConnection",
-                            "printedName": "ConvivaAppAnalytics.CATConnection",
+                            "printedName": "any ConvivaAppAnalytics.CATConnection",
                             "usr": "s:19ConvivaAppAnalytics13CATConnectionP"
                           },
                           {
@@ -6089,12 +6763,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(ConvivaAppAnalytics.CATServerEvent.Type) -> (ConvivaAppAnalytics.CATConnection, Swift.String) -> ConvivaAppAnalytics.CATServerEvent",
+                "printedName": "(ConvivaAppAnalytics.CATServerEvent.Type) -> (any ConvivaAppAnalytics.CATConnection, Swift.String) -> ConvivaAppAnalytics.CATServerEvent",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(ConvivaAppAnalytics.CATConnection, Swift.String) -> ConvivaAppAnalytics.CATServerEvent",
+                    "printedName": "(any ConvivaAppAnalytics.CATConnection, Swift.String) -> ConvivaAppAnalytics.CATServerEvent",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -6105,12 +6779,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(ConvivaAppAnalytics.CATConnection, Swift.String)",
+                        "printedName": "(any ConvivaAppAnalytics.CATConnection, Swift.String)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "CATConnection",
-                            "printedName": "ConvivaAppAnalytics.CATConnection",
+                            "printedName": "any ConvivaAppAnalytics.CATConnection",
                             "usr": "s:19ConvivaAppAnalytics13CATConnectionP"
                           },
                           {
@@ -6152,12 +6826,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(ConvivaAppAnalytics.CATServerEvent.Type) -> (ConvivaAppAnalytics.CATConnection, Foundation.Data) -> ConvivaAppAnalytics.CATServerEvent",
+                "printedName": "(ConvivaAppAnalytics.CATServerEvent.Type) -> (any ConvivaAppAnalytics.CATConnection, Foundation.Data) -> ConvivaAppAnalytics.CATServerEvent",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(ConvivaAppAnalytics.CATConnection, Foundation.Data) -> ConvivaAppAnalytics.CATServerEvent",
+                    "printedName": "(any ConvivaAppAnalytics.CATConnection, Foundation.Data) -> ConvivaAppAnalytics.CATServerEvent",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -6168,12 +6842,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(ConvivaAppAnalytics.CATConnection, Foundation.Data)",
+                        "printedName": "(any ConvivaAppAnalytics.CATConnection, Foundation.Data)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "CATConnection",
-                            "printedName": "ConvivaAppAnalytics.CATConnection",
+                            "printedName": "any ConvivaAppAnalytics.CATConnection",
                             "usr": "s:19ConvivaAppAnalytics13CATConnectionP"
                           },
                           {
@@ -6215,12 +6889,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(ConvivaAppAnalytics.CATServerEvent.Type) -> (ConvivaAppAnalytics.CATConnection, Foundation.Data?) -> ConvivaAppAnalytics.CATServerEvent",
+                "printedName": "(ConvivaAppAnalytics.CATServerEvent.Type) -> (any ConvivaAppAnalytics.CATConnection, Foundation.Data?) -> ConvivaAppAnalytics.CATServerEvent",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(ConvivaAppAnalytics.CATConnection, Foundation.Data?) -> ConvivaAppAnalytics.CATServerEvent",
+                    "printedName": "(any ConvivaAppAnalytics.CATConnection, Foundation.Data?) -> ConvivaAppAnalytics.CATServerEvent",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -6231,12 +6905,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(ConvivaAppAnalytics.CATConnection, Foundation.Data?)",
+                        "printedName": "(any ConvivaAppAnalytics.CATConnection, Foundation.Data?)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "CATConnection",
-                            "printedName": "ConvivaAppAnalytics.CATConnection",
+                            "printedName": "any ConvivaAppAnalytics.CATConnection",
                             "usr": "s:19ConvivaAppAnalytics13CATConnectionP"
                           },
                           {
@@ -6286,12 +6960,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(ConvivaAppAnalytics.CATServerEvent.Type) -> (ConvivaAppAnalytics.CATConnection, Foundation.Data?) -> ConvivaAppAnalytics.CATServerEvent",
+                "printedName": "(ConvivaAppAnalytics.CATServerEvent.Type) -> (any ConvivaAppAnalytics.CATConnection, Foundation.Data?) -> ConvivaAppAnalytics.CATServerEvent",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(ConvivaAppAnalytics.CATConnection, Foundation.Data?) -> ConvivaAppAnalytics.CATServerEvent",
+                    "printedName": "(any ConvivaAppAnalytics.CATConnection, Foundation.Data?) -> ConvivaAppAnalytics.CATServerEvent",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -6302,12 +6976,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(ConvivaAppAnalytics.CATConnection, Foundation.Data?)",
+                        "printedName": "(any ConvivaAppAnalytics.CATConnection, Foundation.Data?)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "CATConnection",
-                            "printedName": "ConvivaAppAnalytics.CATConnection",
+                            "printedName": "any ConvivaAppAnalytics.CATConnection",
                             "usr": "s:19ConvivaAppAnalytics13CATConnectionP"
                           },
                           {
@@ -6356,6 +7030,22 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -6371,12 +7061,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -6412,6 +7102,22 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -6578,12 +7284,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[ConvivaAppAnalytics.CATSocketData]",
+                "printedName": "[any ConvivaAppAnalytics.CATSocketData]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketData",
-                    "printedName": "ConvivaAppAnalytics.CATSocketData",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketData",
                     "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
                   }
                 ],
@@ -6679,6 +7385,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -6833,6 +7553,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -7099,6 +7833,20 @@
         ],
         "enumRawTypeName": "String",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -7379,6 +8127,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -9226,7 +9988,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "ConvivaAppAnalytics.CATSocketEngineClient?"
+                "printedName": "(any ConvivaAppAnalytics.CATSocketEngineClient)?"
               }
             ],
             "declKind": "Var",
@@ -9251,12 +10013,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATSocketEngineClient?",
+                    "printedName": "(any ConvivaAppAnalytics.CATSocketEngineClient)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATSocketEngineClient",
-                        "printedName": "ConvivaAppAnalytics.CATSocketEngineClient",
+                        "printedName": "any ConvivaAppAnalytics.CATSocketEngineClient",
                         "usr": "c:@M@ConvivaAppAnalytics@objc(pl)CATSocketEngineClient"
                       }
                     ],
@@ -9283,12 +10045,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATSocketEngineClient?",
+                    "printedName": "(any ConvivaAppAnalytics.CATSocketEngineClient)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATSocketEngineClient",
-                        "printedName": "ConvivaAppAnalytics.CATSocketEngineClient",
+                        "printedName": "any ConvivaAppAnalytics.CATSocketEngineClient",
                         "usr": "c:@M@ConvivaAppAnalytics@objc(pl)CATSocketEngineClient"
                       }
                     ],
@@ -9336,7 +10098,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATSocketEngineClient",
-                "printedName": "ConvivaAppAnalytics.CATSocketEngineClient",
+                "printedName": "any ConvivaAppAnalytics.CATSocketEngineClient",
                 "usr": "c:@M@ConvivaAppAnalytics@objc(pl)CATSocketEngineClient"
               },
               {
@@ -9376,7 +10138,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATSocketEngineClient",
-                "printedName": "ConvivaAppAnalytics.CATSocketEngineClient",
+                "printedName": "any ConvivaAppAnalytics.CATSocketEngineClient",
                 "usr": "c:@M@ConvivaAppAnalytics@objc(pl)CATSocketEngineClient"
               },
               {
@@ -9792,7 +10554,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATWebSocketClient",
-                "printedName": "ConvivaAppAnalytics.CATWebSocketClient",
+                "printedName": "any ConvivaAppAnalytics.CATWebSocketClient",
                 "usr": "s:19ConvivaAppAnalytics18CATWebSocketClientP"
               }
             ],
@@ -9853,6 +10615,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -9899,6 +10675,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           },
           {
             "kind": "Conformance",
@@ -10235,6 +11018,22 @@
           "AccessControl",
           "ObjC",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -10630,6 +11429,20 @@
         ],
         "enumRawTypeName": "Int",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -11452,6 +12265,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CATSocketEngineSpec",
             "printedName": "CATSocketEngineSpec",
             "usr": "s:19ConvivaAppAnalytics19CATSocketEngineSpecP",
@@ -11482,12 +12309,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "ConvivaAppAnalytics.CATSocketEngineClient?",
+                "printedName": "(any ConvivaAppAnalytics.CATSocketEngineClient)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketEngineClient",
-                    "printedName": "ConvivaAppAnalytics.CATSocketEngineClient",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketEngineClient",
                     "usr": "c:@M@ConvivaAppAnalytics@objc(pl)CATSocketEngineClient"
                   }
                 ],
@@ -11511,12 +12338,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATSocketEngineClient?",
+                    "printedName": "(any ConvivaAppAnalytics.CATSocketEngineClient)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATSocketEngineClient",
-                        "printedName": "ConvivaAppAnalytics.CATSocketEngineClient",
+                        "printedName": "any ConvivaAppAnalytics.CATSocketEngineClient",
                         "usr": "c:@M@ConvivaAppAnalytics@objc(pl)CATSocketEngineClient"
                       }
                     ],
@@ -11546,12 +12373,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATSocketEngineClient?",
+                    "printedName": "(any ConvivaAppAnalytics.CATSocketEngineClient)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATSocketEngineClient",
-                        "printedName": "ConvivaAppAnalytics.CATSocketEngineClient",
+                        "printedName": "any ConvivaAppAnalytics.CATSocketEngineClient",
                         "usr": "c:@M@ConvivaAppAnalytics@objc(pl)CATSocketEngineClient"
                       }
                     ],
@@ -12737,7 +13564,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATSocketEngineClient",
-                "printedName": "ConvivaAppAnalytics.CATSocketEngineClient",
+                "printedName": "any ConvivaAppAnalytics.CATSocketEngineClient",
                 "usr": "c:@M@ConvivaAppAnalytics@objc(pl)CATSocketEngineClient"
               },
               {
@@ -13064,6 +13891,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -13288,6 +14131,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
           {
             "kind": "Conformance",
             "name": "CATSocketEngineSpec",
@@ -13565,6 +14422,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -13804,7 +14677,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "ConvivaAppAnalytics.CATSocketManagerSpec?"
+                "printedName": "(any ConvivaAppAnalytics.CATSocketManagerSpec)?"
               }
             ],
             "declKind": "Var",
@@ -13830,12 +14703,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATSocketManagerSpec?",
+                    "printedName": "(any ConvivaAppAnalytics.CATSocketManagerSpec)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATSocketManagerSpec",
-                        "printedName": "ConvivaAppAnalytics.CATSocketManagerSpec",
+                        "printedName": "any ConvivaAppAnalytics.CATSocketManagerSpec",
                         "usr": "s:19ConvivaAppAnalytics20CATSocketManagerSpecP"
                       }
                     ],
@@ -14017,7 +14890,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATSocketManagerSpec",
-                "printedName": "ConvivaAppAnalytics.CATSocketManagerSpec",
+                "printedName": "any ConvivaAppAnalytics.CATSocketManagerSpec",
                 "usr": "s:19ConvivaAppAnalytics20CATSocketManagerSpecP"
               },
               {
@@ -14292,12 +15165,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[ConvivaAppAnalytics.CATSocketData]",
+                "printedName": "[any ConvivaAppAnalytics.CATSocketData]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketData",
-                    "printedName": "ConvivaAppAnalytics.CATSocketData",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketData",
                     "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
                   }
                 ],
@@ -14360,12 +15233,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[ConvivaAppAnalytics.CATSocketData]",
+                "printedName": "[any ConvivaAppAnalytics.CATSocketData]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketData",
-                    "printedName": "ConvivaAppAnalytics.CATSocketData",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketData",
                     "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
                   }
                 ],
@@ -14428,12 +15301,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[ConvivaAppAnalytics.CATSocketData]",
+                "printedName": "[any ConvivaAppAnalytics.CATSocketData]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketData",
-                    "printedName": "ConvivaAppAnalytics.CATSocketData",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketData",
                     "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
                   }
                 ],
@@ -14471,12 +15344,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[ConvivaAppAnalytics.CATSocketData]",
+                "printedName": "[any ConvivaAppAnalytics.CATSocketData]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketData",
-                    "printedName": "ConvivaAppAnalytics.CATSocketData",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketData",
                     "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
                   }
                 ],
@@ -15268,6 +16141,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -15958,6 +16845,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "ExpressibleByArrayLiteral",
             "printedName": "ExpressibleByArrayLiteral",
             "children": [
@@ -16237,6 +17138,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -16417,6 +17334,20 @@
         ],
         "enumRawTypeName": "Int",
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -17020,12 +17951,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(ConvivaAppAnalytics.CATSocketIOClientOption.Type) -> (ConvivaAppAnalytics.CATSocketLogger) -> ConvivaAppAnalytics.CATSocketIOClientOption",
+                "printedName": "(ConvivaAppAnalytics.CATSocketIOClientOption.Type) -> (any ConvivaAppAnalytics.CATSocketLogger) -> ConvivaAppAnalytics.CATSocketIOClientOption",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(ConvivaAppAnalytics.CATSocketLogger) -> ConvivaAppAnalytics.CATSocketIOClientOption",
+                    "printedName": "(any ConvivaAppAnalytics.CATSocketLogger) -> ConvivaAppAnalytics.CATSocketIOClientOption",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -17036,7 +17967,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "CATSocketLogger",
-                        "printedName": "ConvivaAppAnalytics.CATSocketLogger",
+                        "printedName": "any ConvivaAppAnalytics.CATSocketLogger",
                         "usr": "s:19ConvivaAppAnalytics15CATSocketLoggerP"
                       }
                     ]
@@ -17444,12 +18375,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(ConvivaAppAnalytics.CATSocketIOClientOption.Type) -> (ConvivaAppAnalytics.CATCertificatePinning) -> ConvivaAppAnalytics.CATSocketIOClientOption",
+                "printedName": "(ConvivaAppAnalytics.CATSocketIOClientOption.Type) -> (any ConvivaAppAnalytics.CATCertificatePinning) -> ConvivaAppAnalytics.CATSocketIOClientOption",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(ConvivaAppAnalytics.CATCertificatePinning) -> ConvivaAppAnalytics.CATSocketIOClientOption",
+                    "printedName": "(any ConvivaAppAnalytics.CATCertificatePinning) -> ConvivaAppAnalytics.CATSocketIOClientOption",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -17460,7 +18391,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "CATCertificatePinning",
-                        "printedName": "ConvivaAppAnalytics.CATCertificatePinning",
+                        "printedName": "any ConvivaAppAnalytics.CATCertificatePinning",
                         "usr": "s:19ConvivaAppAnalytics21CATCertificatePinningP"
                       }
                     ]
@@ -17550,12 +18481,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(ConvivaAppAnalytics.CATSocketIOClientOption.Type) -> (Foundation.URLSessionDelegate) -> ConvivaAppAnalytics.CATSocketIOClientOption",
+                "printedName": "(ConvivaAppAnalytics.CATSocketIOClientOption.Type) -> (any Foundation.URLSessionDelegate) -> ConvivaAppAnalytics.CATSocketIOClientOption",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Foundation.URLSessionDelegate) -> ConvivaAppAnalytics.CATSocketIOClientOption",
+                    "printedName": "(any Foundation.URLSessionDelegate) -> ConvivaAppAnalytics.CATSocketIOClientOption",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -17566,7 +18497,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "URLSessionDelegate",
-                        "printedName": "Foundation.URLSessionDelegate",
+                        "printedName": "any Foundation.URLSessionDelegate",
                         "usr": "c:objc(pl)NSURLSessionDelegate"
                       }
                     ]
@@ -17789,6 +18720,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CustomStringConvertible",
             "printedName": "CustomStringConvertible",
             "usr": "s:s23CustomStringConvertibleP",
@@ -17979,12 +18924,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "ConvivaAppAnalytics.CATSocketManagerSpec?",
+                "printedName": "(any ConvivaAppAnalytics.CATSocketManagerSpec)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketManagerSpec",
-                    "printedName": "ConvivaAppAnalytics.CATSocketManagerSpec",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketManagerSpec",
                     "usr": "s:19ConvivaAppAnalytics20CATSocketManagerSpecP"
                   }
                 ],
@@ -18008,12 +18953,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATSocketManagerSpec?",
+                    "printedName": "(any ConvivaAppAnalytics.CATSocketManagerSpec)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATSocketManagerSpec",
-                        "printedName": "ConvivaAppAnalytics.CATSocketManagerSpec",
+                        "printedName": "any ConvivaAppAnalytics.CATSocketManagerSpec",
                         "usr": "s:19ConvivaAppAnalytics20CATSocketManagerSpecP"
                       }
                     ],
@@ -18521,12 +19466,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[ConvivaAppAnalytics.CATSocketData]",
+                "printedName": "[any ConvivaAppAnalytics.CATSocketData]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketData",
-                    "printedName": "ConvivaAppAnalytics.CATSocketData",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketData",
                     "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
                   }
                 ],
@@ -18590,12 +19535,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[ConvivaAppAnalytics.CATSocketData]",
+                "printedName": "[any ConvivaAppAnalytics.CATSocketData]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketData",
-                    "printedName": "ConvivaAppAnalytics.CATSocketData",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketData",
                     "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
                   }
                 ],
@@ -18703,12 +19648,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[ConvivaAppAnalytics.CATSocketData]",
+                "printedName": "[any ConvivaAppAnalytics.CATSocketData]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketData",
-                    "printedName": "ConvivaAppAnalytics.CATSocketData",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketData",
                     "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
                   }
                 ],
@@ -18748,12 +19693,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[ConvivaAppAnalytics.CATSocketData]",
+                "printedName": "[any ConvivaAppAnalytics.CATSocketData]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketData",
-                    "printedName": "ConvivaAppAnalytics.CATSocketData",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketData",
                     "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
                   }
                 ],
@@ -19520,6 +20465,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -19972,6 +20933,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -20358,6 +21333,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -20722,6 +21711,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -20926,12 +21931,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "ConvivaAppAnalytics.CATSocketEngineSpec?",
+                "printedName": "(any ConvivaAppAnalytics.CATSocketEngineSpec)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketEngineSpec",
-                    "printedName": "ConvivaAppAnalytics.CATSocketEngineSpec",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketEngineSpec",
                     "usr": "s:19ConvivaAppAnalytics19CATSocketEngineSpecP"
                   }
                 ],
@@ -20958,12 +21963,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATSocketEngineSpec?",
+                    "printedName": "(any ConvivaAppAnalytics.CATSocketEngineSpec)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATSocketEngineSpec",
-                        "printedName": "ConvivaAppAnalytics.CATSocketEngineSpec",
+                        "printedName": "any ConvivaAppAnalytics.CATSocketEngineSpec",
                         "usr": "s:19ConvivaAppAnalytics19CATSocketEngineSpecP"
                       }
                     ],
@@ -20990,12 +21995,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATSocketEngineSpec?",
+                    "printedName": "(any ConvivaAppAnalytics.CATSocketEngineSpec)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATSocketEngineSpec",
-                        "printedName": "ConvivaAppAnalytics.CATSocketEngineSpec",
+                        "printedName": "any ConvivaAppAnalytics.CATSocketEngineSpec",
                         "usr": "s:19ConvivaAppAnalytics19CATSocketEngineSpecP"
                       }
                     ],
@@ -22219,12 +23224,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[ConvivaAppAnalytics.CATSocketData]",
+                "printedName": "[any ConvivaAppAnalytics.CATSocketData]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketData",
-                    "printedName": "ConvivaAppAnalytics.CATSocketData",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketData",
                     "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
                   }
                 ],
@@ -22721,6 +23726,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -22852,12 +23871,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "ConvivaAppAnalytics.CATSocketEngineSpec?",
+                "printedName": "(any ConvivaAppAnalytics.CATSocketEngineSpec)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketEngineSpec",
-                    "printedName": "ConvivaAppAnalytics.CATSocketEngineSpec",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketEngineSpec",
                     "usr": "s:19ConvivaAppAnalytics19CATSocketEngineSpecP"
                   }
                 ],
@@ -22881,12 +23900,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATSocketEngineSpec?",
+                    "printedName": "(any ConvivaAppAnalytics.CATSocketEngineSpec)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATSocketEngineSpec",
-                        "printedName": "ConvivaAppAnalytics.CATSocketEngineSpec",
+                        "printedName": "any ConvivaAppAnalytics.CATSocketEngineSpec",
                         "usr": "s:19ConvivaAppAnalytics19CATSocketEngineSpecP"
                       }
                     ],
@@ -22916,12 +23935,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATSocketEngineSpec?",
+                    "printedName": "(any ConvivaAppAnalytics.CATSocketEngineSpec)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATSocketEngineSpec",
-                        "printedName": "ConvivaAppAnalytics.CATSocketEngineSpec",
+                        "printedName": "any ConvivaAppAnalytics.CATSocketEngineSpec",
                         "usr": "s:19ConvivaAppAnalytics19CATSocketEngineSpecP"
                       }
                     ],
@@ -24011,12 +25030,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[ConvivaAppAnalytics.CATSocketData]",
+                "printedName": "[any ConvivaAppAnalytics.CATSocketData]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketData",
-                    "printedName": "ConvivaAppAnalytics.CATSocketData",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketData",
                     "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
                   }
                 ],
@@ -24143,6 +25162,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
           {
             "kind": "Conformance",
             "name": "CATSocketEngineClient",
@@ -25011,6 +26044,20 @@
             "conformances": [
               {
                 "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
@@ -25057,6 +26104,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "CustomStringConvertible",
@@ -25245,6 +26306,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -25480,6 +26557,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -25641,6 +26732,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -25677,12 +26784,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[ConvivaAppAnalytics.CATSocketData]",
+                "printedName": "[any ConvivaAppAnalytics.CATSocketData]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketData",
-                    "printedName": "ConvivaAppAnalytics.CATSocketData",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketData",
                     "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
                   }
                 ],
@@ -25762,12 +26869,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[ConvivaAppAnalytics.CATSocketData]",
+                "printedName": "[any ConvivaAppAnalytics.CATSocketData]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketData",
-                    "printedName": "ConvivaAppAnalytics.CATSocketData",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketData",
                     "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
                   }
                 ],
@@ -25873,6 +26980,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -25940,12 +27061,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[ConvivaAppAnalytics.CATSocketData]",
+                "printedName": "[any ConvivaAppAnalytics.CATSocketData]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATSocketData",
-                    "printedName": "ConvivaAppAnalytics.CATSocketData",
+                    "printedName": "any ConvivaAppAnalytics.CATSocketData",
                     "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
                   }
                 ],
@@ -26044,6 +27165,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -26116,7 +27251,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATSocketData",
-                "printedName": "ConvivaAppAnalytics.CATSocketData",
+                "printedName": "any ConvivaAppAnalytics.CATSocketData",
                 "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
               }
             ],
@@ -26142,7 +27277,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATSocketData",
-                "printedName": "ConvivaAppAnalytics.CATSocketData",
+                "printedName": "any ConvivaAppAnalytics.CATSocketData",
                 "usr": "s:19ConvivaAppAnalytics13CATSocketDataP"
               }
             ],
@@ -26166,6 +27301,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -26271,7 +27422,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATHTTPHandlerDelegate",
-                "printedName": "ConvivaAppAnalytics.CATHTTPHandlerDelegate",
+                "printedName": "any ConvivaAppAnalytics.CATHTTPHandlerDelegate",
                 "usr": "s:19ConvivaAppAnalytics22CATHTTPHandlerDelegateP"
               }
             ],
@@ -26293,6 +27444,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "CATHTTPHandler",
@@ -26465,6 +27630,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -26612,12 +27791,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "ConvivaAppAnalytics.CATCertificatePinning?",
+                "printedName": "(any ConvivaAppAnalytics.CATCertificatePinning)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATCertificatePinning",
-                    "printedName": "ConvivaAppAnalytics.CATCertificatePinning",
+                    "printedName": "any ConvivaAppAnalytics.CATCertificatePinning",
                     "usr": "s:19ConvivaAppAnalytics21CATCertificatePinningP"
                   }
                 ],
@@ -26667,7 +27846,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATTransportEventClient",
-                "printedName": "ConvivaAppAnalytics.CATTransportEventClient",
+                "printedName": "any ConvivaAppAnalytics.CATTransportEventClient",
                 "usr": "s:19ConvivaAppAnalytics23CATTransportEventClientP"
               }
             ],
@@ -26699,7 +27878,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Error?) -> ()",
+                "printedName": "((any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -26709,12 +27888,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.Error?",
+                    "printedName": "(any Swift.Error)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -26749,6 +27928,20 @@
           "Available"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "CATTransport",
@@ -26901,12 +28094,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(ConvivaAppAnalytics.CATConnectionState.Type) -> (Swift.Error?) -> ConvivaAppAnalytics.CATConnectionState",
+                "printedName": "(ConvivaAppAnalytics.CATConnectionState.Type) -> ((any Swift.Error)?) -> ConvivaAppAnalytics.CATConnectionState",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error?) -> ConvivaAppAnalytics.CATConnectionState",
+                    "printedName": "((any Swift.Error)?) -> ConvivaAppAnalytics.CATConnectionState",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -26917,12 +28110,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -27160,6 +28353,22 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -27203,6 +28412,22 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -27223,7 +28448,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATTransportEventClient",
-                "printedName": "ConvivaAppAnalytics.CATTransportEventClient",
+                "printedName": "any ConvivaAppAnalytics.CATTransportEventClient",
                 "usr": "s:19ConvivaAppAnalytics23CATTransportEventClientP"
               }
             ],
@@ -27262,12 +28487,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "ConvivaAppAnalytics.CATCertificatePinning?",
+                "printedName": "(any ConvivaAppAnalytics.CATCertificatePinning)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATCertificatePinning",
-                    "printedName": "ConvivaAppAnalytics.CATCertificatePinning",
+                    "printedName": "any ConvivaAppAnalytics.CATCertificatePinning",
                     "usr": "s:19ConvivaAppAnalytics21CATCertificatePinningP"
                   }
                 ],
@@ -27324,7 +28549,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Error?) -> ()",
+                "printedName": "((any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -27334,12 +28559,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.Error?",
+                    "printedName": "(any Swift.Error)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -27409,6 +28634,22 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -27684,6 +28925,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -27897,6 +29152,20 @@
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Error",
@@ -28374,6 +29643,22 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -28732,12 +30017,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(ConvivaAppAnalytics.CATWebSocketEvent.Type) -> (Swift.Error?) -> ConvivaAppAnalytics.CATWebSocketEvent",
+                "printedName": "(ConvivaAppAnalytics.CATWebSocketEvent.Type) -> ((any Swift.Error)?) -> ConvivaAppAnalytics.CATWebSocketEvent",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Error?) -> ConvivaAppAnalytics.CATWebSocketEvent",
+                    "printedName": "((any Swift.Error)?) -> ConvivaAppAnalytics.CATWebSocketEvent",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -28748,12 +30033,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -28963,6 +30248,22 @@
         "moduleName": "ConvivaAppAnalytics",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -28989,7 +30290,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATWebSocketClient",
-                "printedName": "ConvivaAppAnalytics.CATWebSocketClient",
+                "printedName": "any ConvivaAppAnalytics.CATWebSocketClient",
                 "usr": "s:19ConvivaAppAnalytics18CATWebSocketClientP"
               }
             ],
@@ -29012,6 +30313,22 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -29027,7 +30344,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "ConvivaAppAnalytics.CATWebSocketDelegate?"
+                "printedName": "(any ConvivaAppAnalytics.CATWebSocketDelegate)?"
               }
             ],
             "declKind": "Var",
@@ -29051,12 +30368,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATWebSocketDelegate?",
+                    "printedName": "(any ConvivaAppAnalytics.CATWebSocketDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATWebSocketDelegate",
-                        "printedName": "ConvivaAppAnalytics.CATWebSocketDelegate",
+                        "printedName": "any ConvivaAppAnalytics.CATWebSocketDelegate",
                         "usr": "s:19ConvivaAppAnalytics20CATWebSocketDelegateP"
                       }
                     ],
@@ -29083,12 +30400,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATWebSocketDelegate?",
+                    "printedName": "(any ConvivaAppAnalytics.CATWebSocketDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATWebSocketDelegate",
-                        "printedName": "ConvivaAppAnalytics.CATWebSocketDelegate",
+                        "printedName": "any ConvivaAppAnalytics.CATWebSocketDelegate",
                         "usr": "s:19ConvivaAppAnalytics20CATWebSocketDelegateP"
                       }
                     ],
@@ -29541,7 +30858,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATEngine",
-                "printedName": "ConvivaAppAnalytics.CATEngine",
+                "printedName": "any ConvivaAppAnalytics.CATEngine",
                 "usr": "s:19ConvivaAppAnalytics9CATEngineP"
               }
             ],
@@ -29574,12 +30891,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "ConvivaAppAnalytics.CATCertificatePinning?",
+                "printedName": "(any ConvivaAppAnalytics.CATCertificatePinning)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATCertificatePinning",
-                    "printedName": "ConvivaAppAnalytics.CATCertificatePinning",
+                    "printedName": "any ConvivaAppAnalytics.CATCertificatePinning",
                     "usr": "s:19ConvivaAppAnalytics21CATCertificatePinningP"
                   }
                 ],
@@ -29589,12 +30906,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "ConvivaAppAnalytics.CATCompressionHandler?",
+                "printedName": "(any ConvivaAppAnalytics.CATCompressionHandler)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATCompressionHandler",
-                    "printedName": "ConvivaAppAnalytics.CATCompressionHandler",
+                    "printedName": "any ConvivaAppAnalytics.CATCompressionHandler",
                     "usr": "s:19ConvivaAppAnalytics21CATCompressionHandlerP"
                   }
                 ],
@@ -29980,6 +31297,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CATWebSocketClient",
             "printedName": "CATWebSocketClient",
             "usr": "s:19ConvivaAppAnalytics18CATWebSocketClientP",
@@ -30113,12 +31444,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -30148,6 +31479,22 @@
         "declAttributes": [
           "AccessControl",
           "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -30163,7 +31510,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "ConvivaAppAnalytics.CATWebSocketManagerBridgeDelegate?"
+                "printedName": "(any ConvivaAppAnalytics.CATWebSocketManagerBridgeDelegate)?"
               }
             ],
             "declKind": "Var",
@@ -30188,12 +31535,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATWebSocketManagerBridgeDelegate?",
+                    "printedName": "(any ConvivaAppAnalytics.CATWebSocketManagerBridgeDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATWebSocketManagerBridgeDelegate",
-                        "printedName": "ConvivaAppAnalytics.CATWebSocketManagerBridgeDelegate",
+                        "printedName": "any ConvivaAppAnalytics.CATWebSocketManagerBridgeDelegate",
                         "usr": "c:@M@ConvivaAppAnalytics@objc(pl)CATWebSocketManagerBridgeDelegate"
                       }
                     ],
@@ -30223,12 +31570,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATWebSocketManagerBridgeDelegate?",
+                    "printedName": "(any ConvivaAppAnalytics.CATWebSocketManagerBridgeDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATWebSocketManagerBridgeDelegate",
-                        "printedName": "ConvivaAppAnalytics.CATWebSocketManagerBridgeDelegate",
+                        "printedName": "any ConvivaAppAnalytics.CATWebSocketManagerBridgeDelegate",
                         "usr": "c:@M@ConvivaAppAnalytics@objc(pl)CATWebSocketManagerBridgeDelegate"
                       }
                     ],
@@ -30533,6 +31880,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -30743,6 +32104,16 @@
                 "mangledName": "$s19ConvivaAppAnalytics18CATWebSocketServerC7onEventyAA09CATServerH0OcSgvM",
                 "moduleName": "ConvivaAppAnalytics",
                 "implicit": true,
+                "intro_Macosx": "10.14",
+                "intro_iOS": "12.0",
+                "intro_tvOS": "12.0",
+                "intro_watchOS": "5.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -30776,12 +32147,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -30854,6 +32225,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "CATServer",
@@ -31017,6 +32402,16 @@
                 "mangledName": "$s19ConvivaAppAnalytics19CATServerConnectionC7onEventyAA013CATConnectionG0OcSgvM",
                 "moduleName": "ConvivaAppAnalytics",
                 "implicit": true,
+                "intro_Macosx": "10.14",
+                "intro_iOS": "12.0",
+                "intro_tvOS": "12.0",
+                "intro_watchOS": "5.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -31029,7 +32424,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "ConvivaAppAnalytics.CATConnectionDelegate?"
+                "printedName": "(any ConvivaAppAnalytics.CATConnectionDelegate)?"
               }
             ],
             "declKind": "Var",
@@ -31053,12 +32448,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATConnectionDelegate?",
+                    "printedName": "(any ConvivaAppAnalytics.CATConnectionDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATConnectionDelegate",
-                        "printedName": "ConvivaAppAnalytics.CATConnectionDelegate",
+                        "printedName": "any ConvivaAppAnalytics.CATConnectionDelegate",
                         "usr": "s:19ConvivaAppAnalytics21CATConnectionDelegateP"
                       }
                     ],
@@ -31085,12 +32480,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "ConvivaAppAnalytics.CATConnectionDelegate?",
+                    "printedName": "(any ConvivaAppAnalytics.CATConnectionDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "CATConnectionDelegate",
-                        "printedName": "ConvivaAppAnalytics.CATConnectionDelegate",
+                        "printedName": "any ConvivaAppAnalytics.CATConnectionDelegate",
                         "usr": "s:19ConvivaAppAnalytics21CATConnectionDelegateP"
                       }
                     ],
@@ -31120,6 +32515,16 @@
                 "mangledName": "$s19ConvivaAppAnalytics19CATServerConnectionC8delegateAA21CATConnectionDelegate_pSgvM",
                 "moduleName": "ConvivaAppAnalytics",
                 "implicit": true,
+                "intro_Macosx": "10.14",
+                "intro_iOS": "12.0",
+                "intro_tvOS": "12.0",
+                "intro_watchOS": "5.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -31322,6 +32727,20 @@
         ],
         "hasMissingDesignatedInitializers": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "CATConnection",
@@ -31529,6 +32948,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CATCompressionHandler",
             "printedName": "CATCompressionHandler",
             "usr": "s:19ConvivaAppAnalytics21CATCompressionHandlerP",
@@ -31651,18 +33084,18 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATTransport",
-                "printedName": "ConvivaAppAnalytics.CATTransport",
+                "printedName": "any ConvivaAppAnalytics.CATTransport",
                 "usr": "s:19ConvivaAppAnalytics12CATTransportP"
               },
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "ConvivaAppAnalytics.CATCertificatePinning?",
+                "printedName": "(any ConvivaAppAnalytics.CATCertificatePinning)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATCertificatePinning",
-                    "printedName": "ConvivaAppAnalytics.CATCertificatePinning",
+                    "printedName": "any ConvivaAppAnalytics.CATCertificatePinning",
                     "usr": "s:19ConvivaAppAnalytics21CATCertificatePinningP"
                   }
                 ],
@@ -31672,33 +33105,33 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATHeaderValidator",
-                "printedName": "ConvivaAppAnalytics.CATHeaderValidator",
+                "printedName": "any ConvivaAppAnalytics.CATHeaderValidator",
                 "hasDefaultArg": true,
                 "usr": "s:19ConvivaAppAnalytics18CATHeaderValidatorP"
               },
               {
                 "kind": "TypeNominal",
                 "name": "CATHTTPHandler",
-                "printedName": "ConvivaAppAnalytics.CATHTTPHandler",
+                "printedName": "any ConvivaAppAnalytics.CATHTTPHandler",
                 "hasDefaultArg": true,
                 "usr": "s:19ConvivaAppAnalytics14CATHTTPHandlerP"
               },
               {
                 "kind": "TypeNominal",
                 "name": "CATFramer",
-                "printedName": "ConvivaAppAnalytics.CATFramer",
+                "printedName": "any ConvivaAppAnalytics.CATFramer",
                 "hasDefaultArg": true,
                 "usr": "s:19ConvivaAppAnalytics9CATFramerP"
               },
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "ConvivaAppAnalytics.CATCompressionHandler?",
+                "printedName": "(any ConvivaAppAnalytics.CATCompressionHandler)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CATCompressionHandler",
-                    "printedName": "ConvivaAppAnalytics.CATCompressionHandler",
+                    "printedName": "any ConvivaAppAnalytics.CATCompressionHandler",
                     "usr": "s:19ConvivaAppAnalytics21CATCompressionHandlerP"
                   }
                 ],
@@ -31728,7 +33161,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "CATEngineDelegate",
-                "printedName": "ConvivaAppAnalytics.CATEngineDelegate",
+                "printedName": "any ConvivaAppAnalytics.CATEngineDelegate",
                 "usr": "s:19ConvivaAppAnalytics17CATEngineDelegateP"
               }
             ],
@@ -32082,6 +33515,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CATEngine",
             "printedName": "CATEngine",
             "usr": "s:19ConvivaAppAnalytics9CATEngineP",
@@ -32230,6 +33677,27 @@
             ],
             "usr": "s:7SwiftUI4ViewP",
             "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -32242,10 +33710,25 @@
         "mangledName": "$sSS",
         "moduleName": "Swift",
         "declAttributes": [
+          "EagerMove",
           "Frozen"
         ],
         "isExternal": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "CATSocketData",
@@ -32792,12 +34275,6 @@
                         "name": "TransferRepresentation",
                         "printedName": "CoreTransferable.TransferRepresentation",
                         "usr": "s:16CoreTransferable22TransferRepresentationP"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Sendable",
-                        "printedName": "Swift.Sendable",
-                        "usr": "s:s8SendableP"
                       }
                     ]
                   }
@@ -32958,6 +34435,20 @@
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -33135,6 +34626,13 @@
             ],
             "usr": "s:s10SIMDScalarP",
             "mangledName": "$ss10SIMDScalarP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
           },
           {
             "kind": "Conformance",
@@ -33316,6 +34814,7 @@
         "genericSig": "<τ_0_0>",
         "sugared_genericSig": "<Element>",
         "declAttributes": [
+          "EagerMove",
           "Frozen"
         ],
         "isExternal": true,
@@ -33326,6 +34825,20 @@
             "printedName": "_DestructorSafeContainer",
             "usr": "s:s24_DestructorSafeContainerP",
             "mangledName": "$ss24_DestructorSafeContainerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -33841,48 +35354,39 @@
           },
           {
             "kind": "Conformance",
-            "name": "DataProtocol",
-            "printedName": "DataProtocol",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "Regions",
-                "printedName": "Regions",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CollectionOfOne",
-                    "printedName": "Swift.CollectionOfOne<[Swift.UInt8]>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.UInt8]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UInt8",
-                            "printedName": "Swift.UInt8",
-                            "usr": "s:s5UInt8V"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:s15CollectionOfOneV"
+                    "name": "NSArray",
+                    "printedName": "Foundation.NSArray",
+                    "usr": "c:objc(cs)NSArray"
                   }
                 ]
               }
             ],
-            "usr": "s:10Foundation12DataProtocolP",
-            "mangledName": "$s10Foundation12DataProtocolP"
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
           },
           {
             "kind": "Conformance",
-            "name": "MutableDataProtocol",
-            "printedName": "MutableDataProtocol",
-            "usr": "s:10Foundation19MutableDataProtocolP",
-            "mangledName": "$s10Foundation19MutableDataProtocolP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ContiguousBytes",
+            "printedName": "ContiguousBytes",
+            "usr": "s:10Foundation15ContiguousBytesP",
+            "mangledName": "$s10Foundation15ContiguousBytesP"
           },
           {
             "kind": "Conformance",
@@ -33928,39 +35432,48 @@
           },
           {
             "kind": "Conformance",
-            "name": "_ObjectiveCBridgeable",
-            "printedName": "_ObjectiveCBridgeable",
+            "name": "DataProtocol",
+            "printedName": "DataProtocol",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "_ObjectiveCType",
-                "printedName": "_ObjectiveCType",
+                "name": "Regions",
+                "printedName": "Regions",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "NSArray",
-                    "printedName": "Foundation.NSArray",
-                    "usr": "c:objc(cs)NSArray"
+                    "name": "CollectionOfOne",
+                    "printedName": "Swift.CollectionOfOne<[Swift.UInt8]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.UInt8]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt8",
+                            "printedName": "Swift.UInt8",
+                            "usr": "s:s5UInt8V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:s15CollectionOfOneV"
                   }
                 ]
               }
             ],
-            "usr": "s:s21_ObjectiveCBridgeableP",
-            "mangledName": "$ss21_ObjectiveCBridgeableP"
+            "usr": "s:10Foundation12DataProtocolP",
+            "mangledName": "$s10Foundation12DataProtocolP"
           },
           {
             "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ContiguousBytes",
-            "printedName": "ContiguousBytes",
-            "usr": "s:10Foundation15ContiguousBytesP",
-            "mangledName": "$s10Foundation15ContiguousBytesP"
+            "name": "MutableDataProtocol",
+            "printedName": "MutableDataProtocol",
+            "usr": "s:10Foundation19MutableDataProtocolP",
+            "mangledName": "$s10Foundation19MutableDataProtocolP"
           }
         ]
       },
@@ -34046,8 +35559,53 @@
         "usr": "s:10Foundation3URLV",
         "mangledName": "$s10Foundation3URLV",
         "moduleName": "Foundation",
+        "intro_Macosx": "10.10",
+        "intro_iOS": "8.0",
+        "intro_tvOS": "9.0",
+        "intro_watchOS": "2.0",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
         "isExternal": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "ReferenceConvertible",
@@ -34069,27 +35627,6 @@
             ],
             "usr": "s:10Foundation20ReferenceConvertibleP",
             "mangledName": "$s10Foundation20ReferenceConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",
@@ -34175,12 +35712,6 @@
                         "name": "TransferRepresentation",
                         "printedName": "CoreTransferable.TransferRepresentation",
                         "usr": "s:16CoreTransferable22TransferRepresentationP"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Sendable",
-                        "printedName": "Swift.Sendable",
-                        "usr": "s:s8SendableP"
                       }
                     ]
                   }
@@ -34203,23 +35734,31 @@
         "genericSig": "<τ_0_0, τ_0_1 where τ_0_0 : Swift.Hashable>",
         "sugared_genericSig": "<Key, Value where Key : Swift.Hashable>",
         "declAttributes": [
+          "EagerMove",
           "Frozen"
         ],
         "isExternal": true,
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CATSocketData",
             "printedName": "CATSocketData",
             "usr": "s:19ConvivaAppAnalytics13CATSocketDataP",
             "mangledName": "$s19ConvivaAppAnalytics13CATSocketDataP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -34441,6 +35980,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
@@ -34534,17 +36080,24 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CATSocketData",
             "printedName": "CATSocketData",
             "usr": "s:19ConvivaAppAnalytics13CATSocketDataP",
             "mangledName": "$s19ConvivaAppAnalytics13CATSocketDataP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -34581,6 +36134,13 @@
             "printedName": "CustomStringConvertible",
             "usr": "s:s23CustomStringConvertibleP",
             "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -34633,6 +36193,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_ObjectiveCBridgeable",
             "printedName": "_ObjectiveCBridgeable",
             "children": [
@@ -34668,6 +36235,20 @@
         ],
         "isExternal": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "CATSocketData",
@@ -35062,6 +36643,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -35106,13 +36694,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "VectorArithmetic",
-            "printedName": "VectorArithmetic",
-            "usr": "s:7SwiftUI16VectorArithmeticP",
-            "mangledName": "$s7SwiftUI16VectorArithmeticP"
-          },
-          {
-            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -35132,6 +36713,35 @@
             ],
             "usr": "s:7SwiftUI18_FormatSpecifiableP",
             "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VectorArithmetic",
+            "printedName": "VectorArithmetic",
+            "usr": "s:7SwiftUI16VectorArithmeticP",
+            "mangledName": "$s7SwiftUI16VectorArithmeticP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Animatable",
+            "printedName": "Animatable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AnimatableData",
+                "printedName": "AnimatableData",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI10AnimatableP",
+            "mangledName": "$s7SwiftUI10AnimatableP"
           }
         ]
       },
@@ -35291,6 +36901,20 @@
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -35478,6 +37102,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_FormatSpecifiable",
             "printedName": "_FormatSpecifiable",
             "children": [
@@ -35565,6 +37196,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -35700,33 +37345,19 @@
         "usr": "s:10Foundation4DataV",
         "mangledName": "$s10Foundation4DataV",
         "moduleName": "Foundation",
+        "intro_Macosx": "10.10",
+        "intro_iOS": "8.0",
+        "intro_tvOS": "9.0",
+        "intro_watchOS": "2.0",
         "declAttributes": [
-          "Frozen"
+          "Frozen",
+          "Available",
+          "Available",
+          "Available",
+          "Available"
         ],
         "isExternal": true,
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "ReferenceConvertible",
-            "printedName": "ReferenceConvertible",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "ReferenceType",
-                "printedName": "ReferenceType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSData",
-                    "printedName": "Foundation.NSData",
-                    "usr": "c:objc(cs)NSData"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:10Foundation20ReferenceConvertibleP",
-            "mangledName": "$s10Foundation20ReferenceConvertibleP"
-          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -36119,6 +37750,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CATSocketData",
             "printedName": "CATSocketData",
             "usr": "s:19ConvivaAppAnalytics13CATSocketDataP",
@@ -36126,24 +37771,25 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomReflectable",
-            "printedName": "CustomReflectable",
-            "usr": "s:s17CustomReflectableP",
-            "mangledName": "$ss17CustomReflectableP"
+            "name": "ReferenceConvertible",
+            "printedName": "ReferenceConvertible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReferenceType",
+                "printedName": "ReferenceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSData",
+                    "printedName": "Foundation.NSData",
+                    "usr": "c:objc(cs)NSData"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation20ReferenceConvertibleP",
+            "mangledName": "$s10Foundation20ReferenceConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -36166,6 +37812,27 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
           },
           {
             "kind": "Conformance",
@@ -36201,12 +37868,6 @@
                         "name": "TransferRepresentation",
                         "printedName": "CoreTransferable.TransferRepresentation",
                         "usr": "s:16CoreTransferable22TransferRepresentationP"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Sendable",
-                        "printedName": "Swift.Sendable",
-                        "usr": "s:s8SendableP"
                       }
                     ]
                   }
@@ -36239,6 +37900,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -36652,6 +38327,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -36824,6 +38513,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -36992,6 +38695,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -37085,6 +38802,8 @@
             "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
             "sugared_genericSig": "<Self where Self : SwiftUI.View>",
             "declAttributes": [
+              "Preconcurrency",
+              "Custom",
               "RawDocComment"
             ],
             "isFromExtension": true,
@@ -37094,7 +38813,7 @@
         "declKind": "Protocol",
         "usr": "s:7SwiftUI4ViewP",
         "mangledName": "$s7SwiftUI4ViewP",
-        "moduleName": "SwiftUI",
+        "moduleName": "SwiftUICore",
         "genericSig": "<τ_0_0.Body : SwiftUI.View>",
         "sugared_genericSig": "<Self.Body : SwiftUI.View>",
         "intro_Macosx": "10.15",
@@ -37102,18 +38821,530 @@
         "intro_tvOS": "13.0",
         "intro_watchOS": "6.0",
         "declAttributes": [
+          "Preconcurrency",
           "TypeEraser",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
           "Available",
           "Available",
           "Available",
-          "Available"
+          "Available",
+          "Custom"
         ],
-        "isExternal": true
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
       }
     ],
     "json_format_version": 8
   },
   "ConstValues": [
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 189,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 228,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 267,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 306,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 345,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 384,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 423,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 462,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 501,
+      "length": 1,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 540,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 580,
+      "length": 2,
+      "value": "11"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 620,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 660,
+      "length": 2,
+      "value": "13"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 824,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 872,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 920,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 968,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1016,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1064,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1112,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1160,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1208,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1256,
+      "length": 1,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1304,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1353,
+      "length": 2,
+      "value": "11"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1402,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1451,
+      "length": 2,
+      "value": "13"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1500,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1549,
+      "length": 2,
+      "value": "15"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1598,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1647,
+      "length": 2,
+      "value": "17"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1696,
+      "length": 2,
+      "value": "18"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1745,
+      "length": 2,
+      "value": "19"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1794,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1843,
+      "length": 2,
+      "value": "21"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1892,
+      "length": 2,
+      "value": "22"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1941,
+      "length": 2,
+      "value": "23"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1990,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2039,
+      "length": 2,
+      "value": "25"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2088,
+      "length": 2,
+      "value": "26"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2137,
+      "length": 2,
+      "value": "27"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2186,
+      "length": 2,
+      "value": "28"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2235,
+      "length": 2,
+      "value": "29"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2284,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2333,
+      "length": 2,
+      "value": "31"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2382,
+      "length": 2,
+      "value": "32"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2431,
+      "length": 2,
+      "value": "33"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2480,
+      "length": 2,
+      "value": "34"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2529,
+      "length": 2,
+      "value": "35"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2578,
+      "length": 2,
+      "value": "36"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2627,
+      "length": 2,
+      "value": "37"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2676,
+      "length": 2,
+      "value": "38"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2725,
+      "length": 2,
+      "value": "39"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2774,
+      "length": 2,
+      "value": "40"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2823,
+      "length": 2,
+      "value": "41"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2872,
+      "length": 2,
+      "value": "42"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2921,
+      "length": 2,
+      "value": "43"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2970,
+      "length": 2,
+      "value": "44"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3019,
+      "length": 2,
+      "value": "45"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3068,
+      "length": 2,
+      "value": "46"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3117,
+      "length": 2,
+      "value": "47"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3166,
+      "length": 2,
+      "value": "48"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3215,
+      "length": 2,
+      "value": "49"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3264,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3313,
+      "length": 2,
+      "value": "51"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3362,
+      "length": 2,
+      "value": "52"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3411,
+      "length": 2,
+      "value": "53"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3460,
+      "length": 2,
+      "value": "54"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3509,
+      "length": 2,
+      "value": "55"
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/Performance\/CATExceptionTypes.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3558,
+      "length": 2,
+      "value": "56"
+    },
     {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFoundationHTTPServerHandler.swift",
       "kind": "StringLiteral",
@@ -37169,13 +39400,6 @@
       "offset": 1928,
       "length": 2,
       "value": "10"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFoundationTransport.swift",
-      "kind": "StringLiteral",
-      "offset": 1064,
-      "length": 22,
-      "value": "\"ConvivaAppAnalytics.CATFoundationTransport\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFrameCollector.swift",
@@ -37302,216 +39526,6 @@
       "offset": 1579,
       "length": 4,
       "value": "1009"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1263,
-      "length": 4,
-      "value": "1000"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1302,
-      "length": 4,
-      "value": "1001"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1341,
-      "length": 4,
-      "value": "1002"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1380,
-      "length": 4,
-      "value": "1003"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1441,
-      "length": 4,
-      "value": "1005"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1501,
-      "length": 4,
-      "value": "1007"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1540,
-      "length": 4,
-      "value": "1008"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1579,
-      "length": 4,
-      "value": "1009"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1263,
-      "length": 4,
-      "value": "1000"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1302,
-      "length": 4,
-      "value": "1001"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1341,
-      "length": 4,
-      "value": "1002"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1380,
-      "length": 4,
-      "value": "1003"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1441,
-      "length": 4,
-      "value": "1005"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1501,
-      "length": 4,
-      "value": "1007"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1540,
-      "length": 4,
-      "value": "1008"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1579,
-      "length": 4,
-      "value": "1009"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1648,
-      "length": 3,
-      "value": "0x0"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1673,
-      "length": 3,
-      "value": "0x1"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1700,
-      "length": 3,
-      "value": "0x2"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1756,
-      "length": 3,
-      "value": "0x8"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1776,
-      "length": 3,
-      "value": "0x9"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1796,
-      "length": 3,
-      "value": "0xA"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1840,
-      "length": 3,
-      "value": "100"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1648,
-      "length": 3,
-      "value": "0x0"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1673,
-      "length": 3,
-      "value": "0x1"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1700,
-      "length": 3,
-      "value": "0x2"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1756,
-      "length": 3,
-      "value": "0x8"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1776,
-      "length": 3,
-      "value": "0x9"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1796,
-      "length": 3,
-      "value": "0xA"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1840,
-      "length": 3,
-      "value": "100"
     },
     {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATFramer.swift",
@@ -37703,60 +39717,11 @@
       "value": "2"
     },
     {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATSecurity.swift",
-      "kind": "IntegerLiteral",
-      "offset": 982,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATSecurity.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1009,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATSecurity.swift",
-      "kind": "IntegerLiteral",
-      "offset": 982,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATSecurity.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1009,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketAckEmitter.swift",
-      "kind": "StringLiteral",
-      "offset": 1377,
-      "length": 19,
-      "value": "\"ConvivaAppAnalytics.CATSocketAckEmitter\""
-    },
-    {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketAckEmitter.swift",
       "kind": "BooleanLiteral",
       "offset": 3870,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketAckEmitter.swift",
-      "kind": "StringLiteral",
-      "offset": 3621,
-      "length": 16,
-      "value": "\"ConvivaAppAnalytics.CATOnAckCallback\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketAckManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1359,
-      "length": 8,
-      "value": "\"NO ACK\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketAckManager.swift",
@@ -37775,9 +39740,23 @@
     {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketAnyEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1274,
-      "length": 17,
-      "value": "\"ConvivaAppAnalytics.CATSocketAnyEvent\""
+      "offset": 1573,
+      "length": 72,
+      "value": "\"CATSocketAnyEvent: Event: \""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketAnyEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1608,
+      "length": 5,
+      "value": "\" items: \""
+    },
+    {
+      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketAnyEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1644,
+      "length": 1,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketEngine.swift",
@@ -37969,55 +39948,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketEngine.swift",
-      "kind": "StringLiteral",
-      "offset": 1417,
-      "length": 15,
-      "value": "\"ConvivaAppAnalytics.CATSocketEngine\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketEnginePacketType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1389,
-      "length": 5,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketEnginePacketType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1427,
-      "length": 4,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketEnginePacketType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1464,
-      "length": 4,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketEnginePacketType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1504,
-      "length": 7,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketEnginePacketType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1547,
-      "length": 7,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketEnginePacketType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1579,
-      "length": 4,
-      "value": "6"
-    },
-    {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketEnginePacketType.swift",
       "kind": "IntegerLiteral",
       "offset": 1389,
@@ -38064,7 +39994,7 @@
       "kind": "IntegerLiteral",
       "offset": 3131,
       "length": 2,
-      "value": "1"
+      "value": "-1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketIOClient.swift",
@@ -38106,14 +40036,7 @@
       "kind": "IntegerLiteral",
       "offset": 14582,
       "length": 2,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketIOClient.swift",
-      "kind": "StringLiteral",
-      "offset": 1738,
-      "length": 17,
-      "value": "\"ConvivaAppAnalytics.CATSocketIOClient\""
+      "value": "-1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketIOClientConfiguration.swift",
@@ -38134,55 +40057,6 @@
       "kind": "IntegerLiteral",
       "offset": 1415,
       "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketIOClientOption.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1362,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketIOClientOption.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1415,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketIOClientOption.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1362,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketIOClientOption.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1415,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketIOStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1523,
-      "length": 12,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketIOStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1606,
-      "length": 10,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketIOStatus.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1678,
-      "length": 9,
       "value": "3"
     },
     {
@@ -38274,7 +40148,7 @@
       "kind": "IntegerLiteral",
       "offset": 5188,
       "length": 2,
-      "value": "1"
+      "value": "-1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketManager.swift",
@@ -38298,13 +40172,6 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketManager.swift",
-      "kind": "StringLiteral",
-      "offset": 2183,
-      "length": 16,
-      "value": "\"ConvivaAppAnalytics.CATSocketManager\""
-    },
-    {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
       "kind": "StringLiteral",
       "offset": 1376,
@@ -38316,7 +40183,7 @@
       "kind": "IntegerLiteral",
       "offset": 2848,
       "length": 2,
-      "value": "1"
+      "value": "-1"
     },
     {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
@@ -38369,108 +40236,10 @@
     },
     {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5611,
-      "length": 10,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5657,
-      "length": 5,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5696,
-      "length": 3,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5735,
-      "length": 5,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5783,
-      "length": 11,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5835,
-      "length": 9,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5611,
-      "length": 10,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5657,
-      "length": 5,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5696,
-      "length": 3,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5735,
-      "length": 5,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5783,
-      "length": 11,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5835,
-      "length": 9,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketPacket.swift",
       "kind": "BooleanLiteral",
       "offset": 6551,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketRawView.swift",
-      "kind": "StringLiteral",
-      "offset": 1425,
-      "length": 16,
-      "value": "\"ConvivaAppAnalytics.CATSocketRawView\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Socket\/CATSocketRawView.swift",
-      "kind": "StringLiteral",
-      "offset": 5278,
-      "length": 19,
-      "value": "\"ConvivaAppAnalytics.CATSocketRawAckView\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATTCPTransport.swift",
@@ -38520,13 +40289,6 @@
       "offset": 162,
       "length": 12,
       "value": "\"\/socket.io\""
-    },
-    {
-      "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/CATWebSocketManagerBridge.swift",
-      "kind": "StringLiteral",
-      "offset": 431,
-      "length": 25,
-      "value": "\"ConvivaAppAnalytics.CATWebSocketManagerBridge\""
     },
     {
       "filePath": "\/Users\/distiller\/project\/Snowplow\/conviva\/WebSocket\/Starscream\/CATWebSocketServer.swift",

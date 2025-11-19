@@ -73,8 +73,10 @@
 #import "CATUnStructured.h"
 #import "CATButtonClickEvent.h"
 #import "CATNetworkTrace.h"
+#import "CATUtils.h"
 #import "CATConditionalCollectionConfiguration.h"
 #import "CATNetworkReqTrackingConfiguration.h"
+#import "NSData+CAT_GZIP.h"
 
 FOUNDATION_EXPORT double ConvivaAppAnalyticsVersionNumber;
 FOUNDATION_EXPORT const unsigned char ConvivaAppAnalyticsVersionString[];

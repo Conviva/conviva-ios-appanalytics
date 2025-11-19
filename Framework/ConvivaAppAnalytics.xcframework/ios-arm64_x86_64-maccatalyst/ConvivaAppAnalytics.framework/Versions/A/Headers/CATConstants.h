@@ -419,4 +419,10 @@ typedef NS_ENUM(NSInteger, CATPrewarmDetectionMode) {
 };
 
 extern NSInteger const kCATDefaultHBInterval;
+extern NSString * const kCATConvivaCrashEventName;
+extern NSString * const kCATConvivaHangEventName;
+extern NSString * const kCATHangDiagnosticType;
+extern NSInteger const kCATMaxStackTraceLength;
+extern NSInteger const kCATMaxExceptionNameLength;
+extern NSInteger const kCATMaxExceptionMsgLength;
 @end
