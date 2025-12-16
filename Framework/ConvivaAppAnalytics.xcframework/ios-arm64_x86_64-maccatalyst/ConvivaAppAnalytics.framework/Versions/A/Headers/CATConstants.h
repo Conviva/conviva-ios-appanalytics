@@ -388,6 +388,25 @@ extern NSString * const kCATConditionalCollectionNetworkRequestStatusCode;
 
 extern NSString * const kCATConditionalCollectionRequiredPatternMatchingStatus;
 
+// --- Video SDK
+
+extern NSString * const kCATConvivaSdkCen;
+extern NSString * const kCATConvivaSdkCed;
+extern NSString * const kCATConvivaSdkName;
+extern NSString * const kCATConvivaSdkTags;
+extern NSString * const kCATConvivaSdkOldSc;
+extern NSString * const kCATConvivaSdkNewSc;
+extern NSString * const kCATConvivaVideoCustomEvent;
+extern NSString * const kCATConvivaAdCustomEvent;
+extern NSString * const kCATConvivaSdkCustomEvent;
+extern NSString * const kCATConvivaAdEventPrefix;
+extern NSString * const kCATConvivaSdkAdId;
+extern NSString * const kCATConvivaSdkAdCreativeId;
+extern NSString * const kCATConvivaSdkAdPosition;
+extern NSString * const kCATConvivaSdkAdIsSlate;
+extern NSString * const kCATConvivaSdkAdTechnology;
+extern NSString * const kCATConvivaSdkAdSequence;
+extern NSString * const kCATConvivaSdkCsId;
 
 typedef NS_ENUM(NSInteger, CATConditionalCollectionStatus) {
     CATConditionalCollectionStatusNo = 0,        // CollectionStatus is NO

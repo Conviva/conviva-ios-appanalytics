@@ -52,5 +52,7 @@
 + (NSDictionary *)getConfigInfoFor:(NSString *)targetUrl withData:(NSDictionary*)data;
 + (BOOL)hasKey:(NSString *)key attributes:(NSArray*)attributes;
 + (NSString *)stringByTrimmingURLString:(NSURLRequest *)URLRequest;
++ (NSString *)filteredKeysFromJSONString:(NSString *)jsonString allowedKeys:(NSArray<NSString *> *)allowedKeys;
++ (NSString *)filteredKeysFromJSON:(NSDictionary *)dict allowedKeys:(NSArray<NSString *> *)allowedKeys;
 + (NSString *)truncateString:(NSString *)str toLength:(NSInteger)maxLength;
 @end
