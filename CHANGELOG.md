@@ -1,8 +1,8 @@
 # Changelog
 
 ## 1.7.0 (12/16/2025)
-* Added support to report Ad session events to DPI (Attempt, End, etc.).
-* Improved App Load Time metric by collecting more data.
+* Supports reporting the Ad session events such as, Attempt, End, etc., to DPI.
+* Improves App Load Time metric by collecting more data.
 
 ## 1.6.0 (11/19/2025)
 * Crash and ANR reporting has been improved with MetricKit for users on iOS 14+. This delivers deeper insights and faster fixes for a more stable app experience.
