@@ -27,6 +27,10 @@ NS_SWIFT_NAME(CATTraceParentConfigurationProtocol)
 
 - (instancetype) init;
 
+- (BOOL) isTraceparentURLMatching:(NSString*)url;
+
+- (BOOL) shallAddTraceparentHeaderToUrl:(NSString*)url;
+
 SP_BUILDER_DECLARE(BOOL, enabled)
 
 SP_BUILDER_DECLARE(BOOL, force)

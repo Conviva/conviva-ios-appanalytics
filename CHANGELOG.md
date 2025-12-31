@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.8.0 (12/31/2025)
+* Supports network request url query params tracking.
+* Enhanced the remote configuration feature to support instant updates.
+
 ## 1.7.0 (12/16/2025)
 * Supports reporting the Ad session events such as, Attempt, End, etc., to DPI.
 * Improves App Load Time metric by collecting more data.

@@ -346,6 +346,7 @@ extern NSString * const kCATSamplingRandomNumber;
 extern NSString * const kCATSamplingPercentage;
 extern NSString * const kCATSamplingStatus;
 extern NSString * const kCATSamplingDecision;
+extern NSString * const kCATRcvFromCTP;
 
 // --- Conditional Collection
 
@@ -438,6 +439,12 @@ typedef NS_ENUM(NSInteger, CATPrewarmDetectionMode) {
 };
 
 extern NSInteger const kCATDefaultHBInterval;
+
+// --- Remote Config
+extern NSString * const kCATDefaultRemoteConfigVersion;
+extern NSInteger  const kCATInstantRemoteConfigFetchIntervalMils;
+extern NSString * const kCATRemoteConfigFetchEventName;
+
 extern NSString * const kCATConvivaCrashEventName;
 extern NSString * const kCATConvivaHangEventName;
 extern NSString * const kCATHangDiagnosticType;

@@ -13,7 +13,6 @@
 + (id)getClientId;
 + (BOOL)setClientId:(NSString *)newClientId;
 + (NSInteger)getInstanceId;
-+ (void) removeInstanceId;
 
 //+ (NSInteger)getClientIdEventIndex;
 //+ (void)setClientIdEventIndex:(NSInteger)clientIdEventIndex;
@@ -22,7 +21,7 @@
 + (NSString*) userAgentString;
 
 + (NSDictionary *)collectAttributes:(NSDictionary *)payloadInfo withConfig:(NSArray *)collectAttributesConfig andAttributesPayload:(NSDictionary *)attributesPayloadInfo;
-+ (NSDictionary *)filterAttributes:(NSDictionary *)attributesPayloadInfo withConfig:(NSArray *)attributeKeysToCompare andIsCaseInSensitive:(BOOL)isCaseInSensitive;
++ (NSDictionary *)filterAttributes:(NSDictionary *)attributesPayloadInfo withConfig:(NSArray *)attributeKeysToCompare andIsCaseInSensitive:(BOOL)isCaseInSensitive attribute:(NSString *)key;
 + (BOOL)matchesConditions:(NSDictionary *)conditions forPayloadInfo:(NSDictionary *)payloadInfo;
 
 
@@ -55,4 +54,5 @@
 + (NSString *)filteredKeysFromJSONString:(NSString *)jsonString allowedKeys:(NSArray<NSString *> *)allowedKeys;
 + (NSString *)filteredKeysFromJSON:(NSDictionary *)dict allowedKeys:(NSArray<NSString *> *)allowedKeys;
 + (NSString *)truncateString:(NSString *)str toLength:(NSInteger)maxLength;
++ (NSDictionary *)extractQueryParamsFromURL:(NSString *)targetURL trimmedURL:(NSString *)trimmedURL maxQueryLength:(int32_t)maxQueryLength;
 @end

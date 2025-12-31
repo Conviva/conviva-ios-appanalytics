@@ -83,6 +83,9 @@ NS_SWIFT_NAME(CATNetworkTrace)
 /** @brief response headers. */
 @property(nonatomic, nullable, strong) NSDictionary *responseHeaders;
 
+/** @brief query params. */
+@property(nonatomic, nullable, strong) NSDictionary *queryParams;
+
 /** @brief The size of the request. The value is in bytes. */
 @property(nonatomic) int64_t requestSize;
 
@@ -221,5 +224,7 @@ NS_SWIFT_NAME(CATNetworkTrace)
  * NSLog(@"Timestamp for request start: %f", timestamp);
  */
 - (NSTimeInterval)timeSinceEpochForState:(CATNetworkTraceCheckpointState)state;
+
+- (void)filterNetworkRequestData;
 
 @end

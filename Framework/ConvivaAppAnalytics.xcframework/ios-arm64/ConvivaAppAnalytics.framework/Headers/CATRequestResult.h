@@ -35,12 +35,15 @@ NS_SWIFT_NAME(CATRequestResult)
 
 @property (nonatomic, readonly) BOOL overSize;
 
+/// Remote config version from CTP
+@property (nonatomic, readonly) NSString *rcv;
+
 /**
  * Creates a request result object
  * @param statusCode http status code
  * @param storeIds the event indexes in the database
  */
-- (instancetype)initWithStatusCode:(NSInteger)statusCode storeIds:(NSArray<NSNumber *> *)storeIds overSize:(BOOL)overSize;
+- (instancetype)initWithStatusCode:(NSInteger)statusCode storeIds:(NSArray<NSNumber *> *)storeIds overSize:(BOOL)overSize rcv:(NSString *)rcv;
 
 - (BOOL) shouldRetry;
 
