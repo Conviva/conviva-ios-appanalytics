@@ -385,6 +385,10 @@ To learn about the default metrics for analyzing the native and web applications
 
 </details>
 
+## Avoiding App Crashes When Integrating Multiple SDKs
+
+Apps that integrate multiple SDKs using ISA-swizzling should set CATGeneratedClassDisposeDisabled = YES in the app’s Info.plist to prevent runtime crashes. This results in a small, predictable amount of retained memory for class metadata while improving runtime stability.
+
 ### Limitations
 <details>
    
