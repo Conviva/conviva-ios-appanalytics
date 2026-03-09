@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.8.1 (03/09/2025)
+* Bug fixes and minor improvements.
+
 ## 1.8.0 (12/31/2025)
 * Supports network request url query params tracking.
 * Enhanced the remote configuration feature to support instant updates.
