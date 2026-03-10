@@ -27,14 +27,14 @@ Use Conviva iOS DPI SDK to auto-collect events and track application-specific ev
      subgraph B[iOS Application Lifecycle]
        direction TB
        app[Instrumented UI Layer & Business Logic]
-       app --> sdk[Conviva ECO SDK]
+       app --> sdk[Conviva DPI SDK]
      end
       sdk -.-> backend[Conviva Backend]
    
      %% Startup Phase (left)
      subgraph A[iOS Application Startup]
        direction TB
-       sdk_startup[Conviva ECO SDK] --> app_startup[UI Layer & Business Logic]
+       sdk_startup[Conviva DPI SDK] --> app_startup[UI Layer & Business Logic]
        app_startup --> |Swizzling| swizzled[Instrumented UI Layer & Business Logic]
      end
    
@@ -66,7 +66,7 @@ Use Conviva iOS DPI SDK to auto-collect events and track application-specific ev
 
     - **CocoaPods**
 
-       - Add the following line to your `Podfile`, replacing `<version>` with the latest version: [![release](https://img.shields.io/github/release/Conviva/conviva-ios-appanalytics?label=Conviva%20iOS%20ECO%20SDK)](https://github.com/Conviva/conviva-ios-appanalytics/releases)
+       - Add the following line to your `Podfile`, replacing `<version>` with the latest version: [![release](https://img.shields.io/github/release/Conviva/conviva-ios-appanalytics?label=Conviva%20iOS%20DPI%20SDK)](https://github.com/Conviva/conviva-ios-appanalytics/releases)
 
     ```plaintext
         pod 'ConvivaAppAnalytics', '<version>'
@@ -77,7 +77,7 @@ Use Conviva iOS DPI SDK to auto-collect events and track application-specific ev
      <!--self-serve[Manual]-->
 
    - **Manual Install**
-       - Download the package from [![release](https://img.shields.io/github/release/Conviva/conviva-ios-appanalytics?label=Conviva%20iOS%20ECO%20SDK)](https://github.com/Conviva/conviva-ios-appanalytics/releases).
+       - Download the package from [![release](https://img.shields.io/github/release/Conviva/conviva-ios-appanalytics?label=Conviva%20iOS%20DPI%20SDK)](https://github.com/Conviva/conviva-ios-appanalytics/releases).
        - In Xcode, go to **Build Phases** and add `ConvivaAppAnalytics.xcframework` to the **Link Binary with Libraries** section. This package contains frameworks for iOS, iPadOS and tvOS.
 
    <!--eof-self-serve--> 
