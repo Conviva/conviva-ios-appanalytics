@@ -34,6 +34,8 @@
 
 #import "CATEventBase.h"
 
+@class CATRevenueEvent;
+
 NS_ASSUME_NONNULL_BEGIN
 
 NS_SWIFT_NAME(CATTrackerController)
@@ -105,6 +107,13 @@ NS_SWIFT_NAME(CATTrackerController)
  * @param eventData The event data.
  */
 - (void)trackCustomEvent:(NSString *)name eventData:(nonnull id)eventData;
+
+/**
+ * Track Revenue event.
+ * The tracker will pass name and data.
+ * @param eventData The event data.
+ */
+- (void)trackRevenueEvent:(nonnull CATRevenueEvent *)eventData;
 
 /**
  * Track custom tags.

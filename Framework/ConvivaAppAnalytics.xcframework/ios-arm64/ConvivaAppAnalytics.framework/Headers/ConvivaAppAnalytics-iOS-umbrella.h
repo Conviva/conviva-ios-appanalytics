@@ -74,6 +74,8 @@
 #import "CATButtonClickEvent.h"
 #import "CATNetworkTrace.h"
 #import "CATUtils.h"
+#import "CATRevenueEvent.h"
+#import "CATRevenueEventItem.h"
 #import "CATConditionalCollectionConfiguration.h"
 #import "CATNetworkReqTrackingConfiguration.h"
 #import "NSData+CAT_GZIP.h"
