@@ -35,6 +35,7 @@
 @class CATDiagnosticInfoConfiguration;
 @class CATTraceParentConfiguration;
 @class CATVisualActivationConfiguration;
+@class CATSessionReplayConfiguration;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -56,8 +57,9 @@ NS_SWIFT_NAME(CATConfigurationBundle)
 @property (nonatomic, nullable) CATClickConfiguration *clickcc;
 @property (nonatomic, nullable) CATTraceParentConfiguration *traceParentConfiguration;
 @property (nonatomic, nullable) CATVisualActivationConfiguration *visualActivationConfiguration;
-
 @property (nonatomic, nonnull, readonly) NSArray<CATConfiguration *> *configurations;
+
+@property (nonatomic, nullable) CATSessionReplayConfiguration *sessionReplayConfiguration;
 
 + (instancetype) new NS_UNAVAILABLE;
 - (instancetype) init NS_UNAVAILABLE;

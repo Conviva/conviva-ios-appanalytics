@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ConvivaAppAnalytics
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ConvivaAppAnalytics
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 import CommonCrypto
 @_exported import ConvivaAppAnalytics
 import Dispatch
@@ -66,7 +66,7 @@ public class CATFoundationSecurity {
   @objc deinit
 }
 extension ConvivaAppAnalytics.CATFoundationSecurity : ConvivaAppAnalytics.CATCertificatePinning {
-  public func evaluateTrust(trust: Security.SecTrust, domain: Swift.String?, completion: ((ConvivaAppAnalytics.CATPinningState) -> ()))
+  public func evaluateTrust(trust: Security.SecTrust, domain: Swift.String?, completion: (ConvivaAppAnalytics.CATPinningState) -> ())
 }
 extension ConvivaAppAnalytics.CATFoundationSecurity : ConvivaAppAnalytics.CATHeaderValidator {
   public func validate(headers: [Swift.String : Swift.String], key: Swift.String) -> (any Swift.Error)?
@@ -90,7 +90,7 @@ public enum CATFoundationTransportError : Swift.Error {
   public func connect(url: Foundation.URL, timeout: Swift.Double = 10, certificatePinning: (any ConvivaAppAnalytics.CATCertificatePinning)? = nil)
   public func disconnect()
   public func register(delegate: any ConvivaAppAnalytics.CATTransportEventClient)
-  public func write(data: Foundation.Data, completion: @escaping (((any Swift.Error)?) -> ()))
+  public func write(data: Foundation.Data, completion: @escaping ((any Swift.Error)?) -> ())
   @objc open func stream(_ aStream: Foundation.Stream, handle eventCode: Foundation.Stream.Event)
 }
 public protocol CATFrameCollectorDelegate : AnyObject {
@@ -245,7 +245,7 @@ public enum CATPinningState {
   case failed(CoreFoundation.CFError?)
 }
 public protocol CATCertificatePinning : AnyObject {
-  func evaluateTrust(trust: Security.SecTrust, domain: Swift.String?, completion: ((ConvivaAppAnalytics.CATPinningState) -> ()))
+  func evaluateTrust(trust: Security.SecTrust, domain: Swift.String?, completion: (ConvivaAppAnalytics.CATPinningState) -> ())
 }
 public protocol CATHeaderValidator : AnyObject {
   func validate(headers: [Swift.String : Swift.String], key: Swift.String) -> (any Swift.Error)?
@@ -912,7 +912,7 @@ public class CATTCPTransport : ConvivaAppAnalytics.CATTransport {
   public func connect(url: Foundation.URL, timeout: Swift.Double = 10, certificatePinning: (any ConvivaAppAnalytics.CATCertificatePinning)? = nil)
   public func disconnect()
   public func register(delegate: any ConvivaAppAnalytics.CATTransportEventClient)
-  public func write(data: Foundation.Data, completion: @escaping (((any Swift.Error)?) -> ()))
+  public func write(data: Foundation.Data, completion: @escaping ((any Swift.Error)?) -> ())
 }
 public enum CATConnectionState {
   case connected
@@ -931,7 +931,7 @@ public protocol CATTransport : AnyObject {
   func register(delegate: any ConvivaAppAnalytics.CATTransportEventClient)
   func connect(url: Foundation.URL, timeout: Swift.Double, certificatePinning: (any ConvivaAppAnalytics.CATCertificatePinning)?)
   func disconnect()
-  func write(data: Foundation.Data, completion: @escaping (((any Swift.Error)?) -> ()))
+  func write(data: Foundation.Data, completion: @escaping ((any Swift.Error)?) -> ())
   var usingTLS: Swift.Bool { get }
 }
 public enum CATErrorType : Swift.Error {

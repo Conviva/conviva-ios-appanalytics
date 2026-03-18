@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.9.0 (03/18/2025)
+* Bug fixes and minor improvements.
+
 ## 1.8.1 (03/09/2025)
 * Bug fixes and minor improvements.
 

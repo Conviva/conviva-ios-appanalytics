@@ -167,6 +167,10 @@ NS_SWIFT_NAME(CATTrackerController)
  */
 
 - (NSString *)customerKey;
+
+
+- (void)startSessionReplay;
+
 @end
 
 NS_ASSUME_NONNULL_END

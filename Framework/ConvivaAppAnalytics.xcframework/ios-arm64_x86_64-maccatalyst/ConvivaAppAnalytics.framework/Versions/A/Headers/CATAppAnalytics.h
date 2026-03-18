@@ -363,6 +363,17 @@ NS_SWIFT_NAME(CATAppAnalytics)
  */
 - (NSDictionary *)getConfigInfoFor:(NSString *)targetUrl;
 
+/**
+ * Starts Cohort Replay recording if enabled by configuration and sampling.
+ * If Cohort Replay is already running, this is a no-op.
+ */
++ (void)startReplay NS_SWIFT_NAME(startReplay());
+
+/**
+ * Stops Cohort Replay recording if currently active.
+ * If Cohort Replay is not running, this is a no-op.
+ */
++ (void)stopReplay NS_SWIFT_NAME(stopReplay());
 
 @end
 NS_ASSUME_NONNULL_END
