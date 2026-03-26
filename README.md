@@ -229,7 +229,7 @@ NSDictionary *data = @{@"identifier1":@"test",@"identifier2":@(1),@"identifier3"
 </details>
 
 <details>
-<!--self-serve-custom-event-->
+<!--self-serve-revenue-event-->
 <summary><b>Track Revenue Event</b></summary>
 
 Use the **trackRevenueEvent()** API to track successful purchase events. The event is sent as **conviva_revenue_event** and can be used for Business/Revenue Metrics in Conviva.
