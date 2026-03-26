@@ -230,6 +230,130 @@ NSDictionary *data = @{@"identifier1":@"test",@"identifier2":@(1),@"identifier3"
 
 <details>
 <!--self-serve-custom-event-->
+<summary><b>Track Revenue Event</b></summary>
+
+Use the **trackRevenueEvent()** API to track successful purchase events. The event is sent as **conviva_revenue_event** and can be used for Business/Revenue Metrics in Conviva.
+
+| Field              | ObjC Type    | Swift Type   | Description |
+| ------------------ | ------------ | ------------ | ----------- |
+| totalOrderAmount   | NSNumber     | NSNumber     | Total order amount (must be a finite number) |
+| transactionId      | NSString     | String       | Unique order/transaction identifier (non-nil, non-empty after trim). If your backend uses `orderId`, pass it here. |
+| currency           | NSString     | String       | Currency code, e.g. `"USD"`, `"EUR"` (non-nil, non-empty after trim) |
+
+**Optional fields:**
+
+| Field             | ObjC Type                             | Swift Type                       | Description |
+| ----------------- | ------------------------------------- | ------------------------------- |----------- |
+| taxAmount         | NSNumber                              | NSNumber                        | Tax amount |
+| shippingCost      | NSNumber                              | NSNumber                        | Shipping cost |
+| discount          | NSNumber                              | NSNumber                        | Discount / coupon value |
+| cartSize          | NSNumber                              | NSNumber                        | Count of items in the order |
+| paymentMethod     | NSString                              | String                          | e.g. `"card"`, `"ApplePay"`, `"payPal"` |
+| paymentProvider   | NSString                              | String                          | e.g. `"Stripe"`, `"Adyen"` |
+| items             | NSArray<CATRevenueEventItem *>        | [CATRevenueEventItem]           | Array of purchased line items. |
+| extraMetadata     | NSDictionary<NSString *, id> *        | [String: Any]                   | Custom key/value pairs for fields not modeled above (merged into the payload as `extraMetadata`) |
+
+*CATRevenueEventItem Fields:*
+
+| Field             | ObjC Type                         | Swift Type                      | Description |
+| ----------------- | --------------------------------- | ------------------------------- |----------- |
+| productId         | NSString                          | String                          | Unique product identifier |
+| name      		  | NSString                          | String                          | Product name |
+| unitPrice         | NSNumber                          | NSNumber                        | Price per unit |
+| quantity          | NSNumber                          | NSNumber                        | Number of units purchased |
+
+**Notes:**
+- If validation fails on required fields (e.g. missing `transactionId` or non-finite `totalOrderAmount`), the SDK logs a warning and skips the event without throwing.
+- Optional fields with unexpected types are stripped with a warning; the event is still sent.
+
+**Example — minimal:**
+<!-- :::code-tabs[Swift,ObjC] -->
+```Swift
+// Swift:
+let tracker = CATAppAnalytics.defaultTracker
+let event = CATRevenueEvent(
+  totalOrderAmount: 49.99,
+  transactionId: "ORD-12345",
+  currency: "USD"
+)
+tracker?.trackRevenueEvent(event)
+```
+
+```ObjC
+// ObjC:
+id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
+CATRevenueEvent *event = [[CATRevenueEvent alloc]
+  initWithTotalOrderAmount:@(49.99)
+             transactionId:@"ORD-12345"
+                  currency:@"USD"];
+[tracker trackRevenueEvent:event];
+```
+
+**Example — full:**
+<!-- :::code-tabs[Swift,ObjC] -->
+```Swift
+// Swift:
+let tracker = CATAppAnalytics.defaultTracker
+let item1 = CATRevenueEventItem()
+item1.productId = "p1"
+item1.name = "Widget"
+item1.unitPrice = 19.99
+item1.quantity = 2
+let item2 = CATRevenueEventItem()
+item2.productId = "p2"
+item2.name = "Gadget"
+item2.unitPrice = 19.99
+item2.quantity = 1
+let event = CATRevenueEvent(
+  totalOrderAmount: 59.97,
+  transactionId: "ORD-12345",
+  currency: "USD"
+)
+event.taxAmount = 5.00
+event.shippingCost = 4.99
+event.discount = 10.00
+event.cartSize = 3
+event.paymentMethod = "card"
+event.paymentProvider = "Stripe"
+event.items = [item1, item2]
+event.extraMetadata = ["promoCode": "SAVE10", "campaignId": "summer-sale"]
+tracker?.trackRevenueEvent(event)
+```
+
+```ObjC
+// ObjC:
+id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
+CATRevenueEventItem *item1 = [[CATRevenueEventItem alloc]
+  initWithProductId:@"p1"
+               name:@"Widget"
+          unitPrice:@(19.99)
+           quantity:@(2)];
+CATRevenueEventItem *item2 = [[CATRevenueEventItem alloc]
+  initWithProductId:@"p2"
+               name:@"Gadget"
+          unitPrice:@(19.99)
+           quantity:@(1)];
+CATRevenueEvent *event = [[CATRevenueEvent alloc]
+  initWithTotalOrderAmount:@(59.97)
+             transactionId:@"ORD-12345"
+                  currency:@"USD"];
+event.taxAmount      = @(5.00);
+event.shippingCost   = @(4.99);
+event.discount       = @(10.00);
+event.cartSize       = @(3);
+event.paymentMethod  = @"card";
+event.paymentProvider = @"Stripe";
+event.items          = @[item1, item2];
+event.extraMetadata  = @{@"promoCode": @"SAVE10", @"campaignId": @"summer-sale"};
+[tracker trackRevenueEvent:event];
+```
+<!-- ::: -->
+
+<!--eof-self-serve-revenue-event--> 
+</details>
+
+<details>
+<!--self-serve-custom-event-->
 <summary><b>Set Custom Tags</b></summary>
 
 Custom Tags are global tags applied to all events and persist throughout the application lifespan, or until they are cleared.
