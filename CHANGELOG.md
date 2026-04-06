@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.10.1 (04/06/2025)
+* Bug fixes and minor improvements.
+
 ## 1.10.0 (03/18/2025)
 * Removed idfv collection.
 * Added `trackRevenueEvent:` API to track purchase and revenue events which accepts a `CATRevenueEvent` object as an argument.
