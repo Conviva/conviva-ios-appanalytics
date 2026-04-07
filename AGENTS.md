@@ -42,13 +42,16 @@ Single source of truth. Governs: Cursor, Claude Code, Codex, ChatGPT, Gemini CLI
 
 ## 3. Required Inputs - Ask Before Writing Any Code
 
-| Input | Description |
-|---|---|
-| `CUSTOMER_KEY` | Conviva Customer Key - never guess or hardcode |
-| `APP_NAME` | App name string passed to tracker initialization |
-| `SDK_VERSION` | Exact SDK version from GitHub Releases (needed for CocoaPods / SPM tag) |
+Ask the developer for **all four** of the following inputs in a single prompt. Do not split them across multiple questions. Do not proceed without all four values.
 
-Do not proceed without all three values.
+| # | Input | Description |
+|---|---|---|
+| 1 | `CUSTOMER_KEY` | Conviva Customer Key - never guess or hardcode |
+| 2 | `APP_NAME` | App name string passed to tracker initialization - never guess or hardcode |
+| 3 | `SDK_VERSION` | Exact SDK version from GitHub Releases (needed for CocoaPods / SPM tag) |
+| 4 | `INSTALL_METHOD` | Ask: "Which installation method? (a) Swift Package Manager, (b) CocoaPods, (c) Manual framework" |
+
+All four are mandatory. If the developer skips any, ask again before writing code.
 
 ---
 
@@ -142,7 +145,7 @@ Never pass to Conviva: email, phone, full name, display name, IDFA, IDFV, IP add
 
 ## 5. Installation
 
-Detect which dependency manager the project uses, then apply only the matching method. **Perform every automatable step yourself. Only defer to the developer for steps that genuinely require the Xcode GUI.**
+Use the `INSTALL_METHOD` chosen by the developer in Section 3, then apply only the matching method below. **Perform every automatable step yourself. Only defer to the developer for steps that genuinely require the Xcode GUI.**
 
 ### 5a. CocoaPods (fully automatable)
 
