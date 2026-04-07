@@ -42,16 +42,23 @@ Single source of truth. Governs: Cursor, Claude Code, Codex, ChatGPT, Gemini CLI
 
 ## 3. Required Inputs - Ask Before Writing Any Code
 
-Ask the developer for **all four** of the following inputs in a single prompt. Do not split them across multiple questions. Do not proceed without all four values.
+Collect all inputs from the developer **before** writing any code. Present them together in a single prompt. Use **structured selectable options** (not plain text) wherever the input has a fixed set of choices. For free-text inputs, ask the developer to provide the value.
 
-| # | Input | Description |
-|---|---|---|
-| 1 | `CUSTOMER_KEY` | Conviva Customer Key - never guess or hardcode |
-| 2 | `APP_NAME` | App name string passed to tracker initialization - never guess or hardcode |
-| 3 | `SDK_VERSION` | Exact SDK version from GitHub Releases (needed for CocoaPods / SPM tag) |
-| 4 | `INSTALL_METHOD` | Ask: "Which installation method? (a) Swift Package Manager, (b) CocoaPods, (c) Manual framework" |
+**Selectable options (present as clickable choices):**
 
-All four are mandatory. If the developer skips any, ask again before writing code.
+| Input | Options |
+|---|---|
+| `INSTALL_METHOD` | (a) Swift Package Manager, (b) CocoaPods, (c) Manual framework |
+
+**Free-text inputs (ask developer to provide):**
+
+| Input | Description |
+|---|---|
+| `CUSTOMER_KEY` | Conviva Customer Key - never guess or hardcode |
+| `APP_NAME` | App name string passed to tracker initialization - never guess or hardcode |
+| `SDK_VERSION` | Exact SDK version from GitHub Releases (needed for CocoaPods / SPM tag) |
+
+All four inputs are mandatory. If the developer skips any, ask again before writing code. Do not proceed without all four values.
 
 ---
 
