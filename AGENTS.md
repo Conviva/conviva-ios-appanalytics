@@ -8,7 +8,8 @@ Single source of truth. Governs: Cursor, Claude Code, Codex, ChatGPT, Gemini CLI
 2. Ask developer for all inputs in Section 3 before writing any code.
 3. Seed task list from Section 15 before writing any code.
 4. Execute Sections 4-14 in order. Every Section 15 row must appear in your response.
-5. If you cannot proceed without violating a rule, stop and ask.
+5. **Automate what you can:** Write all code changes yourself (imports, initialization, userId, events). For CocoaPods, edit the Podfile and run `pod install`. For SPM/Manual, edit the `.pbxproj` to add the `-ObjC` linker flag, then write all code changes, and provide SPM package/framework setup as a consolidated developer instruction block at the end. Do not ask the developer to perform steps that you can automate.
+6. If you cannot proceed without violating a rule, stop and ask.
 
 ---
 
@@ -61,12 +62,12 @@ Do not re-read a file already in context. If a prior tool call or subagent has a
 | SwiftUI `@main App` struct (e.g. `*App.swift`) | Full `init()` or `body` if no `init`; existing imports | Partial - `init()` + imports |
 | `SceneDelegate.swift` or `SceneDelegate.m` | Check presence only | Partial - first 10 lines |
 | `Podfile` | Full contents | Full (typically < 50 lines) |
-| `*.xcodeproj/project.pbxproj` | Check for `ConvivaAppAnalytics` in frameworks | Grep only - do not read full file |
+| `*.xcodeproj/project.pbxproj` | Check for `ConvivaAppAnalytics` already present; locate app target `XCBuildConfiguration` sections for linker flag edits (Section 5b/5c) | Full read |
 | `Package.swift` (app's, not SDK's) | Check for `ConvivaAppAnalytics` dependency | Grep only |
 | `Info.plist` | Check for `CATGeneratedClassDisposeDisabled` key | Grep only |
 | Auth hooks (login / logout) | Every function triggering login or logout; lowest-layer convergence point per operation | Targeted - grep first, then single partial read |
 
-**Do NOT read:** View controllers, views, storyboards, xibs, asset catalogs, test targets, the full `.pbxproj`, any file not in the table above. Exception: auth hooks must be found regardless of which file they are in.
+**Do NOT read:** View controllers, views, storyboards, xibs, asset catalogs, test targets, any file not in the table above. Exception: auth hooks must be found regardless of which file they are in.
 
 **Subagent scope:** Return only: AppDelegate or SwiftUI App entry point method; imports; Podfile contents; whether ConvivaAppAnalytics is already present; Info.plist CATGeneratedClassDisposeDisabled check. Do not read view controllers, views, or test files.
 
@@ -127,51 +128,85 @@ Never pass to Conviva: email, phone, full name, display name, IDFA, IDFV, IP add
 
 ## 4. Core Rules
 
+- **Automate what you can:** Write all code changes and safe build setting edits yourself. Do not ask the developer to perform steps that you can automate. Only defer steps to the developer when they require Xcode GUI interaction or risky `.pbxproj` modifications (e.g. adding new objects with UUIDs).
 - Initialize exactly once: `CATAppAnalytics.createTracker(customerKey:appName:)` - no namespace, network config, configuration arrays, builders, or extra arguments.
 - Entry point: existing `AppDelegate` method `application(_:didFinishLaunchingWithOptions:)`, or SwiftUI `App.init()`. Never create a new AppDelegate.
 - Insert Conviva call at the beginning of the entry point method, before any other application logic but after `super` calls (if any). In SwiftUI `App.init()`, place it as the first statement.
 - Import only `ConvivaAppAnalytics` - never `ConvivaAppAnalytics.Private`, individual header names, or internal symbols.
 - Set `userId` immediately after `createTracker(...)` if a non-PII identifier is available. Update on login, registration, logout, and account switch. Never use PII. If no guest identifier exists, ask developer.
-- For CocoaPods: only append `pod 'ConvivaAppAnalytics'` to the Podfile - never modify existing pods or targets.
-- For SPM: only add the package dependency via Xcode or `Package.swift` - never modify existing dependencies.
+- For CocoaPods: edit the `Podfile` directly to append `pod 'ConvivaAppAnalytics'` - never modify existing pods or targets. Run `pod install` yourself.
+- For SPM: edit the `.pbxproj` to add `-ObjC` to `OTHER_LDFLAGS` (see Section 5b). Provide the SPM package addition as developer instructions at the end.
+- For Manual: edit the `.pbxproj` to add `-ObjC` to `OTHER_LDFLAGS` (see Section 5c). Provide the framework setup as developer instructions at the end.
 
 ---
 
 ## 5. Installation
 
-Detect which dependency manager the project uses, then apply only the matching method:
+Detect which dependency manager the project uses, then apply only the matching method. **Perform every automatable step yourself. Only defer to the developer for steps that genuinely require the Xcode GUI.**
 
-**Swift Package Manager:**
+### 5a. CocoaPods (fully automatable)
 
-| Step | Action |
+The agent MUST perform all of these steps directly - do not ask the developer:
+
+| Step | Agent Action |
 |---|---|
-| 1 | Add package dependency URL: `https://github.com/conviva/conviva-ios-appanalytics` |
-| 2 | Select the exact version matching `SDK_VERSION` |
-| 3 | Add `ConvivaAppAnalytics` to the app target |
+| 1 | Edit the `Podfile`: append `pod 'ConvivaAppAnalytics', '<SDK_VERSION>'` inside the app target block |
+| 2 | Run `pod install` in the terminal |
+| 3 | Inform developer to open `.xcworkspace` instead of `.xcodeproj` (if not already) |
 
-**CocoaPods:**
+CocoaPods handles system framework linkage and linker flags automatically via the podspec. No build settings changes needed.
 
-| Step | Action |
-|---|---|
-| 1 | Append to Podfile inside the app target: `pod 'ConvivaAppAnalytics', '<SDK_VERSION>'` |
-| 2 | Run `pod install` |
-| 3 | Open `.xcworkspace` (not `.xcodeproj`) |
+### 5b. Swift Package Manager (partial automation)
 
-**Manual:**
+The agent automates the build settings edit and all code changes. The SPM package addition requires Xcode GUI and is deferred to the developer.
 
-| Step | Action |
-|---|---|
-| 1 | Download `ConvivaAppAnalytics.xcframework` from GitHub Releases |
-| 2 | Add to Xcode: Build Phases -> Link Binary With Libraries |
+**Agent-automated - linker flag (do this yourself):**
 
-**Required Build Settings (SPM and Manual only):**
+1. Read the `.xcodeproj/project.pbxproj` file.
+2. In the `PBXNativeTarget` section, find the app target (`productType = "com.apple.product-type.application"`). Record its UUID.
+3. Find the `XCConfigurationList` for that target, then find all `XCBuildConfiguration` entries it references (typically Debug and Release).
+4. In each `XCBuildConfiguration`, add `-ObjC` to `OTHER_LDFLAGS`:
+   - If `OTHER_LDFLAGS` does not exist, add: `OTHER_LDFLAGS = ("-ObjC",);`
+   - If it exists as a list, append `"-ObjC"` to it.
+   - If it already contains `"-ObjC"`, skip.
+5. After editing, run `plutil -lint <path>/project.pbxproj` to verify the file is still valid.
+6. If `plutil -lint` reports errors, revert your changes and include the linker flag in the developer instructions instead.
 
-| Setting | Value |
-|---|---|
-| Link Binary With Libraries | Add `UIKit`, `Foundation`, `CoreTelephony` (iOS only) |
-| Other Linker Flags | Add `-ObjC` |
+System frameworks (`UIKit`, `Foundation`, `CoreTelephony`) are auto-linked by Xcode when modules are enabled (the default). Do not add them to `PBXFrameworksBuildPhase` unless the project has `CLANG_MODULES_AUTOLINK = NO`.
 
-CocoaPods handles these automatically via the podspec.
+**Agent-automated - code changes (do this yourself):**
+
+Proceed immediately through Sections 6-10: write the import, initialization, userId, and any custom event/tag code. Do not wait for the developer to complete the SPM package setup.
+
+**Developer instructions - SPM package (provide at the end):**
+
+After completing all code changes and the linker flag edit, provide the developer a single consolidated block:
+
+```
+XCODE SETUP REQUIRED (one-time):
+1. File → Add Package Dependencies → enter URL:
+   https://github.com/conviva/conviva-ios-appanalytics
+   Set version to: <SDK_VERSION>
+   Add "ConvivaAppAnalytics" to your app target.
+```
+
+### 5c. Manual Install (partial automation)
+
+Same approach as SPM: agent automates the linker flag edit and all code changes; developer handles the framework download and linking.
+
+**Agent-automated:**
+
+1. Edit `.pbxproj` to add `-ObjC` to `OTHER_LDFLAGS` in all app target `XCBuildConfiguration` entries (same procedure as Section 5b).
+2. Run `plutil -lint` to verify.
+3. Proceed through Sections 6-10 for all code changes.
+
+**Developer instructions (provide at the end):**
+
+```
+XCODE SETUP REQUIRED (one-time):
+1. Download ConvivaAppAnalytics.xcframework from GitHub Releases (<SDK_VERSION>).
+2. App target → Build Phases → Link Binary With Libraries → add the xcframework.
+```
 
 ---
 
@@ -307,9 +342,9 @@ Seed your task list from this table before writing any code. Every row must appe
 
 | Row | Required Content |
 |---|---|
-| Installation method | SPM, CocoaPods, or Manual; exact steps applied |
-| Build settings | System frameworks linked and linker flags added (SPM/Manual), or confirmed CocoaPods handles automatically |
-| Summary of changes | Exact files changed and why |
+| Installation method | SPM, CocoaPods, or Manual; CocoaPods: confirm Podfile edited and `pod install` run; SPM/Manual: confirm developer instructions provided at end |
+| Build settings | CocoaPods: "handled automatically by podspec"; SPM/Manual: confirm `-ObjC` added to `OTHER_LDFLAGS` in `.pbxproj` by agent; confirm `plutil -lint` passed |
+| Summary of changes | Exact files changed by the agent and why |
 | Initialization placement | Entry point chosen (AppDelegate or SwiftUI App) and why |
 | User ID setup | Login, registration, and logout implementation; or stop instructions if PII-only |
 | Custom events and tags | One code snippet each |
