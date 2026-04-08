@@ -172,11 +172,18 @@ tracker?.trackRevenueEvent(event)
 
 ## SwiftUI
 
-Auto-collection of `button_click` and `screen_view` is not supported in SwiftUI. Use these modifiers:
+Auto-collection of `button_click` and `screen_view` is not supported in SwiftUI. Ask the developer which views and buttons to track, then add modifiers only to those specific locations.
+
+**Every file using these modifiers must have `import ConvivaAppAnalytics` at the top.**
 
 **Button click tracking:**
 
 ```swift
+import SwiftUI
+import ConvivaAppAnalytics
+
+// ...
+
 Button("Submit") {
     // action
 }.convivaAnalyticsButtonClick(title: "Submit")
@@ -185,6 +192,9 @@ Button("Submit") {
 **Screen view tracking:**
 
 ```swift
+import SwiftUI
+import ConvivaAppAnalytics
+
 struct DetailView: View {
     var body: some View {
         VStack {

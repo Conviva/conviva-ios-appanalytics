@@ -351,12 +351,18 @@ Custom events accept a `Dictionary` (Swift) or `NSDictionary` (ObjC) - never raw
 
 ## 11. SwiftUI Considerations
 
-Auto-collection of `button_click` and `screen_view` events is **not supported** in SwiftUI. If the project uses SwiftUI, inform the developer and provide these view modifiers:
+Auto-collection of `button_click` and `screen_view` events is **not supported** in SwiftUI. If the project uses SwiftUI:
+
+1. **Inform the developer** that `button_click` and `screen_view` are not auto-collected in SwiftUI.
+2. **Ask the developer** which specific views and buttons they want to track. Do not auto-add modifiers to all views or all buttons -- the developer decides what to track.
+3. **Only after the developer specifies** which views/buttons to track, add the modifiers to those specific locations.
 
 | Event | SwiftUI Modifier |
 |---|---|
 | Button click | `.convivaAnalyticsButtonClick(title: "Button Title")` |
 | Screen view | `.convivaAnalyticsScreenView(name: "Screen Name")` |
+
+**Import requirement:** Every `.swift` file where you add a Conviva SwiftUI modifier **must** have `import ConvivaAppAnalytics` at the top. The modifier will not compile without the import. Do not assume the import exists -- check and add it if missing.
 
 See `AGENTS-swift.md` -> "SwiftUI" for snippets.
 
@@ -404,7 +410,7 @@ Seed your task list from this table before writing any code. Every row must appe
 | Initialization placement | Entry point chosen (AppDelegate or SwiftUI App) and why |
 | User ID setup | Login, registration, and logout implementation; or stop instructions if PII-only |
 | Custom events and tags | One code snippet each |
-| SwiftUI check | "Not using SwiftUI" or modifiers provided for button_click / screen_view |
+| SwiftUI check | "Not using SwiftUI" or "Developer asked to track: [list of views/buttons]" with `import ConvivaAppAnalytics` confirmed in each modified file |
 | Multi-SDK ISA-swizzling | "No concern" or Info.plist recommendation provided |
 | Build verification | Outcome |
 | Product validation | Ask developer to validate in Pulse App -> Activation Module -> Live Lens |

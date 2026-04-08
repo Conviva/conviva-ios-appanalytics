@@ -52,7 +52,11 @@ Fix: Add the correct import at the top of the file:
 Fix: Use only `CATAppAnalytics.createTracker(customerKey:appName:)` (Swift) or `[CATAppAnalytics createTrackerWithCustomerKey:appName:]` (ObjC). Do not use the `namespace:customerKey:network:configurations:` variant or pass any configuration objects.
 
 **Issue 4 - SwiftUI button_click / screen_view events not appearing**
-Fix: Auto-collection of `button_click` and `screen_view` is not supported in SwiftUI. Use `.convivaAnalyticsButtonClick(title:)` on Button views and `.convivaAnalyticsScreenView(name:)` on screen-level views. See AGENTS-swift.md -> "SwiftUI".
+Fix: Auto-collection of `button_click` and `screen_view` is not supported in SwiftUI. Use `.convivaAnalyticsButtonClick(title:)` on Button views and `.convivaAnalyticsScreenView(name:)` on screen-level views. Every file using these modifiers must have `import ConvivaAppAnalytics` at the top. See AGENTS-swift.md -> "SwiftUI".
+
+**Issue 4a - SwiftUI modifier compile error: "is not available due to missing import of defining module 'ConvivaAppAnalytics'"**
+Cause: `.convivaAnalyticsScreenView(name:)` or `.convivaAnalyticsButtonClick(title:)` was added to a SwiftUI view file without `import ConvivaAppAnalytics`.
+Fix: Add `import ConvivaAppAnalytics` at the top of the file where the modifier is used.
 
 **Issue 5 - Runtime crash in multi-SDK app (ISA-swizzling conflict)**
 Fix: Add `CATGeneratedClassDisposeDisabled` as a Boolean with value `YES` in the app's `Info.plist`. This prevents crashes when multiple SDKs use ISA-swizzling (e.g. Firebase, Conviva Video Sensor).
