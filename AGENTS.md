@@ -60,11 +60,11 @@ Collect all inputs from the developer in a single prompt. Use **structured selec
 |---|---|
 | `CUSTOMER_KEY` | Conviva Customer Key - never guess or hardcode |
 | `APP_NAME` | App name string passed to tracker initialization - never guess or hardcode |
-| `SDK_VERSION` | Exact SDK version from GitHub Releases - never guess, never auto-detect from repo files, never pick from CHANGELOG |
+| `SDK_VERSION` | Exact SDK version - look up the latest version from [GitHub Releases](https://github.com/Conviva/conviva-ios-appanalytics/releases) and present it to the developer as a reference (e.g. "The latest version is X.Y.Z"). The developer may confirm it or provide a different version. Never auto-select a version without the developer's confirmation. |
 
 All four inputs are mandatory. If the developer skips any, ask again before writing code. Do not proceed without all four values.
 
-**Do not guess or infer any input value.** Do not use the Xcode project name as `APP_NAME`. Do not extract `CUSTOMER_KEY` from existing code. Do not pick `SDK_VERSION` from `Package.swift`, `CHANGELOG.md`, or any repo file. The developer must explicitly provide each value themselves.
+**Do not guess or infer `CUSTOMER_KEY` or `APP_NAME`.** Do not use the Xcode project name as `APP_NAME`. Do not extract `CUSTOMER_KEY` from existing code. The developer must explicitly provide these values themselves.
 
 ---
 
