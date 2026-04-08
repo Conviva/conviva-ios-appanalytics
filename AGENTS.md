@@ -5,8 +5,8 @@ Single source of truth. Governs: Cursor, Claude Code, Codex, ChatGPT, Gemini CLI
 ## Workflow
 
 1. State: "I have read AGENTS.md and will follow its contract."
-2. Ask developer for all inputs in Section 3 before writing any code.
-3. Seed task list from Section 15 before writing any code.
+2. **STOP and ask the developer for all inputs in Section 3.** This is your very first action. Do not scan files, do not read code, do not write code, do not do anything else until the developer has answered all four questions. Wait for their response.
+3. After receiving all four answers, seed task list from Section 15.
 4. Execute Sections 4-14 in order. Every Section 15 row must appear in your response.
 5. **Automate what you can:** Write all code changes yourself (imports, initialization, userId, events). For CocoaPods, edit the Podfile and run `pod install`. For SPM/Manual, edit the `.pbxproj` to add the `-ObjC` linker flag, then write all code changes, and provide SPM package/framework setup as a consolidated developer instruction block at the end. Do not ask the developer to perform steps that you can automate.
 6. If you cannot proceed without violating a rule, stop and ask.
@@ -40,9 +40,11 @@ Single source of truth. Governs: Cursor, Claude Code, Codex, ChatGPT, Gemini CLI
 
 ---
 
-## 3. Required Inputs - Ask Before Writing Any Code
+## 3. Required Inputs - STOP and Ask Before Doing Anything
 
-Collect all inputs from the developer **before** writing any code. Present them together in a single prompt. Use **structured selectable options** (not plain text) wherever the input has a fixed set of choices. For free-text inputs, ask the developer to provide the value.
+**Your first action must be asking these questions.** Do not scan the project, do not read files, do not write any code until the developer has answered all four questions below. This applies to all project types: UIKit, SwiftUI, Objective-C, Swift, or mixed.
+
+Collect all inputs from the developer in a single prompt. Use **structured selectable options** (not plain text) wherever the input has a fixed set of choices. For free-text inputs, ask the developer to provide the value.
 
 **Selectable options (present as clickable choices):**
 
@@ -58,9 +60,11 @@ Collect all inputs from the developer **before** writing any code. Present them 
 |---|---|
 | `CUSTOMER_KEY` | Conviva Customer Key - never guess or hardcode |
 | `APP_NAME` | App name string passed to tracker initialization - never guess or hardcode |
-| `SDK_VERSION` | Exact SDK version from GitHub Releases (needed for CocoaPods / SPM tag) |
+| `SDK_VERSION` | Exact SDK version from GitHub Releases - never guess, never auto-detect from repo files, never pick from CHANGELOG |
 
 All four inputs are mandatory. If the developer skips any, ask again before writing code. Do not proceed without all four values.
+
+**Do not guess or infer any input value.** Do not use the Xcode project name as `APP_NAME`. Do not extract `CUSTOMER_KEY` from existing code. Do not pick `SDK_VERSION` from `Package.swift`, `CHANGELOG.md`, or any repo file. The developer must explicitly provide each value themselves.
 
 ---
 
@@ -191,16 +195,16 @@ System frameworks (`UIKit`, `Foundation`, `CoreTelephony`) are auto-linked by Xc
 
 Proceed immediately through Sections 6-10: write the import, initialization, userId, and any custom event/tag code. Do not wait for the developer to complete the SPM package setup.
 
-**Developer instructions - SPM package (provide at the end):**
+**MANDATORY developer instructions - SPM package (you MUST include this block in your response):**
 
-After completing all code changes and the linker flag edit, provide the developer a single consolidated block:
+After completing all code changes and the linker flag edit, you MUST provide the developer the exact block below. Replace `<SDK_VERSION>` with the value the developer gave you in Section 3. Do not skip this block. Do not replace it with "open Xcode" or "Xcode will auto-resolve". Do not let Xcode pick a version automatically.
 
 ```
 XCODE SETUP REQUIRED (one-time):
 1. File → Add Package Dependencies → enter URL:
    https://github.com/conviva/conviva-ios-appanalytics
-   Set version to: <SDK_VERSION>
-   Add "ConvivaAppAnalytics" to your app target.
+2. Set version rule to "Exact Version" → <SDK_VERSION>
+3. Add "ConvivaAppAnalytics" to your app target.
 ```
 
 ### 5c. Manual Install
@@ -213,7 +217,9 @@ The agent automates the build settings edit and all code changes. The developer 
 2. Run `plutil -lint` to verify.
 3. Proceed through Sections 6-10 for all code changes.
 
-**Developer instructions (provide at the end):**
+**MANDATORY developer instructions (you MUST include this block in your response):**
+
+Replace `<SDK_VERSION>` with the value the developer gave you in Section 3. Do not skip this block.
 
 ```
 XCODE SETUP REQUIRED (one-time):
@@ -391,7 +397,7 @@ Seed your task list from this table before writing any code. Every row must appe
 
 | Row | Required Content |
 |---|---|
-| Installation method | SPM, CocoaPods, or Manual; CocoaPods: confirm Podfile edited and `pod install` run; SPM/Manual: confirm developer instructions provided at end |
+| Installation method | SPM, CocoaPods, or Manual; CocoaPods: confirm Podfile edited and `pod install` run; SPM/Manual: confirm "XCODE SETUP REQUIRED" instruction block with exact developer-provided `SDK_VERSION` is included in response |
 | Build settings | CocoaPods: "handled automatically by podspec"; SPM/Manual: confirm `-ObjC` added to `OTHER_LDFLAGS` in `.pbxproj` by agent; confirm `plutil -lint` passed |
 | ObjC-only project | SPM/Manual: "Project has Swift files - no action needed" or "ObjC-only project - ConvivaSwiftBridge.swift created"; CocoaPods: "handled automatically" |
 | Summary of changes | Exact files changed by the agent and why |
