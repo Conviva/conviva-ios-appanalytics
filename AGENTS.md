@@ -154,7 +154,7 @@ Never pass to Conviva: email, phone, full name, display name, IDFA, IDFV, IP add
 - For CocoaPods: edit the `Podfile` directly to append `pod 'ConvivaAppAnalytics'` - never modify existing pods or targets. Run `pod install` yourself.
 - For SPM: edit the `.pbxproj` to add `-ObjC` to `OTHER_LDFLAGS` (see Section 5b). Provide the SPM package addition as developer instructions at the end.
 - For Manual: edit the `.pbxproj` to add `-ObjC` to `OTHER_LDFLAGS` (see Section 5c). Provide the framework setup as developer instructions at the end.
-- **Always add `CATGeneratedClassDisposeDisabled = YES`** to the app's `Info.plist` (see Section 12). This is mandatory for every integration -- do not skip, do not ask, just add it.
+- **Always ensure `CATGeneratedClassDisposeDisabled = YES`** is present in the app's Info.plist (see Section 12). This is mandatory for every integration -- do not skip, do not ask, just do it. If the project has no physical `Info.plist`, do NOT create one named `Info.plist` -- follow Section 12 Scenario B to avoid "Multiple commands produce" build errors.
 
 ---
 
@@ -373,15 +373,47 @@ See `AGENTS-swift.md` -> "SwiftUI" for snippets.
 
 **This step is mandatory for every integration. Do not skip it.**
 
-The agent MUST add `CATGeneratedClassDisposeDisabled = YES` to the app's `Info.plist` to prevent potential runtime crashes from ISA-swizzling conflicts. This is required regardless of whether other SDKs are present -- it is a preventive measure that ensures runtime stability.
+The agent MUST ensure `CATGeneratedClassDisposeDisabled = YES` is present in the app's `Info.plist` to prevent potential runtime crashes from ISA-swizzling conflicts. This is required regardless of whether other SDKs are present -- it is a preventive measure that ensures runtime stability.
 
 **Agent action (do this yourself):**
 
-1. Locate the app's `Info.plist` file.
+First, determine which `Info.plist` scenario applies:
+
+### Scenario A: Project has an existing physical `Info.plist` file
+
+A physical `Info.plist` file already exists in the project directory (e.g. `<ProjectName>/Info.plist`).
+
+1. Open the existing `Info.plist` file.
 2. Check if `CATGeneratedClassDisposeDisabled` already exists.
 3. If it does not exist, add it as a Boolean with value `YES`.
 4. If it already exists with value `YES`, skip.
 5. If it already exists with value `NO`, change it to `YES`.
+6. **Do NOT add `Info.plist` to the "Copy Bundle Resources" build phase.** It must only be referenced via the `INFOPLIST_FILE` build setting.
+
+### Scenario B: Project uses auto-generated `Info.plist` (no physical file)
+
+Modern Xcode projects (especially SwiftUI apps) often have `GENERATE_INFOPLIST_FILE = YES` in build settings and no physical `Info.plist` file. **Do NOT create a new `Info.plist` file** in this case -- doing so causes the build error "Multiple commands produce '…/Info.plist'".
+
+Instead:
+
+1. Check the `.pbxproj` for `GENERATE_INFOPLIST_FILE = YES` in the app target's build configurations, or confirm no physical `Info.plist` file exists.
+2. If `INFOPLIST_FILE` build setting already points to a plist file, treat as Scenario A (edit that file).
+3. If no `INFOPLIST_FILE` is set and `GENERATE_INFOPLIST_FILE = YES`:
+   - Create a file named `ConvivaInfo.plist` (not `Info.plist`) in the project directory with only the custom key:
+     ```xml
+     <?xml version="1.0" encoding="UTF-8"?>
+     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+     <plist version="1.0">
+     <dict>
+         <key>CATGeneratedClassDisposeDisabled</key>
+         <true/>
+     </dict>
+     </plist>
+     ```
+   - In the `.pbxproj`, set `INFOPLIST_FILE` to the path of this file (e.g. `"$(SRCROOT)/<ProjectName>/ConvivaInfo.plist"`) in **every** `XCBuildConfiguration` for the app target. Keep `GENERATE_INFOPLIST_FILE = YES` -- Xcode will merge both sources.
+   - **Do NOT add `ConvivaInfo.plist` to the "Copy Bundle Resources" build phase.** The file must only be referenced via the `INFOPLIST_FILE` build setting.
+
+**How to detect which scenario:** Search for a file named `Info.plist` in the app target directory. If found, use Scenario A. If not found, check `.pbxproj` for `GENERATE_INFOPLIST_FILE` and use Scenario B.
 
 ---
 
@@ -416,6 +448,6 @@ Seed your task list from this table before writing any code. Every row must appe
 | User ID setup | Login, registration, and logout implementation; or stop instructions if PII-only |
 | Custom events and tags | One code snippet each |
 | SwiftUI check | "Not using SwiftUI" or "Developer asked to track: [list of views/buttons]" with `import ConvivaAppAnalytics` confirmed in each modified file |
-| ISA-swizzling stability | Confirm `CATGeneratedClassDisposeDisabled = YES` added to Info.plist by agent |
+| ISA-swizzling stability | Confirm `CATGeneratedClassDisposeDisabled = YES` present in Info.plist (Scenario A: edited existing plist; Scenario B: created `ConvivaInfo.plist` and set `INFOPLIST_FILE`) |
 | Build verification | Outcome |
 | Product validation | Ask developer to validate in Pulse App -> Activation Module -> Live Lens |

@@ -77,5 +77,13 @@ Symptoms: Build error `SWIFT_VERSION '' is unsupported, supported versions are: 
 Cause: The project never had Swift code before, so `SWIFT_VERSION` is not set in the Xcode build settings.
 Fix: Set `SWIFT_VERSION` to `5.0` in the app target build settings. In the `.pbxproj`, add `SWIFT_VERSION = 5.0;` to every `XCBuildConfiguration` for the app target (both Debug and Release). See AGENTS.md Section 5d.
 
-**Issue 10 - Events not appearing in Pulse dashboard**
+**Issue 10 - Build error: "Multiple commands produce '…/Info.plist'"**
+Symptoms: Xcode shows `Multiple commands produce '/…/DerivedData/…/Info.plist'` after adding `CATGeneratedClassDisposeDisabled` to Info.plist.
+Cause: The project uses `GENERATE_INFOPLIST_FILE = YES` (common in modern SwiftUI projects) and has no physical `Info.plist`. A new `Info.plist` file was created, conflicting with the auto-generated one; or an existing `Info.plist` was added to the "Copy Bundle Resources" build phase.
+Fix:
+- If the project had no `Info.plist` before: delete the created `Info.plist`. Instead, create a file named `ConvivaInfo.plist` containing only the `CATGeneratedClassDisposeDisabled` key. Set `INFOPLIST_FILE` in the `.pbxproj` build configurations to point to it. Keep `GENERATE_INFOPLIST_FILE = YES`. Do NOT add `ConvivaInfo.plist` to Copy Bundle Resources.
+- If the project had an existing `Info.plist`: remove it from the "Copy Bundle Resources" build phase (Target > Build Phases > Copy Bundle Resources > remove Info.plist). It should only be referenced via the `INFOPLIST_FILE` build setting.
+See AGENTS.md Section 12 for full details.
+
+**Issue 11 - Events not appearing in Pulse dashboard**
 Fix: Verify `CUSTOMER_KEY` is correct and matches the environment (dev vs prod). Check network connectivity. Validate at Pulse App -> Activation Module -> Live Lens.
