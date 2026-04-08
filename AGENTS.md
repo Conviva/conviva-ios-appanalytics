@@ -234,7 +234,7 @@ Undefined symbol: __swift_FORCE_LOAD_$_swiftCompatibility56
 
 **Detection:** After scanning the project (Section 3a), check if any `.swift` files exist in the app target source directories. If the entry point is `AppDelegate.m` (not `.swift`) and no other `.swift` files are found, the project is Objective-C only.
 
-**Agent action (do this yourself):**
+**Agent action (do all of this yourself):**
 
 1. Create an empty Swift file in the app target source directory:
 
@@ -245,7 +245,14 @@ Undefined symbol: __swift_FORCE_LOAD_$_swiftCompatibility56
 import Foundation
 ```
 
-2. When Xcode prompts "Would you like to configure an Objective-C bridging header?", instruct the developer to select **"Create Bridging Header"**.
+2. In the `.pbxproj`, set `SWIFT_VERSION` in every `XCBuildConfiguration` belonging to the app target (both Debug and Release):
+   - If `SWIFT_VERSION` does not exist, add: `SWIFT_VERSION = 5.0;`
+   - If it already exists with a valid value, do not change it.
+   - Without this, Xcode will fail with: `SWIFT_VERSION '' is unsupported, supported versions are: 4.0, 4.2, 5.0, 6.0.`
+
+3. Run `plutil -lint <path>/project.pbxproj` to verify the file is still valid after editing.
+
+4. When Xcode prompts "Would you like to configure an Objective-C bridging header?", instruct the developer to select **"Create Bridging Header"**.
 
 **Do not skip this step for Objective-C projects.** CocoaPods handles this automatically; this fix is only needed for SPM and Manual installs.
 

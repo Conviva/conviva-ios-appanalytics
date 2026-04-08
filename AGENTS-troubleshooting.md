@@ -66,7 +66,12 @@ Fix: Run `pod repo update` to refresh the local spec repo. Verify the exact vers
 **Issue 8 - Objective-C project: "Undefined symbol: __swift_FORCE_LOAD_$_swiftCompatibility50/51/56"**
 Symptoms: Linker errors referencing `__swift_FORCE_LOAD_$_swiftCompatibility50`, `swiftCompatibility51`, or `swiftCompatibility56` after adding ConvivaAppAnalytics via SPM or Manual install.
 Cause: The project is pure Objective-C. Xcode does not link Swift runtime libraries unless it detects at least one Swift file in the target.
-Fix: Add an empty Swift file to the app target (e.g. `ConvivaSwiftBridge.swift` containing only `import Foundation`). Accept the bridging header prompt. This forces Xcode to include the Swift runtime. See AGENTS.md Section 5d.
+Fix: Add an empty Swift file to the app target (e.g. `ConvivaSwiftBridge.swift` containing only `import Foundation`). Also set `SWIFT_VERSION = 5.0` in the build settings (see Issue 9). Accept the bridging header prompt. This forces Xcode to include the Swift runtime. See AGENTS.md Section 5d.
 
-**Issue 9 - Events not appearing in Pulse dashboard**
+**Issue 9 - Objective-C project: "SWIFT_VERSION '' is unsupported"**
+Symptoms: Build error `SWIFT_VERSION '' is unsupported, supported versions are: 4.0, 4.2, 5.0, 6.0.` after adding a Swift file to a pure Objective-C project.
+Cause: The project never had Swift code before, so `SWIFT_VERSION` is not set in the Xcode build settings.
+Fix: Set `SWIFT_VERSION` to `5.0` in the app target build settings. In the `.pbxproj`, add `SWIFT_VERSION = 5.0;` to every `XCBuildConfiguration` for the app target (both Debug and Release). See AGENTS.md Section 5d.
+
+**Issue 10 - Events not appearing in Pulse dashboard**
 Fix: Verify `CUSTOMER_KEY` is correct and matches the environment (dev vs prod). Check network connectivity. Validate at Pulse App -> Activation Module -> Live Lens.
