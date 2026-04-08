@@ -10,6 +10,7 @@ Use Conviva iOS DPI SDK to auto-collect events and track application-specific ev
 | **Product** | Conviva DPI |
 | **Platform** | iOS / iPadOS / tvOS |
 | **Min iOS** | 12.0 |
+| **Min iPadOS** | 13.0 |
 | **Min tvOS** | 12.0 |
 | **Latest Release** | [GitHub Releases](https://github.com/Conviva/conviva-ios-appanalytics/releases) |
 

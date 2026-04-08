@@ -32,7 +32,7 @@ Single source of truth. Governs: Cursor, Claude Code, Codex, ChatGPT, Gemini CLI
 | Product | Conviva DPI |
 | Platform | iOS / iPadOS / tvOS |
 | SDK Name | Conviva iOS App Analytics SDK |
-| GitHub Repo | `Conviva/conviva-ios-appanalytics` |
+| GitHub Repo | [Conviva/conviva-ios-appanalytics](https://github.com/Conviva/conviva-ios-appanalytics) |
 | Framework | `ConvivaAppAnalytics.xcframework` |
 | Module | `ConvivaAppAnalytics` |
 | Min iOS | 12.0 |
@@ -154,6 +154,7 @@ Never pass to Conviva: email, phone, full name, display name, IDFA, IDFV, IP add
 - For CocoaPods: edit the `Podfile` directly to append `pod 'ConvivaAppAnalytics'` - never modify existing pods or targets. Run `pod install` yourself.
 - For SPM: edit the `.pbxproj` to add `-ObjC` to `OTHER_LDFLAGS` (see Section 5b). Provide the SPM package addition as developer instructions at the end.
 - For Manual: edit the `.pbxproj` to add `-ObjC` to `OTHER_LDFLAGS` (see Section 5c). Provide the framework setup as developer instructions at the end.
+- **Always add `CATGeneratedClassDisposeDisabled = YES`** to the app's `Info.plist` (see Section 12). This is mandatory for every integration -- do not skip, do not ask, just add it.
 
 ---
 
@@ -368,15 +369,19 @@ See `AGENTS-swift.md` -> "SwiftUI" for snippets.
 
 ---
 
-## 12. Multi-SDK ISA-Swizzling Check
+## 12. ISA-Swizzling Runtime Stability (mandatory)
 
-After initialization changes, check `Info.plist` for the `CATGeneratedClassDisposeDisabled` key.
+**This step is mandatory for every integration. Do not skip it.**
 
-**If the app integrates multiple SDKs that use ISA-swizzling** (e.g. Firebase, Conviva Video Sensor, analytics SDKs): recommend adding `CATGeneratedClassDisposeDisabled = YES` (Boolean) to the app's `Info.plist` to prevent runtime crashes.
+The agent MUST add `CATGeneratedClassDisposeDisabled = YES` to the app's `Info.plist` to prevent potential runtime crashes from ISA-swizzling conflicts. This is required regardless of whether other SDKs are present -- it is a preventive measure that ensures runtime stability.
 
-**If not found and multi-SDK detected:** inform the developer: "Add `CATGeneratedClassDisposeDisabled` as a Boolean `YES` entry in your app's `Info.plist` to prevent potential runtime crashes from ISA-swizzling conflicts."
+**Agent action (do this yourself):**
 
-**If single SDK or uncertain:** record "No multi-SDK ISA-swizzling concern detected" and proceed.
+1. Locate the app's `Info.plist` file.
+2. Check if `CATGeneratedClassDisposeDisabled` already exists.
+3. If it does not exist, add it as a Boolean with value `YES`.
+4. If it already exists with value `YES`, skip.
+5. If it already exists with value `NO`, change it to `YES`.
 
 ---
 
@@ -411,6 +416,6 @@ Seed your task list from this table before writing any code. Every row must appe
 | User ID setup | Login, registration, and logout implementation; or stop instructions if PII-only |
 | Custom events and tags | One code snippet each |
 | SwiftUI check | "Not using SwiftUI" or "Developer asked to track: [list of views/buttons]" with `import ConvivaAppAnalytics` confirmed in each modified file |
-| Multi-SDK ISA-swizzling | "No concern" or Info.plist recommendation provided |
+| ISA-swizzling stability | Confirm `CATGeneratedClassDisposeDisabled = YES` added to Info.plist by agent |
 | Build verification | Outcome |
 | Product validation | Ask developer to validate in Pulse App -> Activation Module -> Live Lens |
