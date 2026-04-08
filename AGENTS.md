@@ -77,6 +77,7 @@ Do not re-read a file already in context. If a prior tool call or subagent has a
 | `*.xcodeproj/project.pbxproj` | Check for `ConvivaAppAnalytics` already present; locate app target `XCBuildConfiguration` sections for linker flag edits (Section 5b/5c) | Full read |
 | `Package.swift` (app's, not SDK's) | Check for `ConvivaAppAnalytics` dependency | Grep only |
 | `Info.plist` | Check for `CATGeneratedClassDisposeDisabled` key | Grep only |
+| Any `.swift` file in app target | Check if project contains Swift files (needed for ObjC-only project detection - see Section 5d) | Grep for `*.swift` in app source dirs |
 | Auth hooks (login / logout) | Every function triggering login or logout; lowest-layer convergence point per operation | Targeted - grep first, then single partial read |
 
 **Do NOT read:** View controllers, views, storyboards, xibs, asset catalogs, test targets, any file not in the table above. Exception: auth hooks must be found regardless of which file they are in.
@@ -220,6 +221,34 @@ XCODE SETUP REQUIRED (one-time):
 2. App target → Build Phases → Link Binary With Libraries → add the xcframework.
 ```
 
+### 5d. Objective-C Only Project Fix (SPM and Manual only)
+
+**This step is mandatory for SPM and Manual installs when the project has no Swift files.**
+
+ConvivaAppAnalytics contains Swift modules. If the app target is pure Objective-C (no `.swift` files), Xcode will not link the Swift runtime libraries, causing linker errors:
+```
+Undefined symbol: __swift_FORCE_LOAD_$_swiftCompatibility50
+Undefined symbol: __swift_FORCE_LOAD_$_swiftCompatibility51
+Undefined symbol: __swift_FORCE_LOAD_$_swiftCompatibility56
+```
+
+**Detection:** After scanning the project (Section 3a), check if any `.swift` files exist in the app target source directories. If the entry point is `AppDelegate.m` (not `.swift`) and no other `.swift` files are found, the project is Objective-C only.
+
+**Agent action (do this yourself):**
+
+1. Create an empty Swift file in the app target source directory:
+
+```swift
+// ConvivaSwiftBridge.swift
+// This file is required for Xcode to link Swift runtime libraries
+// when using Swift-based frameworks (ConvivaAppAnalytics) in an Objective-C project.
+import Foundation
+```
+
+2. When Xcode prompts "Would you like to configure an Objective-C bridging header?", instruct the developer to select **"Create Bridging Header"**.
+
+**Do not skip this step for Objective-C projects.** CocoaPods handles this automatically; this fix is only needed for SPM and Manual installs.
+
 ---
 
 ## 6. Initialization Point
@@ -339,6 +368,7 @@ Ask developer to build the project in Xcode. If it fails, share the error and fi
 - Missing `-ObjC` linker flag (SPM / Manual only)
 - Missing system framework linkage (SPM / Manual only)
 - Wrong import statement
+- ObjC-only project missing Swift runtime (see Section 5d)
 
 ---
 
@@ -356,6 +386,7 @@ Seed your task list from this table before writing any code. Every row must appe
 |---|---|
 | Installation method | SPM, CocoaPods, or Manual; CocoaPods: confirm Podfile edited and `pod install` run; SPM/Manual: confirm developer instructions provided at end |
 | Build settings | CocoaPods: "handled automatically by podspec"; SPM/Manual: confirm `-ObjC` added to `OTHER_LDFLAGS` in `.pbxproj` by agent; confirm `plutil -lint` passed |
+| ObjC-only project | SPM/Manual: "Project has Swift files - no action needed" or "ObjC-only project - ConvivaSwiftBridge.swift created"; CocoaPods: "handled automatically" |
 | Summary of changes | Exact files changed by the agent and why |
 | Initialization placement | Entry point chosen (AppDelegate or SwiftUI App) and why |
 | User ID setup | Login, registration, and logout implementation; or stop instructions if PII-only |
