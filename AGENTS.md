@@ -50,6 +50,8 @@ Collect all inputs from the developer **before** writing any code. Present them 
 |---|---|
 | `INSTALL_METHOD` | (a) Swift Package Manager, (b) CocoaPods, (c) Manual framework |
 
+**Do not recommend, rank, or label any option as preferred or recommended.** Present all options neutrally and let the developer choose.
+
 **Free-text inputs (ask developer to provide):**
 
 | Input | Description |
@@ -154,7 +156,7 @@ Never pass to Conviva: email, phone, full name, display name, IDFA, IDFV, IP add
 
 Use the `INSTALL_METHOD` chosen by the developer in Section 3, then apply only the matching method below. **Perform every automatable step yourself. Only defer to the developer for steps that genuinely require the Xcode GUI.**
 
-### 5a. CocoaPods (fully automatable)
+### 5a. CocoaPods
 
 The agent MUST perform all of these steps directly - do not ask the developer:
 
@@ -166,7 +168,7 @@ The agent MUST perform all of these steps directly - do not ask the developer:
 
 CocoaPods handles system framework linkage and linker flags automatically via the podspec. No build settings changes needed.
 
-### 5b. Swift Package Manager (partial automation)
+### 5b. Swift Package Manager
 
 The agent automates the build settings edit and all code changes. The SPM package addition requires Xcode GUI and is deferred to the developer.
 
@@ -200,9 +202,9 @@ XCODE SETUP REQUIRED (one-time):
    Add "ConvivaAppAnalytics" to your app target.
 ```
 
-### 5c. Manual Install (partial automation)
+### 5c. Manual Install
 
-Same approach as SPM: agent automates the linker flag edit and all code changes; developer handles the framework download and linking.
+The agent automates the build settings edit and all code changes. The developer handles the framework download and linking.
 
 **Agent-automated:**
 
