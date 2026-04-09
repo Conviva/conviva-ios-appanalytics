@@ -58,6 +58,22 @@ Fix: Auto-collection of `button_click` and `screen_view` is not supported in Swi
 Cause: `.convivaAnalyticsScreenView(name:)` or `.convivaAnalyticsButtonClick(title:)` was added to a SwiftUI view file without `import ConvivaAppAnalytics`.
 Fix: Add `import ConvivaAppAnalytics` at the top of the file where the modifier is used.
 
+**Issue 4b - `.convivaAnalyticsButtonClick` applied to non-Button view (e.g. Image, Text, HStack)**
+Cause: The modifier was applied to a view that is not a SwiftUI `Button`. `.convivaAnalyticsButtonClick(title:)` is designed exclusively for `Button` views and will not track clicks correctly on other views, even if they are tappable via `.onTapGesture` or `NavigationLink`.
+Fix: Wrap the non-Button view in a `Button` first, then apply the modifier to the `Button`. Example:
+```swift
+// Wrong:
+Image(systemName: "gear")
+    .onTapGesture { /* action */ }
+    .convivaAnalyticsButtonClick(title: "Settings")
+
+// Correct:
+Button(action: { /* action */ }) {
+    Image(systemName: "gear")
+}.convivaAnalyticsButtonClick(title: "Settings")
+```
+See AGENTS.md Section 11 and AGENTS-swift.md -> "SwiftUI".
+
 **Issue 5 - Runtime crash in multi-SDK app (ISA-swizzling conflict)**
 Fix: Add `CATGeneratedClassDisposeDisabled` as a Boolean with value `YES` in the app's `Info.plist`. This prevents crashes when multiple SDKs use ISA-swizzling (e.g. Firebase, Conviva Video Sensor).
 

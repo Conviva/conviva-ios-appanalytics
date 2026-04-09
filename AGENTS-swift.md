@@ -176,17 +176,32 @@ Auto-collection of `button_click` and `screen_view` is not supported in SwiftUI.
 
 **Every file using these modifiers must have `import ConvivaAppAnalytics` at the top.**
 
-**Button click tracking:**
+**Button click tracking (Button views ONLY):**
+
+`.convivaAnalyticsButtonClick(title:)` must ONLY be applied to SwiftUI `Button` views. Do NOT apply it to `Image`, `Text`, `HStack`, `Label`, or any other non-Button view -- even if that view is tappable via `.onTapGesture` or a `NavigationLink`.
+
+Before adding this modifier, **always verify the target element is a `Button`**. If it is not, ask the developer whether to wrap it in a `Button`.
 
 ```swift
 import SwiftUI
 import ConvivaAppAnalytics
 
-// ...
-
+// CORRECT - modifier on a Button:
 Button("Submit") {
     // action
 }.convivaAnalyticsButtonClick(title: "Submit")
+```
+
+```swift
+// WRONG - modifier on Image (will not track correctly):
+Image(systemName: "gear")
+    .onTapGesture { /* action */ }
+    .convivaAnalyticsButtonClick(title: "Settings")
+
+// CORRECT - wrap Image in Button first:
+Button(action: { /* action */ }) {
+    Image(systemName: "gear")
+}.convivaAnalyticsButtonClick(title: "Settings")
 ```
 
 **Screen view tracking:**

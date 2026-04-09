@@ -358,10 +358,34 @@ Auto-collection of `button_click` and `screen_view` events is **not supported** 
 2. **Ask the developer** which specific views and buttons they want to track. Do not auto-add modifiers to all views or all buttons -- the developer decides what to track.
 3. **Only after the developer specifies** which views/buttons to track, add the modifiers to those specific locations.
 
-| Event | SwiftUI Modifier |
-|---|---|
-| Button click | `.convivaAnalyticsButtonClick(title: "Button Title")` |
-| Screen view | `.convivaAnalyticsScreenView(name: "Screen Name")` |
+| Event | SwiftUI Modifier | Applies to |
+|---|---|---|
+| Button click | `.convivaAnalyticsButtonClick(title: "Button Title")` | `Button` views **only** |
+| Screen view | `.convivaAnalyticsScreenView(name: "Screen Name")` | Any `View` (typically top-level container) |
+
+### `.convivaAnalyticsButtonClick` -- Button-only constraint (critical)
+
+**Do NOT apply `.convivaAnalyticsButtonClick(title:)` to non-Button views** such as `Image`, `Text`, `HStack`, `Label`, or any other `View`. The modifier is designed exclusively for SwiftUI `Button` views.
+
+**Before adding the modifier, always verify the target element is a `Button`.** If the developer asks to track a tappable element that is not a `Button` (e.g. an `Image` with `.onTapGesture`, a `Text` with a tap handler, or a navigation link icon):
+
+1. **Do NOT apply the modifier directly** to the non-Button view.
+2. **Inform the developer:** "The element `<element>` is not a SwiftUI `Button`. `.convivaAnalyticsButtonClick` only works on `Button` views. Would you like me to wrap it in a `Button` so click tracking works correctly?"
+3. **Only after developer confirms**, wrap the element in a `Button` and apply the modifier to the `Button`.
+
+Example -- wrapping an `Image` in a `Button`:
+
+```swift
+// WRONG - do not do this:
+Image(systemName: "gear")
+    .onTapGesture { /* action */ }
+    .convivaAnalyticsButtonClick(title: "Settings")
+
+// CORRECT - wrap in Button first:
+Button(action: { /* action */ }) {
+    Image(systemName: "gear")
+}.convivaAnalyticsButtonClick(title: "Settings")
+```
 
 **Import requirement:** Every `.swift` file where you add a Conviva SwiftUI modifier **must** have `import ConvivaAppAnalytics` at the top. The modifier will not compile without the import. Do not assume the import exists -- check and add it if missing.
 
