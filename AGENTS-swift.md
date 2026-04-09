@@ -172,7 +172,7 @@ tracker?.trackRevenueEvent(event)
 
 ## SwiftUI
 
-Auto-collection of `button_click` and `screen_view` is not supported in SwiftUI. Ask the developer which views and buttons to track, then add modifiers only to those specific locations.
+Auto-collection of `button_click` and `screen_view` is not supported in SwiftUI. Scan all `.swift` files to find confirmed `Button` views, present them as selectable options to the developer, and add modifiers only to developer-confirmed locations. See AGENTS.md Section 11 for the full procedure.
 
 **Every file using these modifiers must have `import ConvivaAppAnalytics` at the top.**
 
@@ -180,7 +180,7 @@ Auto-collection of `button_click` and `screen_view` is not supported in SwiftUI.
 
 `.convivaAnalyticsButtonClick(title:)` must ONLY be applied to SwiftUI `Button` views. Do NOT apply it to `Image`, `Text`, `HStack`, `Label`, or any other non-Button view -- even if that view is tappable via `.onTapGesture` or a `NavigationLink`.
 
-Before adding this modifier, **always verify the target element is a `Button`**. If it is not, ask the developer whether to wrap it in a `Button`.
+Before adding this modifier, **always verify the target element is a `Button` via source code inspection**. Never present non-Button views as trackable candidates. If the developer requests tracking on a non-Button element, ask whether to wrap it in a `Button` first.
 
 ```swift
 import SwiftUI

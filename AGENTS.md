@@ -22,6 +22,7 @@ Single source of truth. Governs: Cursor, Claude Code, Codex, ChatGPT, Gemini CLI
 5. Apply minimal, localized changes only - no refactors, no comment cleanup, no unrelated edits.
 6. PII Protection: Never pass email, phone, full name, IMEI, or IP address to Conviva. Use only non-PII identifiers (opaque provider UID, account ID, stored UUID). If none found, do not implement userId tracking - ask developer (see Sections 3c, 3d, 9).
 7. If you cannot proceed without violating a rule, stop and ask.
+8. Never present a UI element as a trackable button candidate without first confirming it is a SwiftUI `Button` via source code inspection.
 
 ---
 
@@ -355,8 +356,10 @@ Custom events accept a `Dictionary` (Swift) or `NSDictionary` (ObjC) - never raw
 Auto-collection of `button_click` and `screen_view` events is **not supported** in SwiftUI. If the project uses SwiftUI:
 
 1. **Inform the developer** that `button_click` and `screen_view` are not auto-collected in SwiftUI.
-2. **Ask the developer** which specific views and buttons they want to track. Do not auto-add modifiers to all views or all buttons -- the developer decides what to track.
-3. **Only after the developer specifies** which views/buttons to track, add the modifiers to those specific locations.
+2. **Scan for buttons:** Scan all `.swift` files in the app target to find every SwiftUI `Button { ... }` instance. Record: file path, enclosing view name, and a short descriptive label (e.g. "Submit button in CheckoutView"). Do not read files already in context.
+3. **Present confirmed buttons only:** Present only confirmed `Button` views as selectable options for `button_click` tracking. Never include `Image`, `Text`, `HStack`, `Label`, or any other non-Button view in the options list -- even if they have `.onTapGesture` or appear tappable. Do not guess, infer, or assume button names from app conventions.
+4. **Ask the developer** which of the confirmed buttons they want to track. Do not auto-add modifiers to all buttons -- the developer decides.
+5. **Only after the developer confirms**, add `.convivaAnalyticsButtonClick(title:)` to those specific `Button` views.
 
 | Event | SwiftUI Modifier | Applies to |
 |---|---|---|
