@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.10.2 (04/14/2025)
+* Bug fixes and minor improvements.
+
 ## 1.10.1 (04/06/2025)
 * Bug fixes and minor improvements.
 
