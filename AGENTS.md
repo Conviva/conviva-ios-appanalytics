@@ -156,6 +156,38 @@ Never pass to Conviva: email, phone, full name, display name, IDFA, IDFV, IP add
 - For SPM: edit the `.pbxproj` to add `-ObjC` to `OTHER_LDFLAGS` (see Section 5b). Provide the SPM package addition as developer instructions at the end.
 - For Manual: edit the `.pbxproj` to add `-ObjC` to `OTHER_LDFLAGS` (see Section 5c). Provide the framework setup as developer instructions at the end.
 - **Always ensure `CATGeneratedClassDisposeDisabled = YES`** is present in the app's Info.plist (see Section 12). This is mandatory for every integration -- do not skip, do not ask, just do it. If the project has no physical `Info.plist`, do NOT create one named `Info.plist` -- follow Section 12 Scenario B to avoid "Multiple commands produce" build errors.
+- **Always wrap every Conviva call in language-appropriate exception/nil handling** so AI-generated integration code can never crash the host app **and never alter host-app launch behavior**. ObjC: `@try`/`@catch (NSException *)` plus a `tracker == nil` check that only logs. Swift: assign + nil-check + log on `createTracker`; rely on optional chaining (`tracker?.x`) or `if let` for subsequent calls. See Section 4a for full rules and the per-language import requirement.
+
+---
+
+## 4a. Try-catch and Nil-check Requirement (mandatory)
+
+This rule applies to every Conviva call the agent inserts: `createTracker`, `defaultTracker`, `subject.userId =`, `trackCustomEvent`, `setCustomTags`, `clearCustomTags`, `clearAllCustomTags`, `trackRevenueEvent`, and any future tracker method. AI-generated integration code MUST NOT be able to crash the host app -- wrap every call as specified below.
+
+### Objective-C (`.m` / `.mm`)
+
+- Wrap every Conviva call in `@try { ... } @catch (NSException *exception) { NSLog(@"... failed: %@", exception); }`.
+- Inside the `@try` block, check `if (tracker == nil)` (for `defaultTracker`) or `if (tracker != nil)` (before invoking instance methods) and `NSLog` on nil. For `createTracker`, log when the returned tracker is nil but still complete the surrounding method normally.
+- **Import requirement -- conditional add-if-missing:** `NSException` and `NSLog` are part of `Foundation`. Add `@import Foundation;` at the top of the file **only if the file does not already have a direct Foundation import** (`@import Foundation;` or `#import <Foundation/Foundation.h>`). Do NOT rely on transitive availability via UIKit -- add it explicitly when missing. If a direct Foundation import is already present, skip. Place `@import Foundation;` immediately above `@import ConvivaAppAnalytics;` when both are being added.
+
+### Swift (`.swift`)
+
+- `CATAppAnalytics.createTracker(customerKey:appName:)` is an Objective-C method that returns an optional and does NOT throw Swift errors. Use a simple nil-check (never `do/try/catch`, never `guard let ... else { return ... }`) to log a failed init.
+- **Never let a Conviva init failure short-circuit host-app launch.** Do NOT use `guard let tracker = ... else { return false }` in `application(_:didFinishLaunchingWithOptions:)` -- returning `false` tells iOS the app failed to handle the launch URL/activity, which is a host-app behavior that must never depend on telemetry-SDK initialization. Do NOT use `guard let _ = ... else { return }` in a SwiftUI `App.init()` -- it would skip any subsequent initialization the developer adds.
+- **Correct pattern -- log on nil, continue normally:**
+  ```swift
+  let tracker = CATAppAnalytics.createTracker(customerKey: "YOUR_CUSTOMER_KEY", appName: "YOUR_APP_NAME")
+  if tracker == nil {
+      print("Conviva tracker init returned nil")
+  }
+  ```
+- `CATAppAnalytics.defaultTracker()` also returns an optional. Use optional chaining (`tracker?.x`) for subsequent calls -- this is the Swift-idiomatic equivalent of "if not nil, do" and is a no-op when the tracker is nil. No `guard` is required for the default-tracker retrieval pattern when the snippet only chains one call.
+- For multi-statement blocks that build an event (e.g. `CATRevenueEvent`, item arrays), prefer `if let tracker = CATAppAnalytics.defaultTracker() { ... }` so the construction is skipped entirely when the tracker is nil. `if let` here only skips the body of the block, not the surrounding host-app code.
+- **Import requirement:** `if let`, nil-checks, and optional chaining are Swift built-ins -- no additional import is required. The only Conviva import is `import ConvivaAppAnalytics` (already governed by Section 8).
+
+### Why this is enforced
+
+Any AI tool integrating Conviva must produce code that cannot crash the host app even if the tracker fails to initialize, returns nil unexpectedly, or throws an Objective-C exception.
 
 ---
 
@@ -279,6 +311,7 @@ import Foundation
 
 - Insert at the beginning of the entry point method (after `super` calls if any).
 - Only the inserted Conviva lines may change inside the method.
+- **Wrap the call per Section 4a:** ObjC `@try`/`@catch (NSException *)` + `tracker == nil` check (log only) + `@import Foundation;` (conditional add-if-missing). Swift: assign + nil-check + `print` on nil. Conviva init failure must never short-circuit `application(_:didFinishLaunchingWithOptions:)` (do not return `false`) or SwiftUI `App.init()` (do not `return` early).
 - Forbidden: `createTracker(namespace:customerKey:network:configurations:)`, any variant with `CATNetworkConfiguration`, `CATTrackerConfiguration`, `CATSessionConfiguration`, configuration arrays, or endpoint URLs.
 - Swift: see "Initialization" in `AGENTS-swift.md`.
 - ObjC: see "Initialization" in `AGENTS-objc.md`.
@@ -336,6 +369,7 @@ Complete Section 3c scan first. If only PII identifiers found, do not implement 
 3. Use language-specific snippet: `AGENTS-swift.md` -> "User ID" or `AGENTS-objc.md` -> "User ID".
 4. Place userId assignment once at the convergence point - not at each individual caller.
 5. At the logout convergence point, set `userId = nil`.
+6. **Wrap the assignment per Section 4a.** ObjC: `@try`/`@catch (NSException *)` + `tracker != nil` check; ensure `@import Foundation;` (add only if missing). Swift: optional chaining (`tracker?.subject?.userId = ...`) is sufficient since it is a no-op when the tracker is nil; no `guard` required.
 
 **Do not implement if:**
 - Only email available -> PII
@@ -348,6 +382,8 @@ Complete Section 3c scan first. If only PII identifiers found, do not implement 
 ## 10. Custom Events and Custom Tags (Optional)
 
 Custom events accept a `Dictionary` (Swift) or `NSDictionary` (ObjC) - never raw JSON strings for the `eventData:` variant. See `AGENTS-swift.md` or `AGENTS-objc.md` for snippets.
+
+**Wrap every `trackCustomEvent`, `setCustomTags`, `clearCustomTags`, `clearAllCustomTags`, and `trackRevenueEvent` call per Section 4a.** ObjC: `@try`/`@catch (NSException *)` with `tracker != nil` check + `@import Foundation;` (conditional add-if-missing). Swift: optional chaining for one-line calls, or `if let tracker = CATAppAnalytics.defaultTracker() { ... }` when the snippet builds an event object before invoking the method.
 
 ---
 
@@ -476,5 +512,6 @@ Seed your task list from this table before writing any code. Every row must appe
 | Custom events and tags | One code snippet each |
 | SwiftUI check | "Not using SwiftUI" or "Developer asked to track: [list of views/buttons]" with `import ConvivaAppAnalytics` confirmed in each modified file |
 | ISA-swizzling stability | Confirm `CATGeneratedClassDisposeDisabled = YES` present in Info.plist (Scenario A: edited existing plist; Scenario B: created `ConvivaInfo.plist` and set `INFOPLIST_FILE`) |
+| Exception handling (Section 4a) | Confirm every Conviva call inserted by the agent is wrapped: ObjC `@try`/`@catch (NSException *)` + `tracker == nil`/`!= nil` checks (log only, no rethrow); Swift assign + nil-check + `print` on `createTracker`, optional chaining or `if let` on subsequent calls. Confirm Conviva init failure does not short-circuit `application(_:didFinishLaunchingWithOptions:)` (no `return false`) or SwiftUI `App.init()` (no early `return`). Confirm `@import Foundation;` was added to every edited ObjC file that did not already have a direct Foundation import. |
 | Build verification | Outcome |
 | Product validation | Ask developer to validate in Pulse App -> Activation Module -> Live Lens |

@@ -132,8 +132,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
-        // Initialize Conviva Tracker
+        // Initialize Conviva Tracker.
+        // Note: CATAppAnalytics.createTracker is an Objective-C method and does not throw Swift errors.
+        // Log on nil and continue -- Conviva is telemetry, an init failure must not affect app launch.
         let tracker = CATAppAnalytics.createTracker(customerKey: "YOUR_CUSTOMER_KEY", appName: "YOUR_APP_NAME")
+        if tracker == nil {
+            print("Conviva tracker init returned nil")
+        }
 
         return true
     }
@@ -147,6 +152,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 <summary><b>UIKit AppDelegate (ObjC)</b></summary>
 
 ```ObjC
+@import Foundation;          // add only if not already imported (direct, not transitive via UIKit)
 @import ConvivaAppAnalytics;
 
 @implementation AppDelegate
@@ -155,7 +161,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     // Initialize Conviva Tracker
-    id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey:"YOUR_CUSTOMER_KEY" appName:"YOUR_APP_NAME"];
+    @try {
+        id<CATTrackerController> tracker = [CATAppAnalytics createTrackerWithCustomerKey:@"YOUR_CUSTOMER_KEY" appName:@"YOUR_APP_NAME"];
+        if (tracker == nil) {
+            NSLog(@"Conviva tracker init returned nil");
+        }
+    } @catch (NSException *exception) {
+        NSLog(@"Conviva tracker init failed: %@", exception);
+    }
 
     return YES;
 }
@@ -173,7 +186,12 @@ import ConvivaAppAnalytics
 @main
 struct YourApp: App {
     init() {
-        let _ = CATAppAnalytics.createTracker(customerKey: "YOUR_CUSTOMER_KEY", appName: "YOUR_APP_NAME")
+        // Note: CATAppAnalytics.createTracker is an Objective-C method and does not throw Swift errors.
+        // Log on nil and continue -- do not `return` early, that would skip any subsequent initialization.
+        let tracker = CATAppAnalytics.createTracker(customerKey: "YOUR_CUSTOMER_KEY", appName: "YOUR_APP_NAME")
+        if tracker == nil {
+            print("Conviva tracker init returned nil")
+        }
     }
 
     var body: some Scene {
@@ -205,15 +223,25 @@ id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
 
 ### 3. Set the User ID
 User ID is a unique string identifier to distinguish individual viewers. If using [Conviva Video Sensor](https://github.com/Conviva/ConvivaSDK), match it with the **Viewer ID**.
+
+> Wrap every Conviva call so AI-generated integration code cannot crash the host app: ObjC uses `@try`/`@catch (NSException *)` plus a `tracker != nil` check (and `@import Foundation;` if no direct Foundation import is already present in the file); Swift uses optional chaining for one-line calls and `if let` when building event objects.
 <!-- :::code-tabs[Swift,ObjC] -->
 ```Swift
 // Swift:
+let tracker = CATAppAnalytics.defaultTracker()
 tracker?.subject?.userId = "user_id"
 ```
 
 ```ObjC
 // ObjC:
-tracker.subject.userId = @"user_id";
+@try {
+    id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
+    if (tracker != nil) {
+        tracker.subject.userId = @"user_id";
+    }
+} @catch (NSException *exception) {
+    NSLog(@"Conviva setUserId failed: %@", exception);
+}
 ```
 <!-- ::: -->
 
@@ -241,18 +269,27 @@ Two APIs to track custom events:
 - (void)trackCustomEvent:(NSString *)name eventData:(nonnull id)eventData;
 ```
 
-Examples: 
+Examples:
 <!-- :::code-tabs[Swift,ObjC] -->
 ```Swift
 // Swift:
-var eventData = ["identifier1":"test","identifier2":1,"identifier3":true] as [String : Any]
-tracker?.trackCustomEvent("your-event-name", eventData: eventData)
+if let tracker = CATAppAnalytics.defaultTracker() {
+    let eventData: [String: Any] = ["identifier1": "test", "identifier2": 1, "identifier3": true]
+    tracker.trackCustomEvent("your-event-name", eventData: eventData)
+}
 ```
 
 ```ObjC
 // ObjC:
-NSDictionary *data = @{@"identifier1":@"test",@"identifier2":@(1),@"identifier3":@(true)};
-[self trackCustomEvent:@"your-event-name" eventData:data];
+@try {
+    id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
+    if (tracker != nil) {
+        NSDictionary *data = @{@"identifier1": @"test", @"identifier2": @(1), @"identifier3": @(YES)};
+        [tracker trackCustomEvent:@"your-event-name" eventData:data];
+    }
+} @catch (NSException *exception) {
+    NSLog(@"Conviva trackCustomEvent failed: %@", exception);
+}
 ```
 <!-- ::: -->
 
@@ -301,82 +338,96 @@ Use the **trackRevenueEvent()** API to track successful purchase events. The eve
 <!-- :::code-tabs[Swift,ObjC] -->
 ```Swift
 // Swift:
-let tracker = CATAppAnalytics.defaultTracker
-let event = CATRevenueEvent(
-  totalOrderAmount: 49.99,
-  transactionId: "ORD-12345",
-  currency: "USD"
-)
-tracker?.trackRevenueEvent(event)
+if let tracker = CATAppAnalytics.defaultTracker() {
+    let event = CATRevenueEvent(
+        totalOrderAmount: 49.99,
+        transactionId: "ORD-12345",
+        currency: "USD"
+    )
+    tracker.trackRevenueEvent(event)
+}
 ```
 
 ```ObjC
 // ObjC:
-id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
-CATRevenueEvent *event = [[CATRevenueEvent alloc]
-  initWithTotalOrderAmount:@(49.99)
-             transactionId:@"ORD-12345"
-                  currency:@"USD"];
-[tracker trackRevenueEvent:event];
+@try {
+    id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
+    if (tracker != nil) {
+        CATRevenueEvent *event = [[CATRevenueEvent alloc]
+            initWithTotalOrderAmount:@(49.99)
+                       transactionId:@"ORD-12345"
+                            currency:@"USD"];
+        [tracker trackRevenueEvent:event];
+    }
+} @catch (NSException *exception) {
+    NSLog(@"Conviva trackRevenueEvent failed: %@", exception);
+}
 ```
 
 **Example — full:**
 <!-- :::code-tabs[Swift,ObjC] -->
 ```Swift
 // Swift:
-let tracker = CATAppAnalytics.defaultTracker
-let item1 = CATRevenueEventItem()
-item1.productId = "p1"
-item1.name = "Widget"
-item1.unitPrice = 19.99
-item1.quantity = 2
-let item2 = CATRevenueEventItem()
-item2.productId = "p2"
-item2.name = "Gadget"
-item2.unitPrice = 19.99
-item2.quantity = 1
-let event = CATRevenueEvent(
-  totalOrderAmount: 59.97,
-  transactionId: "ORD-12345",
-  currency: "USD"
-)
-event.taxAmount = 5.00
-event.shippingCost = 4.99
-event.discount = 10.00
-event.cartSize = 3
-event.paymentMethod = "card"
-event.paymentProvider = "Stripe"
-event.items = [item1, item2]
-event.extraMetadata = ["promoCode": "SAVE10", "campaignId": "summer-sale"]
-tracker?.trackRevenueEvent(event)
+if let tracker = CATAppAnalytics.defaultTracker() {
+    let item1 = CATRevenueEventItem()
+    item1.productId = "p1"
+    item1.name = "Widget"
+    item1.unitPrice = 19.99
+    item1.quantity = 2
+    let item2 = CATRevenueEventItem()
+    item2.productId = "p2"
+    item2.name = "Gadget"
+    item2.unitPrice = 19.99
+    item2.quantity = 1
+    let event = CATRevenueEvent(
+        totalOrderAmount: 59.97,
+        transactionId: "ORD-12345",
+        currency: "USD"
+    )
+    event.taxAmount = 5.00
+    event.shippingCost = 4.99
+    event.discount = 10.00
+    event.cartSize = 3
+    event.paymentMethod = "card"
+    event.paymentProvider = "Stripe"
+    event.items = [item1, item2]
+    event.extraMetadata = ["promoCode": "SAVE10", "campaignId": "summer-sale"]
+    tracker.trackRevenueEvent(event)
+}
 ```
 
 ```ObjC
 // ObjC:
-id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
-CATRevenueEventItem *item1 = [[CATRevenueEventItem alloc]
-  initWithProductId:@"p1"
-               name:@"Widget"
-          unitPrice:@(19.99)
-           quantity:@(2)];
-CATRevenueEventItem *item2 = [[CATRevenueEventItem alloc]
-  initWithProductId:@"p2"
-               name:@"Gadget"
-          unitPrice:@(19.99)
-           quantity:@(1)];
-CATRevenueEvent *event = [[CATRevenueEvent alloc]
-  initWithTotalOrderAmount:@(59.97)
-             transactionId:@"ORD-12345"
-                  currency:@"USD"];
-event.taxAmount      = @(5.00);
-event.shippingCost   = @(4.99);
-event.discount       = @(10.00);
-event.cartSize       = @(3);
-event.paymentMethod  = @"card";
-event.paymentProvider = @"Stripe";
-event.items          = @[item1, item2];
-event.extraMetadata  = @{@"promoCode": @"SAVE10", @"campaignId": @"summer-sale"};
-[tracker trackRevenueEvent:event];
+@try {
+    id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
+    if (tracker != nil) {
+        CATRevenueEventItem *item1 = [[CATRevenueEventItem alloc]
+            initWithProductId:@"p1"
+                         name:@"Widget"
+                    unitPrice:@(19.99)
+                     quantity:@(2)];
+        CATRevenueEventItem *item2 = [[CATRevenueEventItem alloc]
+            initWithProductId:@"p2"
+                         name:@"Gadget"
+                    unitPrice:@(19.99)
+                     quantity:@(1)];
+        CATRevenueEvent *event = [[CATRevenueEvent alloc]
+            initWithTotalOrderAmount:@(59.97)
+                       transactionId:@"ORD-12345"
+                            currency:@"USD"];
+        event.taxAmount       = @(5.00);
+        event.shippingCost    = @(4.99);
+        event.discount        = @(10.00);
+        event.cartSize        = @(3);
+        event.paymentMethod   = @"card";
+        event.paymentProvider = @"Stripe";
+        event.items           = @[item1, item2];
+        event.extraMetadata   = @{@"promoCode": @"SAVE10", @"campaignId": @"summer-sale"};
+        [tracker trackRevenueEvent:event];
+    }
+} @catch (NSException *exception) {
+    NSLog(@"Conviva trackRevenueEvent failed: %@", exception);
+}
 ```
 <!-- ::: -->
 
@@ -389,47 +440,72 @@ event.extraMetadata  = @{@"promoCode": @"SAVE10", @"campaignId": @"summer-sale"}
 
 Custom Tags are global tags applied to all events and persist throughout the application lifespan, or until they are cleared.
 
-Set the custom tags: 
+Set the custom tags:
 <!-- :::code-tabs[Swift,ObjC] -->
 ```Swift
 // Swift:
-let tags = ["Key1": "Value1", "Key2": "Value2"]
-tracker?.setCustomTags(tags)
+if let tracker = CATAppAnalytics.defaultTracker() {
+    let tags = ["Key1": "Value1", "Key2": "Value2"]
+    tracker.setCustomTags(tags)
+}
 ```
 
 ```ObjC
 // ObjC:
-NSDictionary* tags = @{
-    @"Key1": @"Value1",
-    @"Key2": @"Value2",
-};
-[tracker setCustomTags:tags];
+@try {
+    id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
+    if (tracker != nil) {
+        NSDictionary *tags = @{
+            @"Key1": @"Value1",
+            @"Key2": @"Value2",
+        };
+        [tracker setCustomTags:tags];
+    }
+} @catch (NSException *exception) {
+    NSLog(@"Conviva setCustomTags failed: %@", exception);
+}
 ```
 <!-- ::: -->
 Clear a few of the previously set custom tags:
 <!-- :::code-tabs[Swift,ObjC] -->
 ```Swift
 // Swift:
+let tracker = CATAppAnalytics.defaultTracker()
 let keys = ["Key1", "Key2", "Key3"]
 tracker?.clearCustomTags(keys)
 ```
 
 ```ObjC
 // ObjC:
-NSArray* keys = @[ @"Key1", @"Key2", @"Key3" ];
-[tracker clearCustomTags:keys];
+@try {
+    id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
+    if (tracker != nil) {
+        NSArray *keys = @[ @"Key1", @"Key2", @"Key3" ];
+        [tracker clearCustomTags:keys];
+    }
+} @catch (NSException *exception) {
+    NSLog(@"Conviva clearCustomTags failed: %@", exception);
+}
 ```
 <!-- ::: -->
 Clear all the previously set custom tags:
 <!-- :::code-tabs[Swift,ObjC] -->
 ```Swift
 // Swift:
+let tracker = CATAppAnalytics.defaultTracker()
 tracker?.clearAllCustomTags()
 ```
 
 ```ObjC
 // ObjC:
-[tracker clearAllCustomTags];
+@try {
+    id<CATTrackerController> tracker = [CATAppAnalytics defaultTracker];
+    if (tracker != nil) {
+        [tracker clearAllCustomTags];
+    }
+} @catch (NSException *exception) {
+    NSLog(@"Conviva clearAllCustomTags failed: %@", exception);
+}
 ```
 <!-- ::: -->
 
