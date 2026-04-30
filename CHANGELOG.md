@@ -1,7 +1,7 @@
 # Changelog
 
 ## 1.11.0 (04/30/2026)
-* Bug fixes and minor improvements.
+* Enhances conviva_click event with elementParent to include the hosting view controller name, enabling identification of the screen associated with the clicked element.
 
 ## 1.10.2 (04/14/2026)
 * Bug fixes and minor improvements.
