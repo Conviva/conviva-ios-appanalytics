@@ -33,6 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
  /// Value of the element.
  @property (nonatomic, nullable) NSString *elementValue;
 
+ /// Class name of the nearest non-container UIViewController that owns the clicked element.
+ @property (nonatomic, nullable) NSString *elementParent;
+
  //- (instancetype)init NS_UNAVAILABLE;
 
  /// Type of the element.
@@ -47,6 +50,8 @@ NS_ASSUME_NONNULL_BEGIN
  SP_BUILDER_DECLARE_NULLABLE(NSString *, elementText)
  /// Value of the element.
  SP_BUILDER_DECLARE_NULLABLE(NSString *, elementValue)
+ /// Class name of the nearest non-container UIViewController that owns the clicked element.
+ SP_BUILDER_DECLARE_NULLABLE(NSString *, elementParent)
 
 @end
 
