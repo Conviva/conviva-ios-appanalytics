@@ -36,6 +36,9 @@
 @class CATTraceParentConfiguration;
 @class CATVisualActivationConfiguration;
 @class CATSessionReplayConfiguration;
+#if SNOWPLOW_TARGET_IOS
+@class CATClientIdSyncConfiguration;
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -60,6 +63,13 @@ NS_SWIFT_NAME(CATConfigurationBundle)
 @property (nonatomic, nonnull, readonly) NSArray<CATConfiguration *> *configurations;
 
 @property (nonatomic, nullable) CATSessionReplayConfiguration *sessionReplayConfiguration;
+
+#if SNOWPLOW_TARGET_IOS
+/// Configuration for propagating the native Client ID into in-app WebViews
+/// (see remote-config key `clid_sync`). Internal SDK plumbing only. iOS-only;
+/// the channel relies on `WKWebView`, which is not available on tvOS/watchOS.
+@property (nonatomic, nullable) CATClientIdSyncConfiguration *clientIdSyncConfiguration;
+#endif
 
 + (instancetype) new NS_UNAVAILABLE;
 - (instancetype) init NS_UNAVAILABLE;

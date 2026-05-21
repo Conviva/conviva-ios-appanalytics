@@ -78,6 +78,9 @@
 #import "CATRevenueEventItem.h"
 #import "CATConditionalCollectionConfiguration.h"
 #import "CATNetworkReqTrackingConfiguration.h"
+#import "CATClientIdSyncConfiguration.h"
+#import "CATWebViewCookieConfiguration.h"
+#import "CATWebViewBridgeConfiguration.h"
 #import "NSData+CAT_GZIP.h"
 
 FOUNDATION_EXPORT double ConvivaAppAnalyticsVersionNumber;

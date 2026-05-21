@@ -20,7 +20,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ConvivaAppAnalytics",
-            url: "https://github.com/Conviva/conviva-ios-appanalytics/releases/download/1.11.0/ConvivaAppAnalytics.xcframework.zip",
-            checksum: "f8aa5b1ac1d3c7ad03a1f6544ac56344e91fb9d45dac900cd01423b8d68821da"),
+            url: "https://github.com/Conviva/conviva-ios-appanalytics/releases/download/1.12.0/ConvivaAppAnalytics.xcframework.zip",
+            checksum: "73ddd38faa725860b6142bdcfaafc640f550a85a8918996390c386abe020c93f"),
     ]
 )

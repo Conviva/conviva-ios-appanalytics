@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.12.0 (05/21/2026)
+* Adds automatic client ID synchronization to in-app WebViews via cookie seeding (iOS 12+) and JS bridge (iOS 14+), enabling unified user identity across native and web surfaces without developer code changes.
+* Upgraded the DiagnosticInfo schema version to 1-0-5.
+* Fixes the Batching intermittent issue.
+* Removed unwanted logs.
+
 ## 1.11.0 (04/30/2026)
 * Enhances conviva_click event with elementParent to include the hosting view controller name, enabling identification of the screen associated with the clicked element.
 

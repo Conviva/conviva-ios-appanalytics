@@ -169,7 +169,7 @@ NS_SWIFT_NAME(CATNetworkTrace)
 - (nullable instancetype)initWithURLRequest:(nonnull NSURLRequest *)URLRequest
     NS_DESIGNATED_INITIALIZER;
 
-- (nullable instancetype)init NS_UNAVAILABLE;
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 /**
  * Records the begining of the network request. This is usually called just before initiating the
