@@ -60,6 +60,11 @@ NS_SWIFT_NAME(CATTrackerConfigurationProtocol)
  */
 @property () BOOL applicationContext;
 /**
+ * Whether the Conviva application context (apn + JS bundle identity) is sent with all the
+ * tracked events. Remote-config driven, default YES. Mirrors the Android `convivaAppContext`.
+ */
+@property () BOOL convivaAppContext;
+/**
  * Whether mobile/platform context is sent with all the tracked events.
  */
 @property () BOOL platformContext;
@@ -156,6 +161,7 @@ NS_SWIFT_NAME(CATTrackerConfiguration)
  *         sessionContext = false;
  *         deepLinkContext = true;
  *         applicationContext = true;
+ *         convivaAppContext = true;
  *         platformContext = true;
  *         geoLocationContext = false;
  *         screenContext = true;
@@ -197,6 +203,10 @@ SP_BUILDER_DECLARE_NULLABLE(id<CATLoggerDelegate>, loggerDelegate)
  * Whether application context is sent with all the tracked events.
  */
 SP_BUILDER_DECLARE(BOOL, applicationContext)
+/**
+ * Whether the Conviva application context is sent with all the tracked events.
+ */
+SP_BUILDER_DECLARE(BOOL, convivaAppContext)
 /**
  * Whether mobile/platform context is sent with all the tracked events.
  */

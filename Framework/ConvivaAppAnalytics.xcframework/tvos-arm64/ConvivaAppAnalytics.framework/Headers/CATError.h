@@ -30,6 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, nullable) NSString *name;
 @property (nonatomic, nullable) NSString *stackTrace;
+/// Source language of the error, e.g. "OBJECTIVEC" (default) or "JAVASCRIPT"
+/// for React Native JS fatals surfaced via the uncaught exception handler.
+@property (nonatomic, nullable) NSString *programmingLanguage;
 @property (nonatomic, readonly) NSString *message;
 
 - (instancetype)init NS_UNAVAILABLE;
@@ -38,6 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 SP_BUILDER_DECLARE_NULLABLE(NSString *, name)
 SP_BUILDER_DECLARE_NULLABLE(NSString *, stackTrace)
+SP_BUILDER_DECLARE_NULLABLE(NSString *, programmingLanguage)
 
 @end
 

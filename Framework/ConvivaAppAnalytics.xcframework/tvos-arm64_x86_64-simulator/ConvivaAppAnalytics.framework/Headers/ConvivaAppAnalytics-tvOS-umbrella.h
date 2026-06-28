@@ -78,6 +78,7 @@
 #import "CATRevenueEventItem.h"
 #import "CATConditionalCollectionConfiguration.h"
 #import "CATNetworkReqTrackingConfiguration.h"
+#import "CATSessionReplayConfiguration.h"
 #import "CATClientIdSyncConfiguration.h"
 #import "CATWebViewCookieConfiguration.h"
 #import "CATWebViewBridgeConfiguration.h"

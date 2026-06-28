@@ -180,6 +180,15 @@ NS_SWIFT_NAME(CATTrackerController)
 
 - (void)startSessionReplay;
 
+/**
+ * Stores the React Native JS bundle identity forwarded by the bridge. The recognised keys are
+ * `jsBundleSource`, `jsBundleId`, `jsBundleChannel`, `jsBundleLabel` and `jsEngine`; unknown keys
+ * and empty values are ignored. The values are attached to the Conviva app-context entity
+ * (iglu:com.conviva/app/jsonschema/1-0-2) on subsequent events.
+ * @param info map of JS bundle fields.
+ */
+- (void)setJsBundleInfo:(nullable NSDictionary<NSString *, id> *)info;
+
 @end
 
 NS_ASSUME_NONNULL_END

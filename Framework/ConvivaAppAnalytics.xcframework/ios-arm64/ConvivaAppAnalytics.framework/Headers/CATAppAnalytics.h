@@ -85,6 +85,14 @@ NS_SWIFT_NAME(CATAppAnalytics)
  */
 + (void) reInitializeSDK;
 
+/**
+ * Returns the verbatim JSON of the remote config last applied to the tracker (from cache or a
+ * remote fetch), or nil if only the default config is in effect. Intended for consumers — e.g.
+ * the React Native bridge — that need to read error-tracking config the SDK does not itself parse
+ * (such as exceptionAutotracking and collectionRateLimit).
+ */
++ (nullable NSString *)appliedRemoteConfigJson;
+
 @end
 
 @interface CATAppAnalytics(Advanced)

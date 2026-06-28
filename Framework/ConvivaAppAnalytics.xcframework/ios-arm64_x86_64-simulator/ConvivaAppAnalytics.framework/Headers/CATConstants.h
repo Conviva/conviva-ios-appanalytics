@@ -96,6 +96,7 @@ extern NSString * const kCATDiagnosticErrorSchema;
 extern NSString * const kCATConvivaEventInfoSchema;
 extern NSString * const kCATConvivaCustomTagsSchema;
 extern NSString * const kCATConvivaDiagnosticInfoSchema;
+extern NSString * const kCATConvivaApplicationContextSchema;
 
 // --- Event Keys
 
@@ -163,6 +164,16 @@ extern NSString * const kCATMobileCPUUsage;
 // --- Application Context
 extern NSString * const kCATApplicationVersion;
 extern NSString * const kCATApplicationBuild;
+
+// --- Conviva Application Context (iglu:com.conviva/app/jsonschema/1-0-2)
+extern NSString * const kCATConvivaAppPackageName;
+extern NSString * const kCATConvivaAppBuildVariant;
+extern NSString * const kCATConvivaAppBuildUUID;
+extern NSString * const kCATConvivaJsBundleSource;
+extern NSString * const kCATConvivaJsBundleId;
+extern NSString * const kCATConvivaJsBundleChannel;
+extern NSString * const kCATConvivaJsBundleLabel;
+extern NSString * const kCATConvivaJsEngine;
 
 // --- Session Context
 
@@ -448,6 +459,7 @@ extern NSString * const kCATRemoteConfigFetchEventName;
 extern NSString * const kCATConvivaCrashEventName;
 extern NSString * const kCATConvivaHangEventName;
 extern NSString * const kCATHangDiagnosticType;
+extern NSInteger const kCATApplicationErrorMaxStackTraceLength;
 extern NSInteger const kCATMaxStackTraceLength;
 extern NSInteger const kCATMaxExceptionNameLength;
 extern NSInteger const kCATMaxExceptionMsgLength;
