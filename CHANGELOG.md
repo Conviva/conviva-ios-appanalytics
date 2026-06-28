@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.13.0 (06/28/2026)
+* Bug fixes and minor improvements.
+
 ## 1.12.0 (05/21/2026)
 * Adds automatic client ID synchronization to in-app WebViews via cookie seeding (iOS 12+) and JS bridge (iOS 14+), enabling unified user identity across native and web surfaces without developer code changes.
 * Upgraded the DiagnosticInfo schema version to 1-0-5.
