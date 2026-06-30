@@ -1,7 +1,9 @@
 # Changelog
 
 ## 1.13.0 (06/28/2026)
-* Bug fixes and minor improvements.
+* Adds React Native JavaScript error reporting, capturing full stack traces and bundle metadata for both fatal and non-fatal errors.
+* Adds bridge APIs to report the JS bundle identity for source-map de-minification and to read the applied remote config.
+* Enriches crash events with 1-0-2 app context schema.
 
 ## 1.12.0 (05/21/2026)
 * Adds automatic client ID synchronization to in-app WebViews via cookie seeding (iOS 12+) and JS bridge (iOS 14+), enabling unified user identity across native and web surfaces without developer code changes.
