@@ -35,6 +35,9 @@
 #import "CATEventBase.h"
 
 @class CATRevenueEvent;
+// Forward-declared (not imported) to keep this public framework header from
+// depending on the internal/private CATEvtStreamTrackingConfiguration.h.
+@class CATEvtStreamTrackingConfiguration;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -169,6 +172,23 @@ NS_SWIFT_NAME(CATTrackerController)
 - (void)keepAliveInBackground:(BOOL)keepAlive;
 
 - (CATNetworkReqTrackingConfiguration *)nwReqTrackingConfiguration;
+
+/**
+ @brief Live event-stream (WebSocket/SSE) tracking configuration on the tracker.
+ @return The `evtStreamTrackingConfiguration`, or nil if the tracker is unavailable.
+ */
+- (nullable CATEvtStreamTrackingConfiguration *)evtStreamTrackingConfiguration;
+
+/**
+ @brief Upfront short-circuit predicate for event-stream (WebSocket/SSE) tracking.
+ @discussion Returns NO when the given emit event would ultimately be dropped
+ (custom-event tracking disabled / name block-listed, or event-stream tracking
+ disabled), so callers can skip buffering/parsing/matching. Must be called on the
+ CAT shared serial queue.
+ @param emitEventName the custom-event name the stream would emit under.
+ @return YES if the stream should be processed; NO to short-circuit (also NO if the tracker is unavailable).
+ */
+- (BOOL)shouldProcessEvtStreamTrackingForEmitEvent:(NSString *)emitEventName;
 
 /**
  @brief Tracker method to get customer key, Set it first to fetch value.

@@ -451,6 +451,56 @@ typedef NS_ENUM(NSInteger, CATPrewarmDetectionMode) {
 
 extern NSInteger const kCATDefaultHBInterval;
 
+// --- Agentic — WebSockets
+extern NSString * const kCATWebSocketEvent;       // "conviva_ws_message"
+extern NSString * const kCATWebSocketEventName;   // "event"
+extern NSString * const kCATWebSocketEventUrl;    // "url"
+extern NSString * const kCATWebSocketEventId;     // "id"
+
+// Event-name values
+extern NSString * const kCATWebSocketEventOpen;       // "open"
+extern NSString * const kCATWebSocketEventSend;       // "send"
+extern NSString * const kCATWebSocketEventServer;     // "server"
+extern NSString * const kCATWebSocketEventError;      // "error"
+extern NSString * const kCATWebSocketEventClose;      // "close"
+extern NSString * const kCATWebSocketMethod;          // "method" (send fallback for `type`)
+
+// Error keys
+extern NSString * const kCATWebSocketErrorMessage;    // "errorMessage"
+extern NSString * const kCATWebSocketErrorType;       // "errorType"
+extern NSString * const kCATWebSocketErrorCode;       // "errorCode"
+extern NSString * const kCATWebSocketResponseCode;    // "responseCode"
+extern NSString * const kCATWebSocketResponseMessage; // "responseMessage"
+
+// Close keys
+extern NSString * const kCATWebSocketCloseCode;       // "code"
+extern NSString * const kCATWebSocketCloseReason;     // "reason"
+
+// --- Agentic — SSE
+extern NSString * const kCATSseEvent;                  // "conviva_sse_message"
+extern NSString * const kCATSseEventName;              // "event"
+extern NSString * const kCATSseEventData;              // "data"
+extern NSString * const kCATSseEventType;              // "type"
+extern NSString * const kCATSseEventUrl;               // "url"
+extern NSString * const kCATSseEventServer;            // "server"
+extern NSString * const kCATSseEventId;                // "id"
+extern NSString * const kCATSseEventDefaultName;       // "message" (default when no `event:` line)
+
+// --- Agentic — event-stream match-attribute keys (WS + SSE)
+// These are the keys the conditional-collection engine matches `collect`/`block`
+// conditions against (must equal the remote-config condition `key` values).
+extern NSString * const kCATEvtStreamMatchScheme;      // "sch" (matches JS canonical + network request tracking)
+extern NSString * const kCATEvtStreamMatchHost;        // "host"
+extern NSString * const kCATEvtStreamMatchPath;        // "path"
+extern NSString * const kCATEvtStreamMatchType;        // "type" (JS parity: lifecycle name for open/close/error & SSE; payload type/method for send/server)
+
+// --- Agentic — event-stream conditionalCollectAttr / count keys (WS + SSE)
+extern NSString * const kCATEvtStreamSmb;              // "smb"  — selective body attribute paths
+extern NSString * const kCATEvtStreamRequestQuery;     // "rqq"  — selective request query params (config + emit key)
+extern NSString * const kCATEvtStreamCount;            // "count"
+extern NSString * const kCATEvtStreamCountReset;       // "countReset"
+extern NSString * const kCATEvtStreamTokenCount;       // "tokenCount"
+
 // --- Remote Config
 extern NSString * const kCATDefaultRemoteConfigVersion;
 extern NSInteger  const kCATInstantRemoteConfigFetchIntervalMils;
@@ -463,4 +513,5 @@ extern NSInteger const kCATApplicationErrorMaxStackTraceLength;
 extern NSInteger const kCATMaxStackTraceLength;
 extern NSInteger const kCATMaxExceptionNameLength;
 extern NSInteger const kCATMaxExceptionMsgLength;
+
 @end

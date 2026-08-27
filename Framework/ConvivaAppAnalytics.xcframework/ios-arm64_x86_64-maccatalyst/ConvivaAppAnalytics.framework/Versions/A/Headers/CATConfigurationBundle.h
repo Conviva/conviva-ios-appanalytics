@@ -32,6 +32,7 @@
 
 @class CATCustomEventTrackingConfiguration;
 @class CATNetworkReqTrackingConfiguration;
+@class CATEvtStreamTrackingConfiguration;
 @class CATDiagnosticInfoConfiguration;
 @class CATTraceParentConfiguration;
 @class CATVisualActivationConfiguration;
@@ -55,6 +56,7 @@ NS_SWIFT_NAME(CATConfigurationBundle)
 @property (nonatomic, nullable) CATSessionConfiguration *sessionConfiguration;
 @property (nonatomic, nullable) CATCustomEventTrackingConfiguration *customEventTrackingConfiguration;
 @property (nonatomic, nullable) CATNetworkReqTrackingConfiguration *networkReqTrackingConfiguration;
+@property (nonatomic, nullable) CATEvtStreamTrackingConfiguration *evtStreamTrackingConfiguration;
 @property (nonatomic, nullable) CATEmitterConfiguration *emitterConfiguration;
 @property (nonatomic, nullable) CATDiagnosticInfoConfiguration *diagnosticInfoConfiguration;
 @property (nonatomic, nullable) CATClickConfiguration *clickcc;

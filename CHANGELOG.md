@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.14.0 (08/27/2026)
+* Supports WebSocket message stream tracking with comprehensive event monitoring (open, close, send, message, error).
+* Supports auto-collection of Server-Sent Events (SSE).
+* Introduces Intelligent Collection of SSE & WebSocket events designed to optimize data collection while ensuring flexibility and actionable insights with reduced volume:
+  * Controls volume through Activation rules (Collect or Block).
+  * Controls collection of attributes in SSE / WebSocket message payloads
+  * Supports filtering based on request URL's hostname, path, scheme, and filtering based on attributes in SSE / WebSocket messages.
+
 ## 1.13.0 (06/28/2026)
 * Adds React Native JavaScript error reporting, capturing full stack traces and bundle metadata for both fatal and non-fatal errors.
 * Adds bridge APIs to report the JS bundle identity for source-map de-minification and to read the applied remote config.
