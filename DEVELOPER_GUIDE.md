@@ -513,6 +513,98 @@ tracker?.clearAllCustomTags()
 </details>
 
 <details>
+<!--self-serve-clid-sync-->
+<summary><b>WebView Client ID Sync</b></summary>
+
+**Available from iOS SDK [v1.12.0](https://github.com/Conviva/conviva-ios-appanalytics/releases/v1.12.0).**
+
+Conviva automatically shares the native client ID with in-app `WKWebView`s so that native and web sessions are attributed to the same user. No code changes are required — the feature is enabled by default and controlled via remote config.
+
+**How it works:**
+
+- **Cookie (primary, iOS 12+):** The SDK seeds a `Conviva_sdkConfig` cookie into `WKWebsiteDataStore.default().httpCookieStore` for each configured domain. The Web SDK reads it on page load.
+- **JS bridge (fallback, iOS 14+):** The SDK auto-attaches a JavaScript message handler to every in-app `WKWebView` — no host-app wiring is required. When the cookie is unavailable (domain not configured or not yet seeded), the Web SDK calls:
+
+    ```js
+    await window.webkit.messageHandlers
+                .__ConvivaiOSGetClientIdInterface
+                .postMessage(null);
+    ```
+
+  The iOS bridge call is **asynchronous** and returns a `Promise`. Because the Web SDK cannot pause the page while waiting for the native reply, it generates a **temporary client ID locally at page load** and uses it for any events fired during that brief window. Once the native client ID arrives, the Web SDK swaps to it so subsequent native and web events share the same identifier.
+
+  On iOS 12 / 13 the bridge is silently disabled and only the cookie path is active.
+
+> **Cookie is the recommended path:** Because the JS bridge is asynchronous on iOS, there is a brief window at page load where the Web SDK uses a temporary client ID. The cookie path avoids this entirely — when the host page's domain is in the configured list, the Web SDK reads the native client ID directly from the cookie on page load with no temp-ID window. Configure fallback domains via **Option 2** below so the cookie covers your in-app WebViews; the JS bridge then acts purely as a safety net.
+
+> **Web SDK requirement:** The cookie path works with any Web SDK version that already reads `Conviva_sdkConfig`. The JS bridge fallback requires **Web SDK ≥ [2.2.0](https://github.com/Conviva/conviva-js-appanalytics/releases/v2.2.0)**.
+
+---
+
+**Option 1 — No code changes (remote config only)**
+
+Both cookie seeding and the JS bridge default to **enabled**. To configure the WebView domains in remote config, contact the [Conviva support team](https://support.conviva.com).
+
+---
+
+**Option 2 — Supply fallback domains in app code**
+
+Provide domains at tracker creation so cookie seeding starts immediately at launch, before the first remote config fetch:
+
+<!-- :::code-tabs[Swift,ObjC] -->
+```Swift
+// Swift:
+import ConvivaAppAnalytics
+
+let clidSync = CATClientIdSyncConfiguration()
+clidSync.wvCke.domains = [".example.com", ".partner.com"]
+
+let tracker = CATAppAnalytics.createTracker(
+    customerKey: "YOUR_CUSTOMER_KEY",
+    appName: "YOUR_APP_NAME",
+    configurations: [clidSync]
+)
+if tracker == nil {
+    print("Conviva tracker init returned nil")
+}
+```
+
+```ObjC
+// ObjC:
+@import ConvivaAppAnalytics;
+
+@try {
+    CATClientIdSyncConfiguration *clidSync = [[CATClientIdSyncConfiguration alloc] init];
+    clidSync.wvCke.domains = @[ @".example.com", @".partner.com" ];
+
+    id<CATTrackerController> tracker = [CATAppAnalytics
+        createTrackerWithCustomerKey:@"YOUR_CUSTOMER_KEY"
+                             appName:@"YOUR_APP_NAME"
+                      configurations:@[ clidSync ]];
+    if (tracker == nil) {
+        NSLog(@"Conviva tracker init returned nil");
+    }
+} @catch (NSException *exception) {
+    NSLog(@"Conviva tracker init failed: %@", exception);
+}
+```
+<!-- ::: -->
+
+> **Recommendation:** Use leading-dot domains (`.example.com`) to cover all subdomains. Keep the same domain list in both app config and remote config. App-config domains seed cookies immediately at launch (before remote config arrives); remote config domains take over once fetched. If the two lists differ, there is a window during the first launch where a `WKWebView` loading a remote-config-only domain will miss the cookie. Keeping them in sync ensures uninterrupted client ID sharing from the very first WebView load.
+
+---
+
+> **Note — disabling the JS bridge:** The bridge is attached automatically to every in-app `WKWebView` (the SDK swizzles `WKWebView`'s initialisers to wire it up). If you ever need to disable it completely — for example, while investigating any unexpected behavior with a WebView, whether from the bridge or the swizzling itself — add the following key to your app's `Info.plist`. When this flag is `YES`, the SDK skips the swizzle entirely and does not register the JavaScript message handler. The cookie path is unaffected and continues to work.
+>
+> ```xml
+> <key>catperf_disable_webview_bridge</key>
+> <true/>
+> ```
+
+<!--eof-self-serve-clid-sync-->
+</details>
+
+<details>
 
 <summary><b>Override UIViewController Class Name</b></summary>
 
